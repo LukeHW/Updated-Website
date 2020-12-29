@@ -1,5 +1,4 @@
 .App {
-  text-align: left;
   background-color: #dfdfdf;
   min-height: 100vh;
   display: flex;
@@ -11,6 +10,10 @@
   font-family: "Roboto"
 }
 
+.App-header {
+  text-align: center;
+}
+
 h1{
   font-weight: normal;
 }
@@ -18,5 +21,4 @@ h1{
 h2{
   font-weight: 300;
   font-size: calc(8px + 2vmin);
-  max-width: 1400px;
 }
