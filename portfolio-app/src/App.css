@@ -4,8 +4,12 @@
 
 .AppBG {
   min-height: 100vh;
-  color: black;
+  color: white;
   font-family: "Roboto";
+}
+
+.navbar {
+  margin-top: 15px;
 }
 
 .App-header {
