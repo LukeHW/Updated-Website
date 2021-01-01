@@ -3,9 +3,7 @@
 }
 
 .AppBG {
-  background-color: #F3EDE0;
   min-height: 100vh;
-  font-size: calc(10px + 2vmin);
   color: black;
   font-family: "Roboto";
 }
