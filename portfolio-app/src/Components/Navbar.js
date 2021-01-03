@@ -1,10 +1,7 @@
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import logo from './logo.svg';
-import './App.css';
+import '../App.css';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -14,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   navbarLogo: {
     minWidth: 70,
     maxWidth: 70,
-    marginTop: 5,
+    marginTop: 10,
     marginLeft: 5
   },
   navbarContainer: {
@@ -23,11 +20,11 @@ const useStyles = makeStyles((theme) => ({
   link: {
       fontWeight: "normal",
       color: "White",
-      marginTop: 25,
+      marginTop: 30,
       textAlign: "center"
   },
   menuIcon: {
-      fontSize: 50,
+      fontSize: 55,
       color: "white"
   }
 }));
@@ -75,17 +72,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-// TITLE and SUBTITLE that disappear when going into a smaller width
-/* <Grid item className={classes.logo} xs={0} sm={0} md={2} lg={2} xl={2}>
-<Hidden smDown>
-    <Typography variant="h5" component="h2" gutterBottom>
-        LHW
-    </Typography>
-</Hidden>
-<Hidden smDown>
-    <Typography className={classes.subtitle} variant="h6" component="h2" gutterBottom>
-        Luke Henry Wahlmeier
-    </Typography>
-</Hidden>
-</Grid> */

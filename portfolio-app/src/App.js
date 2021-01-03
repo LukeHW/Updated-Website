@@ -3,10 +3,9 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import logo from './logo.svg';
 import './App.css';
 import Grid from '@material-ui/core/Grid';
-import Navbar from './Navbar.js';
+import Navbar from './Components/Navbar.js';
 import bg from './blurredBG.jpg';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
@@ -41,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 70
   },
   centeredItem: {
-    textAlign: "center",
     bottom: "0px",
-    left: "50%",
-    position: "absolute"
+    position: "absolute",
+    width: "100%",
+    textAlign: "center"
   }
 }));
 
@@ -75,9 +74,9 @@ function App() {
           </Grid>
           <Grid xs={1} sm={1} md={2} lg={3} xl={3}></Grid>  
         </Grid>
-        <Grid item className={classes.centeredItem} xs={10} sm={10} md={10} lg={10} xl={10}>
-          <ArrowDownwardIcon className={classes.downArrow} align="center"/>
-        </Grid>
+        <div className={classes.centeredItem}>
+          <ArrowDownwardIcon className={classes.downArrow}/>
+        </div>
       </div>
       </Grid>
     </div>
