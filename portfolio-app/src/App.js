@@ -8,28 +8,43 @@ import './App.css';
 import Grid from '@material-ui/core/Grid';
 import Navbar from './Navbar.js';
 import bg from './blurredBG.jpg';
+import Hidden from '@material-ui/core/Hidden';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between",
-    marginTop: "300px"
+    marginTop: "20vh"
   },
   item: {
-    padding: "20px",
-    textAlign: "center",
-    fontSize: 30
+    padding: "20px"
   },
   paperContainer: {
     backgroundImage: `url(${bg})`,
-    backgroundRepeat: "no-repeat center",
+    backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
   },
   title: {
     fontWeight: 700,
-    fontSize: 100
+    fontSize: 60,
+    marginTop: "70px"
   },
   greeting: {
-    textAlign: "left"
+    textAlign: "left",
+    marginBottom: "50px"
+  },
+  placer: {
+    width: "30vmin"
+  },
+  downArrow: {
+    color: "white",
+    fontSize: 70
+  },
+  centeredItem: {
+    textAlign: "center",
+    bottom: "0px",
+    left: "50%",
+    position: "absolute"
   }
 }));
 
@@ -43,13 +58,25 @@ function App() {
       <div className="AppBG">
         <Navbar/>
         <Grid container className={classes.container}>
-          <Grid xs={0} sm={0} md={3} lg={3} xl={3}></Grid> 
-          <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
+        <Grid xs={1} sm={1} md={2} lg={3} xl={3}></Grid> 
+          <Grid item xs={11} sm={11} md={4} lg={3} xl={3}>
             <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-              LUKE H. WAHLMEIER
+              Hi, I'm Luke!
+            </Typography>
+            <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
+              Developer. Designer. Musician.
             </Typography>
           </Grid>
-          <Grid xs={0} sm={0} md={3} lg={3} xl={3}></Grid> 
+          <Hidden mdUp>
+            <Grid xs={1} sm={1}></Grid> 
+          </Hidden>
+          <Grid item xs={10} sm={10} md={4} lg={3} xl={3} align="center">
+            <img className={classes.placer} src="/placer.png" alt="LHW logo"/>
+          </Grid>
+          <Grid xs={1} sm={1} md={2} lg={3} xl={3}></Grid>  
+        </Grid>
+        <Grid item className={classes.centeredItem} xs={10} sm={10} md={10} lg={10} xl={10}>
+          <ArrowDownwardIcon className={classes.downArrow} align="center"/>
         </Grid>
       </div>
       </Grid>

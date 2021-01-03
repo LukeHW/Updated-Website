@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
   navbarLogo: {
     minWidth: 70,
     maxWidth: 70,
-    textAlign: "left",
     marginTop: 5,
     marginLeft: 5
   },
