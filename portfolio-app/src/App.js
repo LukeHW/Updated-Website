@@ -12,11 +12,7 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    justifyContent: "space-between",
-    marginTop: "20vh"
-  },
-  item: {
-    padding: "20px"
+    justifyContent: "space-between"
   },
   paperContainer: {
     backgroundImage: `url(${bg})`,
@@ -26,18 +22,14 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 700,
     fontSize: 60,
-    marginTop: "70px"
+    marginTop: "30vmin"
   },
   greeting: {
-    textAlign: "left",
-    marginBottom: "50px"
+    textAlign: "left"
   },
   placer: {
-    width: "30vmin"
-  },
-  downArrow: {
-    color: "white",
-    fontSize: 70
+    width: "30vmin",
+    marginTop: "20vmin"
   },
   centeredItem: {
     bottom: "0px",
@@ -58,7 +50,7 @@ function App() {
         <Navbar/>
         <Grid container className={classes.container}>
         <Grid xs={1} sm={1} md={2} lg={3} xl={3}></Grid> 
-          <Grid item xs={11} sm={11} md={4} lg={3} xl={3}>
+          <Grid item className={classes.item} xs={11} sm={11} md={4} lg={3} xl={3}>
             <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
               Hi, I'm Luke!
             </Typography>
@@ -69,13 +61,13 @@ function App() {
           <Hidden mdUp>
             <Grid xs={1} sm={1}></Grid> 
           </Hidden>
-          <Grid item xs={10} sm={10} md={4} lg={3} xl={3} align="center">
+          <Grid item className={classes.item} xs={10} sm={10} md={4} lg={3} xl={3} align="center">
             <img className={classes.placer} src="/placer.png" alt="LHW logo"/>
           </Grid>
           <Grid xs={1} sm={1} md={2} lg={3} xl={3}></Grid>  
         </Grid>
         <div className={classes.centeredItem}>
-          <ArrowDownwardIcon className={classes.downArrow}/>
+          <ArrowDownwardIcon className="downArrow bounce-7"/>
         </div>
       </div>
       </Grid>
