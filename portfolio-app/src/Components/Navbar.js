@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       color: "white"
   },
   navbarActive: {
-      backgroundColor: "rgba(0, 0, 0, 0.8)",
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
       maxHeight: 200,
       top:0,
       position: "fixed",

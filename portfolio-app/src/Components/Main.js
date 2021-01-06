@@ -9,6 +9,7 @@ import Navbar from './Navbar.js';
 import bg from '../blurredBG.jpg';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -101,8 +102,10 @@ function Main() {
     <Grid container className={classes.secondContainer}>
       <Grid lg={2} xl={2}></Grid> 
       <Hidden mdDown>
-        <Grid item className={classes.item} lg={2} xl={2}>
+        <Grid item className={classes.item} lg={2} xl={2} align="center">
+        <IconButton aria-label="menu">
           <img className={classes.icons} src="/github.png" alt="github logo"/>
+        </IconButton>
         </Grid>
       </Hidden>
       <Hidden lgUp>
@@ -127,8 +130,10 @@ function Main() {
         <Grid xs={1} sm={1} md={1}></Grid> 
       </Hidden>
       <Hidden mdDown>
-        <Grid item className={classes.item} lg={2} xl={2} >
+        <Grid item className={classes.item} lg={2} xl={2} align="center">
+        <IconButton aria-label="menu">
           <img className={classes.icons} src="/linkedin.png" alt="github logo"/>
+        </IconButton>
         </Grid>
       </Hidden>
       <Grid lg={2} xl={2}></Grid>  
