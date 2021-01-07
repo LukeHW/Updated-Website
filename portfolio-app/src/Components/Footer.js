@@ -26,6 +26,14 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "rgba(0, 0, 0, 0.8)",
       height: 200,
       width: "100%"
+  },
+  footer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    color: "white",
+    width: 300,
+    marginTop: 85,
+    fontSize: 20
   }
 }));
 
@@ -36,36 +44,11 @@ function Footer() {
   return (
     <div className={classes.navbarActive}>
         <Grid container className={classes.container}>
-            <Grid xs={1} sm={1} md={2} lg={3} xl={3}></Grid> 
-            <Grid item className={classes.logo} xs={1} sm={1} md={1} lg={1} xl={1} align="left">
-                <img className={classes.navbarLogo} src="/favicon.png" alt="LHW logo"/>
-            </Grid>
-            <Grid xs={1} sm={1} md={1} lg={2} xl={2}></Grid> 
-            <Hidden smDown>
-                <Grid item className={classes.link} md={2} lg={1} xl={1}>
-                    <Typography variant="h5" component="h2" gutterBottom>
-                        If you want to contact me
-                    </Typography>
-                </Grid>
-                <Grid item className={classes.link} md={2} lg={1} xl={1}>
-                    <Typography variant="h5" component="h2" gutterBottom>
-                        Second
-                    </Typography>
-                </Grid>
-                <Grid item className={classes.link} md={2} lg={1} xl={1}>
-                    <Typography variant="h5" component="h2" gutterBottom>
-                        Thrid
-                    </Typography>
-                </Grid>
-            </Hidden>
-            <Hidden mdUp>
-                <Grid xs={7} sm={7}></Grid> 
-                <Grid item className={classes.menuContainer} xs={2} sm={2}>
-                    <IconButton aria-label="menu">
-                        <MenuIcon className={classes.menuIcon}/>
-                    </IconButton>
-                </Grid>
-            </Hidden>
+            <Grid xs={12} sm={12} md={12} lg={12} xl={12} align="center">
+            <Typography className={classes.footer} variant="h7" component="h2" gutterBottom>
+                Luke H. Wahlmeier - 2021
+            </Typography>
+            </Grid> 
         </Grid>
     </div>
   );
