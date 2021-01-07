@@ -48,7 +48,9 @@ const useStyles = makeStyles((theme) => ({
   },
   iconsInline: {
     width: 50,
-    margin: 5
+    margin: 5,
+    marginTop: -5,
+    marginLeft: 20
   },
   item: {
     flexDirection: "column",
@@ -61,7 +63,15 @@ const useStyles = makeStyles((theme) => ({
   },
   hidden: {
     justifyContent: "center",
-    display: "flex"
+    display: "flex",
+    marginTop: 30
+  },
+  circle: {
+    width: "80px",
+    height: "80px",
+    border: "1px solid #3c2946",
+    position: "fixed",
+    borderRadius: "50%"
   }
 }));
 
@@ -73,9 +83,8 @@ function Main() {
     <div className="App">
     <Grid className={classes.paperContainer}>
     <div className="AppBG">
-      <Navbar/>
       <Grid container className={classes.container}>
-      <Grid xs={1} sm={1} md={2} lg={3} xl={3}></Grid> 
+      <Grid item xs={1} sm={1} md={2} lg={3} xl={3}></Grid> 
         <Grid item className={classes.item} xs={11} sm={11} md={4} lg={3} xl={3}>
           <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
             Hi, I'm Luke!
@@ -85,12 +94,12 @@ function Main() {
           </Typography>
         </Grid>
         <Hidden mdUp>
-          <Grid xs={1} sm={1}></Grid> 
+          <Grid item xs={1} sm={1}></Grid> 
         </Hidden>
         <Grid item xs={10} sm={10} md={4} lg={3} xl={3} align="center">
           <img className={classes.placer} src="/placer.png" alt="LHW logo"/>
         </Grid>
-        <Grid xs={1} sm={1} md={2} lg={3} xl={3}></Grid>  
+        <Grid item xs={1} sm={1} md={2} lg={3} xl={3}></Grid>  
       </Grid>
       <div className={classes.centeredItem}>
         <ArrowDownwardIcon className="downArrow bounce-7"/>
@@ -98,9 +107,9 @@ function Main() {
     </div>
     </Grid>
 
-
+    <div className={classes.circle}></div>
     <Grid container className={classes.secondContainer}>
-      <Grid lg={2} xl={2}></Grid> 
+      <Grid item lg={2} xl={2}></Grid> 
       <Hidden mdDown>
         <Grid item className={classes.item} lg={2} xl={2} align="center">
         <IconButton aria-label="menu">
@@ -109,7 +118,7 @@ function Main() {
         </Grid>
       </Hidden>
       <Hidden lgUp>
-        <Grid xs={1} sm={1} md={1}></Grid> 
+        <Grid item xs={1} sm={1} md={1}></Grid> 
       </Hidden>
       <Grid item className={classes.item} xs={10} sm={10} md={10} lg={4} xl={4} align="center">
         <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
@@ -127,7 +136,7 @@ function Main() {
         </Typography>
       </Grid>
       <Hidden lgUp>
-        <Grid xs={1} sm={1} md={1}></Grid> 
+        <Grid item xs={1} sm={1} md={1}></Grid> 
       </Hidden>
       <Hidden mdDown>
         <Grid item className={classes.item} lg={2} xl={2} align="center">
@@ -136,7 +145,7 @@ function Main() {
         </IconButton>
         </Grid>
       </Hidden>
-      <Grid lg={2} xl={2}></Grid>  
+      <Grid item lg={2} xl={2}></Grid>  
     </Grid>
   </div>
   );

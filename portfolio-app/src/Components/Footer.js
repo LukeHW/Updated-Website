@@ -12,16 +12,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 70,
     marginTop: 10
   },
-  navbarContainer: {
-    maxHeight: 200,
-    top:0,
-    position: "fixed",
-    zIndex: 100,
-    width: "100%"
-  },
   link: {
       fontWeight: "normal",
-      color: "White",
+      color: "white",
       marginTop: 30,
       textAlign: "center"
   },
@@ -30,33 +23,18 @@ const useStyles = makeStyles((theme) => ({
       color: "white"
   },
   navbarActive: {
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
-      maxHeight: 200,
-      top:0,
-      position: "fixed",
-      zIndex: 100,
+      backgroundColor: "rgba(0, 0, 0, 0.8)",
+      height: 200,
       width: "100%"
   }
 }));
 
-function Navbar() {
-
-  const [navbar, setNavbar] = useState(false);
+function Footer() {
 
   const classes = useStyles();
 
-  const changeBackground = () => {
-      if(window.scrollY >= 80){
-          setNavbar(true);
-      } else {
-          setNavbar(false);
-      }
-  };
-
-  window.addEventListener('scroll', changeBackground)
-
   return (
-    <div className={navbar ? classes.navbarActive : classes.navbarContainer}>
+    <div className={classes.navbarActive}>
         <Grid container className={classes.container}>
             <Grid xs={1} sm={1} md={2} lg={3} xl={3}></Grid> 
             <Grid item className={classes.logo} xs={1} sm={1} md={1} lg={1} xl={1} align="left">
@@ -66,17 +44,17 @@ function Navbar() {
             <Hidden smDown>
                 <Grid item className={classes.link} md={2} lg={1} xl={1}>
                     <Typography variant="h5" component="h2" gutterBottom>
-                        Work
+                        If you want to contact me
                     </Typography>
                 </Grid>
                 <Grid item className={classes.link} md={2} lg={1} xl={1}>
                     <Typography variant="h5" component="h2" gutterBottom>
-                        About
+                        Second
                     </Typography>
                 </Grid>
                 <Grid item className={classes.link} md={2} lg={1} xl={1}>
                     <Typography variant="h5" component="h2" gutterBottom>
-                        Contact
+                        Thrid
                     </Typography>
                 </Grid>
             </Hidden>
@@ -93,4 +71,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Footer;
