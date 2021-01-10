@@ -6,9 +6,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
 
 // import components
-import Navbar from './Components/Navbar.js';
-import Main from './Components/Main.js';
-import Footer from './Components/Footer.js'
+import Navbar from './components/Navbar.js';
+import Main from './components/Main.js';
+import Footer from './components/Footer.js';
+import Page from './components/pageComponents/Page.js';
 
 // styles for App.js
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +23,9 @@ function App() {
   return (
     <div className="App">
           <Navbar/>
-          <Main/>
+          <Page>
+            <Main/>
+          </Page>
           <Footer/>
     </div>
   );

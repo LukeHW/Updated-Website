@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,10 +16,6 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
       marginTop: 30,
       textAlign: "center"
-  },
-  menuIcon: {
-      fontSize: 55,
-      color: "white"
   },
   navbarActive: {
       backgroundColor: "rgba(0, 0, 0, 0.8)",

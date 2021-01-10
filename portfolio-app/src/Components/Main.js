@@ -1,16 +1,18 @@
+// import modules
 import React, { useState } from 'react';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import './Main.css';
 import Grid from '@material-ui/core/Grid';
-import Navbar from './Navbar.js';
-import bg from '../blurredBG.jpg';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import IconButton from '@material-ui/core/IconButton';
 
+// import styles
+import './Main.css';
+
+// import components
+import bg from '../blurredBG.jpg';
+// styles for Main.js
 const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between"
@@ -72,6 +74,11 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid #3c2946",
     position: "fixed",
     borderRadius: "50%"
+  },
+  outsideLinks: {
+    textDecoration: "none",
+    fontWeight: "normal",
+    color: "Black"
   }
 }));
 
@@ -84,7 +91,7 @@ function Main() {
     <Grid className={classes.paperContainer}>
     <div className="AppBG">
       <Grid container className={classes.container}>
-      <Grid item xs={1} sm={1} md={2} lg={3} xl={3}></Grid> 
+      <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
         <Grid item className={classes.item} xs={11} sm={11} md={4} lg={3} xl={3}>
           <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
             Hi, I'm Luke!
@@ -94,12 +101,12 @@ function Main() {
           </Typography>
         </Grid>
         <Hidden mdUp>
-          <Grid item xs={1} sm={1}></Grid> 
+          <Grid item xs={1} sm={1}/>
         </Hidden>
         <Grid item xs={10} sm={10} md={4} lg={3} xl={3} align="center">
           <img className={classes.placer} src="/placer.png" alt="LHW logo"/>
         </Grid>
-        <Grid item xs={1} sm={1} md={2} lg={3} xl={3}></Grid>  
+        <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/>
       </Grid>
       <div className={classes.centeredItem}>
         <ArrowDownwardIcon className="downArrow bounce-7"/>
@@ -107,45 +114,52 @@ function Main() {
     </div>
     </Grid>
 
-    <div className={classes.circle}></div>
     <Grid container className={classes.secondContainer}>
-      <Grid item lg={2} xl={2}></Grid> 
+      <Grid item lg={2} xl={2}/>
       <Hidden mdDown>
         <Grid item className={classes.item} lg={2} xl={2} align="center">
         <IconButton aria-label="menu">
-          <img className={classes.icons} src="/github.png" alt="github logo"/>
+          <a target='_blank' href='https://github.com/LukeHW' className={classes.outsideLinks}>
+            <img className={classes.icons} src="/github.png" alt="github logo"/>
+          </a>
         </IconButton>
         </Grid>
       </Hidden>
       <Hidden lgUp>
-        <Grid item xs={1} sm={1} md={1}></Grid> 
+        <Grid item xs={1} sm={1} md={1}/>
       </Hidden>
       <Grid item className={classes.item} xs={10} sm={10} md={10} lg={4} xl={4} align="center">
         <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
           Feel free to add me on 
         <Hidden lgUp>
           <Typography className={classes.hidden} variant="h4" component="h2" gutterBottom>
-            Github
-            <img className={classes.iconsInline} src="/github.png" alt="github logo"/>
+            <a target='_blank' href='https://github.com/LukeHW' className={classes.outsideLinks}>
+              Github
+              <img className={classes.iconsInline} src="/github.png" alt="github logo"/>
+            </a>
           </Typography>
           <Typography className={classes.hidden} variant="h4" component="h2" gutterBottom>
-            LinkedIn
-            <img className={classes.iconsInline} src="/linkedin.png" alt="github logo"/>
+            <a target='_blank' href='https://www.linkedin.com/in/lukehw/' className={classes.outsideLinks}>
+              LinkedIn
+              <img className={classes.iconsInline} src="/linkedin.png" alt="linkedin logo"/>
+            </a>
           </Typography>
         </Hidden>
         </Typography>
       </Grid>
       <Hidden lgUp>
-        <Grid item xs={1} sm={1} md={1}></Grid> 
+        <Grid item xs={1} sm={1} md={1}/>
       </Hidden>
       <Hidden mdDown>
         <Grid item className={classes.item} lg={2} xl={2} align="center">
         <IconButton aria-label="menu">
-          <img className={classes.icons} src="/linkedin.png" alt="github logo"/>
+          <a target='_blank' href='https://www.linkedin.com/in/lukehw/' className={classes.outsideLinks}>
+            <img className={classes.icons} src="/linkedin.png" alt="linkedin logo"/>
+          </a>
         </IconButton>
         </Grid>
       </Hidden>
-      <Grid item lg={2} xl={2}></Grid>  
+      <Grid item lg={2} xl={2}/>  
     </Grid>
   </div>
   );
