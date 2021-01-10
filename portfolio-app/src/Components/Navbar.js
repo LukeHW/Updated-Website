@@ -1,3 +1,4 @@
+// import modules
 import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -7,6 +8,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
+// styles for Navbar.js
 const useStyles = makeStyles((theme) => ({
   navbarLogo: {
     minWidth: 70,
@@ -21,19 +23,42 @@ const useStyles = makeStyles((theme) => ({
     width: "100%"
   },
   link: {
-      fontWeight: "normal",
-      color: "White",
-      marginTop: 30,
-      textAlign: "center"
+    fontWeight: "normal",
+    color: "White",
+    marginTop: 30,
+    textAlign: "center"
   },
   menuIcon: {
-      fontSize: 55,
-      color: "white"
+    fontSize: 55,
+    color: "white"
+  },
+  menuBox: {
+    width: "100%",
+    height: "20vh",
+    position: "fixed",
+    zIndex: 100
+  },
+  menuContainer: {
+    width: "100%",
+    height: "20vh",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    position: "fixed",
+    marginTop: 84
+  },
+  menuLink: {
+    textDecoration: "none",
+    fontWeight: "normal",
+    color: "white",
+    fontsize: 55,
+    textAlign: "right",
+    marginRight: "5vmin",
+    marginTop: 25
   },
   navbarActive: {
-      backgroundColor: "rgba(0, 0, 0, 0.5)",
+      backgroundColor: "rgba(0, 0, 0, 0.7)",
+      backdropFilter: "blur(15px)",
       maxHeight: 200,
-      top:0,
+      top: 0,
       position: "fixed",
       zIndex: 100,
       width: "100%"
@@ -42,12 +67,19 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: "none",
       fontWeight: "normal",
       color: "White"
+  },
+  hide: {
+      visibility: "hidden"
+  },
+  show: {
+    visibility: "visible"
   }
 }));
 
 function Navbar() {
 
   const [navbar, setNavbar] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   const classes = useStyles();
 
@@ -57,6 +89,10 @@ function Navbar() {
       }else {
           setNavbar(false);
       }
+  };
+
+  const toggleDropdown = () => {
+    menu ? setMenu(false) : setMenu(true);
   };
 
   window.addEventListener('scroll', changeBackground)
@@ -90,15 +126,31 @@ function Navbar() {
                     </Grid>
                 </Hidden>
                 <Hidden mdUp>
-                    <Grid xs={7} sm={7}/>
-                    <Grid item className={classes.menuContainer} xs={2} sm={2}>
-                        <IconButton aria-label="menu">
+                    <Grid item xs={7} sm={7}/>
+                    <Grid item xs={2} sm={2}>
+                        <IconButton className={menu ? classes.hidden : classes.show} onClick={toggleDropdown} aria-label="menu">
                             <MenuIcon className={classes.menuIcon}/>
                         </IconButton>
                     </Grid>
                 </Hidden>
             </Grid>
         </div>
+
+        <Hidden mdUp>
+            <Grid container className={classes.menuContainer}>
+                <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
+                    <Typography variant="h5" component="h2" gutterBottom>
+                        <Link to="/Work" className={classes.menuLink}>Work</Link>
+                    </Typography>
+                    <Typography variant="h5" component="h2" gutterBottom>
+                        <Link to="/About" className={classes.menuLink}>About</Link>
+                    </Typography>
+                    <Typography variant="h5" component="h2" gutterBottom>
+                        <Link to="/Contact" className={classes.menuLink}>Contact</Link>
+                    </Typography>
+                </Grid>
+            </Grid>
+        </Hidden>
     </Router>
   );
 }
