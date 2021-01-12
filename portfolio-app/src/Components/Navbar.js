@@ -28,17 +28,21 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 30,
     textAlign: "center"
   },
-  menuIcon: {
-    fontSize: 55,
-    color: "white"
-  },
   menuBox: {
     width: "100%",
     height: "20vh",
     position: "fixed",
     zIndex: 100
   },
-  menuContainer: {
+  menuContainerHidden: {
+    width: "100%",
+    height: "20vh",
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    position: "fixed",
+    marginTop: 84,
+    display: "none"
+  },
+  menuContainerShown: {
     width: "100%",
     height: "20vh",
     backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -55,24 +59,33 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 25
   },
   navbarActive: {
-      backgroundColor: "rgba(0, 0, 0, 0.7)",
-      backdropFilter: "blur(15px)",
-      maxHeight: 200,
-      top: 0,
-      position: "fixed",
-      zIndex: 100,
-      width: "100%"
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backdropFilter: "blur(15px)",
+    maxHeight: 200,
+    top: 0,
+    position: "fixed",
+    zIndex: 100,
+    width: "100%"
   },
   navLinks: {
-      textDecoration: "none",
-      fontWeight: "normal",
-      color: "White"
+    textDecoration: "none",
+    fontWeight: "normal",
+    color: "White"
   },
   hide: {
-      visibility: "hidden"
+    padding: 0,
+    textAlign: "right",
+    marginTop: 15,
+    display: "none",
+    fontSize: 55,
+    color: "white"
   },
   show: {
-    visibility: "visible"
+    padding: 0,
+    textAlign: "right",
+    marginTop: 15,
+    fontSize: 55,
+    color: "white"
   }
 }));
 
@@ -127,9 +140,9 @@ function Navbar() {
                 </Hidden>
                 <Hidden mdUp>
                     <Grid item xs={7} sm={7}/>
-                    <Grid item xs={2} sm={2}>
-                        <IconButton className={menu ? classes.hidden : classes.show} onClick={toggleDropdown} aria-label="menu">
-                            <MenuIcon className={classes.menuIcon}/>
+                    <Grid item xs={1} sm={1}>
+                        <IconButton  onClick={toggleDropdown} aria-label="menu">
+                            <MenuIcon className={menu ? classes.hidden : classes.show}/>
                         </IconButton>
                     </Grid>
                 </Hidden>
@@ -137,7 +150,7 @@ function Navbar() {
         </div>
 
         <Hidden mdUp>
-            <Grid container className={classes.menuContainer}>
+            <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
                 <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
                     <Typography variant="h5" component="h2" gutterBottom>
                         <Link to="/Work" className={classes.menuLink}>Work</Link>
