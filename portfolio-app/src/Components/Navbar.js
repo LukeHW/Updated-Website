@@ -73,17 +73,11 @@ const useStyles = makeStyles((theme) => ({
     color: "White"
   },
   hide: {
-    padding: 0,
-    textAlign: "right",
-    marginTop: 15,
-    display: "none",
-    fontSize: 55,
-    color: "white"
+    display: "none"
   },
   show: {
     padding: 0,
-    textAlign: "right",
-    marginTop: 15,
+    textAlign: "left",
     fontSize: 55,
     color: "white"
   }
@@ -142,7 +136,7 @@ function Navbar() {
                     <Grid item xs={7} sm={7}/>
                     <Grid item xs={1} sm={1}>
                         <IconButton  onClick={toggleDropdown} aria-label="menu">
-                            <MenuIcon className={menu ? classes.hidden : classes.show}/>
+                            <MenuIcon className={menu ? classes.hide : classes.show}/>
                         </IconButton>
                     </Grid>
                 </Hidden>
