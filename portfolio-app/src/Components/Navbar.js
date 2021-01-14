@@ -4,16 +4,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import MenuIcon from '@material-ui/icons/Menu';
-import IconButton from '@material-ui/core/IconButton';
-import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Link} from "react-router-dom";
+import { Spin as Hamburger } from 'hamburger-react';
 
 // styles for Navbar.js
 const useStyles = makeStyles((theme) => ({
   navbarLogo: {
     minWidth: 70,
     maxWidth: 70,
-    marginTop: 10
+    marginTop: 7,
+    marginBottom: 3,
+    marginLeft: -15
   },
   navbarContainer: {
     maxHeight: 200,
@@ -35,28 +36,27 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 100
   },
   menuContainerHidden: {
-    width: "100%",
-    height: "20vh",
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
-    position: "fixed",
-    marginTop: 84,
     display: "none"
   },
   menuContainerShown: {
     width: "100%",
-    height: "20vh",
+    minHeight: "180px",
     backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backdropFilter: "blur(15px)",
     position: "fixed",
-    marginTop: 84
+    marginTop: 84,
+    zIndex: 100
   },
   menuLink: {
     textDecoration: "none",
-    fontWeight: "normal",
+    fontWeight: "lighter",
     color: "white",
-    fontsize: 55,
-    textAlign: "right",
-    marginRight: "5vmin",
-    marginTop: 25
+    fontSize: 25,
+    textAlign: "right"
+  },
+  menuLinkSpacer: {
+    marginRight: "10vmin",
+    marginTop: "15px"
   },
   navbarActive: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -72,14 +72,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "normal",
     color: "White"
   },
-  hide: {
-    display: "none"
-  },
-  show: {
-    padding: 0,
-    textAlign: "left",
-    fontSize: 55,
-    color: "white"
+  hamburger: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    height: "100%",
+    marginLeft: "1vmin"
   }
 }));
 
@@ -87,6 +85,8 @@ function Navbar() {
 
   const [navbar, setNavbar] = useState(false);
   const [menu, setMenu] = useState(false);
+
+  const [isOpen, setOpen] = useState(false);
 
   const classes = useStyles();
 
@@ -135,9 +135,9 @@ function Navbar() {
                 <Hidden mdUp>
                     <Grid item xs={7} sm={7}/>
                     <Grid item xs={1} sm={1}>
-                        <IconButton  onClick={toggleDropdown} aria-label="menu">
-                            <MenuIcon className={menu ? classes.hide : classes.show}/>
-                        </IconButton>
+                      <div className={classes.hamburger} onClick={toggleDropdown}>
+                        <Hamburger toggled={isOpen} toggle={setOpen} size={35} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
+                      </div>
                     </Grid>
                 </Hidden>
             </Grid>
@@ -146,13 +146,13 @@ function Navbar() {
         <Hidden mdUp>
             <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
                 <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
-                    <Typography variant="h5" component="h2" gutterBottom>
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/Work" className={classes.menuLink}>Work</Link>
                     </Typography>
-                    <Typography variant="h5" component="h2" gutterBottom>
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/About" className={classes.menuLink}>About</Link>
                     </Typography>
-                    <Typography variant="h5" component="h2" gutterBottom>
+                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
                         <Link to="/Contact" className={classes.menuLink}>Contact</Link>
                     </Typography>
                 </Grid>
@@ -163,3 +163,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
