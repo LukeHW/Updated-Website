@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuBox: {
     width: "100%",
-    height: "20vh",
+    height: 200,
     position: "fixed",
     zIndex: 100
   },
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuContainerShown: {
     width: "100%",
-    minHeight: "180px",
+    height: 200,
     backgroundColor: "rgba(0, 0, 0, 0.7)",
     backdropFilter: "blur(15px)",
     position: "fixed",
@@ -135,8 +135,8 @@ function Navbar() {
                 <Hidden mdUp>
                     <Grid item xs={7} sm={7}/>
                     <Grid item xs={1} sm={1}>
-                      <div className={classes.hamburger} onClick={toggleDropdown}>
-                        <Hamburger toggled={isOpen} toggle={setOpen} size={35} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
+                      <div className={classes.hamburger}>
+                        <Hamburger toggled={isOpen, menu} toggle={setOpen, setMenu} size={35} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
                       </div>
                     </Grid>
                 </Hidden>
