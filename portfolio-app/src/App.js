@@ -1,7 +1,7 @@
 // import modules
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // import styles
 import './App.css';
@@ -24,11 +24,22 @@ function App() {
 
   return (
     <div className="App">
-          <Navbar/>
-          <Page>
-            <Main/>
-          </Page>
-          <Footer/>
+      <Navbar/>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Page>
+              <Main/>
+            </Page>
+          </Route>
+          <Route path='/Work'>
+            <Page>
+              <Work/>
+            </Page>
+          </Route>
+        </Switch>
+        </Router>
+      <Footer/>
     </div>
   );
 }

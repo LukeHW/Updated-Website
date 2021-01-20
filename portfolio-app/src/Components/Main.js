@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import IconButton from '@material-ui/core/IconButton';
+import { withRouter } from "react-router";
 
 // import styles
 import './Main.css';
@@ -167,4 +168,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default withRouter(Main);
