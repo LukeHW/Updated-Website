@@ -12,6 +12,7 @@ import Main from './components/Main.js';
 import Work from './components/Work.js';
 import Footer from './components/Footer.js';
 import Page from './components/pageComponents/Page.js';
+import ScrollToTop from './components/pageComponents/Scroll.js';
 
 // styles for App.js
 const useStyles = makeStyles((theme) => ({
@@ -23,24 +24,25 @@ function App() {
   const classes = useStyles();
 
   return (
-    <div className="App">
-      <Navbar/>
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <Page>
-              <Main/>
-            </Page>
-          </Route>
-          <Route path='/Work'>
-            <Page>
-              <Work/>
-            </Page>
-          </Route>
-        </Switch>
-        </Router>
-      <Footer/>
-    </div>
+    <Router>
+      <ScrollToTop/>
+      <div className="App">
+        <Navbar/>
+          <Switch>
+            <Route exact path='/'>
+              <Page>
+                <Main/>
+              </Page>
+            </Route>
+            <Route exact path='/Work'>
+              <Page>
+                <Work/>
+              </Page>
+            </Route>
+          </Switch>
+        <Footer/>
+      </div>
+    </Router>
   );
 }
 

@@ -1,10 +1,10 @@
 // import modules
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import { BrowserRouter as Router, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Spin as Hamburger } from 'hamburger-react';
 
 // styles for Navbar.js
@@ -90,7 +90,7 @@ function Navbar() {
 
   const classes = useStyles();
 
-  const changeBackground = () => {
+  const changeNavbarBackground = () => {
       if(window.scrollY >= 80) {
           setNavbar(true);
       }else {
@@ -98,14 +98,10 @@ function Navbar() {
       }
   };
 
-  const toggleDropdown = () => {
-    menu ? setMenu(false) : setMenu(true);
-  };
-
-  window.addEventListener('scroll', changeBackground)
+  window.addEventListener('scroll', changeNavbarBackground);
 
   return (
-    <Router>
+    <div>
         <div className={navbar ? classes.navbarActive : classes.navbarContainer}>
             <Grid container className={classes.container}>
                 <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
@@ -158,7 +154,7 @@ function Navbar() {
                 </Grid>
             </Grid>
         </Hidden>
-    </Router>
+    </div>
   );
 }
 
