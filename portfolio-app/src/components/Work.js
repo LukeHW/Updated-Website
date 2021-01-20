@@ -11,7 +11,7 @@ import IconButton from '@material-ui/core/IconButton';
 import './Main.css';
 
 // import components
-import bg from '../blurredBG.jpg';
+import workBG from '../work-blurred-bg.jpg';
 
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between"
   },
   paperContainer: {
-    backgroundImage: `url(${bg})`,
+    backgroundImage: `url(${workBG})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundAttachment: "fixed"
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Main() {
+function Work() {
 
   const classes = useStyles();
 
@@ -131,16 +131,16 @@ function Main() {
         <Grid item xs={1} sm={1} md={1}/>
       </Hidden>
       <Grid item className={classes.item} xs={10} sm={10} md={10} lg={4} xl={4} align="center">
-        <Typography className={classes.title} variant="h1" gutterBottom>
+        <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
           Feel free to add me on 
         <Hidden lgUp>
-          <Typography className={classes.hidden} variant="h4" gutterBottom>
+          <Typography className={classes.hidden} variant="h4" component="h2" gutterBottom>
             <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.outsideLinks}>
               Github
               <img className={classes.iconsInline} src="/github.png" alt="github logo"/>
             </a>
           </Typography>
-          <Typography className={classes.hidden} variant="h4" gutterBottom>
+          <Typography className={classes.hidden} variant="h4" component="h2" gutterBottom>
             <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.outsideLinks}>
               LinkedIn
               <img className={classes.iconsInline} src="/linkedin.png" alt="linkedin logo"/>
@@ -167,4 +167,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Work;

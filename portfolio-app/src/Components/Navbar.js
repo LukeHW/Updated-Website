@@ -108,13 +108,13 @@ function Navbar() {
     <Router>
         <div className={navbar ? classes.navbarActive : classes.navbarContainer}>
             <Grid container className={classes.container}>
-                <Grid xs={1} sm={1} md={2} lg={3} xl={3}/> 
+                <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
                 <Grid item className={classes.logo} xs={1} sm={1} md={1} lg={1} xl={1} align="left">
                     <Link to="/" className={classes.navLinks}>
                         <img className={classes.navbarLogo} src="/favicon.png" alt="LHW logo"/>
                     </Link>
                 </Grid>
-                <Grid xs={1} sm={1} md={1} lg={2} xl={2}/>
+                <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/>
                 <Hidden smDown>
                     <Grid item className={classes.link} md={2} lg={1} xl={1}>
                         <Typography variant="h5" component="h2" gutterBottom>
