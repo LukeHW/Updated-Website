@@ -10,6 +10,8 @@ import './App.css';
 import Navbar from './components/Navbar.js';
 import Main from './components/Main.js';
 import Work from './components/Work.js';
+import About from './components/About.js';
+import Contact from './components/Contact.js';
 import Footer from './components/Footer.js';
 import Page from './components/pageComponents/Page.js';
 import ScrollToTop from './components/pageComponents/Scroll.js';
@@ -37,6 +39,16 @@ function App() {
             <Route exact path='/Work'>
               <Page>
                 <Work/>
+              </Page>
+            </Route>
+            <Route exact path='/About'>
+              <Page>
+                <About/>
+              </Page>
+            </Route>
+            <Route exact path='/Contact'>
+              <Page>
+                <Contact/>
               </Page>
             </Route>
           </Switch>

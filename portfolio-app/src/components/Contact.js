@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import IconButton from '@material-ui/core/IconButton';
-import { withRouter } from "react-router";
 
 // import components
 import workBG from '../work-blurred-bg.jpg';
@@ -79,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Work() {
+function Contact() {
 
   const classes = useStyles();
 
@@ -91,10 +90,10 @@ function Work() {
       <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
         <Grid item className={classes.item} xs={10} sm={10} md={8} lg={6} xl={6}>
           <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-            What I have worked on:
+            Contact me.
           </Typography>
           <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-            filler text
+            Or don't. Up to you.. I'm so lonely.
           </Typography>
         </Grid>
         <Hidden mdUp>
@@ -162,10 +161,10 @@ function Work() {
                 <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
                     <Grid item className={classes.item} xs={10} sm={10} md={8} lg={6} xl={6}>
                     <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-                        What I have worked on:
+                        So... you're interested?
                     </Typography>
                     <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-                        filler text
+                        I take it? Why else are you down this far?
                     </Typography>
                     </Grid>
                     <Hidden mdUp>
@@ -183,4 +182,4 @@ function Work() {
   );
 }
 
-export default withRouter(Work);
+export default Contact;
