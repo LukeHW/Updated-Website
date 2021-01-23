@@ -1,6 +1,6 @@
 // import modules
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, responsiveFontSizes } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -13,7 +13,7 @@ import workBG from '../work-blurred-bg.jpg';
 import Projects from './Projects.js';
 
 // styles for Main.js
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   container: {
     
   },
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontWeight: 700,
-    fontSize: 60
+    fontSize: 'min(8vw, 80px)'
   },
   greeting: {
     textAlign: "left"
@@ -105,27 +105,6 @@ function Work() {
       </Grid>
     </div>
     </Grid>
-
-    <Grid className={classes.paperContainer}>
-        <div className={classes.workWrapper}>
-            <Grid container className={classes.container}>
-                <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
-                    <Grid item className={classes.item} xs={10} sm={10} md={8} lg={6} xl={6}>
-                    <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-                        What I have worked on:
-                    </Typography>
-                    <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-                        filler text
-                    </Typography>
-                    </Grid>
-                    <Hidden mdUp>
-                    <Grid item xs={1} sm={1}/>
-                    </Hidden>
-                    <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/>
-            </Grid>
-        </div>
-    </Grid>
-
   </div>
   );
 }
