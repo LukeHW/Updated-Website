@@ -91,12 +91,17 @@ function Navbar() {
   const classes = useStyles();
 
   const changeNavbarBackground = () => {
-      if(window.scrollY >= 80) {
-          setNavbar(true);
-      }else {
-          setNavbar(false);
-      }
+    if(window.scrollY >= 80) {
+        setNavbar(true);
+    }else {
+        setNavbar(false);
+    }
   };
+
+  const handleDefault = () => {
+    setMenu(false);
+    setOpen(false);
+  }
 
   window.addEventListener('scroll', changeNavbarBackground);
 
@@ -107,7 +112,7 @@ function Navbar() {
                 <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
                 <Grid item className={classes.logo} xs={1} sm={1} md={1} lg={1} xl={1} align="left">
                     <Link to="/" className={classes.navLinks}>
-                        <img className={classes.navbarLogo} src="/favicon.png" alt="LHW logo"/>
+                        <img className={classes.navbarLogo} src="/favicon.png" alt="LHW logo" onClick={handleDefault}/>
                     </Link>
                 </Grid>
                 <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/>
@@ -143,13 +148,13 @@ function Navbar() {
             <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
                 <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/Work" className={classes.menuLink}>Work</Link>
+                        <Link to="/Work" className={classes.menuLink} onClick={handleDefault}>Work</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/About" className={classes.menuLink}>About</Link>
+                        <Link to="/About" className={classes.menuLink} onClick={handleDefault}>About</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/Contact" className={classes.menuLink}>Contact</Link>
+                        <Link to="/Contact" className={classes.menuLink} onClick={handleDefault}>Contact</Link>
                     </Typography>
                 </Grid>
             </Grid>

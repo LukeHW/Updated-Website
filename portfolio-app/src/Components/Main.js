@@ -60,7 +60,9 @@ const useStyles = makeStyles((theme) => ({
   item: {
     flexDirection: "column",
     justifyContent: "center",
-    display: "flex"
+    display: "flex",
+    marginTop: 100,
+    marginBottom: 50
   },
   secondContainer: {
     height: "100vh",
