@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'lighter',
     fontStyle: 'italic',
     marginTop: '-30px',
-    display: 'block'
+    display: 'inline-block'
   },
   body: {
     fontSize: 'min(6vw, 36px)',
