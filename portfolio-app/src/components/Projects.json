@@ -5,7 +5,7 @@
             "title": "Digi-Key Datasheet and URL fetcher",
             "subtitle": "Node Application",
             "body": "Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. ",
-            "images": ["/github.png", "/github.png", "/github.png"],
+            "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/DigiKey-Primary-Datasheet-and-URL-Fetcher", "secondLink"],
             "tags": ["javascript", "node", "4fun"],
             "yearCreated": 2020
@@ -15,7 +15,7 @@
             "title": "Common Files App",
             "subtitle": "Full-Stack Web Application",
             "body": "write whatever I would like for the body of project 2 to be",
-            "images": ["/github.png", "/github.png", "/github.png"],
+            "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/EMP-Shield-Technical-Documentation", "secondLink"],
             "tags": ["javascript", "html", "css", "react", "node", "adobe", "4fun"],
             "yearCreated": 2020
@@ -25,7 +25,7 @@
             "title": "Non-profit Organization Website",
             "subtitle": "Simple Information Website Hosted On AWS",
             "body": "write whatever I would like for the body of project 3 to be",
-            "images": ["/github.png", "/github.png", "/github.png"],
+            "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/Burlington-God-Store-House-Page", "secondLink"],
             "tags": ["javascript", "html", "css", "react"],
             "yearCreated": 2021
@@ -35,7 +35,7 @@
             "title": "This WeBsItE!!11!!!1!!!",
             "subtitle": "Portfolio Web Application Hosted On AWS",
             "body": "write whatever I would like for the body of project 4 to be",
-            "images": ["/github.png", "/github.png", "/github.png"],
+            "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/Updated-Website", "https://lukehw.com"],
             "tags": ["javascript", "html", "css", "react", "node", "adobe", "4fun"],
             "yearCreated": 2021
@@ -45,7 +45,7 @@
             "title": "Old Website?",
             "subtitle": "Unfinished Project Of What This Site Was Originally",
             "body": "write whatever I would like for the body of project 5 to be",
-            "images": ["/github.png", "/github.png", "/github.png"],
+            "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/Portfolio-Page", "secondLink"],
             "tags": ["javascript", "html", "css", "react", "node", "adobe", "4fun", "etc."],
             "yearCreated": 2018
@@ -55,7 +55,7 @@
             "title": "C Final Game",
             "subtitle": "Pretty Bad Story Game",
             "body": "write whatever I would like for the body of project 6 to be",
-            "images": ["/github.png", "/github.png", "/github.png"],
+            "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/CIS308_Final", "secondLink"],
             "tags": ["c", "schoolwork"],
             "yearCreated": 2020

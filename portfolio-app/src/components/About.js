@@ -161,10 +161,10 @@ function About() {
                 <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
                     <Grid item className={classes.item} xs={10} sm={10} md={8} lg={6} xl={6}>
                     <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-                        What I have worked on:
+                        Title
                     </Typography>
                     <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-                        filler text
+                        Subtitle
                     </Typography>
                     </Grid>
                     <Hidden mdUp>

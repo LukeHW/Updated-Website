@@ -170,4 +170,4 @@ function Main() {
   );
 }
 
-export default withRouter(Main);
+export default Main;

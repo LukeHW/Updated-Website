@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
   },
   title: {
     fontWeight: 700,
-    fontSize: 'min(8vw, 80px)'
+    fontSize: 'min(8vw, 70px)'
   },
   greeting: {
     textAlign: "left"
@@ -49,7 +49,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: 20
   },
   item: {
-    marginTop: 250
+    marginTop: "150px"
   },
   secondContainer: {
     height: "100vh",
@@ -92,7 +92,7 @@ function Work() {
       <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
         <Grid item className={classes.item} xs={10} sm={10} md={8} lg={6} xl={6}>
           <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-            What I have worked on:
+            Some of the projects that I have worked on:
           </Typography>
           <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
             <Projects/>
@@ -109,4 +109,4 @@ function Work() {
   );
 }
 
-export default withRouter(Work);
+export default Work;

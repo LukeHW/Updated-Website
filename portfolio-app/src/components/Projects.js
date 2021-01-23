@@ -18,13 +18,11 @@ import '../../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
 const useStyles = makeStyles((theme) => ({
   container: {
     width: "100%",
-    minHeight: "100vh",
     textAlign: "left"
   },
   project: {
-    marginBottom: "100px",
-    marginTop: 50,
-    color: "white"
+    marginBottom: 50,
+    marginTop: 50
   },
   projectNumber: {
     fontSize: 'min(8vw, 90px)'
@@ -32,21 +30,23 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: 'min(8vw, 60px)',
     fontWeight: 'bold',
-    display: 'block'
+    margin: 0
   },
   subtitle: {
-    fontSize: 'min(8vw, 50px)',
+    fontSize: 'min(8vw, 40px)',
     fontWeight: 'lighter',
     fontStyle: 'italic',
-    marginTop: '-30px',
-    display: 'inline-block'
+    marginTop: 0,
+    marginBottom: 0
   },
   body: {
-    fontSize: 'min(6vw, 36px)',
-    fontWeight: 'lighter'
+    fontSize: 'min(6vw, 25px)',
+    fontWeight: 'lighter',
+    marginTop: 0
   },
   images: {
-    maxWidth: '300px'
+    maxWidth: '200px',
+    textAlign: 'center'
   },
   links: {
     fontSize: 30
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   tags: {
     fontSize: 'min(6vw, 25px)',
     fontWeight: 'lighter',
-    marginTop: '-30px'
+    marginTop: 10
   },
   yearCreated: {
     fontSize: 20
@@ -69,16 +69,36 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
     marginLeft: '20px',
     marginBottom: '-2px'
+  },
+  item: {
+    margin: 0
+  },
+  shadow: {
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 0 18px 18px rgba(0, 0, 0, 0.7)",
+    color: "white",
+    padding: theme.spacing(3)
   }
 }))
 
-var carosel = document.querySelector('.glide');
+var sliders = document.querySelectorAll('.glide');
 
-if (carosel) {
-  var glide = new Glide('.glide').mount();
-
+for (var i = 0; i < sliders.length; i++) {
+  var glide = new Glide(sliders[i], {
+    breakpoints: {
+      1024: {
+        perview: 2
+      },
+      600: {
+        perView: 1
+      }
+    }
+  });
+  
   glide.mount();
 }
+
 
 function Projects() {
 
@@ -113,30 +133,42 @@ function Projects() {
     <div className={classes.container}>
         {projects.map((project, index) => {
           return <div className={classes.project} key={index}>
-                   <h1 className={classes.title}>
-                     {project.title}
-                     <a target="_blank" rel="noopener noreferrer" href={project.links[0]}><img src={project.images[0]} className={classes.inlineLink} alt="github img"/></a>
-                   </h1>
-                   <h3 className={classes.subtitle}>{project.subtitle} ({project.yearCreated})</h3>
-                   <h5 className={classes.tags}>Tech Stack: {project.tags.join(' ')}</h5>
-                   <h5 className={classes.body}>{project.body}</h5>
-
-                  <div className={classes.carosel}>
-                   <div className="glide">
-                    <div data-glide-el="track" className="glide__track">
-                      <ul className="glide__slides">
-                        <li className="glide__slide"><img src={project.images[0]} className={classes.images} alt="github img"/></li>
-                        <li className="glide__slide"><img src={project.images[1]} className={classes.images} alt="github img"/></li>
-                        <li className="glide__slide"><img src={project.images[2]} className={classes.images} alt="github img"/></li>
-                      </ul>
-                    </div>
-                    <div data-glide-el="controls">
-                      <button data-glide-dir="<">Back</button>
-                      <button data-glide-dir=">">Next</button>
-                    </div>
-                   </div>
+                  <div className={classes.shadow}>
+                    <Grid container className={classes.container}>
+                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                          <h1 className={classes.title}>
+                            {project.title}
+                            <a target="_blank" rel="noopener noreferrer" href={project.links[0]}><img src={project.images[0]} className={classes.inlineLink} alt="github img"/></a>
+                          </h1>
+                      </Grid>
+                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                          <h3 className={classes.subtitle}>{project.subtitle} ({project.yearCreated})</h3>
+                      </Grid>
+                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                          <h5 className={classes.tags}>Tech Stack: {project.tags.join(' ')}</h5>
+                      </Grid>
+                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                          <h5 className={classes.body}>{project.body}</h5>
+                      </Grid>
+                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                          <div className={classes.carosel}>
+                          <div className="glide">
+                            <div data-glide-el="track" className="glide__track">
+                              <ul className="glide__slides">
+                                <li className="glide__slide"><img src={project.images[0]} className={classes.images} alt="github img"/></li>
+                                <li className="glide__slide"><img src={project.images[1]} className={classes.images} alt="github img"/></li>
+                                <li className="glide__slide"><img src={project.images[2]} className={classes.images} alt="github img"/></li>
+                              </ul>
+                            </div>
+                            <div data-glide-el="controls">
+                              <button data-glide-dir="<">Back</button>
+                              <button data-glide-dir=">">Next</button>
+                            </div>
+                          </div>
+                          </div>
+                      </Grid>
+                    </Grid>
                   </div>
-
                  </div>
         })}
     </div>
