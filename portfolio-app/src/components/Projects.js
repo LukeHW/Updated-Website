@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   images: {
     maxWidth: '200px',
+    minHeight: '180px',
     textAlign: 'center'
   },
   links: {
@@ -76,7 +77,6 @@ const useStyles = makeStyles((theme) => ({
   shadow: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     backdropFilter: "blur(8px)",
-    boxShadow: "0 0 18px 18px rgba(0, 0, 0, 0.7)",
     color: "white",
     padding: theme.spacing(3)
   }
@@ -86,9 +86,14 @@ var sliders = document.querySelectorAll('.glide');
 
 for (var i = 0; i < sliders.length; i++) {
   var glide = new Glide(sliders[i], {
+    type: 'carousel',
+    perView: '4',
     breakpoints: {
-      1024: {
-        perview: 2
+      1701: {
+        perView: 3
+      },
+      1025: {
+        perView: 2
       },
       600: {
         perView: 1
@@ -145,7 +150,7 @@ function Projects() {
                           <h3 className={classes.subtitle}>{project.subtitle} ({project.yearCreated})</h3>
                       </Grid>
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                          <h5 className={classes.tags}>Tech Stack: {project.tags.join(' ')}</h5>
+                          <h5 className={classes.tags}>Tech Stack: {project.tags.join(', ')}</h5>
                       </Grid>
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                           <h5 className={classes.body}>{project.body}</h5>
@@ -161,7 +166,7 @@ function Projects() {
                               </ul>
                             </div>
                             <div data-glide-el="controls">
-                              <button data-glide-dir="<">Back</button>
+                              <button data-glide-dir="<">Prev</button>
                               <button data-glide-dir=">">Next</button>
                             </div>
                           </div>

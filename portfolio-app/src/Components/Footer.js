@@ -8,13 +8,13 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles((theme) => ({
   footerActive: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
-    height: 200,
+    height: 150,
     width: "100%"
   },
   footer: {
     color: "white",
     width: 300,
-    marginTop: 85,
+    marginTop: 65,
     fontSize: 20
   }
 }));

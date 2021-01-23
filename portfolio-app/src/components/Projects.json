@@ -5,9 +5,9 @@
             "title": "Digi-Key Datasheet and URL fetcher",
             "subtitle": "Node Application",
             "body": "Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. ",
-            "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
+            "images": ["/githubWhiteLogo.png", "/digiKey.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/DigiKey-Primary-Datasheet-and-URL-Fetcher", "secondLink"],
-            "tags": ["javascript", "node", "4fun"],
+            "tags": ["JavaScript", "Node.js", "4fun"],
             "yearCreated": 2020
         },
         {
@@ -17,7 +17,7 @@
             "body": "write whatever I would like for the body of project 2 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/EMP-Shield-Technical-Documentation", "secondLink"],
-            "tags": ["javascript", "html", "css", "react", "node", "adobe", "4fun"],
+            "tags": ["JavaScript", "HTML", "CSS", "React", "Node.js", "Adobe", "4fun"],
             "yearCreated": 2020
         },
         {
@@ -27,7 +27,7 @@
             "body": "write whatever I would like for the body of project 3 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/Burlington-God-Store-House-Page", "secondLink"],
-            "tags": ["javascript", "html", "css", "react"],
+            "tags": ["JavaScript", "HTML", "CSS", "React"],
             "yearCreated": 2021
         },
         {
@@ -37,7 +37,7 @@
             "body": "write whatever I would like for the body of project 4 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/Updated-Website", "https://lukehw.com"],
-            "tags": ["javascript", "html", "css", "react", "node", "adobe", "4fun"],
+            "tags": ["JavaScript", "HTML", "CSS", "React", "Node.js", "Adobe", "4fun"],
             "yearCreated": 2021
         },
         {
@@ -47,7 +47,7 @@
             "body": "write whatever I would like for the body of project 5 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/Portfolio-Page", "secondLink"],
-            "tags": ["javascript", "html", "css", "react", "node", "adobe", "4fun", "etc."],
+            "tags": ["JavaScript", "HTML", "CSS", "4fun"],
             "yearCreated": 2018
         },
         {
@@ -57,7 +57,7 @@
             "body": "write whatever I would like for the body of project 6 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "links": ["https://github.com/LukeHW/CIS308_Final", "secondLink"],
-            "tags": ["c", "schoolwork"],
+            "tags": ["C", "Undergraduate"],
             "yearCreated": 2020
         }
     ]

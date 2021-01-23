@@ -101,58 +101,7 @@ function Contact() {
         </Hidden>
         <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/>
       </Grid>
-      <div className={classes.centeredItem}>
-        <ArrowDownwardIcon className="downArrow bounce-7"/>
-      </div>
     </div>
-    </Grid>
-
-    <Grid container className={classes.secondContainer}>
-      <Grid item lg={2} xl={2}/>
-      <Hidden mdDown>
-        <Grid item className={classes.item} lg={2} xl={2} align="center">
-        <IconButton aria-label="menu">
-          <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.outsideLinks}>
-            <img className={classes.icons} src="/github.png" alt="github logo"/>
-          </a>
-        </IconButton>
-        </Grid>
-      </Hidden>
-      <Hidden lgUp>
-        <Grid item xs={1} sm={1} md={1}/>
-      </Hidden>
-      <Grid item className={classes.item} xs={10} sm={10} md={10} lg={4} xl={4} align="center">
-        <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-          Feel free to add me on 
-        <Hidden lgUp>
-          <Typography className={classes.hidden} variant="h4" component="h2" gutterBottom>
-            <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.outsideLinks}>
-              Github
-              <img className={classes.iconsInline} src="/github.png" alt="github logo"/>
-            </a>
-          </Typography>
-          <Typography className={classes.hidden} variant="h4" component="h2" gutterBottom>
-            <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.outsideLinks}>
-              LinkedIn
-              <img className={classes.iconsInline} src="/linkedin.png" alt="linkedin logo"/>
-            </a>
-          </Typography>
-        </Hidden>
-        </Typography>
-      </Grid>
-      <Hidden lgUp>
-        <Grid item xs={1} sm={1} md={1}/>
-      </Hidden>
-      <Hidden mdDown>
-        <Grid item className={classes.item} lg={2} xl={2} align="center">
-        <IconButton aria-label="menu">
-          <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.outsideLinks}>
-            <img className={classes.icons} src="/linkedin.png" alt="linkedin logo"/>
-          </a>
-        </IconButton>
-        </Grid>
-      </Hidden>
-      <Grid item lg={2} xl={2}/>  
     </Grid>
 
     <Grid className={classes.paperContainer}>
@@ -172,9 +121,6 @@ function Contact() {
                     </Hidden>
                     <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/>
                 </Grid>
-                <div className={classes.centeredItem}>
-                    <ArrowDownwardIcon className="downArrow bounce-7"/>
-                </div>
         </div>
     </Grid>
 

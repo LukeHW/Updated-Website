@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   menuContainerShown: {
     width: "100%",
     height: 200,
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backgroundColor: "rgba(20, 20, 20, 0.7)",
     backdropFilter: "blur(15px)",
     position: "fixed",
     marginTop: 84,
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuLinkSpacer: {
     marginRight: "10vmin",
-    marginTop: "15px"
+    marginTop: "22px"
   },
   navbarActive: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
