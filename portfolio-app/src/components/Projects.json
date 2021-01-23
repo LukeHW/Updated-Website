@@ -4,9 +4,10 @@
             "projectNumber": 0,
             "title": "Digi-Key Datasheet and URL fetcher",
             "subtitle": "Node Application",
-            "body": "Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. Write whatever I would like for the body of project 1 to be. ",
+            "body": "This Node App came to mind while browsing for Digi-Key parts. For each component that I had purchased, it would be nice to have a datasheet of the part I ordered. I forgot to download the datasheets after I purchased the components! I had either the manufacturer's part number, or Digi-Key's part number, but the problem was I had ordered 50-100 different parts. Entering each one into Digi-Key's search bar, trying to find the part, downloading the datasheet, and then grabbing the URL for the part for future use can take quite a bit of time to do manually. This App takes advantage of Digi-Key's API to search for part numbers and return the URL for the part (if found) as well as the datasheet for the part (if it exists). It then bundles everything into a directory. The root file holds a file named after each part number that was given, and each of those files have a shortcut to the component page on Digi-Key, as well as, the datasheet.",
             "images": ["/githubWhiteLogo.png", "/digiKey.png", "/githubWhiteLogo.png"],
-            "links": ["https://github.com/LukeHW/DigiKey-Primary-Datasheet-and-URL-Fetcher", "secondLink"],
+            "githubLink": "https://github.com/LukeHW/DigiKey-Primary-Datasheet-and-URL-Fetcher",
+            "hostedLink": "",
             "tags": ["JavaScript", "Node.js", "4fun"],
             "yearCreated": 2020
         },
@@ -16,7 +17,8 @@
             "subtitle": "Full-Stack Web Application",
             "body": "write whatever I would like for the body of project 2 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
-            "links": ["https://github.com/LukeHW/EMP-Shield-Technical-Documentation", "secondLink"],
+            "githubLink": "https://github.com/LukeHW/EMP-Shield-Technical-Documentation",
+            "hostedLink": "",
             "tags": ["JavaScript", "HTML", "CSS", "React", "Node.js", "Adobe", "4fun"],
             "yearCreated": 2020
         },
@@ -26,7 +28,8 @@
             "subtitle": "Simple Information Website Hosted On AWS",
             "body": "write whatever I would like for the body of project 3 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
-            "links": ["https://github.com/LukeHW/Burlington-God-Store-House-Page", "secondLink"],
+            "githubLink": "https://github.com/LukeHW/Burlington-God-Store-House-Page",
+            "hostedLink": "",
             "tags": ["JavaScript", "HTML", "CSS", "React"],
             "yearCreated": 2021
         },
@@ -36,7 +39,8 @@
             "subtitle": "Portfolio Web Application Hosted On AWS",
             "body": "write whatever I would like for the body of project 4 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
-            "links": ["https://github.com/LukeHW/Updated-Website", "https://lukehw.com"],
+            "githubLink": "https://github.com/LukeHW/Updated-Website",
+            "hostedLink": "https://lukehw.com",
             "tags": ["JavaScript", "HTML", "CSS", "React", "Node.js", "Adobe", "4fun"],
             "yearCreated": 2021
         },
@@ -46,7 +50,8 @@
             "subtitle": "Unfinished Project Of What This Site Was Originally",
             "body": "write whatever I would like for the body of project 5 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
-            "links": ["https://github.com/LukeHW/Portfolio-Page", "secondLink"],
+            "githubLink": "https://github.com/LukeHW/Portfolio-Page",
+            "hostedLink": "",
             "tags": ["JavaScript", "HTML", "CSS", "4fun"],
             "yearCreated": 2018
         },
@@ -56,7 +61,8 @@
             "subtitle": "Pretty Bad Story Game",
             "body": "write whatever I would like for the body of project 6 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
-            "links": ["https://github.com/LukeHW/CIS308_Final", "secondLink"],
+            "githubLink": "https://github.com/LukeHW/CIS308_Final",
+            "hostedLink": "",
             "tags": ["C", "Undergraduate"],
             "yearCreated": 2020
         }

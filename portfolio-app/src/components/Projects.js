@@ -124,11 +124,12 @@ function Projects() {
       let subtitle = cur.subtitle;
       let body = cur.body;
       let images = cur.images;
-      let links = cur.links;
+      let githubLink = cur.githubLink;
+      let hostedLink = cur.hostedLink;
       let tags = cur.tags;
       let yearCreated = cur.yearCreated;
   
-      projectArray.push({projectNumber, title, subtitle, body, images, links, tags, yearCreated});
+      projectArray.push({projectNumber, title, subtitle, body, images, githubLink, hostedLink, tags, yearCreated});
     }
     setProjects(projectArray);
   }, [])
@@ -143,7 +144,8 @@ function Projects() {
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                           <h1 className={classes.title}>
                             {project.title}
-                            <a target="_blank" rel="noopener noreferrer" href={project.links[0]}><img src={project.images[0]} className={classes.inlineLink} alt="github img"/></a>
+                            <a target="_blank" rel="noopener noreferrer" href={project.githubLink}><img src={project.images[0]} className={classes.inlineLink} alt="github img"/></a>
+                            {project.hostedLink.length < 1 ? null : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink}><img src={project.images[1]} className={classes.inlineLink} alt="github img"/></a>)}
                           </h1>
                       </Grid>
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
