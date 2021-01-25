@@ -33,14 +33,14 @@ const useStyles = makeStyles((theme) => ({
     margin: 0
   },
   subtitle: {
-    fontSize: 'min(8vw, 40px)',
+    fontSize: 'min(6vw, 40px)',
     fontWeight: 'lighter',
     fontStyle: 'italic',
     marginTop: 0,
     marginBottom: 0
   },
   body: {
-    fontSize: 'min(6vw, 25px)',
+    fontSize: 'min(4vw, 25px)',
     fontWeight: 'lighter',
     marginTop: 0
   },
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 30
   },
   tags: {
-    fontSize: 'min(6vw, 25px)',
+    fontSize: 'min(4vw, 25px)',
     fontWeight: 'lighter',
     marginTop: 10
   },
