@@ -145,7 +145,7 @@ function Projects() {
                           <h1 className={classes.title}>
                             {project.title}
                             <a target="_blank" rel="noopener noreferrer" href={project.githubLink}><img src={project.images[0]} className={classes.inlineLink} alt="github img"/></a>
-                            {project.hostedLink.length < 1 ? null : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink}><img src={project.images[1]} className={classes.inlineLink} alt="github img"/></a>)}
+                            {project.hostedLink === "" ? null : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink}><img src={project.images[1]} className={classes.inlineLink} alt="github img"/></a>)}
                           </h1>
                       </Grid>
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
