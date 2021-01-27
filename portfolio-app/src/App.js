@@ -19,6 +19,7 @@ import About from './components/About.js';
 import Contact from './components/Contact.js';
 import Footer from './components/Footer.js';
 import Page from './components/pageComponents/Page.js';
+import ScrollToTop from './components/pageComponents/Scroll.js';
 
 //import createHistory from "history/createBrowserHistory";
 
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop/>
           <Navbar/>
             <Switch>
               <Route exact path='/'>

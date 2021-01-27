@@ -29,19 +29,21 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: 'min(8vw, 60px)',
-    fontWeight: 'bold',
-    margin: 0
+    fontWeight: '400',
+    margin: 0,
+    fontFamily: 'Open Sans',
   },
   subtitle: {
     fontSize: 'min(6vw, 40px)',
     fontWeight: 'lighter',
     fontStyle: 'italic',
     marginTop: 0,
-    marginBottom: 0
+    marginBottom: 0,
+    fontFamily: 'Open Sans',
   },
   body: {
     fontSize: 'min(4vw, 25px)',
-    fontWeight: 'lighter',
+    fontWeight: 'normal',
     marginTop: 0
   },
   images: {
@@ -68,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
   inlineLink: {
     maxWidth: "min(6vw, 55px)",
     display: 'inline-block',
-    marginLeft: '20px',
+    marginLeft: '2%',
     marginBottom: '-2px'
   },
   item: {
@@ -82,39 +84,18 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-window.addEventListener('pagehide', function(){
-  let sliders = document.querySelectorAll('.glide');
-
-  for (let i = 0; i < sliders.length; i++) {
-    let glide = new Glide(sliders[i], {
-      type: 'carousel',
-      perView: '4',
-      breakpoints: {
-        1701: {
-          perView: 3
-        },
-        1025: {
-          perView: 2
-        },
-        600: {
-          perView: 1
-        }
-      },
-    });
-    glide.mount();
-  }
-})
-
-
 function Projects() {
 
   const classes = useStyles();
 
   const [projects, setProjects] = useState([]);
 
+  const [projMount, setProjMount] = useState(false);
+
   const projectArray = [];
 
   const currentProjectArray = ProjectsJSON.projects;
+
 
   useEffect(() => {
     for (let i in currentProjectArray) {
@@ -160,7 +141,7 @@ function Projects() {
                       </Grid>
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                           <div className={classes.carosel}>
-                          <div className="glide">
+                          <div className="glide" key={index}>
                             <div data-glide-el="track" className="glide__track">
                               <ul className="glide__slides">
                                 <li className="glide__slide"><img src={project.images[0]} className={classes.images} alt="github img"/></li>

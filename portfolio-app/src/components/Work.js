@@ -7,6 +7,7 @@ import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import IconButton from '@material-ui/core/IconButton';
 import { withRouter } from "react-router";
+import Glide from '@glidejs/glide';
 
 // import components
 import workBG from '../work-blurred-bg.jpg';
@@ -24,8 +25,8 @@ const useStyles = makeStyles(() => ({
     backgroundAttachment: "fixed"
   },
   title: {
-    fontWeight: 700,
-    fontSize: 'min(8vw, 70px)'
+    fontWeight: 400,
+    fontSize: 'min(10vw, 90px)'
   },
   greeting: {
     textAlign: "left"
@@ -75,7 +76,7 @@ const useStyles = makeStyles(() => ({
   workWrapper: {
     minHeight: '100vh',
     color: 'white',
-    fontFamily: 'Roboto',
+    fontFamily: 'Open Sans',
     alignItems: 'center'
   }
 }));
@@ -84,15 +85,41 @@ function Work() {
 
   const classes = useStyles();
 
+  const [mount, setMount] = useState(false);
+
+  useEffect(() => {
+    let sliders = document.querySelectorAll('.glide');
+
+    for (let i = 0; i < sliders.length; i++) {
+      let glide = new Glide(sliders[i], {
+        type: 'carousel',
+        perView: '4',
+        breakpoints: {
+          1700: {
+            perView: 3
+          },
+          1025: {
+            perView: 2
+          },
+          600: {
+            perView: 1
+          }
+        }
+      });
+      glide.mount();
+      setMount(true);
+    };
+  },[])
+
   return (
     <div className="App">
     <Grid className={classes.paperContainer}>
     <div className={classes.workWrapper}>
       <Grid container className={classes.container}>
-      <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
-        <Grid item className={classes.item} xs={10} sm={10} md={8} lg={6} xl={6}>
-          <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-            Some of the projects that I have worked on:
+      <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/> 
+        <Grid item className={classes.item} xs={10} sm={10} md={10} lg={8} xl={8}>
+          <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
+            Some of my work
           </Typography>
           <Typography variant="h4" component="h2" gutterBottom>
             <Projects/>
@@ -101,7 +128,7 @@ function Work() {
         <Hidden mdUp>
           <Grid item xs={1} sm={1}/>
         </Hidden>
-        <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/>
+        <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/>
       </Grid>
     </div>
     </Grid>

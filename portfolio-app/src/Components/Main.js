@@ -17,7 +17,8 @@ import bg from '../blurredBG.jpg';
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
   container: {
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    fontFamily: 'Open Sans',
   },
   paperContainer: {
     backgroundImage: `url(${bg})`,
@@ -26,19 +27,27 @@ const useStyles = makeStyles((theme) => ({
     backgroundAttachment: "fixed"
   },
   title: {
-    fontWeight: 700,
-    fontSize: 60,
-    color: "white"
+    fontWeight: 500,
+    fontSize: 'min(10vw, 90px)',
+    color: "white",
+    fontFamily: 'Open Sans',
   },
   greeting: {
+    fontWeight: 300,
+    fontSize: 'min(5vw, 40px)',
+    color: "white",
+    fontFamily: 'Open Sans',
     textAlign: "left"
   },
   placer: {
     width: "30vmin",
-    minWidth: 200,
+    minWidth: 200
+  },
+  placerContainer: {
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    display: "flex"
   },
   centeredItem: {
     bottom: "0px",
@@ -68,12 +77,14 @@ const useStyles = makeStyles((theme) => ({
   secondContainer: {
     height: "100vh",
     width: "100%",
-    backgroundColor: ('#171717')
+    backgroundColor: ('#171717'),
+    fontFamily: 'Open Sans',
   },
   hidden: {
     justifyContent: "center",
     display: "flex",
-    marginTop: 30
+    marginTop: 30,
+    fontFamily: 'Open Sans',
   },
   circle: {
     width: "80px",
@@ -85,7 +96,10 @@ const useStyles = makeStyles((theme) => ({
   outsideLinks: {
     textDecoration: "none",
     fontWeight: "normal",
-    color: "White"
+    color: "rgba(255, 255, 255)",
+    '&:hover': {
+      filter: 'contrast(50%)'
+    },
   }
 }));
 
@@ -98,8 +112,8 @@ function Main() {
     <Grid className={classes.paperContainer}>
     <div className="AppBG">
       <Grid container className={classes.container}>
-      <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
-        <Grid item className={classes.item} xs={11} sm={11} md={4} lg={3} xl={3}>
+      <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/> 
+        <Grid item className={classes.item} xs={11} sm={11} md={5} lg={4} xl={4}>
           <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
             Hi, I'm Luke!
           </Typography>
@@ -110,10 +124,10 @@ function Main() {
         <Hidden mdUp>
           <Grid item xs={1} sm={1}/>
         </Hidden>
-        <Grid item xs={10} sm={10} md={4} lg={3} xl={3} align="center">
+        <Grid item className={classes.placerContainer} xs={10} sm={10} md={5} lg={4} xl={4} align="center">
           <img className={classes.placer} src="/placer.png" alt="LHW logo"/>
         </Grid>
-        <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/>
+        <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/>
       </Grid>
       <div className={classes.centeredItem}>
         <ArrowDownwardIcon className="downArrow bounce-7"/>
@@ -125,11 +139,9 @@ function Main() {
       <Grid item lg={2} xl={2}/>
       <Hidden mdDown>
         <Grid item className={classes.item} lg={2} xl={2} align="center">
-        <IconButton aria-label="menu">
           <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.outsideLinks}>
             <img className={classes.icons} src="/githubWhiteLogo.png" alt="github logo"/>
           </a>
-        </IconButton>
         </Grid>
       </Hidden>
       <Hidden lgUp>
@@ -159,11 +171,9 @@ function Main() {
       </Hidden>
       <Hidden mdDown>
         <Grid item className={classes.item} lg={2} xl={2} align="center">
-        <IconButton aria-label="menu">
           <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.outsideLinks}>
             <img className={classes.icons} src="/linkedinWhiteLogo.png" alt="linkedin logo"/>
           </a>
-        </IconButton>
         </Grid>
       </Hidden>
       <Grid item lg={2} xl={2}/>  

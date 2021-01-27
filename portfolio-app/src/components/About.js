@@ -87,8 +87,8 @@ function About() {
     <Grid className={classes.paperContainer}>
     <div className={classes.workWrapper}>
       <Grid container className={classes.container}>
-      <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
-        <Grid item className={classes.item} xs={10} sm={10} md={8} lg={6} xl={6}>
+      <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/> 
+        <Grid item className={classes.item} xs={10} sm={10} md={10} lg={8} xl={8}>
           <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
             About me.
           </Typography>
@@ -99,7 +99,7 @@ function About() {
         <Hidden mdUp>
           <Grid item xs={1} sm={1}/>
         </Hidden>
-        <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/>
+        <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/>
       </Grid>
       <div className={classes.centeredItem}>
         <ArrowDownwardIcon className="downArrow bounce-7"/>

@@ -14,7 +14,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 70,
     marginTop: 7,
     marginBottom: 3,
-    marginLeft: -15
+    marginLeft: -15,
+    boxShadow: '0px 0px 5px 5px rgba(255, 255, 255, .2)',
+    '&:hover': {
+      boxShadow: '0px 0px 5px 5px rgba(255, 255, 255, .5)'
+    },
+    borderRadius: '50%'
   },
   navbarContainer: {
     maxHeight: 200,
@@ -25,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     fontWeight: "normal",
-    color: "White",
+    color: "rgba(255, 255, 255)",
     marginTop: 30,
     textAlign: "center"
   },
@@ -70,7 +75,10 @@ const useStyles = makeStyles((theme) => ({
   navLinks: {
     textDecoration: "none",
     fontWeight: "normal",
-    color: "White"
+    color: "rgba(255, 255, 255)",
+    '&:hover': {
+      color: 'rgba(180, 180, 180)'
+    },
   },
   hamburger: {
     flexDirection: "column",
@@ -109,13 +117,13 @@ function Navbar() {
     <div>
         <div className={navbar ? classes.navbarActive : classes.navbarContainer}>
             <Grid container className={classes.container}>
-                <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
+                <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/> 
                 <Grid item className={classes.logo} xs={1} sm={1} md={1} lg={1} xl={1} align="left">
                     <Link to="/" className={classes.navLinks}>
                         <img className={classes.navbarLogo} src="/favicon.png" alt="LHW logo" onClick={handleDefault}/>
                     </Link>
                 </Grid>
-                <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/>
+                <Grid item xs={1} sm={1} md={3} lg={4} xl={4}/>
                 <Hidden smDown>
                     <Grid item className={classes.link} md={2} lg={1} xl={1}>
                         <Typography variant="h5" component="h2" gutterBottom>
