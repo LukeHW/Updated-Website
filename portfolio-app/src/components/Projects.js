@@ -82,27 +82,28 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-var sliders = document.querySelectorAll('.glide');
+window.addEventListener('pagehide', function(){
+  let sliders = document.querySelectorAll('.glide');
 
-for (var i = 0; i < sliders.length; i++) {
-  var glide = new Glide(sliders[i], {
-    type: 'carousel',
-    perView: '4',
-    breakpoints: {
-      1701: {
-        perView: 3
+  for (let i = 0; i < sliders.length; i++) {
+    let glide = new Glide(sliders[i], {
+      type: 'carousel',
+      perView: '4',
+      breakpoints: {
+        1701: {
+          perView: 3
+        },
+        1025: {
+          perView: 2
+        },
+        600: {
+          perView: 1
+        }
       },
-      1025: {
-        perView: 2
-      },
-      600: {
-        perView: 1
-      }
-    }
-  });
-  
-  glide.mount();
-}
+    });
+    glide.mount();
+  }
+})
 
 
 function Projects() {
@@ -168,8 +169,8 @@ function Projects() {
                               </ul>
                             </div>
                             <div data-glide-el="controls">
-                              <button data-glide-dir="<">Prev</button>
-                              <button data-glide-dir=">">Next</button>
+                              <button className="glide__arrow glide__arrow--left" data-glide-dir="<">Prev</button>
+                              <button className="glide__arrow glide__arrow--right" data-glide-dir=">">Next</button>
                             </div>
                           </div>
                           </div>

@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontWeight: 700,
-    fontSize: 60
+    fontSize: 60,
+    color: "white"
   },
   greeting: {
     textAlign: "left"
@@ -66,7 +67,8 @@ const useStyles = makeStyles((theme) => ({
   },
   secondContainer: {
     height: "100vh",
-    width: "100%"
+    width: "100%",
+    backgroundColor: ('#171717')
   },
   hidden: {
     justifyContent: "center",
@@ -83,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
   outsideLinks: {
     textDecoration: "none",
     fontWeight: "normal",
-    color: "Black"
+    color: "White"
   }
 }));
 
@@ -125,7 +127,7 @@ function Main() {
         <Grid item className={classes.item} lg={2} xl={2} align="center">
         <IconButton aria-label="menu">
           <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.outsideLinks}>
-            <img className={classes.icons} src="/github.png" alt="github logo"/>
+            <img className={classes.icons} src="/githubWhiteLogo.png" alt="github logo"/>
           </a>
         </IconButton>
         </Grid>
@@ -140,13 +142,13 @@ function Main() {
           <Typography className={classes.hidden} variant="h4" gutterBottom>
             <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.outsideLinks}>
               Github
-              <img className={classes.iconsInline} src="/github.png" alt="github logo"/>
+              <img className={classes.iconsInline} src="/githubWhiteLogo.png" alt="github logo"/>
             </a>
           </Typography>
           <Typography className={classes.hidden} variant="h4" gutterBottom>
             <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.outsideLinks}>
               LinkedIn
-              <img className={classes.iconsInline} src="/linkedin.png" alt="linkedin logo"/>
+              <img className={classes.iconsInline} src="/linkedinWhiteLogo.png" alt="linkedin logo"/>
             </a>
           </Typography>
         </Hidden>
@@ -159,7 +161,7 @@ function Main() {
         <Grid item className={classes.item} lg={2} xl={2} align="center">
         <IconButton aria-label="menu">
           <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.outsideLinks}>
-            <img className={classes.icons} src="/linkedin.png" alt="linkedin logo"/>
+            <img className={classes.icons} src="/linkedinWhiteLogo.png" alt="linkedin logo"/>
           </a>
         </IconButton>
         </Grid>
