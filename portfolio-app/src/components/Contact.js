@@ -6,14 +6,16 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 
 // import components
 import workBG from '../work-blurred-bg.jpg';
+import Input from './Input.js';
 
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
   container: {
-    
+    fontFamily: 'Open Sans'
   },
   paperContainer: {
     backgroundImage: `url(${workBG})`,
@@ -22,8 +24,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundAttachment: "fixed"
   },
   title: {
-    fontWeight: 700,
-    fontSize: 60
+    fontWeight: 500,
+    fontSize: 60,
+    fontFamily: 'Open Sans'
   },
   greeting: {
     textAlign: "left"
@@ -73,8 +76,29 @@ const useStyles = makeStyles((theme) => ({
   workWrapper: {
     minHeight: '100vh',
     color: 'white',
-    fontFamily: 'Roboto',
+    fontFamily: 'Open Sans',
     alignItems: 'center'
+  },
+  inputContainer: {
+    flexGrow: 1
+  },
+  inputGrid: {
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    textAlign: 'center',
+    padding: '15px'
+  },
+  inputHeaders: {
+    textAlign: 'left',
+    color: 'white',
+    fontSize: '20px',
+    paddingLeft: 'inherit'
+  },
+  button: {
+    color: 'white',
+    backgroundColor: 'rgb(100, 100, 100)',
+    '&:hover': {
+      backgroundColor: 'rgb(150, 150, 150)'
+    }
   }
 }));
 
@@ -90,16 +114,27 @@ function Contact() {
       <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/> 
         <Grid item className={classes.item} xs={10} sm={10} md={10} lg={8} xl={8}>
           <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-            Contact me.
+            Contact me
           </Typography>
           <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-            Or don't. Up to you.. I'm so lonely.
+            Or don't. It's really up to you.
           </Typography>
         </Grid>
-        <Hidden mdUp>
-          <Grid item xs={1} sm={1}/>
-        </Hidden>
         <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/>
+        <div className={classes.inputContainer}>
+          <Grid container>
+            <Grid item xs/> 
+            <Grid item className={classes.inputGrid} xs={12} sm={12} md={10} lg={8} xl={8}>
+              <h5 className={classes.inputHeaders}>First and Last Name</h5>
+              <Input inputType='input' type='text' name='name' placeholder='Your Name'/>
+              <Input inputType='input' type='email' name='email' placeholder='Email Address'/>
+              <Input inputType='input' type='text' name='street' placeholder='Street Address'/>
+              <Input inputType='input' type='text' name='message' placeholder='Reason for contact'/>
+              <Button className={classes.button} placeholder='Send'>Send</Button>
+            </Grid>
+            <Grid item xs/> 
+          </Grid>
+        </div>
       </Grid>
     </div>
     </Grid>

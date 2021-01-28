@@ -107,9 +107,9 @@ function Work() {
         }
       });
       glide.mount();
-      setMount(true);
     };
-  },[])
+    setMount(true);
+  }, []);
 
   return (
     <div className="App">

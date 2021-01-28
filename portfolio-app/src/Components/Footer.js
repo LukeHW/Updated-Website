@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     width: 300,
     marginTop: 65,
-    fontSize: 20
+    fontSize: 20,
+    fontFamily: 'Open Sans'
   }
 }));
 
