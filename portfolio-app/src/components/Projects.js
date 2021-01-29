@@ -65,7 +65,8 @@ const useStyles = makeStyles((theme) => ({
   carosel: {
     diplay: 'flex',
     width: '100%',
-    textAlign: 'center'
+    textAlign: 'center',
+    overflow: 'hidden'
   },
   inlineLink: {
     maxWidth: "min(6vw, 55px)",
@@ -98,29 +99,21 @@ function Projects() {
 
 
   useEffect(() => {
-    for (let i in currentProjectArray) {
-      let cur = currentProjectArray[i];
-
-      let projectNumber = cur.projectNumber;
-      let title = cur.title;
-      let subtitle = cur.subtitle;
-      let body = cur.body;
-      let images = cur.images;
-      let githubLink = cur.githubLink;
-      let hostedLink = cur.hostedLink;
-      let tags = cur.tags;
-      let yearCreated = cur.yearCreated;
-  
-      projectArray.push({projectNumber, title, subtitle, body, images, githubLink, hostedLink, tags, yearCreated});
-    }
-    setProjects(projectArray);
+      for (const i in currentProjectArray) {
+        if(currentProjectArray[i]) {
+        const {projectNumber, title, subtitle, body, images, githubLink, hostedLink, tags, yearCreated} = currentProjectArray[i];
+    
+        projectArray.push({projectNumber, title, subtitle, body, images, githubLink, hostedLink, tags, yearCreated});
+        }
+      }
+      setProjects(projectArray);
   }, [])
 
 
   return (
     <div className={classes.container}>
         {projects.map((project, index) => {
-          return <div className={classes.project} key={index}>
+          return  <div className={classes.project} >
                   <div className={classes.shadow}>
                     <Grid container className={classes.container}>
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
@@ -141,7 +134,7 @@ function Projects() {
                       </Grid>
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                           <div className={classes.carosel}>
-                          <div className="glide" key={index}>
+                          <div className="glide" overflow="hidden">
                             <div data-glide-el="track" className="glide__track">
                               <ul className="glide__slides">
                                 <li className="glide__slide"><img src={project.images[0]} className={classes.images} alt="github img"/></li>
@@ -150,8 +143,8 @@ function Projects() {
                               </ul>
                             </div>
                             <div data-glide-el="controls">
-                              <button className="glide__arrow glide__arrow--left" data-glide-dir="<">Prev</button>
-                              <button className="glide__arrow glide__arrow--right" data-glide-dir=">">Next</button>
+                              <button type="button" className="glide__arrow glide__arrow--left" data-glide-dir="<">Prev</button>
+                              <button type="button" className="glide__arrow glide__arrow--right" data-glide-dir=">">Next</button>
                             </div>
                           </div>
                           </div>

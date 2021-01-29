@@ -6,12 +6,11 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import IconButton from '@material-ui/core/IconButton';
-import { withRouter } from "react-router";
 import Glide from '@glidejs/glide';
 
 // import components
 import workBG from '../work-blurred-bg.jpg';
-import Projects from './Projects.js';
+import Projects from './Projects';
 
 // styles for Main.js
 const useStyles = makeStyles(() => ({
@@ -88,26 +87,28 @@ function Work() {
   const [mount, setMount] = useState(false);
 
   useEffect(() => {
-    let sliders = document.querySelectorAll('.glide');
+    if (!mount) {
+      const sliders = document.querySelectorAll('.glide');
 
-    for (let i = 0; i < sliders.length; i++) {
-      let glide = new Glide(sliders[i], {
-        type: 'carousel',
-        perView: '4',
-        breakpoints: {
-          1700: {
-            perView: 3
-          },
-          1025: {
-            perView: 2
-          },
-          600: {
-            perView: 1
+      for (let i = 0; i < sliders.length; i+1) {
+        const glide = new Glide(sliders[i], {
+          type: 'carousel',
+          perView: '4',
+          breakpoints: {
+            1700: {
+              perView: 3
+            },
+            1025: {
+              perView: 2
+            },
+            600: {
+              perView: 1
+            }
           }
-        }
-      });
-      glide.mount();
-    };
+        });
+        glide.mount();
+      };
+    }
     setMount(true);
   }, []);
 

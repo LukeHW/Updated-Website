@@ -1,0 +1,13 @@
+{
+    "rules": {
+        "no-unused-vars": "warn",
+        "react/jsx-filename-extension": "off",
+        "no-undef": "off",
+        "no-sequences": "off",
+        "no-restricted-syntax": "warn",
+        "arrow-body-style": "warn",
+        "react/jsx-props-no-spreading": "off",
+        "prefer-const": "warn"
+    },
+    "extends": ["airbnb", "prettier", "prettier/react"]
+}

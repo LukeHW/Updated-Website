@@ -6,23 +6,21 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import { Link } from "react-router-dom";
 import { Spin as Hamburger } from 'hamburger-react';
+import ButtonBase from '@material-ui/core/ButtonBase';
+import Button from '@material-ui/core/Button';
+import Avatar from "@material-ui/core/Avatar";
 
 // styles for Navbar.js
 const useStyles = makeStyles((theme) => ({
   navbarLogo: {
-    minWidth: 70,
-    maxWidth: 70,
-    marginTop: 7,
+    width: 70,
+    height: 70,
     marginBottom: 3,
-    marginLeft: -15,
-    boxShadow: '0px 0px 5px 5px rgba(255, 255, 255, .2)',
-    '&:hover': {
-      boxShadow: '0px 0px 5px 5px rgba(255, 255, 255, .5)'
-    },
-    borderRadius: '50%'
+    borderRadius: '50%',
+    marginLeft: 15
   },
   navbarContainer: {
-    maxHeight: 200,
+    height: 200,
     top:0,
     position: "fixed",
     zIndex: 100,
@@ -49,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(20, 20, 20, 0.7)",
     backdropFilter: "blur(15px)",
     position: "fixed",
-    marginTop: 84,
+    marginTop: 80,
     zIndex: 100
   },
   menuLink: {
@@ -66,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
   navbarActive: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
     backdropFilter: "blur(15px)",
-    maxHeight: 200,
+    height: 80,
     top: 0,
     position: "fixed",
     zIndex: 100,
@@ -85,7 +83,20 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     display: "flex",
     height: "100%",
-    marginLeft: "1vmin"
+    marginLeft: "1vmin",
+    marginTop: 2
+  },
+  navButton: {
+    margin: 0,
+    marginTop: 5,
+    padding: 0,
+    borderRadius: '50%',
+    width: 70,
+    height: 70,
+    boxShadow: '0px 0px 5px 5px rgba(255, 255, 255, .2)',
+    '&:hover': {
+      boxShadow: '0px 0px 5px 5px rgba(255, 255, 255, .5)'
+    }
   }
 }));
 
@@ -118,9 +129,9 @@ function Navbar() {
         <div className={navbar ? classes.navbarActive : classes.navbarContainer}>
             <Grid container className={classes.container}>
                 <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/> 
-                <Grid item className={classes.logo} xs={1} sm={1} md={1} lg={1} xl={1} align="left">
-                    <Link to="/" className={classes.navLinks}>
-                        <img className={classes.navbarLogo} src="/favicon.png" alt="LHW logo" onClick={handleDefault}/>
+                <Grid item className={classes.logo} xs={1} sm={1} md={1} lg={1} xl={1}>
+                    <Link to="/">
+                        <Button className={classes.navButton} startIcon={<Avatar className={classes.navbarLogo} src="/favicon.png" />} alt="LHW logo" onClick={handleDefault} />
                     </Link>
                 </Grid>
                 <Grid item xs={1} sm={1} md={3} lg={4} xl={4}/>
@@ -145,7 +156,7 @@ function Navbar() {
                     <Grid item xs={7} sm={7}/>
                     <Grid item xs={1} sm={1}>
                       <div className={classes.hamburger}>
-                        <Hamburger toggled={isOpen, menu} toggle={setOpen, setMenu} size={35} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
+                        <Hamburger toggled={isOpen, menu}  toggle={setOpen, setMenu} size={35} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
                       </div>
                     </Grid>
                 </Hidden>

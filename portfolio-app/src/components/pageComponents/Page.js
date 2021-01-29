@@ -1,3 +1,5 @@
+/* eslint react/prop-types: 0 */
+
 // import modules
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
@@ -14,9 +16,11 @@ function Page(props) {
 
   const classes = useStyles();
 
+  const { children } = props;
+
   return (
    <div className={classes.pageContainer}>
-     {props.children}
+     {children}
    </div>
   );
 }
