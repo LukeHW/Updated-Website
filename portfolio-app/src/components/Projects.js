@@ -7,6 +7,7 @@ import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import IconButton from '@material-ui/core/IconButton';
 import Glide from '@glidejs/glide';
+import Skeleton from 'react-loading-skeleton';
 
 // import json Projects object
 import ProjectsJSON from './Projects.json';
@@ -22,7 +23,9 @@ const useStyles = makeStyles((theme) => ({
   },
   project: {
     marginBottom: 50,
-    marginTop: 50
+    marginTop: 50,
+    marginLeft: 10,
+    marginRight: 10
   },
   projectNumber: {
     fontSize: 'min(8vw, 90px)'
@@ -137,7 +140,7 @@ function Projects() {
       }
       setProjects(projectArray);
 
-      console.log("projects are set");
+      console.log("projects are set in state");
 
       setProjMount(true);
       mountGlider();
@@ -146,7 +149,7 @@ function Projects() {
   return (
     <div className={classes.container}>
         {projects.map((project, index) => {
-          console.log(index)
+          console.log("rendering project", index)
           return  <div className={classes.project} >
                   <div className={classes.shadow}>
                     <Grid container className={classes.container}>
@@ -164,7 +167,7 @@ function Projects() {
                           <h5 className={classes.tags}>Tech Stack: {project.tags.join(', ')}</h5>
                       </Grid>
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                          <h5 className={classes.body}>{project.body}</h5>
+                          <h5 className={classes.body}>{project.body || <Skeleton count={10} />}</h5>
                       </Grid>
                       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                           <div className={classes.carosel}>
