@@ -1,5 +1,5 @@
 // import modules
-import React, { useEffect, useState, componentDidMount } from 'react';
+import React, { useEffect, useState, componentDidUpdate } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -97,6 +97,35 @@ function Projects() {
 
   const currentProjectArray = ProjectsJSON.projects;
 
+  const mountGlider = () => {
+    if (projMount) {
+      const sliders = document.querySelectorAll('.glide');
+      let glide = null;
+
+      const promise = new Promise((res, rej) => {
+        sliders.forEach((slider) => {
+          glide = new Glide(slider, {
+            type: 'carousel',
+            perView: '4',
+            breakpoints: {
+              1700: {
+                perView: 3
+              },
+              1025: {
+                perView: 2
+              },
+              600: {
+                perView: 1
+              }
+            }
+          })
+          console.log(slider)
+          res("promise resolved")
+        })
+      }).then(() => glide.mount());
+    };
+    console.log("glide mounted")
+  }
 
   useEffect(() => {
       for (const i in currentProjectArray) {
@@ -107,12 +136,17 @@ function Projects() {
         }
       }
       setProjects(projectArray);
-  }, [])
 
+      console.log("projects are set");
+
+      setProjMount(true);
+      mountGlider();
+  }, []);
 
   return (
     <div className={classes.container}>
         {projects.map((project, index) => {
+          console.log(index)
           return  <div className={classes.project} >
                   <div className={classes.shadow}>
                     <Grid container className={classes.container}>

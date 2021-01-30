@@ -84,34 +84,6 @@ function Work() {
 
   const classes = useStyles();
 
-  const [mount, setMount] = useState(false);
-
-  useEffect(() => {
-    if (!mount) {
-      const sliders = document.querySelectorAll('.glide');
-
-      for (let i = 0; i < sliders.length; i+1) {
-        const glide = new Glide(sliders[i], {
-          type: 'carousel',
-          perView: '4',
-          breakpoints: {
-            1700: {
-              perView: 3
-            },
-            1025: {
-              perView: 2
-            },
-            600: {
-              perView: 1
-            }
-          }
-        });
-        glide.mount();
-      };
-    }
-    setMount(true);
-  }, []);
-
   return (
     <div className="App">
     <Grid className={classes.paperContainer}>
