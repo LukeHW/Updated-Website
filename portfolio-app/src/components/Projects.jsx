@@ -1,11 +1,7 @@
 // import modules
-import React, { useEffect, useState, componentDidUpdate } from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import IconButton from '@material-ui/core/IconButton';
 import Glide from '@glidejs/glide';
 import Skeleton from 'react-loading-skeleton';
 

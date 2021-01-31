@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import IconButton from '@material-ui/core/IconButton';
 
 // import styles
 import './Main.css';
@@ -14,7 +13,7 @@ import './Main.css';
 import bg from '../blurredBG.jpg';
 
 // styles for Main.js
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   container: {
     justifyContent: "space-between",
     fontFamily: 'Open Sans',

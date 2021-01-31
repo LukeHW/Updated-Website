@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // styles for Page.js
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   pageContainer: {
     minHeight: "200vh",
     width: "100%"
