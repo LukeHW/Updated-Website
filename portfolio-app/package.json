@@ -9,9 +9,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "chai": "^4.2.0",
     "hamburger-react": "^2.4.0",
-    "mocha": "^8.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-loading-skeleton": "^2.1.1",
@@ -25,7 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "SET NODE_ENV=test& mocha --require @babel/register --require ignore-styles src/test/*.test.js",
+    "mocha": "mocha || true",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -47,12 +46,27 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "@babel/register": "^7.12.10",
+    "babel-core": "^6.26.3",
+    "babel-plugin-inline-react-svg": "^1.1.2",
+    "babel-preset-react-app-babel-7": "^4.0.2-0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-enzyme": "^1.0.0-beta.1",
+    "cheerio": "^1.0.0-rc.5",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
+    "ignore-styles": "^5.0.1",
+    "mocha": "^8.2.1",
     "prettier": "^2.2.1"
   }
 }
