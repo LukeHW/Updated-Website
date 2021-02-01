@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-boolean-value */
+/* eslint-disable react/jsx-filename-extension */
 // import modules
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Glide from '@glidejs/glide';
-import Skeleton from 'react-loading-skeleton';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 // import json Projects object
 import ProjectsJSON from './Projects.json';
@@ -70,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   inlineLink: {
     maxWidth: "min(6vw, 55px)",
     display: 'inline-block',
-    marginLeft: '2%',
+    marginLeft: '10px',
     marginBottom: '-2px'
   },
   item: {
@@ -81,6 +83,11 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: "blur(8px)",
     color: "white",
     padding: theme.spacing(3)
+  },
+  inlineSkeleton: {
+    display: 'inline-block',
+    marginLeft: '1%',
+    marginBottom: '2%'
   }
 }))
 
@@ -101,28 +108,26 @@ function Projects() {
       const sliders = document.querySelectorAll('.glide');
       let glide = null;
 
-      const promise = new Promise((res, rej) => {
-        sliders.forEach((slider) => {
-          glide = new Glide(slider, {
-            type: 'carousel',
-            perView: '4',
-            breakpoints: {
-              1700: {
-                perView: 3
-              },
-              1025: {
-                perView: 2
-              },
-              600: {
-                perView: 1
-              }
+      sliders.forEach((slider) => {
+        glide = new Glide(slider, {
+          type: 'carousel',
+          perView: '4',
+          breakpoints: {
+            1700: {
+              perView: 3
+            },
+            1025: {
+              perView: 2
+            },
+            600: {
+              perView: 1
             }
-          })
-          console.log(slider)
-          res("promise resolved")
+          }
         })
-      }).then(() => glide.mount());
-    };
+        console.log(slider)
+      })
+      glide.mount();
+    }
     console.log("glide mounted")
   }
 
@@ -145,46 +150,60 @@ function Projects() {
   return (
     <div className={classes.container}>
         {projects.map((project, index) => {
+          const subTitle = project.subtitle.concat(` (${project.yearCreated})`);
+          const tags = 'Tech Stack: '.concat(`${project.tags.join(', ')}`);
+          const githubLink = (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink}><img src={project.images[0]} className={classes.inlineLink} alt="github img"/></a>);
+          const hostedLink = project.hostedLink === "" ? (<div/>) : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink}><img src={project.images[1]} className={classes.inlineLink} alt="github img"/></a>);
+
           console.log("rendering project", index)
-          return  <div className={classes.project} >
-                  <div className={classes.shadow}>
-                    <Grid container className={classes.container}>
-                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                          <h1 className={classes.title}>
-                            {project.title}
-                            <a target="_blank" rel="noopener noreferrer" href={project.githubLink}><img src={project.images[0]} className={classes.inlineLink} alt="github img"/></a>
-                            {project.hostedLink === "" ? null : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink}><img src={project.images[1]} className={classes.inlineLink} alt="github img"/></a>)}
-                          </h1>
-                      </Grid>
-                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                          <h3 className={classes.subtitle}>{project.subtitle} ({project.yearCreated})</h3>
-                      </Grid>
-                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                          <h5 className={classes.tags}>Tech Stack: {project.tags.join(', ')}</h5>
-                      </Grid>
-                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                          <h5 className={classes.body}>{project.body || <Skeleton count={10} />}</h5>
-                      </Grid>
-                      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                          <div className={classes.carosel}>
-                          <div className="glide" overflow="hidden">
-                            <div data-glide-el="track" className="glide__track">
-                              <ul className="glide__slides">
-                                <li className="glide__slide"><img src={project.images[0]} className={classes.images} alt="github img"/></li>
-                                <li className="glide__slide"><img src={project.images[1]} className={classes.images} alt="github img"/></li>
-                                <li className="glide__slide"><img src={project.images[2]} className={classes.images} alt="github img"/></li>
-                              </ul>
+
+          return  <div className={classes.project}>
+                    <div className={classes.shadow}>
+                    <SkeletonTheme color="#111111" highlightColor="#222222">
+                      <Grid container className={classes.container}>
+                        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                            <h1 className={classes.title}>
+                              {project.title || <Skeleton count={1} duration={2.5} width="50%" />}
+                              {githubLink || <Skeleton circle={true} duration={2.5} height={60} width={60} className={classes.inlineSkeleton} />}
+                              {hostedLink || <Skeleton circle={true} duration={2.5} height={60} width={60} className={classes.inlineSkeleton} />}
+                            </h1>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                            <h3 className={classes.subtitle}>
+                              {subTitle || <Skeleton count={1} duration={2.5} width="30%" />}
+                            </h3>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                            <h5 className={classes.tags}>
+                              {tags || <Skeleton count={1} duration={2.5} width="40%" />}
+                            </h5>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                            <h5 className={classes.body}>
+                                {project.body || <Skeleton count={10} duration={2.5} height={30} />}
+                            </h5>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                            <div className={classes.carosel}>
+                            <div className="glide" overflow="hidden">
+                              <div data-glide-el="track" className="glide__track">
+                                <ul className="glide__slides">
+                                  <li className="glide__slide"><img src={project.images[0]} className={classes.images} alt="github img"/></li>
+                                  <li className="glide__slide"><img src={project.images[1]} className={classes.images} alt="github img"/></li>
+                                  <li className="glide__slide"><img src={project.images[2]} className={classes.images} alt="github img"/></li>
+                                </ul>
+                              </div>
+                              <div data-glide-el="controls">
+                                <button type="button" className="glide__arrow glide__arrow--left" data-glide-dir="<">Prev</button>
+                                <button type="button" className="glide__arrow glide__arrow--right" data-glide-dir=">">Next</button>
+                              </div>
                             </div>
-                            <div data-glide-el="controls">
-                              <button type="button" className="glide__arrow glide__arrow--left" data-glide-dir="<">Prev</button>
-                              <button type="button" className="glide__arrow glide__arrow--right" data-glide-dir=">">Next</button>
                             </div>
-                          </div>
-                          </div>
+                        </Grid>
                       </Grid>
-                    </Grid>
+                    </SkeletonTheme>
+                    </div>
                   </div>
-                 </div>
         })}
     </div>
   );
