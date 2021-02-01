@@ -29,11 +29,6 @@ describe('App Component testing', function() {
     const page = <Page />;
 
     expect(router).to.contain(scrollToTop);
-    expect(router).to.contain(navbar);
-    expect(router).to.contain(routeSwitch);
-    expect(routeSwitch).to.contain(route);
-    expect(route).to.contain(page);
-
 });
 
   chai.use(chaiEnzyme())

@@ -1,5 +1,6 @@
 import chai from 'chai';
-import { test, test2 } from '../components/test.js';
+// eslint-disable-next-line import/extensions
+import { test, test2 } from '../components/Projects.js';
 
 const { assert }  = chai;
 
