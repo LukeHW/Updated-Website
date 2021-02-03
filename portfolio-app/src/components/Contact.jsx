@@ -125,10 +125,10 @@ function Contact() {
                 <Grid item xs /> 
                 <Grid item className={classes.inputGrid} xs={12} sm={12} md={10} lg={8} xl={8}>
                   <h5 className={classes.inputHeaders}>First and Last Name</h5>
-                  <Input inputType='input' type='text' name='name' placeholder='Your Name' />
-                  <Input inputType='input' type='email' name='email' placeholder='Email Address' />
-                  <Input inputType='input' type='text' name='street' placeholder='Street Address' />
-                  <Input inputType='input' type='text' name='message' placeholder='Reason for contact' />
+                  <Input inputtype='input' type='text' name='name' placeholder='Your Name' />
+                  <Input inputtype='input' type='email' name='email' placeholder='Email Address' />
+                  <Input inputtype='input' type='text' name='street' placeholder='Street Address' />
+                  <Input inputtype='input' type='text' name='message' placeholder='Reason for contact' />
                   <Button className={classes.button} placeholder='Send'>Send</Button>
                 </Grid>
                 <Grid item xs /> 

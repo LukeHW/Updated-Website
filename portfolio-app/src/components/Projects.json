@@ -14,8 +14,8 @@
         {
             "projectNumber": 1,
             "title": "Common Files App",
-            "subtitle": "Full-Stack Web Application",
-            "body": "write whatever I would like for the body of project 2 to be",
+            "subtitle": "Full Stack Web Application",
+            "body": "This AWS-hosted web app was made with the intention to distribute common files to those who are given access. Some files are too large and cannot be sent to someone over e-mail, so it would be nice to be able to have one place where they could go view all your hosted files. They can browse and search files, select the ones they want to download, and then they can view them afterwards. Made with React, Node, and lots of JavaScript; this was my first real attempt at a full stack web application. It is not perfect by any means, but I learned a lot by building it myself.",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/EMP-Shield-Technical-Documentation",
             "hostedLink": "",

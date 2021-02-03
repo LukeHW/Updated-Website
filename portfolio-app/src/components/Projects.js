@@ -17,7 +17,8 @@ import '../../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
 const useStyles = makeStyles((theme) => ({
   container: {
     width: "100%",
-    textAlign: "left"
+    textAlign: 'left',
+    maxWidth: '1300px'
   },
   project: {
     marginBottom: 50,
@@ -82,7 +83,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     backdropFilter: "blur(8px)",
     color: "white",
-    padding: theme.spacing(3)
+    padding: theme.spacing(3),
+    borderRadius: '5px'
   },
   inlineSkeleton: {
     display: 'inline-block',

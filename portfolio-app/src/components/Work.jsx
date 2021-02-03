@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 // import components
-import workBG from '../work-blurred-bg.jpg';
+import workBG from '../lost-sky-bg.jpg';
 import Projects from './Projects';
 
 // styles for Main.js
@@ -85,19 +85,19 @@ function Work() {
     <Grid className={classes.paperContainer}>
     <div className={classes.workWrapper}>
       <Grid container className={classes.container}>
-      <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/> 
-        <Grid item className={classes.item} xs={12} sm={12} md={10} lg={8} xl={8}>
-          <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
+      <Grid item xs="auto" sm="auto" md="auto" lg="auto" xl="auto"/> 
+        <Grid item className={classes.item} xs={12} sm={12} md={10} lg={8} xl={8} align='center'>
+          <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
             Some of my work
           </Typography>
           <Typography variant="h4" component="h2" gutterBottom>
-            <Projects/>
+            <Projects />
           </Typography>
         </Grid>
         <Hidden mdUp>
           <Grid item xs={1} sm={1}/>
         </Hidden>
-        <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/>
+        <Grid item xs="auto" sm="auto" md="auto" lg="auto" xl="auto"/>
       </Grid>
     </div>
     </Grid>

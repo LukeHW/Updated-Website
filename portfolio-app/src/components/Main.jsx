@@ -83,6 +83,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     marginTop: 30,
     fontFamily: 'Open Sans',
+    fontSize: 30
   },
   circle: {
     width: "80px",
@@ -97,7 +98,7 @@ const useStyles = makeStyles(() => ({
     color: "rgba(255, 255, 255)",
     '&:hover': {
       filter: 'contrast(50%)'
-    },
+    }
   }
 }));
 
@@ -149,18 +150,18 @@ function Main() {
           <Typography className={classes.title} variant="h1" gutterBottom>
             Feel free to add me on 
             <Hidden lgUp>
-              <Typography className={classes.hidden} variant="h4" gutterBottom>
+              <div className={classes.hidden}>
                 <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.outsideLinks}>
                   Github
                   <img className={classes.iconsInline} src="/githubWhiteLogo.png" alt="github logo" />
                 </a>
-              </Typography>
-              <Typography className={classes.hidden} variant="h4" gutterBottom>
+              </div>
+              <div className={classes.hidden}>
                 <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.outsideLinks}>
                   LinkedIn
                   <img className={classes.iconsInline} src="/linkedinWhiteLogo.png" alt="linkedin logo" />
                 </a>
-              </Typography>
+              </div>
             </Hidden>
           </Typography>
         </Grid>
