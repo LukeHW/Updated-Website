@@ -85,7 +85,7 @@ function Work() {
     <Grid className={classes.paperContainer}>
     <div className={classes.workWrapper}>
       <Grid container className={classes.container}>
-      <Grid item xs="auto" sm="auto" md="auto" lg="auto" xl="auto"/> 
+      <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/> 
         <Grid item className={classes.item} xs={12} sm={12} md={10} lg={8} xl={8} align='center'>
           <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
             Some of my work
@@ -97,7 +97,7 @@ function Work() {
         <Hidden mdUp>
           <Grid item xs={1} sm={1}/>
         </Hidden>
-        <Grid item xs="auto" sm="auto" md="auto" lg="auto" xl="auto"/>
+        <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/>
       </Grid>
     </div>
     </Grid>
