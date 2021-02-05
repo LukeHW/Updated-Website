@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 'min(8vw, 60px)',
     fontWeight: '400',
     margin: 0,
+    marginBottom: 10,
     fontFamily: 'Open Sans',
   },
   subtitle: {
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'lighter',
     fontStyle: 'italic',
     marginTop: 0,
-    marginBottom: 0,
+    marginBottom: 10,
     fontFamily: 'Open Sans',
   },
   body: {
@@ -58,8 +59,8 @@ const useStyles = makeStyles((theme) => ({
   },
   tags: {
     fontSize: 'min(4vw, 25px)',
-    fontWeight: 'lighter',
-    marginTop: 10
+    fontWeight: 300,
+    marginTop: 10,
   },
   yearCreated: {
     fontSize: 20
@@ -84,12 +85,34 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: "blur(8px)",
     color: "white",
     padding: theme.spacing(3),
-    borderRadius: '5px'
+    borderRadius: '20px'
   },
   inlineSkeleton: {
     display: 'inline-block',
     marginLeft: '1%',
     marginBottom: '2%'
+  },
+  hostedLink: {
+    outline: 'none',
+    textDecoration: 'none',
+    '&:link': {
+      color: '#ffffff'
+    },
+    '&:visited': {
+      color: '#bbbbbb'
+    },
+    '&:focus': {
+      borderBottom: '1px solid',
+      background: '#444444'
+    },
+    '&:hover': {
+      borderBottom: '1px solid',
+      background: '#444444'
+    },
+    '&:active': {
+      background: '#333333',
+      color: '#bbbbbb'
+    }
   }
 }))
 
@@ -155,7 +178,7 @@ function Projects() {
           const subTitle = project.subtitle.concat(` (${project.yearCreated})`);
           const tags = 'Tech Stack: '.concat(`${project.tags.join(', ')}`);
           const githubLink = (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink}><img src={project.images[0]} className={classes.inlineLink} alt="github img"/></a>);
-          const hostedLink = project.hostedLink === "" ? (<div/>) : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink}><img src={project.images[1]} className={classes.inlineLink} alt="github img"/></a>);
+          const hostedLink = project.hostedLink === "" ? (<div/>) : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink} className={classes.hostedLink}>here.</a>);
 
           console.log("rendering project", index)
 
@@ -167,7 +190,6 @@ function Projects() {
                             <h1 className={classes.title}>
                               {project.title || <Skeleton count={1} duration={2.5} width="50%" />}
                               {githubLink || <Skeleton circle={true} duration={2.5} height={60} width={60} className={classes.inlineSkeleton} />}
-                              {hostedLink || <Skeleton circle={true} duration={2.5} height={60} width={60} className={classes.inlineSkeleton} />}
                             </h1>
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
@@ -183,6 +205,12 @@ function Projects() {
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                             <h5 className={classes.body}>
                                 {project.body || <Skeleton count={10} duration={2.5} height={30} />}
+                            </h5>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                            <h5 className={classes.tags}>
+                              Is it hosted? {project.hostedLink === "" ? "No" : "Yes, you can find it " }
+                              {hostedLink || <Skeleton circle={true} duration={2.5} height={60} width={60} className={classes.inlineSkeleton} />} 
                             </h5>
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>

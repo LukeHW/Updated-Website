@@ -25,7 +25,8 @@ const useStyles = makeStyles(() => ({
       '&:focus': {
         outline: 'none',
         backgroundColor: '#ccc'
-      }
+      },
+      borderRadius: '3px'
   }
 }));
 

@@ -24,11 +24,14 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontWeight: 500,
-    fontSize: 60,
-    fontFamily: 'Open Sans'
+    fontSize: 'min(10vw, 60px)',
+    fontFamily: 'Open Sans',
+    textAlign: 'center'
   },
   greeting: {
-    textAlign: "left"
+    textAlign: "center",
+    fontSize: "min(6vw, 40px)",
+    marginBottom: 40
   },
   centeredItem: {
     bottom: "0px",
@@ -84,7 +87,11 @@ const useStyles = makeStyles((theme) => ({
   inputGrid: {
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
     textAlign: 'center',
-    padding: '15px'
+    padding: '15px',
+    borderRadius: '10px',
+    marginLeft: 10,
+    marginRight: 10,
+    maxWidth: 1300
   },
   inputHeaders: {
     textAlign: 'left',
@@ -128,7 +135,7 @@ function Contact() {
                   <Input inputtype='input' type='text' name='name' placeholder='Your Name' />
                   <Input inputtype='input' type='email' name='email' placeholder='Email Address' />
                   <Input inputtype='input' type='text' name='street' placeholder='Street Address' />
-                  <Input inputtype='input' type='text' name='message' placeholder='Reason for contact' />
+                  <Input inputtype='textarea' type='text' name='message' placeholder='Reason for contact' />
                   <Button className={classes.button} placeholder='Send'>Send</Button>
                 </Grid>
                 <Grid item xs /> 

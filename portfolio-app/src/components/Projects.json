@@ -3,7 +3,7 @@
         {
             "projectNumber": 0,
             "title": "Digi-Key Datasheet and URL fetcher",
-            "subtitle": "Node Application",
+            "subtitle": "Node.js application",
             "body": "This Node App came to mind while browsing for Digi-Key parts. For each component that I had purchased, it would be nice to have a datasheet of the part I ordered. I forgot to download the datasheets after I purchased the components! I had either the manufacturer's part number, or Digi-Key's part number, but the problem was I had ordered 50-100 different parts. Entering each one into Digi-Key's search bar, trying to find the part, downloading the datasheet, and then grabbing the URL for the part for future use can take quite a bit of time to do manually. This App takes advantage of Digi-Key's API to search for part numbers and return the URL for the part (if found) as well as the datasheet for the part (if it exists). It then bundles everything into a directory. The root file holds a file named after each part number that was given, and each of those files have a shortcut to the component page on Digi-Key, as well as, the datasheet.",
             "images": ["/githubWhiteLogo.png", "/digiKey.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/DigiKey-Primary-Datasheet-and-URL-Fetcher",
@@ -11,10 +11,10 @@
             "tags": ["JavaScript", "Node.js", "4fun"],
             "yearCreated": 2020
         },
-        {
+        { 
             "projectNumber": 1,
             "title": "Common Files App",
-            "subtitle": "Full Stack Web Application",
+            "subtitle": "Full-stack web application",
             "body": "This AWS-hosted web app was made with the intention to distribute common files to those who are given access. Some files are too large and cannot be sent to someone over e-mail, so it would be nice to be able to have one place where they could go view all your hosted files. They can browse and search files, select the ones they want to download, and then they can view them afterwards. Made with React, Node, and lots of JavaScript; this was my first real attempt at a full stack web application. It is not perfect by any means, but I learned a lot by building it myself.",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/EMP-Shield-Technical-Documentation",
@@ -25,7 +25,7 @@
         {
             "projectNumber": 2,
             "title": "Non-profit Organization Website",
-            "subtitle": "Simple Information Website Hosted On AWS",
+            "subtitle": "A simple information website, hosted with AWS",
             "body": "write whatever I would like for the body of project 3 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/Burlington-God-Store-House-Page",
@@ -35,8 +35,8 @@
         },
         {
             "projectNumber": 3,
-            "title": "LukeHW Portfolio Website (this one)",
-            "subtitle": "Portfolio Web Application Hosted On AWS",
+            "title": "LukeHW.com Web Portfolio (this one)",
+            "subtitle": "Displays Work and Projects, hosted with AWS",
             "body": "write whatever I would like for the body of project 4 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/Updated-Website",
@@ -46,8 +46,8 @@
         },
         {
             "projectNumber": 4,
-            "title": "Old Website?",
-            "subtitle": "Unfinished Project Of What This Site Was Originally",
+            "title": "Old Personal Website",
+            "subtitle": "First attempt at designing my own website",
             "body": "write whatever I would like for the body of project 5 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/Portfolio-Page",

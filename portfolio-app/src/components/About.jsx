@@ -8,7 +8,7 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import IconButton from '@material-ui/core/IconButton';
 
 // import components
-import workBG from '../work-blurred-bg.jpg';
+import aboutBG from '../aboutBG.jpg';
 
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
@@ -16,17 +16,18 @@ const useStyles = makeStyles((theme) => ({
     
   },
   paperContainer: {
-    backgroundImage: `url(${workBG})`,
+    backgroundImage: `url(${aboutBG})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundAttachment: "fixed"
   },
   title: {
     fontWeight: 700,
-    fontSize: 60
+    fontSize: 60,
+    textAlign: 'center'
   },
   greeting: {
-    textAlign: "left"
+    textAlign: "center"
   },
   centeredItem: {
     bottom: "0px",
@@ -72,8 +73,8 @@ const useStyles = makeStyles((theme) => ({
   },
   workWrapper: {
     minHeight: '100vh',
-    color: 'white',
-    fontFamily: 'Roboto',
+    color: 'black',
+    fontFamily: 'Open Sans',
     alignItems: 'center'
   }
 }));
@@ -83,7 +84,7 @@ function About() {
   const classes = useStyles();
 
   return (
-    <div className="App">
+    <div className={classes.container}>
     <Grid className={classes.paperContainer}>
     <div className={classes.workWrapper}>
       <Grid container className={classes.container}>
