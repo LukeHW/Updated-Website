@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     marginBottom: 10,
     fontFamily: 'Open Sans',
+    textAlign: 'center'
   },
   subtitle: {
     fontSize: 'min(6vw, 40px)',
@@ -43,11 +44,14 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 0,
     marginBottom: 10,
     fontFamily: 'Open Sans',
+    textAlign: 'center'
   },
   body: {
     fontSize: 'min(4vw, 25px)',
-    fontWeight: 'normal',
-    marginTop: 0
+    fontWeight: 300,
+    marginTop: 0,
+    maxWidth: 1000,
+    textAlign: 'left'
   },
   images: {
     maxWidth: '200px',
@@ -61,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 'min(4vw, 25px)',
     fontWeight: 300,
     marginTop: 10,
+    textAlign: 'center'
   },
   yearCreated: {
     fontSize: 20
@@ -202,7 +207,7 @@ function Projects() {
                               {tags || <Skeleton count={1} duration={2.5} width="40%" />}
                             </h5>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
                             <h5 className={classes.body}>
                                 {project.body || <Skeleton count={10} duration={2.5} height={30} />}
                             </h5>
