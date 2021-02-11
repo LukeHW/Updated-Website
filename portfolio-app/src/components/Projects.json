@@ -35,12 +35,12 @@
         },
         {
             "projectNumber": 3,
-            "title": "LukeHW.com Web Portfolio (this one)",
-            "subtitle": "Displays Work and Projects, hosted with AWS",
+            "title": "LukeHW Web Portfolio",
+            "subtitle": "Displays work and projects, hosted with AWS",
             "body": "write whatever I would like for the body of project 4 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/Updated-Website",
-            "hostedLink": "https://lukehw.com",
+            "hostedLink": "https://www.lukehw.com/",
             "tags": ["JavaScript", "HTML", "CSS", "React", "Node.js", "Adobe", "4fun"],
             "yearCreated": 2021
         },
@@ -57,14 +57,14 @@
         },
         {
             "projectNumber": 5,
-            "title": "C Final Game",
-            "subtitle": "Pretty Bad Story Game",
+            "title": "Text Based Detective Game",
+            "subtitle": "Small game made with C",
             "body": "write whatever I would like for the body of project 6 to be",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/CIS308_Final",
             "hostedLink": "",
             "tags": ["C", "Undergraduate"],
-            "yearCreated": 2020
+            "yearCreated": 2019
         }
     ]
 }

@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     width: "100%",
     textAlign: 'left',
-    maxWidth: '1300px'
+    maxWidth: 1100
   },
   project: {
     marginBottom: 50,
@@ -118,6 +118,28 @@ const useStyles = makeStyles((theme) => ({
       background: '#333333',
       color: '#bbbbbb'
     }
+  },
+  titleLink: {
+    outline: 'none',
+    textDecoration: 'none',
+    '&:link': {
+      color: '#ffffff'
+    },
+    '&:visited': {
+      color: '#bbbbbb'
+    },
+    '&:focus': {
+      borderBottom: '1px solid',
+      background: '#444444'
+    },
+    '&:hover': {
+      borderBottom: '1px solid',
+      background: '#444444'
+    },
+    '&:active': {
+      background: '#333333',
+      color: '#bbbbbb'
+    }
   }
 }))
 
@@ -182,7 +204,7 @@ function Projects() {
         {projects.map((project, index) => {
           const subTitle = project.subtitle.concat(` (${project.yearCreated})`);
           const tags = 'Tech Stack: '.concat(`${project.tags.join(', ')}`);
-          const githubLink = (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink}><img src={project.images[0]} className={classes.inlineLink} alt="github img"/></a>);
+          const githubLink = (<a target="_blank" rel="noopener noreferrer" href={project.githubLink} className={classes.titleLink}>{project.title}</a>);
           const hostedLink = project.hostedLink === "" ? (<div/>) : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink} className={classes.hostedLink}>here.</a>);
 
           console.log("rendering project", index)
@@ -193,8 +215,7 @@ function Projects() {
                       <Grid container className={classes.container}>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                             <h1 className={classes.title}>
-                              {project.title || <Skeleton count={1} duration={2.5} width="50%" />}
-                              {githubLink || <Skeleton circle={true} duration={2.5} height={60} width={60} className={classes.inlineSkeleton} />}
+                              {githubLink || <Skeleton count={1} duration={2.5} width="50%" />}
                             </h1>
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
