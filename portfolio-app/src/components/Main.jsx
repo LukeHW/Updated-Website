@@ -98,6 +98,9 @@ const useStyles = makeStyles(() => ({
     color: "rgba(255, 255, 255)",
     '&:hover': {
       filter: 'contrast(50%)'
+    },
+    '&:focus': {
+      filter: 'contrast(50%)'
     }
   }
 }));
