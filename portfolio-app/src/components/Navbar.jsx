@@ -12,14 +12,14 @@ import Avatar from "@material-ui/core/Avatar";
 // styles for Navbar.js
 const useStyles = makeStyles(() => ({
   navbarLogo: {
-    width: 70,
-    height: 70,
+    width: 50,
+    height: 50,
     marginBottom: 3,
     borderRadius: '50%',
     marginLeft: '12px'
   },
   navbarContainer: {
-    height: 200,
+    height: 100,
     top:0,
     position: "fixed",
     zIndex: 100,
@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
   link: {
     fontWeight: "normal",
     color: "rgba(255, 255, 255)",
-    marginTop: 27,
+    marginTop: 15,
     textAlign: "center"
   },
   menuBox: {
@@ -46,24 +46,28 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "rgba(20, 20, 20, 0.7)",
     backdropFilter: "blur(15px)",
     position: "fixed",
-    marginTop: 80,
+    marginTop: 60,
     zIndex: 100
   },
   menuLink: {
     textDecoration: "none",
     fontWeight: "lighter",
     color: "white",
-    fontSize: 25,
+    fontSize: 20,
     textAlign: "right"
   },
   menuLinkSpacer: {
     marginRight: "10vmin",
-    marginTop: "22px"
+    marginTop: "22px",
+    '&::after': {
+      width: '100%',
+      backgroundColor: 'rgba(180, 180, 180)'
+    }
   },
   navbarActive: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
     backdropFilter: "blur(15px)",
-    height: 80,
+    height: 60,
     top: 0,
     position: "fixed",
     zIndex: 100,
@@ -76,6 +80,9 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       color: 'rgba(180, 180, 180)'
     },
+    '&:focus': {
+      color: 'rgba(180, 180, 180)'
+    }
   },
   hamburgerContainer: {
     flexDirection: "column",
@@ -83,7 +90,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     height: "100%",
     marginLeft: "-30px",
-    marginTop: 2
+    marginTop: 3
   },
   hamburger: {
     marginRight: 50
@@ -93,12 +100,20 @@ const useStyles = makeStyles(() => ({
     marginTop: 5,
     padding: 0,
     borderRadius: '50%',
-    width: 70,
-    height: 70,
+    width: 50,
+    minWidth: 50,
+    height: 50,
     boxShadow: '0px 0px 5px 5px rgba(255, 255, 255, .2)',
     '&:hover': {
       boxShadow: '0px 0px 5px 5px rgba(255, 255, 255, .5)'
-    },
+    }
+  },
+  logoLink: {
+    display: 'block'
+  },
+  logoLinkContainer: {
+    width: 50,
+    height: 50,
     marginLeft: '4vmin'
   }
 }));
@@ -120,22 +135,24 @@ function Navbar() {
     }
   };
 
-  const handleDefault = () => {
+  window.addEventListener('scroll', changeNavbarBackground);
+
+  const closeMenuHandler = () => {
     setMenu(false);
     setOpen(false);
   }
-
-  window.addEventListener('scroll', changeNavbarBackground);
 
   return (
     <div>
         <div className={navbar ? classes.navbarActive : classes.navbarContainer}>
             <Grid container className={classes.container}>
                 <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/> 
-                <Grid item className={classes.logo} xs={1} sm={1} md={1} lg={1} xl={1}>
-                    <Link to="/">
-                        <Button className={classes.navButton} startIcon={<Avatar className={classes.navbarLogo} src="/favicon.png" />} alt="LHW logo" onClick={handleDefault} />
+                <Grid item xs={1} sm={1} md={1} lg={1} xl={1}>
+                  <div className={classes.logoLinkContainer}>
+                    <Link to="/" className={classes.logoLink}>
+                          <Button className={classes.navButton} startIcon={<Avatar className={classes.navbarLogo} src="/favicon.png" />} alt="LHW logo" onClick={closeMenuHandler} />
                     </Link>
+                  </div>
                 </Grid>
                 <Grid item xs="auto" sm="auto" md={3} lg={4} xl={4}/>
                 <Hidden smDown>
@@ -159,7 +176,7 @@ function Navbar() {
                     <Grid item xs={10} sm={10}/>
                     <Grid item xs={1} sm={1}>
                       <div className={classes.hamburgerContainer}>
-                        <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={35} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
+                        <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
                       </div>
                     </Grid>
                 </Hidden>
@@ -170,13 +187,13 @@ function Navbar() {
             <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
                 <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/Work" className={classes.menuLink} onClick={handleDefault}>Work</Link>
+                        <Link to="/Work" className={classes.menuLink} onClick={closeMenuHandler}>Work</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/About" className={classes.menuLink} onClick={handleDefault}>About</Link>
+                        <Link to="/About" className={classes.menuLink} onClick={closeMenuHandler}>About</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/Contact" className={classes.menuLink} onClick={handleDefault}>Contact</Link>
+                        <Link to="/Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
                     </Typography>
                 </Grid>
             </Grid>
@@ -186,4 +203,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
