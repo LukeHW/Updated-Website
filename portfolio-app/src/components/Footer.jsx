@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
   footerActive: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     height: 60,
-    width: "100%"
+    width: "100%",
+    zIndex: 100
   },
   footer: {
     color: "white",
@@ -59,7 +60,7 @@ function Footer() {
                 <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.footerLinks}>
                   <img className={classes.icons} src="/githubWhiteLogo.png" alt="github logo" />
                 </a>
-                <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.footerLinks}>
+                <a target='_blank' href='https://linkedin.com/in/lukehw/' rel="noreferrer" className={classes.footerLinks}>
                   <img className={classes.icons} src="/linkedinWhiteLogo.png" alt="github logo" />
                 </a>
               </div>

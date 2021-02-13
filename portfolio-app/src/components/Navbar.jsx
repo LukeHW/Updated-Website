@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: '12px'
   },
   navbarContainer: {
-    height: 100,
+    height: 60,
     top:0,
     position: "fixed",
     zIndex: 100,
@@ -42,22 +42,30 @@ const useStyles = makeStyles(() => ({
   },
   menuContainerShown: {
     width: "100%",
+    minWidth: '200px',
     height: 200,
-    backgroundColor: "rgba(20, 20, 20, 0.7)",
+    backgroundColor: "rgba(20, 20, 20, 0.75)",
     backdropFilter: "blur(15px)",
     position: "fixed",
     marginTop: 60,
-    zIndex: 100
+    zIndex: 100,
+    right: '0px'
   },
   menuLink: {
     textDecoration: "none",
     fontWeight: "lighter",
     color: "white",
-    fontSize: 20,
-    textAlign: "right"
+    fontSize: 22,
+    textAlign: "right",
+    '&:hover': {
+      color: 'rgba(220, 220, 220)'
+    },
+    '&:focus': {
+      color: 'rgba(220, 220, 220)'
+    }
   },
   menuLinkSpacer: {
-    marginRight: "10vmin",
+    marginRight: "8vw",
     marginTop: "22px",
     '&::after': {
       width: '100%',
@@ -65,7 +73,7 @@ const useStyles = makeStyles(() => ({
     }
   },
   navbarActive: {
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backgroundColor: "rgba(0, 0, 0, 0.75)",
     backdropFilter: "blur(15px)",
     height: 60,
     top: 0,
@@ -78,10 +86,10 @@ const useStyles = makeStyles(() => ({
     fontWeight: "normal",
     color: "rgba(255, 255, 255)",
     '&:hover': {
-      color: 'rgba(180, 180, 180)'
+      color: 'rgba(220, 220, 220)'
     },
     '&:focus': {
-      color: 'rgba(180, 180, 180)'
+      color: 'rgba(220, 220, 220)'
     }
   },
   hamburgerContainer: {
@@ -114,7 +122,7 @@ const useStyles = makeStyles(() => ({
   logoLinkContainer: {
     width: 50,
     height: 50,
-    marginLeft: '4vmin'
+    marginLeft: '4vw'
   }
 }));
 

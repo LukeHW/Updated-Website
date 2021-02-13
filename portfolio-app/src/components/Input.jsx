@@ -41,15 +41,15 @@ const Input = (props) => {
             inputElement = <input className={classes.inputElement} id='input' {...props} />;
             break;
         case('textarea'):
-            inputElement = <textarea className={classes.inputElement} id='input' {...props} />;
+            inputElement = <textarea className={classes.inputElement} id='textarea' {...props} />;
             break;
         default:
-            inputElement = <input className={classes.inputElement} id='input' {...props} />;
+            inputElement = <input className={classes.inputElement} id='default' {...props} />;
     }
 
     return (
         <div className={classes.input}>
-            <label className={classes.label} htmlFor='input'>{inputElement}</label>
+            <label className={classes.label} htmlFor={'input' || 'textarea' || 'default'}>{inputElement}</label>
         </div>
     )
 }

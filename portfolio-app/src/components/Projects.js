@@ -207,9 +207,9 @@ function Projects() {
           const githubLink = (<a target="_blank" rel="noopener noreferrer" href={project.githubLink} className={classes.titleLink}>{project.title}</a>);
           const hostedLink = project.hostedLink === "" ? (<div/>) : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink} className={classes.hostedLink}>here.</a>);
 
-          console.log("rendering project", index)
+          console.log("rendering project", index);
 
-          return  <div className={classes.project}>
+          return  <div className={classes.project} key={project.projectNumber}>
                     <div className={classes.shadow}>
                     <SkeletonTheme color="#111111" highlightColor="#222222">
                       <Grid container className={classes.container}>

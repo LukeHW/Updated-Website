@@ -13,9 +13,6 @@ import aboutBG from '../aboutBG.jpg';
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
   container: {
-    
-  },
-  paperContainer: {
     backgroundImage: `url(${aboutBG})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -85,46 +82,43 @@ function About() {
 
   return (
     <div className={classes.container}>
-    <Grid className={classes.paperContainer}>
-    <div className={classes.workWrapper}>
-      <Grid container className={classes.container}>
-      <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/> 
-        <Grid item className={classes.item} xs={10} sm={10} md={10} lg={8} xl={8}>
-          <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-            About me.
-          </Typography>
-          <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-            This page is about me... Are you sure? This is what you want to do?
-          </Typography>
+      <div className={classes.workWrapper}>
+        <Grid container className={classes.container}>
+        <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/> 
+          <Grid item className={classes.item} xs={10} sm={10} md={10} lg={8} xl={8}>
+            <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
+              About me.
+            </Typography>
+            <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
+              This page is about me... Are you sure? This is what you want to do?
+            </Typography>
+          </Grid>
+          <Hidden mdUp>
+            <Grid item xs={1} sm={1}/>
+          </Hidden>
+          <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/>
         </Grid>
-        <Hidden mdUp>
-          <Grid item xs={1} sm={1}/>
-        </Hidden>
-        <Grid item xs={1} sm={1} md={1} lg={2} xl={2}/>
-      </Grid>
-    </div>
-    </Grid>
+      </div>
 
-    <Grid className={classes.paperContainer}>
-        <div className={classes.workWrapper}>
-            <Grid container className={classes.container}>
-                <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
-                <Grid item className={classes.item} xs={10} sm={10} md={8} lg={6} xl={6}>
-                  <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-                      Title
-                  </Typography>
-                  <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-                      Subtitle
-                  </Typography>
-                </Grid>
-                <Hidden mdUp>
-                  <Grid item xs={1} sm={1}/>
-                </Hidden>
-                <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/>
-            </Grid>
-        </div>
-    </Grid>
-
+      <div className={classes.container}>
+          <div className={classes.workWrapper}>
+              <Grid container className={classes.container}>
+                  <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/> 
+                  <Grid item className={classes.item} xs={10} sm={10} md={8} lg={6} xl={6}>
+                    <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
+                        Title
+                    </Typography>
+                    <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
+                        Subtitle
+                    </Typography>
+                  </Grid>
+                  <Hidden mdUp>
+                    <Grid item xs={1} sm={1}/>
+                  </Hidden>
+                  <Grid item xs={1} sm={1} md={2} lg={3} xl={3}/>
+              </Grid>
+          </div>
+      </div>
   </div>
   );
 }

@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '10px',
     marginLeft: 10,
     marginRight: 10,
-    maxWidth: 1300
+    maxWidth: 1000
   },
   inputHeaders: {
     textAlign: 'left',

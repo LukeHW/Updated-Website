@@ -90,9 +90,7 @@ function Work() {
           <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
             Some of my work
           </Typography>
-          <Typography variant="h4" component="h2" gutterBottom>
-            <Projects />
-          </Typography>
+          <Projects />
         </Grid>
         <Hidden mdUp>
           <Grid item xs={1} sm={1}/>

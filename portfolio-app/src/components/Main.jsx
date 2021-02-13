@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import Paper from '@material-ui/core/Paper';
 
 // import styles
 import './Main.css';
@@ -13,7 +14,7 @@ import './Main.css';
 import bg from '../blurredBG.jpg';
 
 // styles for Main.js
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between",
     fontFamily: 'Open Sans',
@@ -29,13 +30,14 @@ const useStyles = makeStyles(() => ({
     fontSize: 'min(10vw, 90px)',
     color: "white",
     fontFamily: 'Open Sans',
+    textAlign: 'center'
   },
   greeting: {
     fontWeight: 300,
     fontSize: 'min(5vw, 40px)',
     color: "white",
     fontFamily: 'Open Sans',
-    textAlign: "left"
+    textAlign: "center"
   },
   placer: {
     width: "30vmin",
@@ -62,7 +64,6 @@ const useStyles = makeStyles(() => ({
   iconsInline: {
     width: 50,
     margin: 5,
-    marginTop: -5,
     marginLeft: 20
   },
   item: {
@@ -75,15 +76,18 @@ const useStyles = makeStyles(() => ({
   secondContainer: {
     height: "100vh",
     width: "100%",
-    backgroundColor: ('#171717'),
+    backgroundColor: ('#444444'),
     fontFamily: 'Open Sans',
+    justifyContent: "space-between",
+    padding: theme.spacing(0)
   },
   hidden: {
     justifyContent: "center",
     display: "flex",
     marginTop: 30,
     fontFamily: 'Open Sans',
-    fontSize: 30
+    fontSize: 30,
+    overflow: 'auto'
   },
   circle: {
     width: "80px",
@@ -102,6 +106,13 @@ const useStyles = makeStyles(() => ({
     '&:focus': {
       filter: 'contrast(50%)'
     }
+  },
+  paperLinksContainer: {
+    
+  },
+  paperLinks: {
+    width: 300,
+    height: 400,
   }
 }));
 
@@ -114,9 +125,9 @@ function Main() {
       <Grid className={classes.paperContainer}>
         <div className="AppBG">
           <Grid container className={classes.container}>
-            <Grid item xs={1} sm={1} md={1} lg={2} xl={2} /> 
-            <Grid item className={classes.item} xs={11} sm={11} md={5} lg={4} xl={4}>
-              <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
+            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
+            <Grid item className={classes.item} xs={12} sm={12} md={5} lg={5} xl={5}>
+              <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
                 Hi, I&#39;m Luke!
               </Typography>
               <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
@@ -124,12 +135,12 @@ function Main() {
               </Typography>
             </Grid>
             <Hidden mdUp>
-              <Grid item xs={1} sm={1} />
+              <Grid item xs="auto" sm="auto" />
             </Hidden>
-            <Grid item className={classes.placerContainer} xs={10} sm={10} md={5} lg={4} xl={4} align="center">
+            <Grid item className={classes.placerContainer} xs={12} sm={12} md={5} lg={5} xl={5} align="center">
               <img className={classes.placer} src="/placer.png" alt="LHW logo" />
             </Grid>
-            <Grid item xs={1} sm={1} md={1} lg={2} xl={2} />
+            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
           </Grid>
           <div className={classes.centeredItem}>
             <ArrowDownwardIcon className="downArrow bounce-7" />
@@ -138,48 +149,29 @@ function Main() {
       </Grid>
 
       <Grid container className={classes.secondContainer}>
-        <Grid item lg={2} xl={2} />
-        <Hidden mdDown>
-          <Grid item className={classes.item} lg={2} xl={2} align="center">
-            <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.outsideLinks}>
-              <img className={classes.icons} src="/githubWhiteLogo.png" alt="github logo" />
-            </a>
-          </Grid>
-        </Hidden>
-        <Hidden lgUp>
-          <Grid item xs={1} sm={1} md={1} />
-        </Hidden>
-        <Grid item className={classes.item} xs={10} sm={10} md={10} lg={4} xl={4} align="center">
-          <Typography className={classes.title} variant="h1" gutterBottom>
-            Feel free to add me on 
-            <Hidden lgUp>
-              <div className={classes.hidden}>
-                <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.outsideLinks}>
-                  Github
-                  <img className={classes.iconsInline} src="/githubWhiteLogo.png" alt="github logo" />
-                </a>
-              </div>
-              <div className={classes.hidden}>
-                <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.outsideLinks}>
-                  LinkedIn
-                  <img className={classes.iconsInline} src="/linkedinWhiteLogo.png" alt="linkedin logo" />
-                </a>
-              </div>
-            </Hidden>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center' b={3}>
+          <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
+            Feel free to add me here:
           </Typography>
         </Grid>
-        <Hidden lgUp>
-          <Grid item xs={1} sm={1} md={1} />
-        </Hidden>
-        <Hidden mdDown>
-          <Grid item className={classes.item} lg={2} xl={2} align="center">
-            <a target='_blank' href='https://www.linkedin.com/in/lukehw/' rel="noreferrer" className={classes.outsideLinks}>
-              <img className={classes.icons} src="/linkedinWhiteLogo.png" alt="linkedin logo" />
-            </a>
-          </Grid>
-        </Hidden>
-        <Grid item lg={2} xl={2} />  
+        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
+        <Grid item className={classes.paperLinksContainer} xs={12} sm={12} md={5} lg={5} xl={5} align='center'>
+          <Paper elevation={5} className={classes.paperLinks}>
+            <Typography variant="h4" component="h2" gutterBottom align='center'>
+              Github
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item className={classes.paperLinksContainer} xs={12} sm={12} md={5} lg={5} xl={5} align="center">
+          <Paper elevation={5} className={classes.paperLinks}>
+            <Typography variant="h4" component="h2" gutterBottom align='center'>
+              Github
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />  
       </Grid>
+
     </div>
   );
 }
