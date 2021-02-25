@@ -119,10 +119,11 @@ const useStyles = makeStyles((theme) => ({
   spacer: {
     flexDirection: "column",
     justifyContent: "center",
-    display: "flex"
+    display: "flex",
+    marginTop: 100
   },
   spacerText: {
-    fontWeight: 700,
+    fontWeight: 500,
     fontSize: 'min(10vw, 70px)',
     textAlign: 'center',
     color: 'white'
@@ -145,7 +146,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    height: 'inherit'
+    height: 'inherit',
+    marginTop: 50
+  },
+  paperBody: {
+    padding: 10
   }
 }));
 
@@ -184,11 +189,11 @@ function Main() {
       <Grid container className={classes.secondContainer}>
           <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>
               <Typography className={classes.spacerText} variant="h4" component="h2" gutterBottom align='center'>
-                Feel free to add me here
+                Feel free to add me on these platforms
               </Typography>
           </Grid>
           <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
-          <Grid item xs={12} sm={12} md={5} lg={5} xl={5} align='center'>
+          <Grid item xs={12} sm={12} md={12} lg={3} xl={3} align='center'>
             <Paper elevation={5} className={classes.paperLinks} align='center'>
               <div className={classes.paperLinksContainer}>
                 <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.links}>
@@ -197,13 +202,28 @@ function Main() {
                 <Typography variant="h4" component="h2" className={classes.paperTitle} gutterBottom align='center'>
                   Github
                 </Typography>
-                <Typography variant="h6" component="h6" gutterBottom align='center'>
-                  Check out my repos and other projects - stored on Github
+                <Typography variant="h6" component="h6" className={classes.paperBody} align='center'>
+                  Explore, read, or star my current repos and other contributions to projects; all stored on Github&#39;s cloud servers.
                 </Typography>
               </div>
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={12} md={5} lg={5} xl={5} align="center">
+          <Grid item xs={12} sm={12} md={12} lg={4} xl={4} align="center">
+            <Paper elevation={5} className={classes.paperLinks} align='center'>
+              <div className={classes.paperLinksContainer}>
+                <a target='_blank' href='https://linkedin.com/in/lukehw/' rel="noreferrer" className={classes.links}>
+                    <img className={classes.icons} src="/linkedin.png" alt="linkedin logo" />
+                </a>
+                <Typography variant="h4" component="h4" className={classes.paperTitle} gutterBottom align='center'>
+                  Second?
+                </Typography>
+                <Typography variant="h6" component="h6" className={classes.paperBody} align='center'>
+                  Add me on one of the most popular professional networking platforms. Add me on one of the most popular professional networking platforms.
+                </Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12} lg={3} xl={3} align="center">
             <Paper elevation={5} className={classes.paperLinks} align='center'>
               <div className={classes.paperLinksContainer}>
                 <a target='_blank' href='https://linkedin.com/in/lukehw/' rel="noreferrer" className={classes.links}>
@@ -212,8 +232,8 @@ function Main() {
                 <Typography variant="h4" component="h4" className={classes.paperTitle} gutterBottom align='center'>
                   LinkedIn
                 </Typography>
-                <Typography variant="h6" component="h6" gutterBottom align='center'>
-                  text text text text text text text text text text text text text text text text 
+                <Typography variant="h6" component="h6" className={classes.paperBody} align='center'>
+                  Add me on one of the most popular professional networking platforms.
                 </Typography>
               </div>
             </Paper>
