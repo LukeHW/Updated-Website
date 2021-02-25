@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
     backgroundAttachment: "fixed"
   },
   title: {
-    fontWeight: 400,
+    fontWeight: 700,
     fontSize: 'min(10vw, 90px)'
   },
   greeting: {

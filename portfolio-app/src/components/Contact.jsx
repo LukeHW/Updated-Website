@@ -23,14 +23,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundAttachment: "fixed"
   },
   title: {
-    fontWeight: 500,
-    fontSize: 'min(10vw, 60px)',
+    fontWeight: 700,
+    fontSize: 'min(10vw, 90px)',
     fontFamily: 'Open Sans',
     textAlign: 'center'
   },
   greeting: {
     textAlign: "center",
-    fontSize: "min(6vw, 40px)",
+    fontSize: "min(5vw, 40px)",
     marginBottom: 40
   },
   centeredItem: {
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 20
   },
   item: {
-    marginTop: 250
+    marginTop: 180
   },
   secondContainer: {
     height: "100vh",

@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     marginBottom: 10,
     fontFamily: 'Open Sans',
-    textAlign: 'center'
+    textAlign: 'center',
+    lineHeight: '145%'
   },
   subtitle: {
     fontSize: 'min(6vw, 40px)',

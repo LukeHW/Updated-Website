@@ -20,11 +20,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontWeight: 700,
-    fontSize: 60,
+    fontSize: 'min(10vw, 90px)',
     textAlign: 'center'
   },
   greeting: {
-    textAlign: "center"
+    textAlign: "center",
+    fontSize: 'min(5vw, 40px)'
   },
   centeredItem: {
     bottom: "0px",
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 20
   },
   item: {
-    marginTop: 250
+    marginTop: 180
   },
   secondContainer: {
     height: "100vh",

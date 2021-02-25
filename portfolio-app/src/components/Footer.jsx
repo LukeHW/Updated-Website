@@ -61,7 +61,7 @@ function Footer() {
                   <img className={classes.icons} src="/githubWhiteLogo.png" alt="github logo" />
                 </a>
                 <a target='_blank' href='https://linkedin.com/in/lukehw/' rel="noreferrer" className={classes.footerLinks}>
-                  <img className={classes.icons} src="/linkedinWhiteLogo.png" alt="github logo" />
+                  <img className={classes.icons} src="/linkedinWhiteLogo.png" alt="linkedin logo" />
                 </a>
               </div>
             </Grid> 

@@ -56,10 +56,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center"
   },
   icons: {
-    width: 200,
-    alignItems: "center",
-    justifyContent: "center",
-    display: "flex"
+    width: 100
   },
   iconsInline: {
     width: 50,
@@ -74,11 +71,9 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 50
   },
   secondContainer: {
-    height: "100vh",
-    width: "100%",
-    backgroundColor: ('#444444'),
+    minHeight: "100vh",
+    backgroundColor: ('#222222'),
     fontFamily: 'Open Sans',
-    justifyContent: "space-between",
     padding: theme.spacing(0)
   },
   hidden: {
@@ -107,12 +102,50 @@ const useStyles = makeStyles((theme) => ({
       filter: 'contrast(50%)'
     }
   },
-  paperLinksContainer: {
-    
-  },
   paperLinks: {
     width: 300,
     height: 400,
+    margin: 10,
+    transition: 'transform .2s',
+    '&:hover': {
+      boxShadow: '0 0px 8px 0 rgba(255, 255, 255, 0.7)',
+      transform: 'scale(1.1)'
+    },
+    '&:focus': {
+      filter: 'contrast(50%)',
+      transform: 'scale(1.1)'
+    }
+  },
+  spacer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex"
+  },
+  spacerText: {
+    fontWeight: 700,
+    fontSize: 'min(10vw, 70px)',
+    textAlign: 'center',
+    color: 'white'
+  },
+  links: {
+    paddingTop: 5,
+    width: 'inherit',
+    transition: 'transform .2s',
+    '&:hover': {
+      backgroundColor: ('#dddddd')
+    },
+    '&:focus': {
+      filter: 'opacity(0.8)'
+    }
+  },
+  paperTitle: {
+    marginTop: 15
+  },
+  paperLinksContainer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    height: 'inherit'
   }
 }));
 
@@ -149,27 +182,43 @@ function Main() {
       </Grid>
 
       <Grid container className={classes.secondContainer}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center' b={3}>
-          <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
-            Feel free to add me here:
-          </Typography>
-        </Grid>
-        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
-        <Grid item className={classes.paperLinksContainer} xs={12} sm={12} md={5} lg={5} xl={5} align='center'>
-          <Paper elevation={5} className={classes.paperLinks}>
-            <Typography variant="h4" component="h2" gutterBottom align='center'>
-              Github
-            </Typography>
-          </Paper>
-        </Grid>
-        <Grid item className={classes.paperLinksContainer} xs={12} sm={12} md={5} lg={5} xl={5} align="center">
-          <Paper elevation={5} className={classes.paperLinks}>
-            <Typography variant="h4" component="h2" gutterBottom align='center'>
-              Github
-            </Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />  
+          <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>
+              <Typography className={classes.spacerText} variant="h4" component="h2" gutterBottom align='center'>
+                Feel free to add me here
+              </Typography>
+          </Grid>
+          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
+          <Grid item xs={12} sm={12} md={5} lg={5} xl={5} align='center'>
+            <Paper elevation={5} className={classes.paperLinks} align='center'>
+              <div className={classes.paperLinksContainer}>
+                <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.links}>
+                    <img className={classes.icons} src="/github.png" alt="github logo" />
+                </a>
+                <Typography variant="h4" component="h2" className={classes.paperTitle} gutterBottom align='center'>
+                  Github
+                </Typography>
+                <Typography variant="h6" component="h6" gutterBottom align='center'>
+                  Check out my repos and other projects - stored on Github
+                </Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={12} md={5} lg={5} xl={5} align="center">
+            <Paper elevation={5} className={classes.paperLinks} align='center'>
+              <div className={classes.paperLinksContainer}>
+                <a target='_blank' href='https://linkedin.com/in/lukehw/' rel="noreferrer" className={classes.links}>
+                    <img className={classes.icons} src="/linkedin.png" alt="linkedin logo" />
+                </a>
+                <Typography variant="h4" component="h4" className={classes.paperTitle} gutterBottom align='center'>
+                  LinkedIn
+                </Typography>
+                <Typography variant="h6" component="h6" gutterBottom align='center'>
+                  text text text text text text text text text text text text text text text text 
+                </Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
       </Grid>
 
     </div>
