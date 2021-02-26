@@ -108,11 +108,11 @@ const useStyles = makeStyles((theme) => ({
     margin: 10,
     transition: 'transform .2s',
     '&:hover': {
-      boxShadow: '0 0px 8px 0 rgba(255, 255, 255, 0.7)',
+      boxShadow: '0 0px 15px 0 rgba(255, 255, 255, 0.9)',
       transform: 'scale(1.1)'
     },
     '&:focus': {
-      filter: 'contrast(50%)',
+      boxShadow: '0 0px 8px 0 rgba(255, 255, 255, 0.7)',
       transform: 'scale(1.1)'
     }
   },
