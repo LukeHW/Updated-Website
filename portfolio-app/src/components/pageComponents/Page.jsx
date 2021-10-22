@@ -7,7 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 // styles for Page.js
 const useStyles = makeStyles(() => ({
   pageContainer: {
-    minHeight: "200vh",
+    minHeight: "100vh",
+    height: "100%",
     width: "100%"
   }
 }));

@@ -10,27 +10,18 @@ import { createStore } from 'redux';
 // import styles
 import './App.css';
 
-// import components
-import Navbar from './components/Navbar';
+// import pages
 import Main from './components/Main';
 import Work from './components/Work';
 import About from './components/About';
 import Contact from './components/Contact';
+import Gallery from './components/Gallery';
+
+// import components
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Page from './components/pageComponents/Page';
 import ScrollToTop from './components/pageComponents/Scroll';
-
-// import createHistory from "history/createBrowserHistory";
-
-// export const history = createHistory();
-
-// const store = configureStore;
-
-// history.listen((location, action) => {
-//   if (action === "PUSH") {
-//     window.scrollTo(0, 0);
-//   }
-// })
 
 // styles for App.js
 const useStyles = makeStyles((theme) => ({}));
@@ -62,6 +53,9 @@ function App() {
           <Page>
             <Contact />
           </Page>
+        </Route>
+        <Route exact path="/Gallery">
+            <Gallery />
         </Route>
       </Switch>
       <Footer />

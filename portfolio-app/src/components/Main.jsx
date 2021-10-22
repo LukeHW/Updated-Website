@@ -1,5 +1,5 @@
 // import modules
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between",
     fontFamily: 'Open Sans',
+    minHeight: 600
   },
   paperContainer: {
     backgroundImage: `url(${bg})`,
@@ -203,7 +204,7 @@ function Main() {
                   Github
                 </Typography>
                 <Typography variant="h6" component="h6" className={classes.paperBody} align='center'>
-                  Explore, read, or star my current repos and other contributions to projects; all stored on Github&#39;s cloud servers.
+                  Explore, read, or star my current repos and other contributions to projects.
                 </Typography>
               </div>
             </Paper>
@@ -211,14 +212,14 @@ function Main() {
           <Grid item xs={12} sm={12} md={12} lg={4} xl={4} align="center">
             <Paper elevation={5} className={classes.paperLinks} align='center'>
               <div className={classes.paperLinksContainer}>
-                <a target='_blank' href='https://linkedin.com/in/lukehw/' rel="noreferrer" className={classes.links}>
+                <a target='_blank' href='https://stackoverflow.com/users/10533948/lukehw' rel="noreferrer" className={classes.links}>
                     <img className={classes.icons} src="/linkedin.png" alt="linkedin logo" />
                 </a>
                 <Typography variant="h4" component="h4" className={classes.paperTitle} gutterBottom align='center'>
-                  Second?
+                  Stack Overflow
                 </Typography>
                 <Typography variant="h6" component="h6" className={classes.paperBody} align='center'>
-                  Add me on one of the most popular professional networking platforms. Add me on one of the most popular professional networking platforms.
+                  Add me on one of the most popular professional networking platforms.
                 </Typography>
               </div>
             </Paper>
