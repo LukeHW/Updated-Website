@@ -47,7 +47,7 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "rgba(20, 20, 20, 0.75)",
     backdropFilter: "blur(15px)",
     position: "fixed",
-    marginTop: 60,
+    marginTop: 63,
     zIndex: 100,
     right: '0px'
   },
@@ -73,13 +73,14 @@ const useStyles = makeStyles(() => ({
     }
   },
   navbarActive: {
-    backgroundColor: "rgba(0, 0, 0, 0.75)",
+    backgroundColor: "rgba(0, 0, 0, 0.55)",
     backdropFilter: "blur(15px)",
-    height: 60,
+    height: 62,
     top: 0,
     position: "fixed",
     zIndex: 100,
-    width: "100%"
+    width: "100%",
+    borderBottom: '1px solid #333333'
   },
   navLinks: {
     textDecoration: "none",
@@ -128,22 +129,12 @@ const useStyles = makeStyles(() => ({
 
 function Navbar() {
 
-  const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState(true);
   const [menu, setMenu] = useState(false);
 
   const [isOpen, setOpen] = useState(false);
 
   const classes = useStyles();
-
-  const changeNavbarBackground = () => {
-    if(window.scrollY >= 80) {
-        setNavbar(true);
-    }else {
-        setNavbar(false);
-    }
-  };
-
-  window.addEventListener('scroll', changeNavbarBackground);
 
   const closeMenuHandler = () => {
     setMenu(false);

@@ -26,23 +26,26 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundAttachment: "fixed"
   },
-  title: {
-    fontWeight: 500,
-    fontSize: 'min(10vw, 90px)',
+  greeting: {
+    fontWeight: 600,
+    fontSize: 'min(10vw, 70px)',
     color: "white",
     fontFamily: 'Open Sans',
     textAlign: 'center'
   },
-  greeting: {
-    fontWeight: 300,
-    fontSize: 'min(5vw, 40px)',
+  title: {
+    fontWeight: 400,
+    fontSize: 'min(6vw, 28px)',
     color: "white",
     fontFamily: 'Open Sans',
     textAlign: "center"
   },
   placer: {
     width: "30vmin",
-    minWidth: 200
+    minWidth: 200,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    marginBottom: 35
   },
   placerContainer: {
     flexDirection: "column",
@@ -68,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    marginTop: 100,
+    marginTop: 50,
     marginBottom: 50
   },
   secondContainer: {
@@ -165,19 +168,14 @@ function Main() {
         <div className="AppBG">
           <Grid container className={classes.container}>
             <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
-            <Grid item className={classes.item} xs={12} sm={12} md={5} lg={5} xl={5}>
+            <Grid item className={classes.item} xs={12} sm={12} md={10} lg={10} xl={10}>
+              <img className={classes.placer} src="/placer.png" alt="LHW logo" />
               <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
-                Hi, I&#39;m Luke!
+                Luke Wahlmeier
               </Typography>
               <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-                Developer. Designer. Musician.
+                Developer. Innovator. Musician.
               </Typography>
-            </Grid>
-            <Hidden mdUp>
-              <Grid item xs="auto" sm="auto" />
-            </Hidden>
-            <Grid item className={classes.placerContainer} xs={12} sm={12} md={5} lg={5} xl={5} align="center">
-              <img className={classes.placer} src="/placer.png" alt="LHW logo" />
             </Grid>
             <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
           </Grid>
