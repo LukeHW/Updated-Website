@@ -44,16 +44,6 @@ function App() {
             <Work />
           </Page>
         </Route>
-        <Route exact path="/About">
-          <Page>
-            <About />
-          </Page>
-        </Route>
-        <Route exact path="/Contact">
-          <Page>
-            <Contact />
-          </Page>
-        </Route>
         <Route exact path="/Gallery">
             <Gallery />
         </Route>

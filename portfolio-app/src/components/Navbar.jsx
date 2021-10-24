@@ -162,12 +162,12 @@ function Navbar() {
                     </Grid>
                     <Grid item className={classes.link} md={2} lg={1} xl={1}>
                         <Typography variant="h5" component="h2" gutterBottom>
-                            <Link to="/About" className={classes.navLinks}>About</Link>
+                            <Link to="/Gallery" className={classes.navLinks}>Gallery</Link>
                         </Typography>
                     </Grid>
                     <Grid item className={classes.link} md={2} lg={1} xl={1}>
                         <Typography variant="h5" component="h2" gutterBottom>
-                            <Link to="/Contact" className={classes.navLinks}>Contact</Link>
+                            <Link to="/#Contact" className={classes.navLinks}>Contact</Link>
                         </Typography>
                     </Grid>
                 </Hidden>
@@ -189,10 +189,10 @@ function Navbar() {
                         <Link to="/Work" className={classes.menuLink} onClick={closeMenuHandler}>Work</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/About" className={classes.menuLink} onClick={closeMenuHandler}>About</Link>
+                        <Link to="/Gallery" className={classes.menuLink} onClick={closeMenuHandler}>Gallery</Link>
                     </Typography>
                     <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
-                        <Link to="/Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
+                        <Link to="/#Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
                     </Typography>
                 </Grid>
             </Grid>

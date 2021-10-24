@@ -1,194 +1,194 @@
 [
     {
+        "id": 3,
+        "title": "Taking A Nap",
+        "names": "Dewey",
+        "img": "/galleryImages/Dewey 2.JPEG"
+    },
+    {
         "id": 1,
-        "title": "Catland by Sarah Archer and Dewey",
+        "title": "Catland by Sarah Archer",
         "names": "Dewey",
         "img": "/galleryImages/Catland.JPEG"
     },
     {
         "id": 2,
-        "title": "Dinner Time For Toby and Dewey",
+        "title": "Dinner Time",
         "names": "Toby and Dewey",
         "img": "/galleryImages/Cats.JPEG"
     },
     {
-        "id": 2,
-        "title": "Dewey Taking A Nap",
-        "names": "Dewey",
-        "img": "/galleryImages/Dewey 2.JPEG"
-    },
-    {
-        "id": 2,
-        "title": "Dewey Cuddling",
+        "id": 4,
+        "title": "Cuddle Time",
         "names": "Dewey",
         "img": "/galleryImages/Dewey 3.JPEG"
     },
     {
-        "id": 2,
-        "title": "Dewey Sitting Funny",
+        "id": 5,
+        "title": "Sitting Funny",
         "names": "Dewey",
         "img": "/galleryImages/Dewey 4.JPEG"
     },
     {
-        "id": 2,
-        "title": "Dewey Looking For Birds",
+        "id": 6,
+        "title": "Looking For Birds",
         "names": "Dewey",
         "img": "/galleryImages/Dewey 5.JPEG"
     },
     {
-        "id": 2,
-        "title": "Dewey Hanging Out On A Towel",
+        "id": 7,
+        "title": "Hanging Out On A Towel",
         "names": "Dewey",
         "img": "/galleryImages/Dewey.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 8,
+        "title": "Weird Resting Position",
+        "names": "Gracie",
         "img": "/galleryImages/Gracie 2.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 9,
+        "title": "Looking Back",
+        "names": "Gracie",
         "img": "/galleryImages/Gracie 3.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 10,
+        "title": "Waiting",
+        "names": "Gracie",
         "img": "/galleryImages/Gracie.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 11,
+        "title": "Life On The Edge",
+        "names": "Little Bitty",
         "img": "/galleryImages/Little Bitty 2.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 12,
+        "title": "Relaxing",
+        "names": "Little Bitty",
         "img": "/galleryImages/Little Bitty 3.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 13,
+        "title": "Defensive",
+        "names": "Little Bitty",
         "img": "/galleryImages/Little Bitty.JPG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 14,
+        "title": "Wet Boi",
+        "names": "Mr. Mister",
         "img": "/galleryImages/Mr. Mister 2.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 15,
+        "title": "On The Hunt",
+        "names": "Mr. Mister",
         "img": "/galleryImages/Mr. Mister.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 16,
+        "title": "After A Rain",
+        "names": "Mushrooms",
         "img": "/galleryImages/Mushrooms.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 17,
+        "title": "Colorful Cloud",
+        "names": "Kansas",
         "img": "/galleryImages/Outside 2.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 18,
+        "title": "Classic Evening Sky",
+        "names": "Kansas",
         "img": "/galleryImages/Outside 3.JPG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 19,
+        "title": "Approaching Sunset",
+        "names": "Kansas",
         "img": "/galleryImages/Outside 4.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 20,
+        "title": "Star Wars Vibes",
+        "names": "Kansas",
         "img": "/galleryImages/Outside.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 21,
+        "title": "Waiting For Their Return",
+        "names": "Peaches",
         "img": "/galleryImages/Peaches.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 22,
+        "title": "Deceive-mode: ON",
+        "names": "Pipsqueak",
         "img": "/galleryImages/Pipsqueak.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 23,
+        "title": "Moonrise",
+        "names": "Kansas",
         "img": "/galleryImages/Road.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 24,
+        "title": "For Everything",
+        "names": "Setup",
         "img": "/galleryImages/Setup.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 25,
+        "title": "Not amused",
+        "names": "Toby",
         "img": "/galleryImages/Toby 2.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 26,
+        "title": "Curious",
+        "names": "Toby",
         "img": "/galleryImages/Toby 3.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 27,
+        "title": "Alone Time",
+        "names": "Toby",
         "img": "/galleryImages/Toby.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 28,
+        "title": "Showing Off",
+        "names": "Vicious",
         "img": "/galleryImages/Vicious 2.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 29,
+        "title": "Thinking Of Drinking",
+        "names": "Vicious",
         "img": "/galleryImages/Vicious 3.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 30,
+        "title": "Taking The Drink",
+        "names": "Vicious",
         "img": "/galleryImages/Vicious 4.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 31,
+        "title": "Fabulous",
+        "names": "Vicious",
         "img": "/galleryImages/Vicious 5.JPEG"
     },
     {
-        "id": 2,
-        "title": "",
-        "names": "",
+        "id": 32,
+        "title": "Vibing",
+        "names": "Vicious",
         "img": "/galleryImages/Vicious.JPEG"
     }
 ]

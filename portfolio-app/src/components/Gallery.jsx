@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100%'
   },
   gallerySpacer: {
-      height: 100,
+      height: 300,
       width: '100%'
   },
   galleryTitleContainer: {
@@ -111,6 +111,15 @@ const useStyles = makeStyles((theme) => ({
   gallerySubtitle: {
     fontSize: 20,
     fontWeight: 300
+  },
+  pageTitle:{
+    fontSize: 80,
+    fontWeight: 500,
+    marginTop: 130,
+  },
+  pageSubtitle: {
+    fontSize: 40,
+    fontWeight: 400
   }
 }));
 
@@ -124,12 +133,20 @@ function Gallery() {
     <div className={classes.bg}>
         <div className={classes.container}>
             <div className={classes.workWrapper}>
-                <div className={classes.gallerySpacer} />
-                <Grid container >
+                <div className={classes.gallerySpacer} >
+                    <Grid container>
+                        <Grid item xs={1} sm={1} md={2} lg={2} xl={2} />
+                        <Grid item xs={10} sm={10} md={8} lg={8} xl={8}>
+                            <h1 className={classes.pageTitle}>Gallery</h1>
+                        </Grid>
+                        <Grid item xs={1} sm={1} md={2} lg={2} xl={2} />
+                    </Grid>
+                </div>
+                <Grid container>
                     <Hidden mdDown>
                     <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
                     <Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
-                        <ImageList variant="masonry" cols={3} gap={40}>
+                        <ImageList variant="masonry" cols={3} gap={20}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.img}>
                                 <div className={classes.galleryTitleContainer}>
@@ -152,7 +169,7 @@ function Gallery() {
                     <Hidden smDown lgUp>
                     <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
                     <Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
-                        <ImageList variant="masonry" cols={2} gap={40}>
+                        <ImageList variant="masonry" cols={2} gap={20}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.img}>
                                 <div className={classes.galleryTitleContainer}>
