@@ -4,10 +4,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
 
 // import components
 import aboutBG from '../aboutBG.jpg';
+// import image data
+import galleryJSON from './pageComponents/gallery.json';
 
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
@@ -79,14 +83,34 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center'
   },
   galleryImages: {
-    paddingBottom: 100,
-    height: '100%'
+    
   },
   galleryContainer: {
-    paddingTop: 70
+    paddingTop: 70,
+    height: '100%'
   },
-  imagesContainer: {
-      
+  gallerySpacer: {
+      height: 100,
+      width: '100%'
+  },
+  galleryTitleContainer: {
+      zIndex: 3,
+      color: '#FFFFFF',
+      display: 'block',
+      position: 'absolute',
+      textAlign: 'center',
+      pointerEvents: 'none',
+      width: "100%",
+      height: "100%",
+      margin: "0 auto"
+  },
+  galleryTitle: {
+      fontSize: 40,
+      fontWeight: 500
+  },
+  gallerySubtitle: {
+    fontSize: 20,
+    fontWeight: 300
   }
 }));
 
@@ -94,48 +118,82 @@ function Gallery() {
 
   const classes = useStyles();
 
+  const itemData = galleryJSON;
+
   return (
     <div className={classes.bg}>
         <div className={classes.container}>
             <div className={classes.workWrapper}>
-                <Grid container className={classes.galleryContainer}>
-                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-                    <Grid item className="imagesContainer" xs={10} sm={10} md={5} lg={5} xl={5} align='center'>
-                        <Parallax className="galleryImages" y={[-20, 20]} tagOuter="figure">
-                            <img height='100%' width='90%' src="/galleryImages/Catland.JPEG" alt=''/>
-                        </Parallax>
+                <div className={classes.gallerySpacer} />
+                <Grid container >
+                    <Hidden mdDown>
+                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
+                    <Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
+                        <ImageList variant="masonry" cols={3} gap={40}>
+                        {itemData.map((item) => (
+                            <ImageListItem key={item.img}>
+                                <div className={classes.galleryTitleContainer}>
+                                    <h3 className={classes.galleryTitle}>{item.names}</h3>
+                                    <h5 className={classes.gallerySubtitle}>{item.title}</h5>
+                                </div>
+                            <img
+                                src={`${item.img}?w=248&fit=crop&auto=format`}
+                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                            </ImageListItem>
+                        ))}
+                        </ImageList>
                     </Grid>
-                    <Hidden mdUp>
-                        <Grid item xs={1} sm={1} />
-                        <Grid item xs={1} sm={1} />
+                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
                     </Hidden>
-                    <Grid item className="imagesContainer" xs={10} sm={10} md={5} lg={5} xl={5} align='center'>
-                        <Parallax className="galleryImages" y={[10, 40]} tagOuter="figure">
-                            <img height='100%' width='90%' src="/galleryImages/Cats.JPEG" alt=''/>
-                        </Parallax>
+
+                    <Hidden smDown lgUp>
+                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
+                    <Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
+                        <ImageList variant="masonry" cols={2} gap={40}>
+                        {itemData.map((item) => (
+                            <ImageListItem key={item.img}>
+                                <div className={classes.galleryTitleContainer}>
+                                    <h3 className={classes.galleryTitle}>{item.names}</h3>
+                                    <h5 className={classes.gallerySubtitle}>{item.title}</h5>
+                                </div>
+                            <img
+                                src={`${item.img}?w=248&fit=crop&auto=format`}
+                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                            </ImageListItem>
+                        ))}
+                        </ImageList>
+                    </Grid>
+                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
+                    </Hidden>
+
+                    <Hidden mdUp>
+                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+                    <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
+                        <ImageList variant="masonry" cols={1} gap={20}>
+                        {itemData.map((item) => (
+                            <ImageListItem key={item.img}>
+                                <div className={classes.galleryTitleContainer}>
+                                    <h3 className={classes.galleryTitle}>{item.names}</h3>
+                                    <h5 className={classes.gallerySubtitle}>{item.title}</h5>
+                                </div>
+                            <img
+                                src={`${item.img}?w=248&fit=crop&auto=format`}
+                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                            </ImageListItem>
+                        ))}
+                        </ImageList>
                     </Grid>
                     <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-
-                    <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-                    <Grid item className="imagesContainer" xs={12} sm={12} md={10} lg={10} xl={10} align='center'>
-                        <Parallax className="galleryImages" y={[-30, 30]} tagOuter="figure">
-                            <img height='100%' width='90%' src="/galleryImages/Dewey 2.JPEG" alt=''/>
-                        </Parallax>
-                    </Grid>
-                    <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-
-                    <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-                    <Grid item className="imagesContainer" xs={6} sm={6} md={5} lg={5} xl={5} align='center'>
-                        <Parallax className="galleryImages" y={[-20, 20]} tagOuter="figure">
-                            <img height='100%' width='90%' src="/galleryImages/Dewey.JPEG" alt=''/>
-                        </Parallax>
-                    </Grid>
-                    <Grid item className="imagesContainer" xs={6} sm={6} md={5} lg={5} xl={5} align='center'>
-                        <Parallax className="galleryImages" y={[-20, 40]} tagOuter="figure">
-                            <img height='100%' width='90%' src="/galleryImages/Gracie 3.JPEG" alt=''/>
-                        </Parallax>
-                    </Grid>
-                    <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />     
+                    </Hidden>
                 </Grid>
           </div>
       </div>
