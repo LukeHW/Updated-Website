@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import { Spin as Hamburger } from 'hamburger-react';
 import Button from '@material-ui/core/Button';
 import Avatar from "@material-ui/core/Avatar";
@@ -23,7 +23,8 @@ const useStyles = makeStyles(() => ({
     top:0,
     position: "fixed",
     zIndex: 100,
-    width: "100%"
+    width: "100%",
+    fontFamily: "Inter"
   },
   link: {
     fontWeight: "normal",
@@ -80,7 +81,8 @@ const useStyles = makeStyles(() => ({
     position: "fixed",
     zIndex: 100,
     width: "100%",
-    borderBottom: '1px solid #333333'
+    borderBottom: '1px solid #333333',
+    fontFamily: "Inter"
   },
   navLinks: {
     textDecoration: "none",
@@ -124,6 +126,9 @@ const useStyles = makeStyles(() => ({
     width: 50,
     height: 50,
     marginLeft: '4vw'
+  },
+  container: {
+    height: 62
   }
 }));
 
@@ -156,19 +161,13 @@ function Navbar() {
                 <Grid item xs="auto" sm="auto" md={3} lg={4} xl={4}/>
                 <Hidden smDown>
                     <Grid item className={classes.link} md={2} lg={1} xl={1}>
-                        <Typography variant="h5" component="h2" gutterBottom>
-                            <Link to="/Work" className={classes.navLinks}>Work</Link>
-                        </Typography>
+                          <Link to="/Work" className={classes.navLinks}>Work</Link>
                     </Grid>
                     <Grid item className={classes.link} md={2} lg={1} xl={1}>
-                        <Typography variant="h5" component="h2" gutterBottom>
-                            <Link to="/Gallery" className={classes.navLinks}>Gallery</Link>
-                        </Typography>
+                          <Link to="/Gallery" className={classes.navLinks}>Gallery</Link>
                     </Grid>
                     <Grid item className={classes.link} md={2} lg={1} xl={1}>
-                        <Typography variant="h5" component="h2" gutterBottom>
-                            <Link to="/#Contact" className={classes.navLinks}>Contact</Link>
-                        </Typography>
+                          <Link to="/#Contact" className={classes.navLinks}>Contact</Link>
                     </Grid>
                 </Hidden>
                 <Hidden mdUp>
@@ -185,15 +184,15 @@ function Navbar() {
         <Hidden mdUp>
             <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
                 <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
-                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                    <div className={classes.menuLinkSpacer} gutterBottom>
                         <Link to="/Work" className={classes.menuLink} onClick={closeMenuHandler}>Work</Link>
-                    </Typography>
-                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                    </div>
+                    <div className={classes.menuLinkSpacer} gutterBottom>
                         <Link to="/Gallery" className={classes.menuLink} onClick={closeMenuHandler}>Gallery</Link>
-                    </Typography>
-                    <Typography className={classes.menuLinkSpacer} variant="h5" component="h2" gutterBottom>
+                    </div>
+                    <div className={classes.menuLinkSpacer} gutterBottom>
                         <Link to="/#Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
-                    </Typography>
+                    </div>
                 </Grid>
             </Grid>
         </Hidden>

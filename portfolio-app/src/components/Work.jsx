@@ -8,6 +8,8 @@ import Hidden from '@material-ui/core/Hidden';
 import workBG from '../lost-sky-bg.jpg';
 import Projects from './Projects';
 
+import ScrollToTop from './pageComponents/ScrollToTop';
+
 // styles for Main.js
 const useStyles = makeStyles(() => ({
   container: {
@@ -71,7 +73,7 @@ const useStyles = makeStyles(() => ({
   workWrapper: {
     minHeight: '100vh',
     color: 'white',
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     alignItems: 'center'
   }
 }));
@@ -82,6 +84,7 @@ function Work() {
 
   return (
     <div className="App">
+    <ScrollToTop showBelow={250} />
     <Grid className={classes.paperContainer}>
     <div className={classes.workWrapper}>
       <Grid container className={classes.container}>

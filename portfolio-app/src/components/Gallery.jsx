@@ -9,9 +9,11 @@ import ImageListItem from '@mui/material/ImageListItem';
 import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
 
 // import components
-import aboutBG from '../aboutBG.jpg';
+import galleryBG2 from '../galleryBG2.jpg';
 // import image data
 import galleryJSON from './pageComponents/gallery.json';
+
+import ScrollToTop from './pageComponents/ScrollToTop';
 
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%'
   },
   bg:{
-    backgroundImage: `url(${aboutBG})`,
+    backgroundImage: `url(${galleryBG2})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundAttachment: "fixed"
@@ -79,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
   workWrapper: {
     minHeight: '100vh',
     color: 'black',
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     alignItems: 'center'
   },
   galleryImages: {
@@ -116,6 +118,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 80,
     fontWeight: 500,
     marginTop: 130,
+    fontFamily: 'Inter'
   },
   pageSubtitle: {
     fontSize: 40,
@@ -131,6 +134,7 @@ function Gallery() {
 
   return (
     <div className={classes.bg}>
+      <ScrollToTop showBelow={250} />
         <div className={classes.container}>
             <div className={classes.workWrapper}>
                 <div className={classes.gallerySpacer} >

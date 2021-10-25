@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   workWrapper: {
     minHeight: '100vh',
     color: 'black',
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     alignItems: 'center'
   }
 }));

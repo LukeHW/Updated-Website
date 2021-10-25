@@ -14,7 +14,7 @@ import Input from './Input';
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
   container: {
-    fontFamily: 'Open Sans'
+    fontFamily: 'Inter'
   },
   paperContainer: {
     backgroundImage: `url(${workBG})`,
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 700,
     fontSize: 'min(10vw, 90px)',
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     textAlign: 'center'
   },
   greeting: {
@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   workWrapper: {
     minHeight: '100vh',
     color: 'white',
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     alignItems: 'center'
   },
   inputContainer: {

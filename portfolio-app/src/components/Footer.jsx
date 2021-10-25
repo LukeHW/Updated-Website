@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     height: 60,
     width: "100%",
-    zIndex: 100
+    zIndex: 10
   },
   footer: {
     color: "white",
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20,
     marginLeft: '7%',
     fontSize: 15,
-    fontFamily: 'Open Sans'
+    fontFamily: 'Inter'
   },
   footerLinks: {
     textDecoration: "none",

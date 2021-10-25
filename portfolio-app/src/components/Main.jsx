@@ -7,6 +7,8 @@ import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Paper from '@material-ui/core/Paper';
 
+import ScrollToTop from './pageComponents/ScrollToTop';
+
 // import styles
 import './Main.css';
 
@@ -17,7 +19,7 @@ import bg from '../blurredBG.jpg';
 const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between",
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     minHeight: 600
   },
   paperContainer: {
@@ -30,14 +32,14 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     fontSize: 'min(10vw, 70px)',
     color: "white",
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     textAlign: 'center'
   },
   title: {
     fontWeight: 400,
     fontSize: 'min(6vw, 28px)',
     color: "white",
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     textAlign: "center"
   },
   placer: {
@@ -155,6 +157,21 @@ const useStyles = makeStyles((theme) => ({
   },
   paperBody: {
     padding: 10
+  },
+  galleryContainer: {
+    minHeight: "100vh",
+    fontFamily: 'Open Sans',
+    padding: theme.spacing(0),
+    backgroundImage: `url(${bg})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed"
+  },
+  contactContainer: {
+    minHeight: "100vh",
+    backgroundColor: ('#222222'),
+    fontFamily: 'Open Sans',
+    padding: theme.spacing(0)
   }
 }));
 
@@ -164,6 +181,7 @@ function Main() {
 
   return (
     <div className="App">
+      <ScrollToTop showBelow={250} />
       <Grid className={classes.paperContainer}>
         <div className="AppBG">
           <Grid container className={classes.container}>
@@ -188,7 +206,7 @@ function Main() {
       <Grid container className={classes.secondContainer}>
           <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>
               <Typography className={classes.spacerText} variant="h4" component="h2" gutterBottom align='center'>
-                Feel free to add me on these platforms
+                Some of my work
               </Typography>
           </Grid>
           <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
@@ -238,6 +256,22 @@ function Main() {
             </Paper>
           </Grid>
           <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
+      </Grid>
+
+      <Grid cointainer>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align="center">
+          <div className={classes.galleryContainer}>
+            Gallery
+          </div>
+        </Grid>
+      </Grid>
+
+      <Grid cointainer>
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align="center">
+          <div className={classes.contactContainer} id="Contact">
+            Contact
+          </div>
+        </Grid>
       </Grid>
 
     </div>
