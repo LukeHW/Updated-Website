@@ -6,7 +6,10 @@ const useStyles = makeStyles(() => ({
   input: {
       width: '100%',
       padding: '10px',
-      boxSizing: 'border-box'
+      boxSizing: 'border-box',
+      maxWidth: 1000,
+      marginLeft: 'auto',
+      marginRight: 'auto'
   },
   label: {
       fontWeight: 'bold',

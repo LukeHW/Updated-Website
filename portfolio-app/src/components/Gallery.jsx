@@ -92,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100%'
   },
   gallerySpacer: {
-      height: 300,
+      height: 400,
       width: '100%'
   },
   galleryTitleContainer: {
@@ -123,7 +123,32 @@ const useStyles = makeStyles((theme) => ({
   pageSubtitle: {
     fontSize: 40,
     fontWeight: 400
-  }
+  },
+  spacer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    marginTop: 100
+  },
+  spacerContainer: {
+    maxWidth: 1000,
+    marginRight: 'auto',
+    marginLeft: 'auto'
+  },
+  spacerText: {
+    fontWeight: 500,
+    fontSize: 'min(10vw, 92px)',
+    textAlign: 'left',
+    color: '#222222',
+    margin: 5
+  },
+  spacerTextHeader: {
+    fontWeight: 500,
+    fontSize: 28,
+    textAlign: 'left',
+    color: 'black',
+    margin: 5
+  },
 }));
 
 function Gallery() {
@@ -139,11 +164,18 @@ function Gallery() {
             <div className={classes.workWrapper}>
                 <div className={classes.gallerySpacer} >
                     <Grid container>
-                        <Grid item xs={1} sm={1} md={2} lg={2} xl={2} />
-                        <Grid item xs={10} sm={10} md={8} lg={8} xl={8}>
-                            <h1 className={classes.pageTitle}>Gallery</h1>
-                        </Grid>
-                        <Grid item xs={1} sm={1} md={2} lg={2} xl={2} />
+                      <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+                      <Grid item className={classes.spacer} xs={10} sm={10} md={10} lg={10} xl={10}>
+                          <div className={classes.spacerContainer}>
+                            <h1 className={classes.spacerTextHeader}>
+                              Gallery
+                            </h1>
+                            <h2 className={classes.spacerText}>
+                              Pictures taken from my daily life.
+                            </h2>
+                          </div>
+                      </Grid>
+                      <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
                     </Grid>
                 </div>
                 <Grid container>

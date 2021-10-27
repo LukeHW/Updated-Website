@@ -5,7 +5,7 @@
 .AppBG {
   min-height: 100vh;
   color: white;
-  font-family: 'Open Sans';
+  font-family: 'Inter';
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -22,13 +22,13 @@
 
 h1 {
   font-weight: normal;
-  font-family: 'Open Sans';
+  font-family: 'Inter';
 }
 
 h2 {
   font-weight: 300;
   font-size: calc(8px + 2vmin);
-  font-family: 'Open Sans';
+  font-family: 'Inter';
 }
 
 .downArrow {

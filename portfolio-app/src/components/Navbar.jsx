@@ -29,7 +29,6 @@ const useStyles = makeStyles(() => ({
   link: {
     fontWeight: "normal",
     color: "rgba(255, 255, 255)",
-    marginTop: 15,
     textAlign: "center"
   },
   menuBox: {
@@ -93,18 +92,23 @@ const useStyles = makeStyles(() => ({
     },
     '&:focus': {
       color: 'rgba(220, 220, 220)'
-    }
+    },
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    height: "100%",
   },
   hamburgerContainer: {
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
     height: "100%",
-    marginLeft: "-30px",
-    marginTop: 3
+    width: 50,
+    marginLeft: "auto",
+    marginRight: "auto"
   },
   hamburger: {
-    marginRight: 50
+    
   },
   navButton: {
     margin: 0,
@@ -171,8 +175,8 @@ function Navbar() {
                     </Grid>
                 </Hidden>
                 <Hidden mdUp>
-                    <Grid item xs={10} sm={10}/>
-                    <Grid item xs={1} sm={1}>
+                    <Grid item xs={9} sm={9}/>
+                    <Grid item xs={2} sm={2} align="center">
                       <div className={classes.hamburgerContainer}>
                         <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
                       </div>

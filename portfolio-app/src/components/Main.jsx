@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
 
@@ -14,6 +15,8 @@ import './Main.css';
 
 // import components
 import bg from '../blurredBG.jpg';
+
+import Input from './Input';
 
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
@@ -79,14 +82,14 @@ const useStyles = makeStyles((theme) => ({
   secondContainer: {
     minHeight: "100vh",
     backgroundColor: ('#222222'),
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     padding: theme.spacing(0)
   },
   hidden: {
     justifyContent: "center",
     display: "flex",
     marginTop: 30,
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     fontSize: 30,
     overflow: 'auto'
   },
@@ -120,19 +123,35 @@ const useStyles = makeStyles((theme) => ({
     '&:focus': {
       boxShadow: '0 0px 8px 0 rgba(255, 255, 255, 0.7)',
       transform: 'scale(1.1)'
-    }
+    },
+    marginBottom: 25
   },
   spacer: {
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    marginTop: 100
+    marginTop: 100,
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  spacerContainer: {
+    maxWidth: 1000,
+    marginRight: 'auto',
+    marginLeft: 'auto'
   },
   spacerText: {
     fontWeight: 500,
-    fontSize: 'min(10vw, 70px)',
-    textAlign: 'center',
-    color: 'white'
+    fontSize: 'min(10vw, 92px)',
+    textAlign: 'left',
+    color: '#DDDDDD',
+    margin: 5
+  },
+  spacerTextHeader: {
+    fontWeight: 500,
+    fontSize: 28,
+    textAlign: 'left',
+    color: 'white',
+    margin: 5
   },
   links: {
     paddingTop: 5,
@@ -160,7 +179,7 @@ const useStyles = makeStyles((theme) => ({
   },
   galleryContainer: {
     minHeight: "100vh",
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     padding: theme.spacing(0),
     backgroundImage: `url(${bg})`,
     backgroundRepeat: "no-repeat",
@@ -168,10 +187,49 @@ const useStyles = makeStyles((theme) => ({
     backgroundAttachment: "fixed"
   },
   contactContainer: {
-    minHeight: "100vh",
+    minHeight: "55vh",
     backgroundColor: ('#222222'),
-    fontFamily: 'Open Sans',
+    fontFamily: 'Inter',
     padding: theme.spacing(0)
+  },
+  viewLink: {
+    textDecoration: 'none',
+    fontSize: 24,
+    fontWeight: 300,
+    color: 'white',
+  },
+  galleryTextHeader: {
+    fontWeight: 500,
+    fontSize: 28,
+    textAlign: 'left',
+    color: 'white',
+    margin: 5,
+    marginTop: 0,
+    paddingTop: 30
+  },
+  gallerySpacer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    paddingTop: 100,
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  inputHeaders: {
+    textAlign: 'left',
+    color: 'white',
+    fontSize: '20px',
+    paddingLeft: 'inherit'
+  },
+  button: {
+    color: 'white',
+    backgroundColor: 'rgb(100, 100, 100)',
+    '&:hover': {
+      backgroundColor: 'rgb(150, 150, 150)'
+    },
+    width: 100,
+    marginLeft: 'auto',
+    marginRight: 'auto'
   }
 }));
 
@@ -204,11 +262,19 @@ function Main() {
       </Grid>
 
       <Grid container className={classes.secondContainer}>
-          <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>
-              <Typography className={classes.spacerText} variant="h4" component="h2" gutterBottom align='center'>
-                Some of my work
-              </Typography>
+        <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+          <Grid item className={classes.spacer} xs={10} sm={10} md={10} lg={10} xl={10}>
+              <div className={classes.spacerContainer}>
+                <h1 className={classes.spacerTextHeader}>
+                  Projects
+                </h1>
+                <h2 className={classes.spacerText}>
+                  Some of the work I have done.
+                </h2>
+              </div>
           </Grid>
+          <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+
           <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
           <Grid item xs={12} sm={12} md={12} lg={3} xl={3} align='center'>
             <Paper elevation={5} className={classes.paperLinks} align='center'>
@@ -255,24 +321,52 @@ function Main() {
               </div>
             </Paper>
           </Grid>
-          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
+          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+              <h6 className={classes.viewLink} variant="h4" component="h2" gutterBottom align='center'>
+                View more
+              </h6>
+          </Grid> 
       </Grid>
 
       <Grid cointainer>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align="center">
           <div className={classes.galleryContainer}>
-            Gallery
+            <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+            <Grid item className={classes.gallerySpacer} xs={10} sm={10} md={10} lg={10} xl={10}>
+                <div className={classes.spacerContainer}>
+                  <h1 className={classes.galleryTextHeader}>
+                    Gallery
+                  </h1>
+                  <h2 className={classes.spacerText}>
+                    Some of the pictures I have taken.
+                  </h2>
+                </div>
+            </Grid>
+            <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
           </div>
-        </Grid>
       </Grid>
 
       <Grid cointainer>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align="center">
           <div className={classes.contactContainer} id="Contact">
-            Contact
+          <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+            <Grid item className={classes.gallerySpacer} xs={10} sm={10} md={10} lg={10} xl={10}>
+                <div className={classes.spacerContainer}>
+                  <h1 className={classes.galleryTextHeader}>
+                    Contact
+                  </h1>
+                  <h2 className={classes.spacerText}>
+                    Get in touch with me.
+                  </h2>
+                </div>
+                  <Input inputtype='input' type='text' name='name' placeholder='Your Name' />
+                  <Input inputtype='input' type='email' name='email' placeholder='Email Address' />
+                  <Input inputtype='input' type='text' name='street' placeholder='Street Address' />
+                  <Input inputtype='textarea' type='text' name='message' placeholder='Reason for contact' />
+                  <Button className={classes.button} placeholder='Send'>Send</Button>
+            </Grid>
+            <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
           </div>
         </Grid>
-      </Grid>
 
     </div>
   );
