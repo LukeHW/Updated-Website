@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   greeting: {
     fontWeight: 600,
-    fontSize: 'min(10vw, 70px)',
+    fontSize: 'min(10vw, 92px)',
     color: "white",
     fontFamily: 'Inter',
     textAlign: 'center'
@@ -212,6 +212,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     display: "flex",
     paddingTop: 100,
+    paddingBottom: 130,
     marginLeft: 'auto',
     marginRight: 'auto'
   },

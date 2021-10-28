@@ -177,11 +177,9 @@ function Projects() {
             }
           }
         })
-        console.log(slider)
       })
       glide.mount();
     }
-    console.log("glide mounted")
   }
 
   useEffect(() => {
@@ -194,8 +192,6 @@ function Projects() {
       }
       setProjects(projectArray);
 
-      console.log("projects are set in state");
-
       setProjMount(true);
       mountGlider();
   }, []);
@@ -207,8 +203,6 @@ function Projects() {
           const tags = 'Tech Stack: '.concat(`${project.tags.join(', ')}`);
           const githubLink = (<a target="_blank" rel="noopener noreferrer" href={project.githubLink} className={classes.titleLink}>{project.title}</a>);
           const hostedLink = project.hostedLink === "" ? (<div/>) : (<a target="_blank" rel="noopener noreferrer" href={project.hostedLink} className={classes.hostedLink}>here.</a>);
-
-          console.log("rendering project", index);
 
           return  <div className={classes.project} key={project.projectNumber}>
                     <div className={classes.shadow}>
@@ -267,6 +261,3 @@ function Projects() {
 }
 
 export default Projects;
-
-export function test() { return "test"; }
-export function test2() { return "test2"; }

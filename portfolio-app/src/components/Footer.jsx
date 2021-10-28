@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Inter'
   },
   footerContainer: {
-    height: 60
+    height: 60,
+    borderTop: '1px solid #333333'
   },
   footerLinks: {
     textDecoration: "none",
@@ -54,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Inter',
     flexDirection: "column",
     justifyContent: "center",
-    display: "flex",
+    display: "flex"
   },
   iconsContainerSmall: {
     padding: 5,
@@ -66,7 +67,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     height: 120,
     width: "100%",
-    zIndex: 10
+    zIndex: 10,
+    borderTop: '1px solid #333333'
+  },
+  footerWrapper: {
+    maxHeight: 120
   }
 }));
 
@@ -75,7 +80,7 @@ function Footer() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.footerWrapper}>
       <div className={classes.footerActive}>
           <Grid className={classes.footerContainer} container>
           <Hidden smDown>
