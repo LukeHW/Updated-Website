@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
 
 // import components
 import galleryBG2 from '../galleryBG2.jpg';
@@ -140,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 'min(10vw, 92px)',
     textAlign: 'left',
     color: '#222222',
-    margin: 5
+    margin: 5,
   },
   spacerTextHeader: {
     fontWeight: 500,

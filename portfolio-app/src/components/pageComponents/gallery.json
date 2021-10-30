@@ -3,7 +3,7 @@
         "id": 3,
         "title": "Taking A Nap",
         "names": "Dewey",
-        "img": "/galleryImages/Dewey 2.JPEG"
+        "img": "/galleryImages/Dewey%202.JPEG"
     },
     {
         "id": 1,
@@ -21,19 +21,19 @@
         "id": 4,
         "title": "Cuddle Time",
         "names": "Dewey",
-        "img": "/galleryImages/Dewey 3.JPEG"
+        "img": "/galleryImages/Dewey%203.JPEG"
     },
     {
         "id": 5,
         "title": "Sitting Funny",
         "names": "Dewey",
-        "img": "/galleryImages/Dewey 4.JPEG"
+        "img": "/galleryImages/Dewey%204.JPEG"
     },
     {
         "id": 6,
         "title": "Looking For Birds",
         "names": "Dewey",
-        "img": "/galleryImages/Dewey 5.JPEG"
+        "img": "/galleryImages/Dewey%205.JPEG"
     },
     {
         "id": 7,
@@ -45,13 +45,13 @@
         "id": 8,
         "title": "Weird Resting Position",
         "names": "Gracie",
-        "img": "/galleryImages/Gracie 2.JPEG"
+        "img": "/galleryImages/Gracie%202.JPEG"
     },
     {
         "id": 9,
         "title": "Looking Back",
         "names": "Gracie",
-        "img": "/galleryImages/Gracie 3.JPEG"
+        "img": "/galleryImages/Gracie%203.JPEG"
     },
     {
         "id": 10,
@@ -63,31 +63,31 @@
         "id": 11,
         "title": "Life On The Edge",
         "names": "Little Bitty",
-        "img": "/galleryImages/Little Bitty 2.JPEG"
+        "img": "/galleryImages/Little%20Bitty%202.JPEG"
     },
     {
         "id": 12,
         "title": "Relaxing",
         "names": "Little Bitty",
-        "img": "/galleryImages/Little Bitty 3.JPEG"
+        "img": "/galleryImages/Little%20Bitty%203.JPEG"
     },
     {
         "id": 13,
         "title": "Defensive",
         "names": "Little Bitty",
-        "img": "/galleryImages/Little Bitty.JPG"
+        "img": "/galleryImages/Little%20Bitty.JPG"
     },
     {
         "id": 14,
         "title": "Wet Boi",
         "names": "Mr. Mister",
-        "img": "/galleryImages/Mr. Mister 2.JPEG"
+        "img": "/galleryImages/Mr.%20Mister%202.JPEG"
     },
     {
         "id": 15,
         "title": "On The Hunt",
         "names": "Mr. Mister",
-        "img": "/galleryImages/Mr. Mister.JPEG"
+        "img": "/galleryImages/Mr.%20Mister.JPEG"
     },
     {
         "id": 16,
@@ -99,19 +99,19 @@
         "id": 17,
         "title": "Colorful Cloud",
         "names": "Kansas",
-        "img": "/galleryImages/Outside 2.JPEG"
+        "img": "/galleryImages/Outside%202.JPEG"
     },
     {
         "id": 18,
         "title": "Classic Evening Sky",
         "names": "Kansas",
-        "img": "/galleryImages/Outside 3.JPG"
+        "img": "/galleryImages/Outside%203.JPG"
     },
     {
         "id": 19,
         "title": "Approaching Sunset",
         "names": "Kansas",
-        "img": "/galleryImages/Outside 4.JPEG"
+        "img": "/galleryImages/Outside%204.JPEG"
     },
     {
         "id": 20,
@@ -147,13 +147,13 @@
         "id": 25,
         "title": "Not amused",
         "names": "Toby",
-        "img": "/galleryImages/Toby 2.JPEG"
+        "img": "/galleryImages/Toby%202.JPEG"
     },
     {
         "id": 26,
         "title": "Curious",
         "names": "Toby",
-        "img": "/galleryImages/Toby 3.JPEG"
+        "img": "/galleryImages/Toby%203.JPEG"
     },
     {
         "id": 27,
@@ -165,25 +165,25 @@
         "id": 28,
         "title": "Showing Off",
         "names": "Vicious",
-        "img": "/galleryImages/Vicious 2.JPEG"
+        "img": "/galleryImages/Vicious%202.JPEG"
     },
     {
         "id": 29,
         "title": "Thinking Of Drinking",
         "names": "Vicious",
-        "img": "/galleryImages/Vicious 3.JPEG"
+        "img": "/galleryImages/Vicious%203.JPEG"
     },
     {
         "id": 30,
         "title": "Taking The Drink",
         "names": "Vicious",
-        "img": "/galleryImages/Vicious 4.JPEG"
+        "img": "/galleryImages/Vicious%204.JPEG"
     },
     {
         "id": 31,
         "title": "Fabulous",
         "names": "Vicious",
-        "img": "/galleryImages/Vicious 5.JPEG"
+        "img": "/galleryImages/Vicious%205.JPEG"
     },
     {
         "id": 32,

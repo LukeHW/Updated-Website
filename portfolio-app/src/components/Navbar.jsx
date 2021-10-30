@@ -200,13 +200,13 @@ function Navbar() {
         <Hidden mdUp>
             <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
                 <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
-                    <div className={classes.menuLinkSpacer} gutterBottom>
+                    <div className={classes.menuLinkSpacer}>
                         <Link to="/Work" className={classes.menuLink} onClick={closeMenuHandler}>Work</Link>
                     </div>
-                    <div className={classes.menuLinkSpacer} gutterBottom>
+                    <div className={classes.menuLinkSpacer}>
                         <Link to="/Gallery" className={classes.menuLink} onClick={closeMenuHandler}>Gallery</Link>
                     </div>
-                    <div className={classes.menuLinkSpacer} gutterBottom>
+                    <div className={classes.menuLinkSpacer}>
                         <Link to="/#Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
                     </div>
                 </Grid>

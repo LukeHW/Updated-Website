@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-boolean-value */
 // import modules
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
@@ -353,7 +354,6 @@ function Main() {
           </Grid> 
       </Grid>
 
-      <Grid cointainer>
           <div className={classes.galleryContainer}>
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
             <Grid item className={classes.gallerySpacer} xs={10} sm={10} md={10} lg={10} xl={10}>
@@ -365,12 +365,11 @@ function Main() {
                     Some of the pictures I have taken.
                   </h2>
                 </div>
+                
             </Grid>
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
           </div>
-      </Grid>
 
-      <Grid cointainer>
           <div className={classes.contactContainer} id="Contact">
           <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
             <Grid item className={classes.gallerySpacer} xs={10} sm={10} md={10} lg={10} xl={10}>
@@ -393,7 +392,6 @@ function Main() {
             </Grid>
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
           </div>
-        </Grid>
 
     </div>
   );
