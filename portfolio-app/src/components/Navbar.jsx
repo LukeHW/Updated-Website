@@ -62,7 +62,8 @@ const useStyles = makeStyles(() => ({
     },
     '&:focus': {
       color: 'rgba(220, 220, 220)'
-    }
+    },
+    fontFamily: 'Inter'
   },
   menuLinkSpacer: {
     marginRight: "8vw",
@@ -124,15 +125,26 @@ const useStyles = makeStyles(() => ({
     }
   },
   logoLink: {
-    display: 'block'
+    display: 'block',
+    textDecoration: 'none'
   },
   logoLinkContainer: {
-    width: 50,
-    height: 50,
-    marginLeft: '4vw'
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    height: "100%"
   },
   container: {
     height: 62
+  },
+  nameLink: {
+    color: 'white',
+    fontSize: 19,
+    fontWeight: 500,
+    fontFamily: 'Inter',
+    textAlign: 'center',
+    width: 160,
+    marginLeft: '3vw'
   }
 }));
 
@@ -155,14 +167,14 @@ function Navbar() {
         <div className={navbar ? classes.navbarActive : classes.navbarContainer}>
             <Grid container className={classes.container}>
                 <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/> 
-                <Grid item xs={1} sm={1} md={1} lg={1} xl={1}>
+                <Grid item xs={7} sm={4} md={2} lg={2} xl={2}>
                   <div className={classes.logoLinkContainer}>
                     <Link to="/" className={classes.logoLink}>
-                          <Button className={classes.navButton} startIcon={<Avatar className={classes.navbarLogo} src="/favicon.png" />} alt="LHW logo" onClick={closeMenuHandler} />
+                          <h1 className={classes.nameLink}>Luke Wahlmeier</h1>
                     </Link>
                   </div>
                 </Grid>
-                <Grid item xs="auto" sm="auto" md={3} lg={4} xl={4}/>
+                <Grid item xs="auto" sm="auto" md={2} lg={3} xl={3}/>
                 <Hidden smDown>
                     <Grid item className={classes.link} md={2} lg={1} xl={1}>
                           <Link to="/Work" className={classes.navLinks}>Work</Link>
@@ -175,7 +187,7 @@ function Navbar() {
                     </Grid>
                 </Hidden>
                 <Hidden mdUp>
-                    <Grid item xs={9} sm={9}/>
+                    <Grid item xs={3} sm={6}/>
                     <Grid item xs={2} sm={2} align="center">
                       <div className={classes.hamburgerContainer}>
                         <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />

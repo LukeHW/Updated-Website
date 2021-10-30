@@ -192,11 +192,19 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Inter',
     padding: theme.spacing(0)
   },
+  viewLinkContainer: {
+    width: 300,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    textAlign: 'center',
+    height: 50
+  },
   viewLink: {
     textDecoration: 'none',
     fontSize: 24,
     fontWeight: 300,
     color: 'white',
+    margin: 30
   },
   galleryTextHeader: {
     fontWeight: 500,
@@ -230,7 +238,20 @@ const useStyles = makeStyles((theme) => ({
     },
     width: 100,
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    marginTop: 10
+  },
+  emailText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 16,
+    fontWeight: 200,
+    textDecoration: 'none',
+    marginTop: 25,
+    marginBottom: 25,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    width: 200
   }
 }));
 
@@ -324,9 +345,11 @@ function Main() {
           </Grid>
           <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-              <h6 className={classes.viewLink} variant="h4" component="h2" gutterBottom align='center'>
+            <div className={classes.viewLinkContainer}>
+              <a href="/Work" className={classes.viewLink}>
                 View more
-              </h6>
+              </a>
+            </div>
           </Grid> 
       </Grid>
 
@@ -364,6 +387,9 @@ function Main() {
                   <Input inputtype='input' type='text' name='street' placeholder='Street Address' />
                   <Input inputtype='textarea' type='text' name='message' placeholder='Reason for contact' />
                   <Button className={classes.button} placeholder='Send'>Send</Button>
+                  <a href="mailto:lukewahlmeier@gmail.com" className={classes.emailText}>
+                    lukewahlmeier@gmail.com
+                  </a>
             </Grid>
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
           </div>
