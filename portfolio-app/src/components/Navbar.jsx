@@ -9,6 +9,7 @@ import { Spin as Hamburger } from 'hamburger-react';
 import Button from '@material-ui/core/Button';
 import Avatar from "@material-ui/core/Avatar";
 
+
 // styles for Navbar.js
 const useStyles = makeStyles(() => ({
   navbarLogo: {

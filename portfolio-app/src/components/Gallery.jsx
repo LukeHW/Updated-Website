@@ -7,6 +7,8 @@ import Hidden from '@material-ui/core/Hidden';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
+import ReactHover, { Trigger, Hover } from 'react-hover';
+
 // import components
 import galleryBG2 from '../galleryBG2.jpg';
 // import image data
@@ -91,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100%'
   },
   gallerySpacer: {
-      height: 400,
+      maxHeight: 500,
       width: '100%'
   },
   galleryTitleContainer: {
@@ -102,11 +104,10 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'center',
       pointerEvents: 'none',
       width: "100%",
-      height: "100%",
-      margin: "0 auto"
+      height: "100%"
   },
   galleryTitle: {
-      fontSize: 40,
+      fontSize: 36,
       fontWeight: 500
   },
   gallerySubtitle: {
@@ -127,7 +128,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    marginTop: 100
+    marginTop: 140
   },
   spacerContainer: {
     maxWidth: 1000,
@@ -140,6 +141,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     color: '#222222',
     margin: 5,
+    marginBottom: 100
   },
   spacerTextHeader: {
     fontWeight: 500,
@@ -202,8 +204,8 @@ function Gallery() {
                     </Hidden>
 
                     <Hidden smDown lgUp>
-                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
-                    <Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
+                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+                    <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
                         <ImageList variant="masonry" cols={2} gap={20}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.img}>
@@ -221,12 +223,12 @@ function Gallery() {
                         ))}
                         </ImageList>
                     </Grid>
-                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
+                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
                     </Hidden>
 
                     <Hidden mdUp>
-                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-                    <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
+                    <Grid item xs="auto" sm={1} md={1} lg={1} xl={1} />
+                    <Grid item xs={12} sm={10} md={10} lg={10} xl={10}>
                         <ImageList variant="masonry" cols={1} gap={20}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.img}>
@@ -244,7 +246,7 @@ function Gallery() {
                         ))}
                         </ImageList>
                     </Grid>
-                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+                    <Grid item xs="auto" sm={1} md={1} lg={1} xl={1} />
                     </Hidden>
                 </Grid>
           </div>

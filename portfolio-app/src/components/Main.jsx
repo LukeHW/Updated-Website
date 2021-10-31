@@ -11,6 +11,8 @@ import Button from '@material-ui/core/Button';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
 
+import DemoCarousel from './pageComponents/DemoCarousel';
+
 // import styles
 import './Main.css';
 
@@ -81,7 +83,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 50
   },
   secondContainer: {
-    minHeight: "100vh",
     backgroundColor: ('#222222'),
     fontFamily: 'Inter',
     padding: theme.spacing(0)
@@ -145,7 +146,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 'min(10vw, 92px)',
     textAlign: 'left',
     color: '#DDDDDD',
-    margin: 5
+    margin: 5,
+    marginBottom: 100
   },
   spacerTextHeader: {
     fontWeight: 500,
@@ -179,7 +181,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10
   },
   galleryContainer: {
-    minHeight: "100vh",
     fontFamily: 'Inter',
     padding: theme.spacing(0),
     backgroundImage: `url(${bg})`,
@@ -197,15 +198,18 @@ const useStyles = makeStyles((theme) => ({
     width: 300,
     marginRight: 'auto',
     marginLeft: 'auto',
-    textAlign: 'center',
-    height: 50
+    textAlign: 'center'
   },
   viewLink: {
     textDecoration: 'none',
     fontSize: 24,
     fontWeight: 300,
     color: 'white',
-    margin: 30
+    padding: 50,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex"
   },
   galleryTextHeader: {
     fontWeight: 500,
@@ -221,7 +225,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     display: "flex",
     paddingTop: 100,
-    paddingBottom: 130,
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -253,6 +256,19 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 'auto',
     marginLeft: 'auto',
     width: 200
+  },
+  contactSpacer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    paddingTop: 100,
+    paddingBottom: 100,
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  carouselSpacer: {
+    marginLeft: 'auto',
+    marginRight: 'auto'
   }
 }));
 
@@ -266,8 +282,8 @@ function Main() {
       <Grid className={classes.paperContainer}>
         <div className="AppBG">
           <Grid container className={classes.container}>
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
-            <Grid item className={classes.item} xs={12} sm={12} md={10} lg={10} xl={10}>
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} /> 
+            <Grid item className={classes.item} xs={12} sm={12} md={12} lg={10} xl={10}>
               <img className={classes.placer} src="/placer.png" alt="LHW logo" />
               <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
                 Luke Wahlmeier
@@ -276,7 +292,7 @@ function Main() {
                 Developer. Innovator. Musician.
               </Typography>
             </Grid>
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
           </Grid>
           <div className={classes.centeredItem}>
             <ArrowDownwardIcon className="downArrow bounce-7" />
@@ -365,14 +381,27 @@ function Main() {
                     Some of the pictures I have taken.
                   </h2>
                 </div>
-                
             </Grid>
             <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+
+            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+            <Grid item className={classes.carouselSpacer} xs={12} sm={12} md={10} lg={10} xl={10}>
+                <DemoCarousel />
+            </Grid>
+            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+              <div className={classes.viewLinkContainer}>
+                <a href="/Gallery" className={classes.viewLink}>
+                  View gallery
+                </a>
+              </div>
+            </Grid> 
           </div>
 
           <div className={classes.contactContainer} id="Contact">
           <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-            <Grid item className={classes.gallerySpacer} xs={10} sm={10} md={10} lg={10} xl={10}>
+            <Grid item className={classes.contactSpacer} xs={10} sm={10} md={10} lg={10} xl={10}>
                 <div className={classes.spacerContainer}>
                   <h1 className={classes.galleryTextHeader}>
                     Contact

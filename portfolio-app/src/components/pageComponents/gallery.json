@@ -6,6 +6,12 @@
         "img": "/galleryImages/Dewey%202.JPEG"
     },
     {
+        "id": 20,
+        "title": "Star Wars Vibes",
+        "names": "Kansas",
+        "img": "/galleryImages/Outside.JPEG"
+    },
+    {
         "id": 1,
         "title": "Catland by Sarah Archer",
         "names": "Dewey",
@@ -72,52 +78,46 @@
         "img": "/galleryImages/Little%20Bitty%203.JPEG"
     },
     {
-        "id": 13,
-        "title": "Defensive",
-        "names": "Little Bitty",
-        "img": "/galleryImages/Little%20Bitty.JPG"
-    },
-    {
         "id": 14,
-        "title": "Wet Boi",
-        "names": "Mr. Mister",
-        "img": "/galleryImages/Mr.%20Mister%202.JPEG"
-    },
-    {
-        "id": 15,
-        "title": "On The Hunt",
-        "names": "Mr. Mister",
-        "img": "/galleryImages/Mr.%20Mister.JPEG"
-    },
-    {
-        "id": 16,
-        "title": "After A Rain",
-        "names": "Mushrooms",
-        "img": "/galleryImages/Mushrooms.JPEG"
-    },
-    {
-        "id": 17,
         "title": "Colorful Cloud",
         "names": "Kansas",
         "img": "/galleryImages/Outside%202.JPEG"
     },
     {
-        "id": 18,
-        "title": "Classic Evening Sky",
-        "names": "Kansas",
-        "img": "/galleryImages/Outside%203.JPG"
+        "id": 15,
+        "title": "Wet Boi",
+        "names": "Mr. Mister",
+        "img": "/galleryImages/Mr.%20Mister%202.JPEG"
     },
     {
-        "id": 19,
+        "id": 13,
         "title": "Approaching Sunset",
         "names": "Kansas",
         "img": "/galleryImages/Outside%204.JPEG"
     },
     {
-        "id": 20,
-        "title": "Star Wars Vibes",
+        "id": 16,
+        "title": "On The Hunt",
+        "names": "Mr. Mister",
+        "img": "/galleryImages/Mr.%20Mister.JPEG"
+    },
+    {
+        "id": 17,
+        "title": "After A Rain",
+        "names": "Mushrooms",
+        "img": "/galleryImages/Mushrooms.JPEG"
+    },
+    {
+        "id": 18,
+        "title": "Defensive",
+        "names": "Little Bitty",
+        "img": "/galleryImages/Little%20Bitty.JPG"
+    },
+    {
+        "id": 19,
+        "title": "Classic Evening Sky",
         "names": "Kansas",
-        "img": "/galleryImages/Outside.JPEG"
+        "img": "/galleryImages/Outside%203.JPG"
     },
     {
         "id": 21,
@@ -175,7 +175,7 @@
     },
     {
         "id": 30,
-        "title": "Taking The Drink",
+        "title": "Taking A Drink",
         "names": "Vicious",
         "img": "/galleryImages/Vicious%204.JPEG"
     },
@@ -190,5 +190,47 @@
         "title": "Vibing",
         "names": "Vicious",
         "img": "/galleryImages/Vicious.JPEG"
+    },
+    {
+        "id": 33,
+        "title": "Layers",
+        "names": "Castle Rock",
+        "img": "/galleryImages/Castle%20Rock.JPEG"
+    },
+    {
+        "id": 34,
+        "title": "Snoozing",
+        "names": "Vicious",
+        "img": "/galleryImages/Vicious%206.JPEG"
+    },
+    {
+        "id": 35,
+        "title": "Being Cute",
+        "names": "Jack",
+        "img": "/galleryImages/Jack.JPEG"
+    },
+    {
+        "id": 36,
+        "title": "Breather",
+        "names": "Colin",
+        "img": "/galleryImages/Colin.JPEG"
+    },
+    {
+        "id": 37,
+        "title": "Spooky Loaf",
+        "names": "Jack",
+        "img": "/galleryImages/Jack%202.JPEG"
+    },
+    {
+        "id": 38,
+        "title": "Downtown",
+        "names": "Castle Rock",
+        "img": "/galleryImages/Castle%20Rock%202.JPEG"
+    },
+    {
+        "id": 39,
+        "title": "Views",
+        "names": "Colin",
+        "img": "/galleryImages/Colin%202.JPEG"
     }
 ]
