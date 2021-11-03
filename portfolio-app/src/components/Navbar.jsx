@@ -54,17 +54,32 @@ const useStyles = makeStyles(() => ({
   },
   menuLink: {
     textDecoration: "none",
-    fontWeight: "lighter",
+    fontWeight: 300,
     color: "white",
     fontSize: 22,
     textAlign: "right",
-    '&:hover': {
-      color: 'rgba(220, 220, 220)'
+    fontFamily: 'Inter',
+    position: 'relative',
+    display: 'inline-block',
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      display: 'block',
+      width: '100%',
+      backgroundColor: '#397BA6',
+      height: '2px',
+      bottom: 0,
+      left: 0,
+      transform: 'scale(0)',
+      transformOrigin: 'center',
+      transition: 'transform 0.3s ease'
     },
-    '&:focus': {
-      color: 'rgba(220, 220, 220)'
+    '&:hover::before': {
+      transform: 'scale(1)'
     },
-    fontFamily: 'Inter'
+    '&:focus::before': {
+      transform: 'scale(1)'
+    },
   },
   menuLinkSpacer: {
     marginRight: "8vw",
@@ -99,6 +114,26 @@ const useStyles = makeStyles(() => ({
     justifyContent: "center",
     display: "flex",
     height: "100%",
+    position: 'relative',
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      display: 'block',
+      width: '100%',
+      backgroundColor: '#397BA6',
+      height: '2px',
+      bottom: 0,
+      left: 0,
+      transform: 'scale(0)',
+      transformOrigin: 'center',
+      transition: 'transform 0.3s ease'
+    },
+    '&:hover::before': {
+      transform: 'scale(1)'
+    },
+    '&:focus::before': {
+      transform: 'scale(1)'
+    },
   },
   hamburgerContainer: {
     flexDirection: "column",

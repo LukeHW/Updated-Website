@@ -134,7 +134,7 @@ function Contact() {
                   <h5 className={classes.inputHeaders}>First and Last Name</h5>
                   <Input inputtype='input' type='text' name='name' placeholder='Your Name' />
                   <Input inputtype='input' type='email' name='email' placeholder='Email Address' />
-                  <Input inputtype='input' type='text' name='street' placeholder='Street Address' />
+                  <Input inputtype='input' type='tel' name='number' placeholder='Phone Number' />
                   <Input inputtype='textarea' type='text' name='message' placeholder='Reason for contact' />
                   <Button className={classes.button} placeholder='Send'>Send</Button>
                 </Grid>

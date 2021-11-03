@@ -36,24 +36,27 @@ const useStyles = makeStyles((theme) => ({
   },
   greeting: {
     fontWeight: 600,
-    fontSize: 'min(10vw, 92px)',
+    fontSize: 'min(8vw, 105px)',
     color: "white",
     fontFamily: 'Inter',
     textAlign: 'center'
   },
   title: {
     fontWeight: 400,
-    fontSize: 'min(6vw, 28px)',
+    fontSize: 'min(6vw, 32px)',
     color: "white",
     fontFamily: 'Inter',
     textAlign: "center"
   },
   placer: {
-    width: "30vmin",
-    minWidth: 200,
+    width: "50vmin",
+    maxWidth: 400,
+    minWidth: 150,
     marginRight: 'auto',
     marginLeft: 'auto',
-    marginBottom: 35
+    marginBottom: 35,
+    borderRadius: '50%',
+    border: 'solid white 5px'
   },
   placerContainer: {
     flexDirection: "column",
@@ -196,6 +199,8 @@ const useStyles = makeStyles((theme) => ({
   },
   viewLinkContainer: {
     width: 300,
+    height: 70,
+    marginTop: 20,
     marginRight: 'auto',
     marginLeft: 'auto',
     textAlign: 'center'
@@ -205,11 +210,27 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
     fontWeight: 300,
     color: 'white',
-    padding: 50,
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    display: "flex"
+    position: 'relative',
+    display: 'inline-block',
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      display: 'block',
+      width: '100%',
+      backgroundColor: '#397BA6',
+      height: '2px',
+      bottom: 0,
+      left: 0,
+      transform: 'scale(0)',
+      transformOrigin: 'center',
+      transition: 'transform 0.3s ease'
+    },
+    '&:hover::before': {
+      transform: 'scale(1)'
+    },
+    '&:focus::before': {
+      transform: 'scale(1)'
+    },
   },
   galleryTextHeader: {
     fontWeight: 500,
@@ -284,7 +305,7 @@ function Main() {
           <Grid container className={classes.container}>
             <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} /> 
             <Grid item className={classes.item} xs={12} sm={12} md={12} lg={10} xl={10}>
-              <img className={classes.placer} src="/placer.png" alt="LHW logo" />
+              <img className={classes.placer} src="/main.png" alt="Luke W." />
               <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
                 Luke Wahlmeier
               </Typography>
@@ -412,7 +433,7 @@ function Main() {
                 </div>
                   <Input inputtype='input' type='text' name='name' placeholder='Your Name' />
                   <Input inputtype='input' type='email' name='email' placeholder='Email Address' />
-                  <Input inputtype='input' type='text' name='street' placeholder='Street Address' />
+                  <Input inputtype='input' type='tel' name='number' placeholder='Phone Number' />
                   <Input inputtype='textarea' type='text' name='message' placeholder='Reason for contact' />
                   <Button className={classes.button} placeholder='Send'>Send</Button>
                   <a href="mailto:lukewahlmeier@gmail.com" className={classes.emailText}>

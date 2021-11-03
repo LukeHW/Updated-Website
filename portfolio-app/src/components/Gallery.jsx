@@ -7,7 +7,9 @@ import Hidden from '@material-ui/core/Hidden';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-import ReactHover, { Trigger, Hover } from 'react-hover';
+// import ReactHover, { Trigger, Hover } from 'react-hover';
+
+import { ImageGroup, Image } from 'react-fullscreen-image';
 
 // import components
 import galleryBG2 from '../galleryBG2.jpg';
@@ -140,7 +142,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 'min(10vw, 92px)',
     textAlign: 'left',
     color: '#222222',
-    margin: 5,
+    marginTop: 5,
     marginBottom: 100
   },
   spacerTextHeader: {
@@ -148,7 +150,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 28,
     textAlign: 'left',
     color: 'black',
-    margin: 5
+    marginBottom: 5,
+    marginTop: 0
   },
 }));
 

@@ -30,6 +30,22 @@ const useStyles = makeStyles(() => ({
         backgroundColor: '#ccc'
       },
       borderRadius: '3px'
+  },
+  textArea: {
+    outline: 'none',
+    border: '1px solid #ccc',
+    backgroundColor: 'white',
+    font: 'inherit',
+    display: 'block',
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '6px 10px',
+    '&:focus': {
+      outline: 'none',
+      backgroundColor: '#ccc'
+    },
+    borderRadius: '3px',
+    resize: 'none'
   }
 }));
 
@@ -39,12 +55,12 @@ const Input = (props) => {
 
     let inputElement = null;
 
-    switch (props.inputType) {
+    switch (props.inputtype) {
         case('input'):
             inputElement = <input className={classes.inputElement} id='input' {...props} />;
             break;
         case('textarea'):
-            inputElement = <textarea className={classes.inputElement} id='textarea' {...props} />;
+            inputElement = <textarea className={classes.textArea} id='textarea' rows="10" {...props} />;
             break;
         default:
             inputElement = <input className={classes.inputElement} id='default' {...props} />;
