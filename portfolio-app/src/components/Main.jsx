@@ -4,13 +4,11 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
-
 import DemoCarousel from './pageComponents/DemoCarousel';
 
 // import styles
@@ -36,10 +34,13 @@ const useStyles = makeStyles((theme) => ({
   },
   greeting: {
     fontWeight: 600,
-    fontSize: 'min(8vw, 105px)',
+    fontSize: 'clamp(48px, 10vw, 105px)',
     color: "white",
     fontFamily: 'Inter',
-    textAlign: 'center'
+    textAlign: 'center',
+    lineHeight: 1.05,
+    letterSpacing: '-.045em',
+    marginTop: 10
   },
   title: {
     fontWeight: 400,
@@ -141,16 +142,19 @@ const useStyles = makeStyles((theme) => ({
   },
   spacerContainer: {
     maxWidth: 1000,
+    width: '100%',
     marginRight: 'auto',
     marginLeft: 'auto'
   },
   spacerText: {
     fontWeight: 500,
-    fontSize: 'min(10vw, 92px)',
+    fontSize: 'clamp(48px, 10vw, 92px)',
     textAlign: 'left',
     color: '#DDDDDD',
     margin: 5,
-    marginBottom: 100
+    marginBottom: 80,
+    lineHeight: 1.05,
+    letterSpacing: '-.045em'
   },
   spacerTextHeader: {
     fontWeight: 500,
@@ -178,7 +182,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     display: "flex",
     height: 'inherit',
-    marginTop: 50
+    marginTop: 20
   },
   paperBody: {
     padding: 10
@@ -186,7 +190,7 @@ const useStyles = makeStyles((theme) => ({
   galleryContainer: {
     fontFamily: 'Inter',
     padding: theme.spacing(0),
-    backgroundImage: `url(${bg})`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundAttachment: "fixed"
@@ -200,7 +204,7 @@ const useStyles = makeStyles((theme) => ({
   viewLinkContainer: {
     width: 300,
     height: 70,
-    marginTop: 20,
+    marginTop: 40,
     marginRight: 'auto',
     marginLeft: 'auto',
     textAlign: 'center'
@@ -212,13 +216,14 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     position: 'relative',
     display: 'inline-block',
+    paddingBottom: 3,
     '&::before': {
       content: '""',
       position: 'absolute',
       display: 'block',
       width: '100%',
       backgroundColor: '#397BA6',
-      height: '2px',
+      height: '3px',
       bottom: 0,
       left: 0,
       transform: 'scale(0)',
@@ -289,7 +294,8 @@ const useStyles = makeStyles((theme) => ({
   },
   carouselSpacer: {
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    marginBottom: 60
   }
 }));
 
@@ -305,13 +311,13 @@ function Main() {
           <Grid container className={classes.container}>
             <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} /> 
             <Grid item className={classes.item} xs={12} sm={12} md={12} lg={10} xl={10}>
-              <img className={classes.placer} src="/main.png" alt="Luke W." />
-              <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
-                Luke Wahlmeier
-              </Typography>
-              <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-                Developer. Innovator. Musician.
-              </Typography>
+                <img className={classes.placer} src="/main.png" alt="Luke W." />
+                <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
+                  Luke Wahlmeier
+                </Typography>
+                <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
+                  Developer. Innovator. Musician.
+                </Typography>
             </Grid>
             <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
           </Grid>
@@ -434,7 +440,7 @@ function Main() {
                   <Input inputtype='input' type='text' name='name' placeholder='Your Name' />
                   <Input inputtype='input' type='email' name='email' placeholder='Email Address' />
                   <Input inputtype='input' type='tel' name='number' placeholder='Phone Number' />
-                  <Input inputtype='textarea' type='text' name='message' placeholder='Reason for contact' />
+                  <Input inputtype='textarea' type='text' name='message' placeholder='Reason for getting in touch' />
                   <Button className={classes.button} placeholder='Send'>Send</Button>
                   <a href="mailto:lukewahlmeier@gmail.com" className={classes.emailText}>
                     lukewahlmeier@gmail.com

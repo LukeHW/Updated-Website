@@ -1,15 +1,10 @@
 // import modules
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-
-// import ReactHover, { Trigger, Hover } from 'react-hover';
-
-import { ImageGroup, Image } from 'react-fullscreen-image';
 
 // import components
 import galleryBG2 from '../galleryBG2.jpg';
@@ -115,6 +110,21 @@ const useStyles = makeStyles((theme) => ({
   gallerySubtitle: {
     fontSize: 20,
     fontWeight: 300
+  },
+  galleryTitleSmall: {
+      fontSize: 36,
+      fontWeight: 500,
+      position: 'absolute',
+      bottom: 0,
+      left: 5,
+      marginBottom: 25
+  },
+  gallerySubtitleSmall: {
+    fontSize: 20,
+    fontWeight: 300,
+    position: 'absolute',
+    bottom: 20,
+    left: 5,
   },
   pageTitle:{
     fontSize: 80,
@@ -236,8 +246,8 @@ function Gallery() {
                         {itemData.map((item) => (
                             <ImageListItem key={item.img}>
                                 <div className={classes.galleryTitleContainer}>
-                                    <h3 className={classes.galleryTitle}>{item.names}</h3>
-                                    <h5 className={classes.gallerySubtitle}>{item.title}</h5>
+                                    <h3 className={classes.galleryTitleSmall}>{item.names}</h3>
+                                    <h5 className={classes.gallerySubtitleSmall}>{item.title}</h5>
                                 </div>
                             <img
                                 src={`${item.img}?w=248&fit=crop&auto=format`}

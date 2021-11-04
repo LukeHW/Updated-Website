@@ -219,7 +219,7 @@ function Navbar() {
                           <Link to="/Gallery" className={classes.navLinks}>Gallery</Link>
                     </Grid>
                     <Grid item className={classes.link} md={2} lg={1} xl={1}>
-                          <Link to="/#Contact" className={classes.navLinks}>Contact</Link>
+                          <Link smooth to="/#Contact" className={classes.navLinks}>Contact</Link>
                     </Grid>
                 </Hidden>
                 <Hidden mdUp>
@@ -243,7 +243,7 @@ function Navbar() {
                         <Link to="/Gallery" className={classes.menuLink} onClick={closeMenuHandler}>Gallery</Link>
                     </div>
                     <div className={classes.menuLinkSpacer}>
-                        <Link to="/#Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
+                        <Link smooth to="/#Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
                     </div>
                 </Grid>
             </Grid>

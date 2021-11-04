@@ -1,7 +1,7 @@
 /* eslint react/prop-types: 0 */
 
 // import modules
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // styles for Page.js

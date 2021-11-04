@@ -16,6 +16,7 @@
     "hamburger-react": "^2.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-fade-in": "^2.0.1",
     "react-fullscreen-image": "0.0.3",
     "react-hover": "^3.0.1",
     "react-loading-skeleton": "^2.1.1",

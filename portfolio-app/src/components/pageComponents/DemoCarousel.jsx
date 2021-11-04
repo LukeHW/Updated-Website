@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     carouselWrapper: {
         maxWidth: 800,
         minWidth: 300,
-        width: 'min(60vh, 60vw)',
+        width: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: 30
@@ -26,12 +26,19 @@ const useStyles = makeStyles(() => ({
         margin: "0 auto"
     },
     galleryTitle: {
-        fontSize: 40,
-        fontWeight: 500
+        fontSize: 'clamp(40px, 8vw, 80px)',
+        fontWeight: 600,
+        position: 'absolute',
+        bottom: 0,
+        left: 5,
+        marginBottom: 0
     },
     gallerySubtitle: {
-      fontSize: 20,
-      fontWeight: 300
+      fontSize: 'clamp(20px, 4vw, 50px)',
+      fontWeight: 400,
+      position: 'absolute',
+      bottom: 10,
+      left: 5,
     }
   }));
 
@@ -40,7 +47,7 @@ function DemoCarousel() {
     const classes = useStyles();
 
     return (
-        <Carousel className={classes.carouselWrapper} autoPlay={true} interval={5000} infiniteLoop={true} showStatus={false} emulateTouch={true} useKeyboardArrows={true}>
+        <Carousel className={classes.carouselWrapper} autoPlay={true} showThumbs={false} interval={5000} infiniteLoop={true} showStatus={false} emulateTouch={true} useKeyboardArrows={true} showIndicators={false} >
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Dewey</h3>
