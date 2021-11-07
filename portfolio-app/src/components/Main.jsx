@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   greeting: {
     fontWeight: 600,
-    fontSize: 'clamp(48px, 10vw, 105px)',
+    fontSize: 'clamp(48px, 10vmin, 105px)',
     color: "white",
     fontFamily: 'Inter',
     textAlign: 'center',
@@ -50,9 +50,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center"
   },
   placer: {
-    width: "50vmin",
+    width: "30%",
     maxWidth: 400,
-    minWidth: 150,
+    minWidth: 200,
     marginRight: 'auto',
     marginLeft: 'auto',
     marginBottom: 35,
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    marginTop: 50,
+    marginTop: 70,
     marginBottom: 50
   },
   secondContainer: {
@@ -142,9 +142,11 @@ const useStyles = makeStyles((theme) => ({
   },
   spacerContainer: {
     maxWidth: 1000,
-    width: '100%',
+    width: '95%',
     marginRight: 'auto',
-    marginLeft: 'auto'
+    marginLeft: 'auto',
+    padding: 10,
+    paddingLeft: '3vw'
   },
   spacerText: {
     fontWeight: 500,
@@ -295,7 +297,8 @@ const useStyles = makeStyles((theme) => ({
   carouselSpacer: {
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom: 60
+    marginBottom: 60,
+    minHeight: 400
   }
 }));
 
@@ -309,8 +312,7 @@ function Main() {
       <Grid className={classes.paperContainer}>
         <div className="AppBG">
           <Grid container className={classes.container}>
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} /> 
-            <Grid item className={classes.item} xs={12} sm={12} md={12} lg={10} xl={10}>
+            <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
                 <img className={classes.placer} src="/main.png" alt="Luke W." />
                 <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
                   Luke Wahlmeier
@@ -319,7 +321,6 @@ function Main() {
                   Developer. Innovator. Musician.
                 </Typography>
             </Grid>
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
           </Grid>
           <div className={classes.centeredItem}>
             <ArrowDownwardIcon className="downArrow bounce-7" />
@@ -328,8 +329,8 @@ function Main() {
       </Grid>
 
       <Grid container className={classes.secondContainer}>
-        <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-          <Grid item className={classes.spacer} xs={10} sm={10} md={10} lg={10} xl={10}>
+        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+          <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={10} xl={10}>
               <div className={classes.spacerContainer}>
                 <h1 className={classes.spacerTextHeader}>
                   Projects
@@ -339,7 +340,7 @@ function Main() {
                 </h2>
               </div>
           </Grid>
-          <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
 
           <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
           <Grid item xs={12} sm={12} md={12} lg={3} xl={3} align='center'>
@@ -398,8 +399,8 @@ function Main() {
       </Grid>
 
           <div className={classes.galleryContainer}>
-            <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-            <Grid item className={classes.gallerySpacer} xs={10} sm={10} md={10} lg={10} xl={10}>
+            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+            <Grid item className={classes.gallerySpacer} xs={12} sm={12} md={10} lg={10} xl={10}>
                 <div className={classes.spacerContainer}>
                   <h1 className={classes.galleryTextHeader}>
                     Gallery
@@ -409,7 +410,7 @@ function Main() {
                   </h2>
                 </div>
             </Grid>
-            <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
 
             <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
             <Grid item className={classes.carouselSpacer} xs={12} sm={12} md={10} lg={10} xl={10}>

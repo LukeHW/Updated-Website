@@ -1,13 +1,10 @@
 // import modules
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import { HashLink as Link } from 'react-router-hash-link';
 import { Spin as Hamburger } from 'hamburger-react';
-import Button from '@material-ui/core/Button';
-import Avatar from "@material-ui/core/Avatar";
 
 
 // styles for Navbar.js

@@ -53,56 +53,56 @@ function DemoCarousel() {
                     <h3 className={classes.galleryTitle}>Dewey</h3>
                     <h5 className={classes.gallerySubtitle}>Sitting Funny</h5>
                 </div>
-                <img src="/galleryImages/Dewey%204.jpeg" alt='Dewey' />
+                <img src="/galleryImages/Dewey%204.JPEG" alt='Dewey' />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Jack</h3>
                     <h5 className={classes.gallerySubtitle}>Spooky Loaf</h5>
                 </div>
-                <img src="/galleryImages/Jack%202.jpeg" alt='Jack' />
+                <img src="/galleryImages/Jack%202.JPEG" alt='Jack' />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Colin</h3>
                     <h5 className={classes.gallerySubtitle}>Views</h5>
                 </div>
-                <img src="/galleryImages/Colin%202.jpeg" alt='Colin' />
+                <img src="/galleryImages/Colin%202.JPEG" alt='Colin' />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Mr. Mister</h3>
                     <h5 className={classes.gallerySubtitle}>Wet Boi</h5>
                 </div>
-                <img src="/galleryImages/Mr.%20Mister%202.jpeg" alt='Mr. Mister' />
+                <img src="/galleryImages/Mr.%20Mister%202.JPEG" alt='Mr. Mister' />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Vicious</h3>
                     <h5 className={classes.gallerySubtitle}>Showing Off</h5>
                 </div>
-                <img src="/galleryImages/Vicious%202.jpeg" alt='Vicious' />
+                <img src="/galleryImages/Vicious%202.JPEG" alt='Vicious' />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Jack</h3>
                     <h5 className={classes.gallerySubtitle}>Being Cute</h5>
                 </div>
-                <img src="/galleryImages/Jack.jpeg" alt='Jack' />
+                <img src="/galleryImages/Jack.JPEG" alt='Jack' />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Vicious</h3>
                     <h5 className={classes.gallerySubtitle}>Fabulous</h5>
                 </div>
-                <img src="/galleryImages/Vicious%205.jpeg" alt='Vicious' />
+                <img src="/galleryImages/Vicious%205.JPEG" alt='Vicious' />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Colin</h3>
                     <h5 className={classes.gallerySubtitle}>Breather</h5>
                 </div>
-                <img src="/galleryImages/Colin.jpeg" alt='Colin' />
+                <img src="/galleryImages/Colin.JPEG" alt='Colin' />
             </div>
         </Carousel>
     );
