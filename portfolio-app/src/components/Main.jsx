@@ -8,6 +8,8 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 
+import { Fade, Slide } from '@mui/material';
+
 import ScrollToTop from './pageComponents/ScrollToTop';
 import DemoCarousel from './pageComponents/DemoCarousel';
 
@@ -299,7 +301,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 'auto',
     marginBottom: 60,
     minHeight: 400
-  }
+  },
 }));
 
 function Main() {
@@ -313,13 +315,19 @@ function Main() {
         <div className="AppBG">
           <Grid container className={classes.container}>
             <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
-                <img className={classes.placer} src="/main.png" alt="Luke W." />
-                <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
-                  Luke Wahlmeier
-                </Typography>
-                <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
-                  Developer. Innovator. Musician.
-                </Typography>
+                <Slide in timeout={1500} direction="up" easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
+                  <img className={classes.placer} src="/main.png" alt="Luke W." />
+                </Slide>
+                <Slide in timeout={1750} direction="up" easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
+                  <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
+                    Luke Wahlmeier
+                  </Typography>
+                </Slide>
+                <Slide in timeout={2000} direction="up" easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
+                  <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
+                    Developer. Innovator. Musician.
+                  </Typography>
+                </Slide>
             </Grid>
           </Grid>
           <div className={classes.centeredItem}>
