@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import Hidden from '@material-ui/core/Hidden';
 
 import { Fade, Slide } from '@mui/material';
 
@@ -250,7 +251,6 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     margin: 5,
     marginTop: 0,
-    paddingTop: 30
   },
   gallerySpacer: {
     flexDirection: "column",
@@ -310,7 +310,6 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 10,
     textAlign: 'left',
     maxWidth: 450,
-    display: 'inline-block'
   },
   projectNumber: {
     fontSize: 'min(8vw, 90px)'
@@ -329,7 +328,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '400',
     margin: 5,
     marginBottom: 20,
-    fontFamily: 'Inter'
+    fontFamily: 'Inter',
+    maxWidth: 450,
+    display: 'inline-block'
   },
   subtitle: {
     fontSize: 'min(6vw, 40px)',
@@ -380,8 +381,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '20px',
     minHeight: 300,
     maxWidth: 400,
-    marginRight: 'auto',
-    marginLeft: 'auto'
+    margin: 10
   },
   inlineSkeleton: {
     display: 'inline-block',
@@ -431,6 +431,58 @@ const useStyles = makeStyles((theme) => ({
       background: '#333333',
       color: '#bbbbbb'
     }
+  },
+  line: {
+    height: 2,
+    width: 200,
+    color: 'white',
+    backgroundColor: 'white',
+    position: 'relative',
+    top: 65
+  },
+  year: {
+    fontWeight: 200,
+    fontStyle: 'italic',
+    fontSize: 28,
+    color: 'white',
+    height: '100%',
+    textAlign: 'left',
+    marginLeft: 240
+  },
+  line2: {
+    height: 2,
+    width: 200,
+    color: 'white',
+    backgroundColor: 'white',
+    position: 'relative',
+    top: -65
+  },
+  year2: {
+    fontWeight: 200,
+    fontStyle: 'italic',
+    fontSize: 28,
+    color: 'white',
+    height: '100%',
+    textAlign: 'right',
+    marginRight: 240
+  },
+  workWrapper: {
+    width: 360,
+    height: '100%',
+    marginLeft: 100
+  },
+  workWrapper2: {
+    width: 360,
+    height: '100%',
+    marginRight: 100
+  },
+  wrapper: {
+    marginRight: 'auto',
+    marginLeft: 'auto'
+  },
+  test: {
+    marginTop: 230,
+    marginBottom: 230
   }
 }));
 
@@ -482,7 +534,9 @@ function Main() {
           </Grid>
           <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+          <Hidden smDown>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='right'>
+            <div className={classes.wrapper}>
               <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
                 <div className={classes.shadow}>
                   <Grid container>
@@ -504,9 +558,58 @@ function Main() {
                   </Grid>
                 </div>
               </div>
-          </Grid>
+            </div>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='left'>
+              <div className={classes.workWrapper}>
+                <div className={classes.test}>
+                <div className={classes.line} />
+                <h5 className={classes.year}>{projectJSON[0].yearCreated}</h5>
+              </div>
+              </div>
+            </Grid>
+          </Hidden>
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align="center">
+          <Hidden mdUp>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+            <div className={classes.wrapper}>
+              <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
+                <div className={classes.shadow}>
+                  <Grid container>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h1 className={classes.projectTitle}>
+                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[0].githubLink} className={classes.titleLink}>{projectJSON[0].title}</a>
+                        </h1>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                        <h5 className={classes.body}>
+                            {projectJSON[0].body}
+                        </h5>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h5 className={classes.tags}>
+                          {projectJSON[0].tags}
+                        </h5>
+                    </Grid>
+                  </Grid>
+                </div>
+              </div>
+            </div>
+            </Grid>
+          </Hidden>
+              
+
+          <Hidden smDown>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='right'>
+              <div className={classes.workWrapper2}>
+                <div className={classes.test}>
+                  <h5 className={classes.year2}>{projectJSON[2].yearCreated}</h5>
+                  <div className={classes.line2} />
+              </div>
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='left'>
+            <div className={classes.wrapper}>
               <div className={classes.projectContainer} key={projectJSON[2].projectNumber}>
                 <div className={classes.shadow}>
                   <Grid container>
@@ -528,9 +631,41 @@ function Main() {
                   </Grid>
                 </div>
               </div>
-          </Grid>
+            </div>
+            </Grid>
+          </Hidden>
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align="center">
+          <Hidden mdUp>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+            <div className={classes.wrapper}>
+              <div className={classes.projectContainer} key={projectJSON[2].projectNumber}>
+                <div className={classes.shadow}>
+                  <Grid container>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h1 className={classes.projectTitle}>
+                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[2].githubLink} className={classes.titleLink}>{projectJSON[2].title}</a>
+                        </h1>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                        <h5 className={classes.body}>
+                            {projectJSON[2].body}
+                        </h5>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h5 className={classes.tags}>
+                          {projectJSON[2].tags}
+                        </h5>
+                    </Grid>
+                  </Grid>
+                </div>
+              </div>
+            </div>
+            </Grid>
+          </Hidden>
+
+          <Hidden smDown>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='right'>
+            <div className={classes.wrapper}>
               <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
                 <div className={classes.shadow}>
                   <Grid container>
@@ -552,7 +687,45 @@ function Main() {
                   </Grid>
                 </div>
               </div>
-          </Grid>
+            </div>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='left'>
+              <div className={classes.workWrapper}>
+                <div className={classes.test}>
+                <div className={classes.line} />
+                <h5 className={classes.year}>{projectJSON[0].yearCreated}</h5>
+              </div>
+              </div>
+            </Grid>
+          </Hidden>
+
+          <Hidden mdUp>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+            <div className={classes.wrapper}>
+              <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
+                <div className={classes.shadow}>
+                  <Grid container>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h1 className={classes.projectTitle}>
+                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[0].githubLink} className={classes.titleLink}>{projectJSON[0].title}</a>
+                        </h1>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                        <h5 className={classes.body}>
+                            {projectJSON[0].body}
+                        </h5>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h5 className={classes.tags}>
+                          {projectJSON[0].tags}
+                        </h5>
+                    </Grid>
+                  </Grid>
+                </div>
+              </div>
+            </div>
+            </Grid>
+          </Hidden>
 
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <div className={classes.viewLinkContainer}>

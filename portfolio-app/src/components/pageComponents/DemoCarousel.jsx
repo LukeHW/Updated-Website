@@ -11,8 +11,7 @@ const useStyles = makeStyles(() => ({
         minWidth: 300,
         width: '100%',
         marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: 30
+        marginRight: 'auto'
     },
     galleryTitleContainer: {
         zIndex: 3,

@@ -14,7 +14,7 @@
             "projectNumber": 1,
             "title": "Common Files Application",
             "subtitle": "Full-stack web application",
-            "body": "Previously hosted on AWS, this web app was made with the intention to distribute common files to those who are given access. This project lost funding, and is not finished, but I learned a lot by building it myself.",
+            "body": "Previously hosted on AWS, this web app was made with the intention to distribute common files to those who are given access. This project lost funding, and is not complete, but I learned a lot by building it myself.",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/EMP-Shield-Technical-Documentation",
             "tags": ["JavaScript", "HTML", "CSS", "React", "Node.js", "Adobe", "4fun"],
