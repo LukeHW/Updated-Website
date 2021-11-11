@@ -22,8 +22,10 @@ const useStyles = makeStyles(() => ({
     backgroundAttachment: "fixed"
   },
   title: {
-    fontWeight: 700,
-    fontSize: 'min(10vw, 90px)'
+    fontWeight: 500,
+    fontSize: 'min(10vw, 90px)',
+    marginBottom: 80,
+    fontFamily: 'Inter'
   },
   greeting: {
     textAlign: "left"
@@ -47,7 +49,10 @@ const useStyles = makeStyles(() => ({
     marginLeft: 20
   },
   item: {
-    marginTop: "150px"
+    maxWidth: 1600,
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   secondContainer: {
     height: "100vh",
@@ -72,9 +77,42 @@ const useStyles = makeStyles(() => ({
   },
   workWrapper: {
     minHeight: '100vh',
-    color: 'white',
+    color: 'black',
     fontFamily: 'Inter',
     alignItems: 'center'
+  },
+  spacer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    marginTop: 100,
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  spacerContainer: {
+    maxWidth: 1000,
+    width: '95%',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    padding: 10,
+    paddingLeft: '3vw'
+  },
+  spacerText: {
+    fontWeight: 500,
+    fontSize: 'clamp(48px, 10vw, 92px)',
+    textAlign: 'left',
+    color: '#222222',
+    margin: 5,
+    marginBottom: 40,
+    lineHeight: 1.05,
+    letterSpacing: '-.045em'
+  },
+  spacerTextHeader: {
+    fontWeight: 500,
+    fontSize: 28,
+    textAlign: 'left',
+    color: '#333333',
+    margin: 5
   }
 }));
 
@@ -88,17 +126,24 @@ function Work() {
     <Grid className={classes.paperContainer}>
     <div className={classes.workWrapper}>
       <Grid container className={classes.container}>
-      <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/> 
-        <Grid item className={classes.item} xs={12} sm={12} md={10} lg={8} xl={8} align='center'>
-          <Typography className={classes.title} variant="h1" component="h2" gutterBottom>
-            Some of my work
-          </Typography>
+        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+        <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={10} xl={10}>
+            <div className={classes.spacerContainer}>
+              <h1 className={classes.spacerTextHeader}>
+                Projects
+              </h1>
+              <h2 className={classes.spacerText}>
+                Some of the work I have done.
+              </h2>
+            </div>
+        </Grid>
+        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+
+        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+        <Grid item className={classes.item} xs={12} sm={12} md={10} lg={10} xl={10} align='center'>
           <Projects />
         </Grid>
-        <Hidden mdUp>
-          <Grid item xs={1} sm={1}/>
-        </Hidden>
-        <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/>
+        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
       </Grid>
     </div>
     </Grid>

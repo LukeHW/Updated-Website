@@ -38,9 +38,7 @@ function App() {
           </Page>
         </Route>
         <Route exact path="/Work">
-          <Page>
             <Work />
-          </Page>
         </Route>
         <Route exact path="/Gallery">
             <Gallery />

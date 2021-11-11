@@ -13,6 +13,8 @@ import { Fade, Slide } from '@mui/material';
 import ScrollToTop from './pageComponents/ScrollToTop';
 import DemoCarousel from './pageComponents/DemoCarousel';
 
+import projectData from './Projects.json';
+
 // import styles
 import './Main.css';
 
@@ -120,8 +122,8 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   paperLinks: {
-    width: 300,
-    height: 400,
+    width: 400,
+    height: 500,
     margin: 10,
     transition: 'transform .2s',
     '&:hover': {
@@ -302,11 +304,141 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 60,
     minHeight: 400
   },
+  project: {
+    marginBottom: 50,
+    marginLeft: 10,
+    marginRight: 10,
+    textAlign: 'left',
+    maxWidth: 450,
+    display: 'inline-block'
+  },
+  projectNumber: {
+    fontSize: 'min(8vw, 90px)'
+  },
+  projectTitle: {
+    fontSize: 'min(8vw, 42px)',
+    fontWeight: '400',
+    margin: 0,
+    marginBottom: 10,
+    fontFamily: 'Inter',
+    textAlign: 'left',
+    lineHeight: '120%'
+  },
+  projectContainer: {
+    fontSize: 'min(8vw, 42px)',
+    fontWeight: '400',
+    margin: 5,
+    marginBottom: 20,
+    fontFamily: 'Inter'
+  },
+  subtitle: {
+    fontSize: 'min(6vw, 40px)',
+    fontWeight: 'lighter',
+    fontStyle: 'italic',
+    marginTop: 0,
+    marginBottom: 10,
+    fontFamily: 'Inter',
+    textAlign: 'center'
+  },
+  body: {
+    fontSize: 'min(4vw, 25px)',
+    fontWeight: 300,
+    marginTop: 0,
+    textAlign: 'left'
+  },
+  images: {
+    maxWidth: '200px',
+    minHeight: '180px',
+    textAlign: 'center'
+  },
+  tags: {
+    fontSize: 'min(4vw, 25px)',
+    fontWeight: 300,
+    marginTop: 10,
+    textAlign: 'center'
+  },
+  yearCreated: {
+    fontSize: 20
+  },
+  carosel: {
+    diplay: 'flex',
+    width: '100%',
+    textAlign: 'center',
+    overflow: 'hidden'
+  },
+  inlineLink: {
+    maxWidth: "min(6vw, 55px)",
+    display: 'inline-block',
+    marginLeft: '10px',
+    marginBottom: '-2px'
+  },
+  shadow: {
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    backdropFilter: "blur(8px)",
+    color: "white",
+    padding: theme.spacing(4),
+    borderRadius: '20px',
+    minHeight: 300,
+    maxWidth: 400,
+    marginRight: 'auto',
+    marginLeft: 'auto'
+  },
+  inlineSkeleton: {
+    display: 'inline-block',
+    marginLeft: '1%',
+    marginBottom: '2%'
+  },
+  hostedLink: {
+    outline: 'none',
+    textDecoration: 'none',
+    '&:link': {
+      color: '#ffffff'
+    },
+    '&:visited': {
+      color: '#bbbbbb'
+    },
+    '&:focus': {
+      borderBottom: '1px solid',
+      background: '#444444'
+    },
+    '&:hover': {
+      borderBottom: '1px solid',
+      background: '#444444'
+    },
+    '&:active': {
+      background: '#333333',
+      color: '#bbbbbb'
+    }
+  },
+  titleLink: {
+    outline: 'none',
+    textDecoration: 'none',
+    '&:link': {
+      color: '#ffffff'
+    },
+    '&:visited': {
+      color: '#bbbbbb'
+    },
+    '&:focus': {
+      borderBottom: '1px solid',
+      background: '#444444'
+    },
+    '&:hover': {
+      borderBottom: '1px solid',
+      background: '#444444'
+    },
+    '&:active': {
+      background: '#333333',
+      color: '#bbbbbb'
+    }
+  }
 }));
 
 function Main() {
 
   const classes = useStyles();
+
+  const projectJSON = projectData.projects;
 
   return (
     <div className="App">
@@ -350,53 +482,78 @@ function Main() {
           </Grid>
           <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
 
-          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} /> 
-          <Grid item xs={12} sm={12} md={12} lg={3} xl={3} align='center'>
-            <Paper elevation={5} className={classes.paperLinks} align='center'>
-              <div className={classes.paperLinksContainer}>
-                <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.links}>
-                    <img className={classes.icons} src="/github.png" alt="github logo" />
-                </a>
-                <Typography variant="h4" component="h2" className={classes.paperTitle} gutterBottom align='center'>
-                  Github
-                </Typography>
-                <Typography variant="h6" component="h6" className={classes.paperBody} align='center'>
-                  Explore, read, or star my current repos and other contributions to projects.
-                </Typography>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+              <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
+                <div className={classes.shadow}>
+                  <Grid container>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h1 className={classes.projectTitle}>
+                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[0].githubLink} className={classes.titleLink}>{projectJSON[0].title}</a>
+                        </h1>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                        <h5 className={classes.body}>
+                            {projectJSON[0].body}
+                        </h5>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h5 className={classes.tags}>
+                          {projectJSON[0].tags}
+                        </h5>
+                    </Grid>
+                  </Grid>
+                </div>
               </div>
-            </Paper>
           </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={4} xl={4} align="center">
-            <Paper elevation={5} className={classes.paperLinks} align='center'>
-              <div className={classes.paperLinksContainer}>
-                <a target='_blank' href='https://stackoverflow.com/users/10533948/lukehw' rel="noreferrer" className={classes.links}>
-                    <img className={classes.icons} src="/linkedin.png" alt="linkedin logo" />
-                </a>
-                <Typography variant="h4" component="h4" className={classes.paperTitle} gutterBottom align='center'>
-                  Stack Overflow
-                </Typography>
-                <Typography variant="h6" component="h6" className={classes.paperBody} align='center'>
-                  Add me on one of the most popular professional networking platforms.
-                </Typography>
+
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align="center">
+              <div className={classes.projectContainer} key={projectJSON[2].projectNumber}>
+                <div className={classes.shadow}>
+                  <Grid container>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h1 className={classes.projectTitle}>
+                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[2].githubLink} className={classes.titleLink}>{projectJSON[2].title}</a>
+                        </h1>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                        <h5 className={classes.body}>
+                            {projectJSON[2].body}
+                        </h5>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h5 className={classes.tags}>
+                          {projectJSON[2].tags}
+                        </h5>
+                    </Grid>
+                  </Grid>
+                </div>
               </div>
-            </Paper>
           </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={3} xl={3} align="center">
-            <Paper elevation={5} className={classes.paperLinks} align='center'>
-              <div className={classes.paperLinksContainer}>
-                <a target='_blank' href='https://linkedin.com/in/lukehw/' rel="noreferrer" className={classes.links}>
-                    <img className={classes.icons} src="/linkedin.png" alt="linkedin logo" />
-                </a>
-                <Typography variant="h4" component="h4" className={classes.paperTitle} gutterBottom align='center'>
-                  LinkedIn
-                </Typography>
-                <Typography variant="h6" component="h6" className={classes.paperBody} align='center'>
-                  Add me on one of the most popular professional networking platforms.
-                </Typography>
+
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align="center">
+              <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
+                <div className={classes.shadow}>
+                  <Grid container>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h1 className={classes.projectTitle}>
+                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[0].githubLink} className={classes.titleLink}>{projectJSON[0].title}</a>
+                        </h1>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                        <h5 className={classes.body}>
+                            {projectJSON[0].body}
+                        </h5>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h5 className={classes.tags}>
+                          {projectJSON[0].tags}
+                        </h5>
+                    </Grid>
+                  </Grid>
+                </div>
               </div>
-            </Paper>
           </Grid>
-          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <div className={classes.viewLinkContainer}>
               <a href="/Work" className={classes.viewLink}>
@@ -436,8 +593,8 @@ function Main() {
           </div>
 
           <div className={classes.contactContainer} id="Contact">
-          <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-            <Grid item className={classes.contactSpacer} xs={10} sm={10} md={10} lg={10} xl={10}>
+          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+            <Grid item className={classes.contactSpacer} xs={12} sm={12} md={10} lg={10} xl={10}>
                 <div className={classes.spacerContainer}>
                   <h1 className={classes.galleryTextHeader}>
                     Contact
@@ -455,7 +612,7 @@ function Main() {
                     lukewahlmeier@gmail.com
                   </a>
             </Grid>
-            <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
           </div>
 
     </div>

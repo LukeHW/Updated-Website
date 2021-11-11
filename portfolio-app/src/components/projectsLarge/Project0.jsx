@@ -6,10 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 // import json Projects object
-import ProjectsJSON from './Projects.json';
-
-// import styles
-import '../../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
+import ProjectsJSON from '../Projects.json';
 
 // styles for App.js
 const useStyles = makeStyles((theme) => ({
@@ -142,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function Projects() {
+function Project0() {
 
   const classes = useStyles();
 
@@ -201,4 +198,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Project0;

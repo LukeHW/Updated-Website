@@ -140,29 +140,40 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    marginTop: 140
+    marginTop: 100,
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   spacerContainer: {
     maxWidth: 1000,
+    width: '95%',
     marginRight: 'auto',
-    marginLeft: 'auto'
+    marginLeft: 'auto',
+    padding: 10,
+    paddingLeft: '3vw'
   },
   spacerText: {
     fontWeight: 500,
-    fontSize: 'min(10vw, 92px)',
+    fontSize: 'clamp(48px, 10vw, 92px)',
     textAlign: 'left',
     color: '#222222',
-    marginTop: 5,
-    marginBottom: 100
+    margin: 5,
+    marginBottom: 50,
+    lineHeight: 1.05,
+    letterSpacing: '-.045em'
   },
   spacerTextHeader: {
     fontWeight: 500,
     fontSize: 28,
     textAlign: 'left',
     color: 'black',
-    marginBottom: 5,
-    marginTop: 0
+    margin: 5
   },
+  mediumContainer: {
+    maxWidth: 1200,
+    marginRight: 'auto',
+    marginLeft: 'auto'
+  }
 }));
 
 function Gallery() {
@@ -178,8 +189,7 @@ function Gallery() {
             <div className={classes.workWrapper}>
                 <div className={classes.gallerySpacer} >
                     <Grid container>
-                      <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-                      <Grid item className={classes.spacer} xs={10} sm={10} md={10} lg={10} xl={10}>
+                      <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>
                           <div className={classes.spacerContainer}>
                             <h1 className={classes.spacerTextHeader}>
                               Gallery
@@ -189,11 +199,10 @@ function Gallery() {
                             </h2>
                           </div>
                       </Grid>
-                      <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
                     </Grid>
                 </div>
                 <Grid container>
-                    <Hidden mdDown>
+                    <Hidden lgDown>
                     <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
                     <Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
                         <ImageList variant="masonry" cols={3} gap={20}>
@@ -215,9 +224,9 @@ function Gallery() {
                     <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
                     </Hidden>
 
-                    <Hidden smDown lgUp>
+                    <Hidden smDown xlUp>
                     <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-                    <Grid item xs={10} sm={10} md={10} lg={10} xl={10}>
+                    <Grid item className={classes.mediumContainer} xs={10} sm={10} md={10} lg={10} xl={10}>
                         <ImageList variant="masonry" cols={2} gap={20}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.img}>

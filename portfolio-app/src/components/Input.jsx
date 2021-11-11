@@ -5,7 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
   input: {
       width: '100%',
-      padding: '10px',
+      paddingTop: '10px',
+      paddingBottom: '10px',
+      paddingRight: '20px',
+      paddingLeft: '20px',
       boxSizing: 'border-box',
       maxWidth: 1000,
       marginLeft: 'auto',
