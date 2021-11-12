@@ -21,15 +21,15 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 10,
     marginRight: 10,
     textAlign: 'left',
-    maxWidth: 450,
+    maxWidth: 460,
     display: 'inline-block'
   },
   projectNumber: {
     fontSize: 'min(8vw, 90px)'
   },
   title: {
-    fontSize: 'min(8vw, 42px)',
-    fontWeight: '400',
+    fontSize: 'clamp(24, 5vw, 32px)',
+    fontWeight: '600',
     margin: 0,
     marginBottom: 10,
     fontFamily: 'Inter',
@@ -46,10 +46,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   body: {
-    fontSize: 'min(4vw, 25px)',
-    fontWeight: 300,
+    fontSize: 'clamp(18px, 5vw, 20px)',
+    fontWeight: 500,
     marginTop: 0,
-    textAlign: 'left'
+    textAlign: 'left',
+    color: '#1d1d1f'
   },
   images: {
     maxWidth: '200px',
@@ -84,7 +85,8 @@ const useStyles = makeStyles((theme) => ({
     margin: 0
   },
   shadow: {
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    border: '1px solid rgba(131, 131, 131, 0.16)',
     backdropFilter: "blur(8px)",
     color: "white",
     padding: theme.spacing(3),
@@ -107,11 +109,11 @@ const useStyles = makeStyles((theme) => ({
     },
     '&:focus': {
       borderBottom: '1px solid',
-      background: '#444444'
+      background: '#cccccc'
     },
     '&:hover': {
       borderBottom: '1px solid',
-      background: '#444444'
+      background: '#cccccc'
     },
     '&:active': {
       background: '#333333',
@@ -122,18 +124,18 @@ const useStyles = makeStyles((theme) => ({
     outline: 'none',
     textDecoration: 'none',
     '&:link': {
-      color: '#ffffff'
+      color: 'rgb(29, 29, 31)'
     },
     '&:visited': {
-      color: '#bbbbbb'
+      color: 'rgb(29, 29, 31)'
     },
     '&:focus': {
       borderBottom: '1px solid',
-      background: '#444444'
+      background: '#cccccc'
     },
     '&:hover': {
       borderBottom: '1px solid',
-      background: '#444444'
+      background: '#cccccc'
     },
     '&:active': {
       background: '#333333',

@@ -153,7 +153,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '3vw'
   },
   spacerText: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 'clamp(48px, 10vw, 92px)',
     textAlign: 'left',
     color: '#222222',
@@ -163,7 +163,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '-.045em'
   },
   spacerTextHeader: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 28,
     textAlign: 'left',
     color: 'black',

@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 10
   },
   title: {
-    fontWeight: 400,
+    fontWeight: 600,
     fontSize: 'min(6vw, 32px)',
     color: "white",
     fontFamily: 'Inter',
@@ -154,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '3vw'
   },
   spacerText: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 'clamp(48px, 10vw, 92px)',
     textAlign: 'left',
     color: '#DDDDDD',
@@ -164,7 +164,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '-.045em'
   },
   spacerTextHeader: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 28,
     textAlign: 'left',
     color: 'white',
@@ -245,7 +245,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   galleryTextHeader: {
-    fontWeight: 500,
+    fontWeight: 600,
     fontSize: 28,
     textAlign: 'left',
     color: 'white',

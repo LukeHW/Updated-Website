@@ -31,8 +31,10 @@ const useStyles = makeStyles(() => ({
   },
   menuBox: {
     width: "100%",
-    height: 200,
-    position: "fixed",
+    height: '100%',
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
     zIndex: 100
   },
   menuContainerHidden: {
@@ -41,20 +43,20 @@ const useStyles = makeStyles(() => ({
   menuContainerShown: {
     width: "100%",
     minWidth: '200px',
-    height: 200,
+    height: '100vh',
+    overflow: 'hidden',
     backgroundColor: "rgba(20, 20, 20, 0.75)",
     backdropFilter: "blur(15px)",
     position: "fixed",
-    marginTop: 63,
-    zIndex: 100,
+    zIndex: 6,
     right: '0px'
   },
   menuLink: {
     textDecoration: "none",
-    fontWeight: 300,
+    fontWeight: 500,
     color: "white",
-    fontSize: 22,
-    textAlign: "right",
+    fontSize: 20,
+    textAlign: "center",
     fontFamily: 'Inter',
     position: 'relative',
     display: 'inline-block',
@@ -79,12 +81,13 @@ const useStyles = makeStyles(() => ({
     },
   },
   menuLinkSpacer: {
-    marginRight: "8vw",
     marginTop: "22px",
     '&::after': {
       width: '100%',
       backgroundColor: 'rgba(180, 180, 180)'
-    }
+    },
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   navbarActive: {
     backgroundColor: "rgba(0, 0, 0, 0.55)",
@@ -99,7 +102,7 @@ const useStyles = makeStyles(() => ({
   },
   navLinks: {
     textDecoration: "none",
-    fontWeight: "normal",
+    fontWeight: 500,
     color: "rgba(255, 255, 255)",
     '&:hover': {
       color: 'rgba(220, 220, 220)'
@@ -173,7 +176,7 @@ const useStyles = makeStyles(() => ({
   nameLink: {
     color: 'white',
     fontSize: 19,
-    fontWeight: 500,
+    fontWeight: 600,
     fontFamily: 'Inter',
     textAlign: 'center',
     width: 160,
@@ -232,7 +235,7 @@ function Navbar() {
 
         <Hidden mdUp>
             <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
-                <Grid item className={classes.menuBox} xs={12} sm={12} align="right">
+                <Grid item className={classes.menuBox} xs={12} sm={12} align="center">
                     <div className={classes.menuLinkSpacer}>
                         <Link to="/Work" className={classes.menuLink} onClick={closeMenuHandler}>Work</Link>
                     </div>
