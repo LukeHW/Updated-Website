@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex"
   },
   iconsContainerSmall: {
-    padding: 5,
+    padding: 2,
     width: 80,
     marginRight: 'auto',
     marginLeft: 'auto',

@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${bg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+    backgroundAttachment: "fixed",
+    backfaceVisibility: "hidden"
   },
   greeting: {
     fontWeight: 600,
@@ -200,7 +201,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+    backgroundAttachment: "fixed",
+    backfaceVisibility: "hidden"
   },
   contactContainer: {
     minHeight: "55vh",

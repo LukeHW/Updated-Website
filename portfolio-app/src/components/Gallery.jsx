@@ -17,7 +17,8 @@ import ScrollToTop from './pageComponents/ScrollToTop';
 const useStyles = makeStyles((theme) => ({
   container: {
     minHeight: '100%',
-    width: '100%'
+    width: '100%',
+    overflow: 'hidden'
   },
   bg:{
     backgroundImage: `url(${galleryBG2})`,

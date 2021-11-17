@@ -33,9 +33,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <Page>
             <Main />
-          </Page>
         </Route>
         <Route exact path="/Work">
             <Work />

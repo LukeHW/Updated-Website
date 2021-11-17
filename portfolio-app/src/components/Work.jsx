@@ -13,7 +13,7 @@ import ScrollToTop from './pageComponents/ScrollToTop';
 // styles for Main.js
 const useStyles = makeStyles(() => ({
   container: {
-    
+    overflow: 'hidden'
   },
   paperContainer: {
     backgroundImage: `url(${workBG})`,
