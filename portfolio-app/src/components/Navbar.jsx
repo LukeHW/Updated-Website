@@ -27,7 +27,8 @@ const useStyles = makeStyles(() => ({
   link: {
     fontWeight: "normal",
     color: "rgba(255, 255, 255)",
-    textAlign: "center"
+    textAlign: "center",
+    width: 120
   },
   menuBox: {
     width: "100%",
@@ -103,6 +104,8 @@ const useStyles = makeStyles(() => ({
   navLinks: {
     textDecoration: "none",
     fontWeight: 500,
+    paddingLeft: 30,
+    paddingRight: 30,
     color: "rgba(255, 255, 255)",
     '&:hover': {
       color: 'rgba(220, 220, 220)'
@@ -171,16 +174,23 @@ const useStyles = makeStyles(() => ({
     height: "100%"
   },
   container: {
-    height: 62
+    height: 62,
+    maxWidth: 1080,
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   nameLink: {
     color: 'white',
-    fontSize: 19,
+    fontSize: 18,
     fontWeight: 600,
     fontFamily: 'Inter',
-    textAlign: 'center',
-    width: 160,
+    textAlign: 'left',
     marginLeft: '3vw'
+  },
+  navSpacer: {
+    height: '100%',
+    width: '35vw',
+    maxWidth: 450
   }
 }));
 
@@ -202,29 +212,30 @@ function Navbar() {
     <div>
         <div className={navbar ? classes.navbarActive : classes.navbarContainer}>
             <Grid container className={classes.container}>
-                <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/> 
-                <Grid item xs={7} sm={4} md={2} lg={2} xl={2}>
+                <Grid item xs="auto" sm="auto" /> 
+                <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
                   <div className={classes.logoLinkContainer}>
                     <Link to="/" className={classes.logoLink}>
                           <h1 className={classes.nameLink}>Luke Wahlmeier</h1>
                     </Link>
                   </div>
                 </Grid>
-                <Grid item xs="auto" sm="auto" md={2} lg={3} xl={3}/>
                 <Hidden smDown>
-                    <Grid item className={classes.link} md={2} lg={1} xl={1}>
+                    <div className={classes.navSpacer}/>
+                    <div className={classes.link}>
                           <Link to="/Work" className={classes.navLinks}>Work</Link>
-                    </Grid>
-                    <Grid item className={classes.link} md={2} lg={1} xl={1}>
+                    </div>
+                    <div className={classes.link}>
                           <Link to="/Gallery" className={classes.navLinks}>Gallery</Link>
-                    </Grid>
-                    <Grid item className={classes.link} md={2} lg={1} xl={1}>
+                    </div>
+                    <div className={classes.link}>
                           <Link smooth to="/#Contact" className={classes.navLinks}>Contact</Link>
-                    </Grid>
+                    </div>
                 </Hidden>
+
                 <Hidden mdUp>
-                    <Grid item xs={3} sm={6}/>
-                    <Grid item xs={2} sm={2} align="center">
+                    <Grid item xs={4} sm={7} /> 
+                    <Grid item xs={2} sm={1} align="center">
                       <div className={classes.hamburgerContainer}>
                         <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
                       </div>

@@ -23,7 +23,10 @@ const useStyles = makeStyles((theme) => ({
   },
   footerContainer: {
     height: 60,
-    borderTop: '1px solid #333333'
+    borderTop: '1px solid #333333',
+    maxWidth: 1250,
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   footerLinks: {
     textDecoration: "none",
@@ -84,13 +87,13 @@ function Footer() {
       <div className={classes.footerActive}>
           <Grid className={classes.footerContainer} container>
           <Hidden smDown>
-              <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/>
-              <Grid item xs={6} sm={6} md={5} lg={4} xl={4} align="left">
+              <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1}/>
+              <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align="left">
                 <Typography className={classes.footer} variant="h5" component="h2" gutterBottom>
                     2021 - LukeHW
                 </Typography>
               </Grid>
-              <Grid item xs={6} sm={6} md={5} lg={4} xl={4} align="right">
+              <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align="right">
                 <div className={classes.iconsContainer}>
                   <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.footerLinks}>
                     <img className={classes.icons} src="/githubWhiteLogo.png" alt="github logo" />
@@ -100,7 +103,7 @@ function Footer() {
                   </a>
                 </div>
               </Grid> 
-              <Grid item xs="auto" sm="auto" md={1} lg={2} xl={2}/>
+              <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1}/>
           </Hidden>
           </Grid>
       </div>
