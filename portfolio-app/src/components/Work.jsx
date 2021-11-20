@@ -126,8 +126,8 @@ function Work() {
     <Grid className={classes.paperContainer}>
     <div className={classes.workWrapper}>
       <Grid container className={classes.container}>
-        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-        <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={10} xl={10}>
+        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+        <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={10} xl={10}>
             <div className={classes.spacerContainer}>
               <h1 className={classes.spacerTextHeader}>
                 Projects
@@ -137,13 +137,13 @@ function Work() {
               </h2>
             </div>
         </Grid>
-        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
 
-        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-        <Grid item className={classes.item} xs={12} sm={12} md={10} lg={10} xl={10} align='center'>
+        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+        <Grid item className={classes.item} xs={12} sm={12} md={12} lg={10} xl={10} align='center'>
           <Projects />
         </Grid>
-        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
       </Grid>
     </div>
     </Grid>

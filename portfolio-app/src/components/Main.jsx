@@ -523,8 +523,8 @@ function Main() {
       </Grid>
 
       <Grid container className={classes.secondContainer}>
-        <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-          <Grid item className={classes.spacer} xs={12} sm={12} md={10} lg={10} xl={10}>
+        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+          <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={10} xl={10}>
               <div className={classes.spacerContainer}>
                 <h1 className={classes.spacerTextHeader}>
                   Projects
@@ -534,7 +534,7 @@ function Main() {
                 </h2>
               </div>
           </Grid>
-          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
 
           <Hidden smDown>
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='right'>
@@ -739,8 +739,8 @@ function Main() {
       </Grid>
 
           <div className={classes.galleryContainer}>
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-            <Grid item className={classes.gallerySpacer} xs={12} sm={12} md={10} lg={10} xl={10}>
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item className={classes.gallerySpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
                 <div className={classes.spacerContainer}>
                   <h1 className={classes.galleryTextHeader}>
                     Gallery
@@ -750,7 +750,7 @@ function Main() {
                   </h2>
                 </div>
             </Grid>
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
 
             <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
             <Grid item className={classes.carouselSpacer} xs={12} sm={12} md={10} lg={10} xl={10}>
@@ -768,8 +768,8 @@ function Main() {
           </div>
 
           <div className={classes.contactContainer} id="Contact">
-          <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
-            <Grid item className={classes.contactSpacer} xs={12} sm={12} md={10} lg={10} xl={10}>
+          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item className={classes.contactSpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
                 <div className={classes.spacerContainer}>
                   <h1 className={classes.galleryTextHeader}>
                     Contact
@@ -787,7 +787,7 @@ function Main() {
                     lukewahlmeier@gmail.com
                   </a>
             </Grid>
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
           </div>
 
     </div>
