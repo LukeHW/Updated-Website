@@ -8,6 +8,7 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
+import Anime, { anime } from 'react-anime';
 
 import { Fade, Slide } from '@mui/material';
 
@@ -21,6 +22,7 @@ import './Main.css';
 
 // import components
 import bg from '../blurredBG.jpg';
+import {ReactComponent as AnimateLogo} from '../greetingWire.svg'
 
 import Input from './Input';
 
@@ -93,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 50
   },
   secondContainer: {
-    backgroundColor: ('#222222'),
+    backgroundColor: ('#252423'),
     fontFamily: 'Inter',
     padding: theme.spacing(0)
   },
@@ -206,7 +208,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contactContainer: {
     minHeight: "55vh",
-    backgroundColor: ('#222222'),
+    backgroundColor: ('#252423'),
     fontFamily: 'Inter',
     padding: theme.spacing(0)
   },
@@ -514,6 +516,9 @@ function Main() {
                     Developer. Innovator. Musician.
                   </Typography>
                 </Slide>
+                <Anime strokeDashoffset={[anime.setDashoffset, 0]} strokeDasharray={[anime.setDasharray, 10]} easing='easeInOutSine' duration={5000} direction='alternate' delay={(el, i) => {return i * 250 }} loop autoplay>
+                    <AnimateLogo />
+                </Anime>
             </Grid>
           </Grid>
           <div className={classes.centeredItem}>
@@ -778,11 +783,13 @@ function Main() {
                     Get in touch with me.
                   </h2>
                 </div>
-                  <Input inputtype='input' type='text' name='name' placeholder='Your Name' />
-                  <Input inputtype='input' type='email' name='email' placeholder='Email Address' />
-                  <Input inputtype='input' type='tel' name='number' placeholder='Phone Number' />
-                  <Input inputtype='textarea' type='text' name='message' placeholder='Reason for getting in touch' />
-                  <Button className={classes.button} placeholder='Send'>Send</Button>
+                <form>
+                  <Input inputtype='input' required type='text' name='name' placeholder='Your Name' />
+                  <Input inputtype='input' required type='email' name='email' placeholder='Email Address' />
+                  <Input inputtype='input' required type='tel' name='number' placeholder='Phone Number' />
+                  <Input inputtype='textarea' required type='text' name='message' placeholder='Reason for getting in touch' />
+                  <Input inputtype='submit' type='submit' name='submit' placeholder='Send' />
+                </form>
                   <a href="mailto:lukewahlmeier@gmail.com" className={classes.emailText}>
                     lukewahlmeier@gmail.com
                   </a>

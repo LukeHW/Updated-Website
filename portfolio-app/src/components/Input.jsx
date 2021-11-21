@@ -32,6 +32,9 @@ const useStyles = makeStyles(() => ({
         outline: 'none',
         backgroundColor: '#ccc'
       },
+      '&:user-invalid': {
+        border: '2px solid red'
+      },
       borderRadius: '3px'
   },
   textArea: {
@@ -47,8 +50,38 @@ const useStyles = makeStyles(() => ({
       outline: 'none',
       backgroundColor: '#ccc'
     },
+    '&:user-invalid': {
+        border: '2px solid red'
+    },
     borderRadius: '3px',
     resize: 'none'
+  },
+  button: {
+    outline: 'none',
+    border: '1px solid #ccc',
+    font: 'inherit',
+    display: 'block',
+    boxSizing: 'border-box',
+    padding: '6px 10px',
+    '&:focus': {
+      outline: 'none',
+      backgroundColor: '#ccc'
+    },
+    '&:user-invalid': {
+        border: '2px solid red'
+    },
+    borderRadius: '3px',
+    resize: 'none',
+    color: 'white',
+    backgroundColor: 'rgb(100, 100, 100)',
+    '&:hover': {
+      backgroundColor: 'rgb(150, 150, 150)'
+    },
+    width: 100,
+    height: 40,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 10
   }
 }));
 
@@ -62,6 +95,9 @@ const Input = (props) => {
         case('input'):
             inputElement = <input className={classes.inputElement} id='input' {...props} />;
             break;
+        case('submit'):
+            inputElement = <button className={classes.button} id='submit' type='submit' {...props} >Send</button>;
+            break;
         case('textarea'):
             inputElement = <textarea className={classes.textArea} id='textarea' rows="10" {...props} />;
             break;
@@ -71,7 +107,7 @@ const Input = (props) => {
 
     return (
         <div className={classes.input}>
-            <label className={classes.label} htmlFor={'input' || 'textarea' || 'default'}>{inputElement}</label>
+            <label className={classes.label} htmlFor={'input' || 'submit' || 'textarea' || 'default'}>{inputElement}</label>
         </div>
     )
 }
