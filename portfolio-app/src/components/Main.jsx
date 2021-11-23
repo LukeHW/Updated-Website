@@ -14,6 +14,7 @@ import { Fade, Slide } from '@mui/material';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
 import DemoCarousel from './pageComponents/DemoCarousel';
+import Projects from './Projects';
 
 import projectData from './Projects.json';
 
@@ -487,6 +488,15 @@ const useStyles = makeStyles((theme) => ({
   test: {
     marginTop: 230,
     marginBottom: 230
+  },
+  projects: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    marginTop: 30,
+    maxWidth: 1500,
+    marginRight: 'auto',
+    marginLeft: 'auto'
   }
 }));
 
@@ -516,9 +526,6 @@ function Main() {
                     Developer. Innovator. Musician.
                   </Typography>
                 </Slide>
-                <Anime strokeDashoffset={[anime.setDashoffset, 0]} strokeDasharray={[anime.setDasharray, 10]} easing='easeInOutSine' duration={5000} direction='alternate' delay={(el, i) => {return i * 250 }} loop autoplay>
-                    <AnimateLogo />
-                </Anime>
             </Grid>
           </Grid>
           <div className={classes.centeredItem}>
@@ -541,198 +548,11 @@ function Main() {
           </Grid>
           <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
 
-          <Hidden smDown>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='right'>
-            <div className={classes.wrapper}>
-              <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
-                <div className={classes.shadow}>
-                  <Grid container>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h1 className={classes.projectTitle}>
-                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[0].githubLink} className={classes.titleLink}>{projectJSON[0].title}</a>
-                        </h1>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                        <h5 className={classes.body}>
-                            {projectJSON[0].body}
-                        </h5>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h5 className={classes.tags}>
-                          {projectJSON[0].tags}
-                        </h5>
-                    </Grid>
-                  </Grid>
-                </div>
-              </div>
-            </div>
+          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item className={classes.projects} xs={12} sm={12} md={12} lg={10} xl={10} align='center'>
+              <Projects renderAmount={4}/>
             </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='left'>
-              <div className={classes.workWrapper}>
-                <div className={classes.test}>
-                <div className={classes.line} />
-                <h5 className={classes.year}>{projectJSON[0].yearCreated}</h5>
-              </div>
-              </div>
-            </Grid>
-          </Hidden>
-
-          <Hidden mdUp>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-            <div className={classes.wrapper}>
-              <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
-                <div className={classes.shadow}>
-                  <Grid container>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h1 className={classes.projectTitle}>
-                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[0].githubLink} className={classes.titleLink}>{projectJSON[0].title}</a>
-                        </h1>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                        <h5 className={classes.body}>
-                            {projectJSON[0].body}
-                        </h5>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h5 className={classes.tags}>
-                          {projectJSON[0].tags}
-                        </h5>
-                    </Grid>
-                  </Grid>
-                </div>
-              </div>
-            </div>
-            </Grid>
-          </Hidden>
-              
-
-          <Hidden smDown>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='right'>
-              <div className={classes.workWrapper2}>
-                <div className={classes.test}>
-                  <h5 className={classes.year2}>{projectJSON[2].yearCreated}</h5>
-                  <div className={classes.line2} />
-              </div>
-              </div>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='left'>
-            <div className={classes.wrapper}>
-              <div className={classes.projectContainer} key={projectJSON[2].projectNumber}>
-                <div className={classes.shadow}>
-                  <Grid container>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h1 className={classes.projectTitle}>
-                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[2].githubLink} className={classes.titleLink}>{projectJSON[2].title}</a>
-                        </h1>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                        <h5 className={classes.body}>
-                            {projectJSON[2].body}
-                        </h5>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h5 className={classes.tags}>
-                          {projectJSON[2].tags}
-                        </h5>
-                    </Grid>
-                  </Grid>
-                </div>
-              </div>
-            </div>
-            </Grid>
-          </Hidden>
-
-          <Hidden mdUp>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-            <div className={classes.wrapper}>
-              <div className={classes.projectContainer} key={projectJSON[2].projectNumber}>
-                <div className={classes.shadow}>
-                  <Grid container>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h1 className={classes.projectTitle}>
-                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[2].githubLink} className={classes.titleLink}>{projectJSON[2].title}</a>
-                        </h1>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                        <h5 className={classes.body}>
-                            {projectJSON[2].body}
-                        </h5>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h5 className={classes.tags}>
-                          {projectJSON[2].tags}
-                        </h5>
-                    </Grid>
-                  </Grid>
-                </div>
-              </div>
-            </div>
-            </Grid>
-          </Hidden>
-
-          <Hidden smDown>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='right'>
-            <div className={classes.wrapper}>
-              <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
-                <div className={classes.shadow}>
-                  <Grid container>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h1 className={classes.projectTitle}>
-                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[0].githubLink} className={classes.titleLink}>{projectJSON[0].title}</a>
-                        </h1>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                        <h5 className={classes.body}>
-                            {projectJSON[0].body}
-                        </h5>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h5 className={classes.tags}>
-                          {projectJSON[0].tags}
-                        </h5>
-                    </Grid>
-                  </Grid>
-                </div>
-              </div>
-            </div>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='left'>
-              <div className={classes.workWrapper}>
-                <div className={classes.test}>
-                <div className={classes.line} />
-                <h5 className={classes.year}>{projectJSON[0].yearCreated}</h5>
-              </div>
-              </div>
-            </Grid>
-          </Hidden>
-
-          <Hidden mdUp>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-            <div className={classes.wrapper}>
-              <div className={classes.projectContainer} key={projectJSON[0].projectNumber}>
-                <div className={classes.shadow}>
-                  <Grid container>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h1 className={classes.projectTitle}>
-                        <a target="_blank" rel="noopener noreferrer" href={projectJSON[0].githubLink} className={classes.titleLink}>{projectJSON[0].title}</a>
-                        </h1>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                        <h5 className={classes.body}>
-                            {projectJSON[0].body}
-                        </h5>
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <h5 className={classes.tags}>
-                          {projectJSON[0].tags}
-                        </h5>
-                    </Grid>
-                  </Grid>
-                </div>
-              </div>
-            </div>
-            </Grid>
-          </Hidden>
+          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
 
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <div className={classes.viewLinkContainer}>
@@ -780,7 +600,7 @@ function Main() {
                     Contact
                   </h1>
                   <h2 className={classes.spacerText}>
-                    Get in touch with me.
+                    Get in touch.
                   </h2>
                 </div>
                 <form>

@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable react/jsx-boolean-value */
 /* eslint-disable react/jsx-filename-extension */
 // import modules
@@ -22,19 +24,31 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 10,
     textAlign: 'left',
     maxWidth: 460,
-    display: 'inline-block'
+    borderRadius: '25px',
+    border: '5px solid transparent',
+    display: 'inline-block',
+    '&:focus': {
+      border: '5px solid #397BA6',
+      webkitTransition: 'all 0.15s ease-in-out',
+      transition: 'all 0.15s ease-in-out'
+    },
+    '&:hover': {
+      border: '5px solid #397BA6',
+      webkitTransition: 'all 0.15s ease-in-out',
+      transition: 'all 0.15s ease-in-out'
+    }
   },
   projectNumber: {
     fontSize: 'min(8vw, 90px)'
   },
   title: {
-    fontSize: 'clamp(24, 5vw, 32px)',
+    fontSize: 'clamp(24px, 8vw, 32px)',
     fontWeight: '600',
     margin: 0,
-    marginBottom: 10,
     fontFamily: 'Inter',
     textAlign: 'left',
-    lineHeight: '125%'
+    lineHeight: '125%',
+    padding: '15px 15px 0px 15px'
   },
   subtitle: {
     fontSize: 'min(6vw, 40px)',
@@ -50,7 +64,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     marginTop: 0,
     textAlign: 'left',
-    color: '#1d1d1f'
+    color: '#1d1d1f',
+    padding: '15px 15px 0px 15px'
   },
   images: {
     maxWidth: '200px',
@@ -86,12 +101,8 @@ const useStyles = makeStyles((theme) => ({
   },
   shadow: {
     backgroundColor: "rgba(255, 255, 255, 1)",
-    border: '1px solid rgba(131, 131, 131, 0.16)',
-    backdropFilter: "blur(8px)",
-    color: "white",
-    padding: theme.spacing(3),
     borderRadius: '20px',
-    minHeight: 300
+    minHeight: 495
   },
   inlineSkeleton: {
     display: 'inline-block',
@@ -141,10 +152,19 @@ const useStyles = makeStyles((theme) => ({
       background: '#333333',
       color: '#bbbbbb'
     }
+  },
+  projectBG: {
+    width: '100%',
+    maxHeight: 200,
+    objectFit: 'cover',
+    objectPosition: '50% 50%',
+    borderRadius: '20px 20px 0px 0px',
+    backgroundColor: "#252423",
+    overflow: 'hidden'
   }
 }))
 
-function Projects() {
+function Projects(props) {
 
   const classes = useStyles();
 
@@ -158,10 +178,10 @@ function Projects() {
 
   useEffect(() => {
       for (const i in currentProjectArray) {
-        if(currentProjectArray[i]) {
-        const {projectNumber, title, subtitle, body, images, githubLink, hostedLink, tags, yearCreated} = currentProjectArray[i];
+        if(currentProjectArray[i] && i < props.renderAmount) {
+        const {projectNumber, title, subtitle, body, background, images, githubLink, hostedLink, tags, yearCreated} = currentProjectArray[i];
     
-        projectArray.push({projectNumber, title, subtitle, body, images, githubLink, hostedLink, tags, yearCreated});
+        projectArray.push({projectNumber, title, subtitle, body, background, images, githubLink, hostedLink, tags, yearCreated});
         }
       }
       setProjects(projectArray);
@@ -179,6 +199,7 @@ function Projects() {
 
           return  <div className={classes.project} key={project.projectNumber}>
                     <div className={classes.shadow}>
+                    <img className={classes.projectBG} src={project.background} alt=""/>
                       <Grid container className={classes.container}>
                         <Grid item className={classes.container} xs={12} sm={12} md={12} lg={12} xl={12}>
                             <h1 className={classes.title}>
@@ -188,11 +209,6 @@ function Projects() {
                         <Grid item className={classes.container} xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
                             <h5 className={classes.body}>
                                 {project.body}
-                            </h5>
-                        </Grid>
-                        <Grid item className={classes.container} xs={12} sm={12} md={12} lg={12} xl={12}>
-                            <h5 className={classes.tags}>
-                              {tags}
                             </h5>
                         </Grid>
                       </Grid>

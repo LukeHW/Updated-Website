@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 // import modules
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -214,8 +216,8 @@ function Gallery() {
                                     <h5 className={classes.gallerySubtitle}>{item.title}</h5>
                                 </div>
                             <img
-                                src={`${item.img}?w=248&fit=crop&auto=format`}
-                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${item.img}`}
+                                srcSet={`${item.img}`}
                                 alt={item.title}
                             />
                             </ImageListItem>
@@ -236,8 +238,8 @@ function Gallery() {
                                     <h5 className={classes.gallerySubtitle}>{item.title}</h5>
                                 </div>
                             <img
-                                src={`${item.img}?w=248&fit=crop&auto=format`}
-                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${item.img}`}
+                                srcSet={`${item.img}`}
                                 alt={item.title}
                             />
                             </ImageListItem>
@@ -258,8 +260,8 @@ function Gallery() {
                                     <h5 className={classes.gallerySubtitleSmall}>{item.title}</h5>
                                 </div>
                             <img
-                                src={`${item.img}?w=248&fit=crop&auto=format`}
-                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${item.img}`}
+                                srcSet={`${item.img}`}
                                 alt={item.title}
                                 loading="lazy"
                             />

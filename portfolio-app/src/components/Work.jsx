@@ -103,7 +103,7 @@ const useStyles = makeStyles(() => ({
     textAlign: 'left',
     color: '#222222',
     margin: 5,
-    marginBottom: 40,
+    marginBottom: 60,
     lineHeight: 1.05,
     letterSpacing: '-.045em'
   },
@@ -133,7 +133,7 @@ function Work() {
                 Projects
               </h1>
               <h2 className={classes.spacerText}>
-                Some of the work I have done.
+                Code I have worked on.
               </h2>
             </div>
         </Grid>
@@ -141,7 +141,7 @@ function Work() {
 
         <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
         <Grid item className={classes.item} xs={12} sm={12} md={12} lg={10} xl={10} align='center'>
-          <Projects />
+          <Projects renderAmount={6}/>
         </Grid>
         <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
       </Grid>
