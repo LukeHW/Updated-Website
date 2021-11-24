@@ -19,9 +19,9 @@ const useStyles = makeStyles((theme) => ({
     
   },
   project: {
-    marginBottom: 50,
-    marginLeft: 10,
-    marginRight: 10,
+    marginBottom: 30,
+    marginLeft: 15,
+    marginRight: 15,
     textAlign: 'left',
     maxWidth: 460,
     borderRadius: '25px',
@@ -156,6 +156,7 @@ const useStyles = makeStyles((theme) => ({
   projectBG: {
     width: '100%',
     maxHeight: 200,
+    minHeight: 170,
     objectFit: 'cover',
     objectPosition: '50% 50%',
     borderRadius: '20px 20px 0px 0px',
