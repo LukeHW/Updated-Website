@@ -9,5 +9,6 @@
         "react/jsx-props-no-spreading": "off",
         "prefer-const": "warn"
     },
-    "extends": ["airbnb", "prettier", "prettier/react"]
+    "extends": ["airbnb", "prettier", "prettier/react"],
+    "parser": "babel-eslint"
 }

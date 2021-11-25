@@ -5,12 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
-import Hidden from '@material-ui/core/Hidden';
-import Anime, { anime } from 'react-anime';
 
-import { Fade, Slide } from '@mui/material';
+import { Slide } from '@mui/material';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
 import DemoCarousel from './pageComponents/DemoCarousel';
@@ -22,8 +18,7 @@ import projectData from './Projects.json';
 import './Main.css';
 
 // import components
-import bg from '../blurredBG.jpg';
-import {ReactComponent as AnimateLogo} from '../greetingWire.svg'
+import bg from '../blurredBG.avif';
 
 import Input from './Input';
 
@@ -514,7 +509,7 @@ function Main() {
           <Grid container className={classes.container}>
             <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Slide in timeout={1500} direction="up" easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
-                  <img className={classes.placer} src="/main.png" alt="Luke W." />
+                  <img className={classes.placer} src="/main.avif" alt="Luke W." />
                 </Slide>
                 <Slide in timeout={1750} direction="up" easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
                   <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>

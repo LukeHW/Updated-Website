@@ -9,7 +9,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 // import components
-import galleryBG2 from '../test-bg.jpg';
+import galleryBG2 from '../test-bg.avif';
 // import image data
 import galleryJSON from './pageComponents/gallery.json';
 

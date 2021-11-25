@@ -1,11 +1,9 @@
 // import modules
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
 // import components
-import workBG from '../lost-sky-bg.jpg';
+import workBG from '../lost-sky-bg.avif';
 import Projects from './Projects';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
