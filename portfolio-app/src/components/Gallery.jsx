@@ -192,11 +192,29 @@ function Gallery() {
   let imagesArray = [];
   
   for(let i=0; i<itemData.length; i++) {
-    let src = {
-      src: `${itemData[i].img}`,
-      lightboxCaption: `${itemData[i].title}`,
-      lightboxTitle: `${itemData[i].names}`
-    };
+    let orderM = null;
+    let orderL = null;
+    let src = {};
+
+    if(itemData[i].orderM){
+      orderM = itemData[i].orderM;
+      orderL = itemData[i].orderL;
+
+      src = {
+        src: `${itemData[i].img}`,
+        lightboxCaption: `${itemData[i].title}`,
+        lightboxTitle: `${itemData[i].names}`,
+        orderM: `${orderM}`,
+        orderL: `${orderL}`
+      };
+    } else {
+      src = {
+        src: `${itemData[i].img}`,
+        lightboxCaption: `${itemData[i].title}`,
+        lightboxTitle: `${itemData[i].names}`
+      };
+    }
+
     imagesArray.push(src);
   }
 

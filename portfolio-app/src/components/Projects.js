@@ -10,9 +10,6 @@ import Grid from '@material-ui/core/Grid';
 // import json Projects object
 import ProjectsJSON from './Projects.json';
 
-// import styles
-import '../../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
-
 // styles for App.js
 const useStyles = makeStyles((theme) => ({
   container: {
