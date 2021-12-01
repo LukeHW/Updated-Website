@@ -5,9 +5,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import ResponsiveGallery from 'react-responsive-gallery';
 
 // import components
@@ -178,6 +175,11 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 1200,
     marginRight: 'auto',
     marginLeft: 'auto'
+  },
+  gallery: {
+    maxWidth: 1500,
+    marginRight: 'auto',
+    marginLeft: 'auto'
   }
 }));
 
@@ -191,7 +193,9 @@ function Gallery() {
   
   for(let i=0; i<itemData.length; i++) {
     let src = {
-      src: `${itemData[i].img}`
+      src: `${itemData[i].img}`,
+      lightboxCaption: `${itemData[i].title}`,
+      lightboxTitle: `${itemData[i].names}`
     };
     imagesArray.push(src);
   }
@@ -216,58 +220,9 @@ function Gallery() {
                     </Grid>
                 </div>
                 <Grid container>
-                    <Hidden lgDown>
-                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
-                    <Grid item xs={8} sm={8} md={8} lg={8} xl={8}>
-                    <ResponsiveGallery useLightBox images={imagesArray}/>
+                    <Grid item className={classes.gallery} xs={12} sm={12} md={12} lg={12} xl={12}>
+                      <ResponsiveGallery useLightBox images={imagesArray} numOfImagesPerRow={{xs: 1, s: 1, m: 2, l: 2, xl: 3, xxl: 4}} />
                     </Grid>
-                    <Grid item xs={2} sm={2} md={2} lg={2} xl={2} />
-                    </Hidden>
-
-                    <Hidden smDown xlUp>
-                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-                    <Grid item className={classes.mediumContainer} xs={10} sm={10} md={10} lg={10} xl={10}>
-                        <ImageList variant="masonry" cols={2} gap={20}>
-                        {itemData.map((item) => (
-                            <ImageListItem key={item.img}>
-                                <div className={classes.galleryTitleContainer}>
-                                    <h3 className={classes.galleryTitle}>{item.names}</h3>
-                                    <h5 className={classes.gallerySubtitle}>{item.title}</h5>
-                                </div>
-                            <img
-                                src={`${item.img}`}
-                                srcSet={`${item.img}`}
-                                alt={item.title}
-                            />
-                            </ImageListItem>
-                        ))}
-                        </ImageList>
-                    </Grid>
-                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
-                    </Hidden>
-
-                    <Hidden mdUp>
-                    <Grid item xs="auto" sm={1} md={1} lg={1} xl={1} />
-                    <Grid item xs={12} sm={10} md={10} lg={10} xl={10}>
-                        <ImageList variant="masonry" cols={1} gap={20}>
-                        {itemData.map((item) => (
-                            <ImageListItem key={item.img}>
-                                <div className={classes.galleryTitleContainer}>
-                                    <h3 className={classes.galleryTitleSmall}>{item.names}</h3>
-                                    <h5 className={classes.gallerySubtitleSmall}>{item.title}</h5>
-                                </div>
-                            <img
-                                src={`${item.img}`}
-                                srcSet={`${item.img}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                            </ImageListItem>
-                        ))}
-                        </ImageList>
-                    </Grid>
-                    <Grid item xs="auto" sm={1} md={1} lg={1} xl={1} />
-                    </Hidden>
                 </Grid>
           </div>
       </div>

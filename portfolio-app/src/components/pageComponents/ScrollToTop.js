@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
           borderRadius: '50%',
           boxShadow: '0 0 0 3px #397BA6'
       },
-      right: '5%',
+      right: '2vw',
       borderRadius: '50%',
       boxShadow: '0 0 0 3px #EEEEEE'
     }

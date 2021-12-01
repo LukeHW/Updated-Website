@@ -231,6 +231,8 @@
         "id": 39,
         "title": "Views",
         "names": "Colin",
-        "img": "/galleryImages/compressed/Colin%202.avif"
+        "img": "/galleryImages/compressed/Colin%202.avif",
+        "orderM": 1,
+        "orderL": 1
     }
 ]

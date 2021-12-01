@@ -9,14 +9,15 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 // import components
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ScrollToTop from './components/pageComponents/Scroll';
+const Navbar = React.lazy(() => import('./components/Navbar'))
+const Footer = React.lazy(() => import('./components/Footer'))
+const ScrollToTop = React.lazy(() => import('./components/pageComponents/Scroll'))
 
 // import pages
 const Main = React.lazy(() => import('./components/Main'))
 const Work = React.lazy(() => import('./components/Work'))
 const Gallery = React.lazy(() => import('./components/Gallery'))
+
 
 // styles for App.js
 const useStyles = makeStyles(() => ({
@@ -25,35 +26,35 @@ const useStyles = makeStyles(() => ({
 
 function App() {
 
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
-  React.useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // React.useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
 
   const classes = useStyles();
 
   return (
     <Router>
-      <ScrollToTop />
-      <Navbar />
-      <Switch>
-        <React.Suspense fallback={<p>Loading</p>}>
-          <Route exact path="/">
-              <Main />
-          </Route>
-          <Route exact path="/Work">
-              <Work />
-          </Route>
-          <Route exact path="/Gallery">
-              <Gallery />
-          </Route>
-        </React.Suspense>
-      </Switch>
-      <Footer />
+      <React.Suspense fallback={<p>Loading</p>}>
+        <ScrollToTop />
+        <Navbar />
+        <Switch>
+            <Route exact path="/">
+                <Main />
+            </Route>
+            <Route exact path="/Work">
+                <Work />
+            </Route>
+            <Route exact path="/Gallery">
+                <Gallery />
+            </Route>
+        </Switch>
+        <Footer />
+      </React.Suspense>
     </Router>
   );
 }
