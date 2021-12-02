@@ -1,8 +1,5 @@
-/* eslint-disable react/jsx-filename-extension */
 // import modules
-import { useState } from 'react';
 import * as React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // import styles
@@ -20,9 +17,9 @@ const Gallery = React.lazy(() => import('./components/Gallery'))
 
 
 // styles for App.js
-const useStyles = makeStyles(() => ({
+// const useStyles = makeStyles(() => ({
 
-}));
+// }));
 
 function App() {
 
@@ -35,7 +32,7 @@ function App() {
   //   }, 2000);
   // }, []);
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
     <Router>
@@ -43,13 +40,13 @@ function App() {
         <ScrollToTop />
         <Navbar />
         <Switch>
-            <Route exact path="/">
+            <Route exact path={"/"}>
                 <Main />
             </Route>
-            <Route exact path="/Work">
+            <Route exact path={"/Work"}>
                 <Work />
             </Route>
-            <Route exact path="/Gallery">
+            <Route exact path={"/Gallery"}>
                 <Gallery />
             </Route>
         </Switch>

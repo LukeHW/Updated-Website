@@ -1,6 +1,7 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+
 // styles for Input.js
 const useStyles = makeStyles(() => ({
   input: {
@@ -93,16 +94,16 @@ const Input = (props) => {
 
     switch (props.inputtype) {
         case('input'):
-            inputElement = <input className={classes.inputElement} id='input' {...props} />;
+            inputElement = <input className={classes.inputElement} id={"input"} {...props} />;
             break;
         case('submit'):
-            inputElement = <button className={classes.button} id='submit' type='submit' {...props} >Send</button>;
+            inputElement = <button className={classes.button} id={"submit"} type={"submit"} {...props} >Send</button>;
             break;
         case('textarea'):
-            inputElement = <textarea className={classes.textArea} id='textarea' rows="10" {...props} />;
+            inputElement = <textarea className={classes.textArea} id={"textarea"} rows={"10"} {...props} />;
             break;
         default:
-            inputElement = <input className={classes.inputElement} id='default' {...props} />;
+            inputElement = <input className={classes.inputElement} id={"default"} {...props} />;
     }
 
     return (

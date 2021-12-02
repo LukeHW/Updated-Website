@@ -2,6 +2,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+
 // import components
 import workBG from '../lost-sky-bg.avif';
 import Projects from './Projects';
@@ -119,12 +120,12 @@ function Work() {
   const classes = useStyles();
 
   return (
-    <div className="App">
+    <div className={"App"}>
     <ScrollToTop showBelow={250} />
     <Grid className={classes.paperContainer}>
     <div className={classes.workWrapper}>
       <Grid container className={classes.container}>
-        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+        <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
         <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={10} xl={10}>
             <div className={classes.spacerContainer}>
               <h1 className={classes.spacerTextHeader}>
@@ -135,13 +136,13 @@ function Work() {
               </h2>
             </div>
         </Grid>
-        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+        <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
 
-        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
-        <Grid item className={classes.item} xs={12} sm={12} md={12} lg={10} xl={10} align='center'>
+        <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+        <Grid item className={classes.item} xs={12} sm={12} md={12} lg={10} xl={10} align={"center"}>
           <Projects renderAmount={6}/>
         </Grid>
-        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+        <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
       </Grid>
     </div>
     </Grid>

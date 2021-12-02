@@ -1,21 +1,20 @@
 /* eslint-disable no-plusplus */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 // import modules
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import ResponsiveGallery from 'react-responsive-gallery';
 
 // import components
 import galleryBG2 from '../test-bg.avif';
+
 // import image data
 import galleryJSON from './pageComponents/gallery.json';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
 
 // styles for Main.js
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   container: {
     minHeight: '100%',
     width: '100%',
@@ -189,16 +188,13 @@ function Gallery() {
 
   const itemData = galleryJSON;
 
-  let imagesArray = [];
+  const imagesArray = [];
   
   for(let i=0; i<itemData.length; i++) {
-    let orderM = null;
-    let orderL = null;
     let src = {};
 
     if(itemData[i].orderM){
-      orderM = itemData[i].orderM;
-      orderL = itemData[i].orderL;
+      const {orderM, orderL} = itemData[i];
 
       src = {
         src: `${itemData[i].img}`,

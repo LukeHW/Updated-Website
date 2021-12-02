@@ -1,0 +1,114 @@
+{
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "rules": {
+      // Put a blank space before line comments except at beginning of an object or block
+      // http://eslint.org/docs/rules/lines-around-comment
+      "lines-around-comment": [
+        2,
+        {
+          "beforeLineComment": true,
+          "allowObjectStart": true,
+          "allowBlockStart": true,
+          "beforeBlockComment": true,
+          "allowArrayStart": true
+        }
+      ],
+      // Allows updating properties of params only
+      // https: //eslint.org/docs/rules/no-param-reassign
+      "no-param-reassign": [
+        "error",
+        {
+          "props": false
+        }
+      ],
+      // Allow dangling underscores
+      // http://eslint.org/docs/rules/no-underscore-dangle
+      "no-underscore-dangle": 0,
+      // Allow componentDidMount to not require 'this.' Disabled for Segment
+      // http://eslint.org/docs/rules/no-underscore-dangle
+      "class-methods-use-this": [
+        "error",
+        {
+          "exceptMethods": [
+            "componentDidMount"
+          ]
+        }
+      ],
+      // Allow the use of console
+      // https://eslint.org/docs/rules/no-console
+      "no-console": "off",
+      // Allow of export class as well as the connected component using the same name
+      // https://eslint.org/docs/rules/import/no-named-as-default
+      "import/no-named-as-default": "off",
+      // Allow destructuring of actions using mapDispatchToProps
+      // https://eslint.org/docs/rules/no-shadow
+      "no-shadow": "off",
+      //
+      // React rules
+      //
+      // Prevent missing React when using JSX
+      // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
+      "react/react-in-jsx-scope": 2,
+      // Allow files with .js extension to include jsx
+      // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      // Prevent React to be incorrectly marked as unused
+      // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
+      "react/jsx-uses-react": 2,
+      // Prevent variables used in JSX to be incorrectly marked as unused
+      // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
+      "react/jsx-uses-vars": 2,
+      // Prevent missing props validation in a React component definition
+      // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+      "react/prop-types": 2,
+      // Prevent definitions of unused prop types
+      // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
+      "react/no-unused-prop-types": 2,
+      // Enforces consistent naming for boolean props, must start with is/has
+      // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
+      "react/boolean-prop-naming": 2,
+      // Prevent duplicate props in JSX
+      // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
+      "react/jsx-no-duplicate-props": 2,
+      // Enforce curly braces in JSX
+      // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md
+      "react/jsx-curly-brace-presence": [
+        2,
+        {
+          "props": "always"
+        }
+      ],
+      "react-hooks/rules-of-hooks": "error"
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "extends": [
+      "airbnb-base",
+      "prettier",
+      "prettier/react"
+    ],
+    "plugins": [
+      "prettier",
+      "react",
+      "mocha",
+      "react-hooks"
+    ]
+}

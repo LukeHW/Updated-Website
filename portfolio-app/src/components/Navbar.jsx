@@ -1,3 +1,5 @@
+/* eslint-disable no-sequences */
+/* eslint-disable no-unused-vars */
 // import modules
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
@@ -212,10 +214,10 @@ function Navbar() {
     <div>
         <div className={navbar ? classes.navbarActive : classes.navbarContainer}>
             <Grid container className={classes.container}>
-                <Grid item xs="auto" sm="auto" /> 
+                <Grid item xs={"auto"} sm={"auto"} /> 
                 <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
                   <div className={classes.logoLinkContainer}>
-                    <Link to="/" className={classes.logoLink}>
+                    <Link to={"/"} className={classes.logoLink}>
                           <h1 className={classes.nameLink}>Luke Wahlmeier</h1>
                     </Link>
                   </div>
@@ -223,21 +225,21 @@ function Navbar() {
                 <Hidden smDown>
                     <div className={classes.navSpacer}/>
                     <div className={classes.link}>
-                          <Link to="/Work" className={classes.navLinks}>Work</Link>
+                          <Link to={"/Work"} className={classes.navLinks}>Work</Link>
                     </div>
                     <div className={classes.link}>
-                          <Link to="/Gallery" className={classes.navLinks}>Gallery</Link>
+                          <Link to={"/Gallery"} className={classes.navLinks}>Gallery</Link>
                     </div>
                     <div className={classes.link}>
-                          <Link smooth to="/#Contact" className={classes.navLinks}>Contact</Link>
+                          <Link smooth to={"/#Contact"} className={classes.navLinks}>Contact</Link>
                     </div>
                 </Hidden>
 
                 <Hidden mdUp>
                     <Grid item xs={4} sm={7} /> 
-                    <Grid item xs={2} sm={1} align="center">
+                    <Grid item xs={2} sm={1} align={"center"}>
                       <div className={classes.hamburgerContainer}>
-                        <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color="#FFFFFF" label="Show menu" marginTop="20px" direction="right" />
+                        <Hamburger className={classes.hamburger} toggled={isOpen, menu}  toggle={setOpen, setMenu} size={25} color={"#FFFFFF"} label={"Show menu"} marginTop={"20px"} direction={"right"} />
                       </div>
                     </Grid>
                 </Hidden>
@@ -246,15 +248,15 @@ function Navbar() {
 
         <Hidden mdUp>
             <Grid container className={menu ? classes.menuContainerShown : classes.menuContainerHidden}>
-                <Grid item className={classes.menuBox} xs={12} sm={12} align="center">
+                <Grid item className={classes.menuBox} xs={12} sm={12} align={"center"}>
                     <div className={classes.menuLinkSpacer}>
-                        <Link to="/Work" className={classes.menuLink} onClick={closeMenuHandler}>Work</Link>
+                        <Link to={"/Work"} className={classes.menuLink} onClick={closeMenuHandler}>Work</Link>
                     </div>
                     <div className={classes.menuLinkSpacer}>
-                        <Link to="/Gallery" className={classes.menuLink} onClick={closeMenuHandler}>Gallery</Link>
+                        <Link to={"/Gallery"} className={classes.menuLink} onClick={closeMenuHandler}>Gallery</Link>
                     </div>
                     <div className={classes.menuLinkSpacer}>
-                        <Link smooth to="/#Contact" className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
+                        <Link smooth to={"/#Contact"} className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
                     </div>
                 </Grid>
             </Grid>

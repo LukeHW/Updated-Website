@@ -55,56 +55,56 @@ function DemoCarousel() {
                     <h3 className={classes.galleryTitle}>Dewey</h3>
                     <h5 className={classes.gallerySubtitle}>Sitting Funny</h5>
                 </div>
-                <img className={classes.image} src="/galleryImages/compressed/Dewey%204.avif" alt='Dewey' />
+                <img className={classes.image} src={"/galleryImages/compressed/Dewey%204.avif"} alt={"Dewey"} />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Jack</h3>
                     <h5 className={classes.gallerySubtitle}>Spooky Loaf</h5>
                 </div>
-                <img className={classes.image} src="/galleryImages/compressed/Jack%202.avif" alt='Jack' />
+                <img className={classes.image} src={"/galleryImages/compressed/Jack%202.avif"} alt={"Jack"} />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Colin</h3>
                     <h5 className={classes.gallerySubtitle}>Views</h5>
                 </div>
-                <img className={classes.image} src="/galleryImages/compressed/Colin%202.avif" alt='Colin' />
+                <img className={classes.image} src={"/galleryImages/compressed/Colin%202.avif"} alt={"Colin"} />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Mr. Mister</h3>
                     <h5 className={classes.gallerySubtitle}>Wet Boi</h5>
                 </div>
-                <img className={classes.image} src="/galleryImages/compressed/Mr.%20Mister%202.avif" alt='Mr. Mister' />
+                <img className={classes.image} src={"/galleryImages/compressed/Mr.%20Mister%202.avif"} alt={"Mr. Mister"} />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Vicious</h3>
                     <h5 className={classes.gallerySubtitle}>Showing Off</h5>
                 </div>
-                <img className={classes.image} src="/galleryImages/compressed/Vicious%202.avif" alt='Vicious' />
+                <img className={classes.image} src={"/galleryImages/compressed/Vicious%202.avif"} alt={"Vicious"} />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Jack</h3>
                     <h5 className={classes.gallerySubtitle}>Being Cute</h5>
                 </div>
-                <img className={classes.image} src="/galleryImages/compressed/Jack.avif" alt='Jack' />
+                <img className={classes.image} src={"/galleryImages/compressed/Jack.avif"} alt={"Jack"} />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Vicious</h3>
                     <h5 className={classes.gallerySubtitle}>Fabulous</h5>
                 </div>
-                <img className={classes.image} src="/galleryImages/compressed/Vicious%205.avif" alt='Vicious' />
+                <img className={classes.image} src={"/galleryImages/compressed/Vicious%205.avif"} alt={"Vicious"} />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Colin</h3>
                     <h5 className={classes.gallerySubtitle}>Breather</h5>
                 </div>
-                <img className={classes.image} src="/galleryImages/compressed/Colin.avif" alt='Colin' />
+                <img className={classes.image} src={"/galleryImages/compressed/Colin.avif"} alt={"Colin"} />
             </div>
         </Carousel>
     );

@@ -10,18 +10,11 @@ import { makeStyles } from '@material-ui/core/styles';
 // styles for App.js
 const useStyles = makeStyles(() => ({
   container: {
-    height: 1000,
-    width: 1000,
-    zIndex: 1000,
-    backgroundColor: 'white',
-    position: 'absolute',
-    marginRight: 'auto',
-    marginLeft: 'auto',
-    display: 'none'
+    
   }
 }))
 
-function Project0() {
+function Project2() {
 
   const classes = useStyles();
 
@@ -32,4 +25,4 @@ function Project0() {
   );
 }
 
-export default Project0;
+export default Project2;

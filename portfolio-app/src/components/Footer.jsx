@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
 // styles for Footer.js
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   footerActive: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     height: 60,
@@ -87,41 +87,41 @@ function Footer() {
       <div className={classes.footerActive}>
           <Grid className={classes.footerContainer} container>
           <Hidden smDown>
-              <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1}/>
-              <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align="left">
-                <Typography className={classes.footer} variant="h5" component="h2" gutterBottom>
+              <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1}/>
+              <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align={"left"}>
+                <Typography className={classes.footer} variant={"h5"} component={"h2"} gutterBottom>
                     2021 - LukeHW
                 </Typography>
               </Grid>
-              <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align="right">
+              <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align={"right"}>
                 <div className={classes.iconsContainer}>
-                  <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.footerLinks}>
-                    <img className={classes.icons} src="/githubWhiteLogo.png" alt="github logo" />
+                  <a target={'_blank'} href={'https://github.com/LukeHW'} rel={"noreferrer"} className={classes.footerLinks}>
+                    <img className={classes.icons} src={"/githubWhiteLogo.png"} alt={"github logo"} />
                   </a>
-                  <a target='_blank' href='https://linkedin.com/in/lukehw/' rel="noreferrer" className={classes.footerLinks}>
-                    <img className={classes.icons} src="/linkedinWhiteLogo.png" alt="linkedin logo" />
+                  <a target={'_blank'} href={'https://linkedin.com/in/lukehw/'} rel={"noreferrer"} className={classes.footerLinks}>
+                    <img className={classes.icons} src={"/linkedinWhiteLogo.png"} alt={"linkedin logo"} />
                   </a>
                 </div>
               </Grid> 
-              <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1}/>
+              <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1}/>
           </Hidden>
           </Grid>
       </div>
 
       <Hidden mdUp>
         <div className={classes.footerActiveSmall}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align="left">
-          <Typography className={classes.footerSmall} variant="h5" component="h2">
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align={"left"}>
+          <Typography className={classes.footerSmall} variant={"h5"} component={"h2"}>
               2021 - LukeHW
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4} align="right">
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={4} align={"right"}>
           <div className={classes.iconsContainerSmall}>
-            <a target='_blank' href='https://github.com/LukeHW' rel="noreferrer" className={classes.footerLinks}>
-              <img className={classes.icons} src="/githubWhiteLogo.png" alt="github logo" />
+            <a target={'_blank'} href={'https://github.com/LukeHW'} rel={"noreferrer"} className={classes.footerLinks}>
+              <img className={classes.icons} src={"/githubWhiteLogo.png"} alt={"github logo"} />
             </a>
-            <a target='_blank' href='https://linkedin.com/in/lukehw/' rel="noreferrer" className={classes.footerLinks}>
-              <img className={classes.icons} src="/linkedinWhiteLogo.png" alt="linkedin logo" />
+            <a target={'_blank'} href={'https://linkedin.com/in/lukehw/'} rel={"noreferrer"} className={classes.footerLinks}>
+              <img className={classes.icons} src={"/linkedinWhiteLogo.png"} alt={"linkedin logo"} />
             </a>
           </div>
         </Grid> 

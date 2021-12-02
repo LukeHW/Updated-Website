@@ -9,10 +9,8 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import { Slide } from '@mui/material';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
-import DemoCarousel from './pageComponents/DemoCarousel';
+import DemoCarousel from './pageComponents/DemoCarousel.jsx';
 import Projects from './Projects';
-
-import projectData from './Projects.json';
 
 // import styles
 import './Main.css';
@@ -20,7 +18,7 @@ import './Main.css';
 // import components
 import bg from '../blurredBG.avif';
 
-import Input from './Input';
+import Input from './Input.jsx';
 
 // styles for Main.js
 const useStyles = makeStyles((theme) => ({
@@ -499,38 +497,36 @@ function Main() {
 
   const classes = useStyles();
 
-  const projectJSON = projectData.projects;
-
   return (
-    <div className="App">
+    <div className={"App"}>
       <ScrollToTop showBelow={250} />
       <Grid className={classes.paperContainer}>
-        <div className="AppBG">
+        <div className={"AppBG"}>
           <Grid container className={classes.container}>
             <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
-                <Slide in timeout={1500} direction="up" easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
-                  <img className={classes.placer} src="/main.avif" alt="Luke W." />
+                <Slide in timeout={1500} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
+                  <img className={classes.placer} src={"/main.avif"} alt={"Luke W."} />
                 </Slide>
-                <Slide in timeout={1750} direction="up" easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
-                  <Typography className={classes.title} variant="h1" component="h2" gutterBottom align='center'>
+                <Slide in timeout={1750} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
+                  <Typography className={classes.title} variant={"h1"} component={"h2"} gutterBottom align={"center"}>
                     Luke Wahlmeier
                   </Typography>
                 </Slide>
-                <Slide in timeout={2000} direction="up" easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
-                  <Typography className={classes.greeting} variant="h4" component="h2" gutterBottom>
+                <Slide in timeout={2000} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
+                  <Typography className={classes.greeting} variant={"h4"} component={"h2"} gutterBottom>
                     Developer. Innovator. Musician.
                   </Typography>
                 </Slide>
             </Grid>
           </Grid>
           <div className={classes.centeredItem}>
-            <ArrowDownwardIcon className="downArrow bounce-7" />
+            <ArrowDownwardIcon className={"downArrow bounce-7"} />
           </div>
         </div>
       </Grid>
 
       <Grid container className={classes.secondContainer}>
-        <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+        <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
           <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={10} xl={10}>
               <div className={classes.spacerContainer}>
                 <h1 className={classes.spacerTextHeader}>
@@ -541,17 +537,17 @@ function Main() {
                 </h2>
               </div>
           </Grid>
-          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+          <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
 
-          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
-            <Grid item className={classes.projects} xs={12} sm={12} md={12} lg={10} xl={10} align='center'>
+          <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+            <Grid item className={classes.projects} xs={12} sm={12} md={12} lg={10} xl={10} align={"center"}>
               <Projects renderAmount={4}/>
             </Grid>
-          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+          <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
 
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <div className={classes.viewLinkContainer}>
-              <a href="/Work" className={classes.viewLink}>
+              <a href={"/Work"} className={classes.viewLink}>
                 View more
               </a>
             </div>
@@ -559,7 +555,7 @@ function Main() {
       </Grid>
 
           <div className={classes.galleryContainer}>
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
             <Grid item className={classes.gallerySpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
                 <div className={classes.spacerContainer}>
                   <h1 className={classes.galleryTextHeader}>
@@ -570,25 +566,25 @@ function Main() {
                   </h2>
                 </div>
             </Grid>
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
 
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+            <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} />
             <Grid item className={classes.carouselSpacer} xs={12} sm={12} md={10} lg={10} xl={10}>
                 <DemoCarousel />
             </Grid>
-            <Grid item xs="auto" sm="auto" md={1} lg={1} xl={1} />
+            <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} />
 
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <div className={classes.viewLinkContainer}>
-                <a href="/Gallery" className={classes.viewLink}>
+                <a href={"/Gallery"} className={classes.viewLink}>
                   View gallery
                 </a>
               </div>
             </Grid> 
           </div>
 
-          <div className={classes.contactContainer} id="Contact">
-          <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+          <div className={classes.contactContainer} id={"Contact"}>
+          <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
             <Grid item className={classes.contactSpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
                 <div className={classes.spacerContainer}>
                   <h1 className={classes.galleryTextHeader}>
@@ -599,17 +595,17 @@ function Main() {
                   </h2>
                 </div>
                 <form>
-                  <Input inputtype='input' required type='text' name='name' placeholder='Your Name' />
-                  <Input inputtype='input' required type='email' name='email' placeholder='Email Address' />
-                  <Input inputtype='input' required type='tel' name='number' placeholder='Phone Number' />
-                  <Input inputtype='textarea' required type='text' name='message' placeholder='Reason for getting in touch' />
-                  <Input inputtype='submit' type='submit' name='submit' placeholder='Send' />
+                  <Input inputtype={"input"} required type={"text"} name={"name"} placeholder={"Your Name"} />
+                  <Input inputtype={"input"} required type={"email"} name={"email"} placeholder={"Email Address"} />
+                  <Input inputtype={"input"} required type={"tel"} name={"number"} placeholder={"Phone Number"} />
+                  <Input inputtype={"textarea"} required type={"text"} name={"message"} placeholder={"Reason for getting in touch"} />
+                  <Input inputtype={"submit"} type={"submit"} name={"submit"} placeholder={"Send"} />
                 </form>
-                  <a href="mailto:lukewahlmeier@gmail.com" className={classes.emailText}>
+                  <a href={"mailto:lukewahlmeier@gmail.com"} className={classes.emailText}>
                     lukewahlmeier@gmail.com
                   </a>
             </Grid>
-            <Grid item xs="auto" sm="auto" md="auto" lg={1} xl={1} />
+            <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
           </div>
 
     </div>
