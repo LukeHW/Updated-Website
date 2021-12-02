@@ -164,6 +164,12 @@ const useStyles = makeStyles(() => ({
     backgroundColor: '#252423',
     overflow: 'hidden',
   },
+  projectContainer: {
+    maxWidth: 1600,
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
 }));
 
 function Projects(props) {
@@ -230,7 +236,7 @@ function Projects(props) {
 
     // setProjMount(true);
   }, []);
-  const [showResults, setShowResults] = React.useState(true);
+  const [showResults, setShowResults] = React.useState(false);
   const [resultNumber, setResultNumber] = React.useState(0);
   const onClick = index => () => {
     setShowResults(true);
@@ -239,6 +245,7 @@ function Projects(props) {
 
   return (
     <div className={classes.container}>
+      <div className={classes.projectContainer}>
       {projects.map((project, index) => {
         const githubLink = (
           <a target={"_blank"} rel={"noopener noreferrer"} href={project.githubLink} className={classes.titleLink}>
@@ -262,6 +269,7 @@ function Projects(props) {
           </div>
         );
       })}
+      </div>
       {showResults ? projectIndex(resultNumber) : null}
     </div>
   );

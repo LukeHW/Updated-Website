@@ -539,11 +539,9 @@ function Main() {
           </Grid>
           <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
 
-          <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
-            <Grid item className={classes.projects} xs={12} sm={12} md={12} lg={10} xl={10} align={"center"}>
-              <Projects renderAmount={4}/>
-            </Grid>
-          <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align={"center"}>
+            <Projects renderAmount={4}/>
+          </Grid>
 
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <div className={classes.viewLinkContainer}>
