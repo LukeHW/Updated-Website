@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 import ResponsiveGallery from 'react-responsive-gallery';
 
 // import components
-import galleryBG2 from '../test-bg.avif';
 
 // import image data
 import galleryJSON from './pageComponents/gallery.json';
@@ -20,10 +19,7 @@ const useStyles = makeStyles(() => ({
     width: '100%'
   },
   bg:{
-    backgroundImage: `url(${galleryBG2})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+    backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9))'
   },
   title: {
     fontWeight: 700,

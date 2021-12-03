@@ -1,6 +1,10 @@
 // import modules
 import * as React from 'react';
+
+// import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Loading from './components/pageComponents/Loading.jsx';
 
 // import styles
 import './App.css';
@@ -15,7 +19,6 @@ const Main = React.lazy(() => import('./components/Main'))
 const Work = React.lazy(() => import('./components/Work'))
 const Gallery = React.lazy(() => import('./components/Gallery'))
 
-
 // styles for App.js
 // const useStyles = makeStyles(() => ({
 
@@ -25,7 +28,7 @@ function App() {
 
   // const [loading, setLoading] = useState(false);
 
-  // React.useEffect(() => {
+  // useEffect(() => {
   //   setLoading(true);
   //   setTimeout(() => {
   //     setLoading(false);
@@ -36,7 +39,7 @@ function App() {
 
   return (
     <Router>
-      <React.Suspense fallback={<p>Loading</p>}>
+      <React.Suspense fallback={<Loading />}>
         <ScrollToTop />
         <Navbar />
         <Switch>

@@ -4,6 +4,8 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 // import json Projects object
 import ProjectsJSON from './Projects.json';
@@ -161,14 +163,36 @@ const useStyles = makeStyles(() => ({
     objectFit: 'cover',
     objectPosition: '50% 50%',
     borderRadius: '20px 20px 0px 0px',
-    backgroundColor: '#252423',
-    overflow: 'hidden',
+    backgroundColor: '#252423'
   },
   projectContainer: {
     maxWidth: 1600,
     width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto'
+  },
+  projectExitButton: {
+    float: 'right',
+    color: 'white'
+  },
+  projectLargeContainer: {
+    minHeight: '100vh',
+    width: '100vw',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    backdropFilter: "blur(15px)",
+    paddingTop: 150,
+    position: 'fixed',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    zIndex: 200
+  },
+  projectLargeContentContainer: {
+    width: '100%',
+    maxWidth: 990
   }
 }));
 
@@ -176,6 +200,26 @@ function Projects(props) {
   const classes = useStyles();
 
   const [projects, setProjects] = useState([]);
+
+  const [showResults, setShowResults] = React.useState(false);
+  const [resultNumber, setResultNumber] = React.useState(0);
+
+  const onClick = index => () => {
+    if(showResults) {
+      setShowResults(false);
+    } else {
+      setShowResults(true);
+      setResultNumber(index);
+    }
+  };
+
+  const handleClose = () => {
+    if(showResults) {
+      setShowResults(false);
+    } else {
+      setShowResults(true);
+    }
+  };
 
   // const [projMount, setProjMount] = useState(false);
 
@@ -186,17 +230,59 @@ function Projects(props) {
   const projectIndex = index => {
     switch (index) {
       case 0:
-        return <Project0 />;
+        return <div className={classes.projectLargeContainer}>
+                  <div className={classes.projectLargeContentContainer}>
+                    <IconButton className={classes.projectExitButton} color={"primary"} aria-label={"close"} onClick={handleClose}>
+                      <CloseIcon />
+                    </IconButton>
+                  </div>
+                  <Project0 />
+               </div>;
       case 1:
-        return <Project1 />;
+        return <div className={classes.projectLargeContainer}>
+                  <div className={classes.projectLargeContentContainer}>
+                    <IconButton className={classes.projectExitButton} aria-label={"close"} onClick={handleClose}>
+                      <CloseIcon />
+                    </IconButton>
+                  </div>
+                  <Project1 />
+               </div>;
       case 2:
-        return <Project2 />;
+        return <div className={classes.projectLargeContainer}>
+                  <div className={classes.projectLargeContentContainer}>
+                    <IconButton className={classes.projectExitButton} color={"primary"} aria-label={"close"} onClick={handleClose}>
+                      <CloseIcon />
+                    </IconButton>
+                  </div>
+                  <Project2 />
+               </div>;
       case 3:
-        return <Project3 />;
+        return <div className={classes.projectLargeContainer}>
+                  <div className={classes.projectLargeContentContainer}>
+                    <IconButton className={classes.projectExitButton} aria-label={"close"} onClick={handleClose}>
+                      <CloseIcon />
+                    </IconButton>
+                  </div>
+                  <Project3 />
+               </div>;
       case 4:
-        return <Project4 />;
+        return <div className={classes.projectLargeContainer}>
+                  <div className={classes.projectLargeContentContainer}>
+                    <IconButton className={classes.projectExitButton} aria-label={"close"} onClick={handleClose}>
+                      <CloseIcon />
+                    </IconButton>
+                  </div>
+                  <Project4 />
+               </div>;
       case 5:
-        return <Project5 />;
+        return <div className={classes.projectLargeContainer}>
+                  <div className={classes.projectLargeContentContainer}>
+                    <IconButton className={classes.projectExitButton} color={"primary"} aria-label={"close"} onClick={handleClose}>
+                      <CloseIcon />
+                    </IconButton>
+                  </div>
+                  <Project5 />
+               </div>;
       default:
         return null;
     }
@@ -236,12 +322,6 @@ function Projects(props) {
 
     // setProjMount(true);
   }, []);
-  const [showResults, setShowResults] = React.useState(false);
-  const [resultNumber, setResultNumber] = React.useState(0);
-  const onClick = index => () => {
-    setShowResults(true);
-    setResultNumber(index);
-  };
 
   return (
     <div className={classes.container}>

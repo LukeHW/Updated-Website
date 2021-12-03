@@ -28,11 +28,19 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 600
   },
   paperContainer: {
-    backgroundImage: `url(${bg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed",
-    backfaceVisibility: "hidden"
+    background: `url(${bg}) no-repeat center center`,
+    '&::before': {
+      content: ' ',
+      position: 'fixed',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      background: `url(${bg}) no-repeat center center`,
+      backgroundSize: 'cover',
+      willChange: 'transform',
+      zIndex: -1
+    }
   },
   greeting: {
     fontWeight: 600,
@@ -106,7 +114,8 @@ const useStyles = makeStyles((theme) => ({
     height: "80px",
     border: "1px solid #3c2946",
     position: "fixed",
-    borderRadius: "50%"
+    borderRadius: "50%",
+    willChange: 'transform'
   },
   outsideLinks: {
     textDecoration: "none",
@@ -194,11 +203,18 @@ const useStyles = makeStyles((theme) => ({
   galleryContainer: {
     fontFamily: 'Inter',
     padding: theme.spacing(0),
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed",
-    backfaceVisibility: "hidden"
+    background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg})`,
+    '&::before': {
+      content: ' ',
+      position: 'fixed',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      backgroundSize: 'cover',
+      willChange: 'transform',
+      zIndex: -1
+    }
   },
   contactContainer: {
     minHeight: "55vh",
