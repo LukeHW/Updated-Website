@@ -52,6 +52,9 @@ function App() {
             <Route exact path={"/Gallery"}>
                 <Gallery />
             </Route>
+            <Route exact path={"/Loading"}>
+                <Loading />
+            </Route>
         </Switch>
         <Footer />
       </React.Suspense>

@@ -1,11 +1,13 @@
+/* eslint-disable arrow-body-style */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-restricted-syntax */
 // import modules
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import { Fade } from '@mui/material';
 
 // import json Projects object
 import ProjectsJSON from './Projects.json';
@@ -30,6 +32,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: '25px',
     border: '5px solid transparent',
     display: 'inline-block',
+    cursor: 'pointer',
     '&:focus': {
       border: '5px solid #397BA6',
       webkitTransition: 'all 0.15s ease-in-out',
@@ -38,7 +41,7 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       border: '5px solid #397BA6',
       webkitTransition: 'all 0.15s ease-in-out',
-      transition: 'all 0.15s ease-in-out',
+      transition: 'all 0.15s ease-in-out'
     },
   },
   projectNumber: {
@@ -193,6 +196,12 @@ const useStyles = makeStyles(() => ({
   projectLargeContentContainer: {
     width: '100%',
     maxWidth: 990
+  },
+  projectWrapper: {
+    maxWidth: 1000,
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   }
 }));
 
@@ -227,61 +236,104 @@ function Projects(props) {
 
   const currentProjectArray = ProjectsJSON.projects;
 
+  const ref = useRef()
+
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (showResults && ref.current && !ref.current.contains(e.target)) {
+        setShowResults(false)
+      }
+    }
+
+    document.addEventListener("mouseup", checkIfClickedOutside)
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mouseup", checkIfClickedOutside)
+    }
+  }, [showResults])
+
   const projectIndex = index => {
     switch (index) {
       case 0:
         return <div className={classes.projectLargeContainer}>
                   <div className={classes.projectLargeContentContainer}>
+                    <Fade in timeout={3000}>
                     <IconButton className={classes.projectExitButton} color={"primary"} aria-label={"close"} onClick={handleClose}>
                       <CloseIcon />
                     </IconButton>
+                    </Fade>
                   </div>
-                  <Project0 />
+                  <div className={classes.projectWrapper} ref={ref}>
+                    <Project0 />
+                  </div>
                </div>;
       case 1:
         return <div className={classes.projectLargeContainer}>
                   <div className={classes.projectLargeContentContainer}>
+                  <Fade in timeout={3000}>
                     <IconButton className={classes.projectExitButton} aria-label={"close"} onClick={handleClose}>
                       <CloseIcon />
                     </IconButton>
+                  </Fade>
                   </div>
-                  <Project1 />
+                  <div className={classes.projectWrapper} ref={ref}>
+                    <Project1 />
+                  </div>
                </div>;
       case 2:
         return <div className={classes.projectLargeContainer}>
                   <div className={classes.projectLargeContentContainer}>
+                  <Fade in timeout={3000}>
                     <IconButton className={classes.projectExitButton} color={"primary"} aria-label={"close"} onClick={handleClose}>
                       <CloseIcon />
                     </IconButton>
+                  </Fade>
                   </div>
-                  <Project2 />
+                  <div className={classes.projectWrapper} ref={ref}>
+                    <Project2 />
+                  </div>
                </div>;
       case 3:
         return <div className={classes.projectLargeContainer}>
                   <div className={classes.projectLargeContentContainer}>
+                  <Fade in timeout={3000}>
                     <IconButton className={classes.projectExitButton} aria-label={"close"} onClick={handleClose}>
                       <CloseIcon />
                     </IconButton>
+                  </Fade>
                   </div>
-                  <Project3 />
+                  <div className={classes.projectWrapper} ref={ref}>
+                    <Project3 />
+                  </div>
                </div>;
       case 4:
         return <div className={classes.projectLargeContainer}>
                   <div className={classes.projectLargeContentContainer}>
+                  <Fade in timeout={3000}>
                     <IconButton className={classes.projectExitButton} aria-label={"close"} onClick={handleClose}>
                       <CloseIcon />
                     </IconButton>
+                  </Fade>
                   </div>
-                  <Project4 />
+                  <div className={classes.projectWrapper} ref={ref}>
+                    <Project4 />
+                  </div>
                </div>;
       case 5:
         return <div className={classes.projectLargeContainer}>
                   <div className={classes.projectLargeContentContainer}>
+                  <Fade in timeout={3000}>
                     <IconButton className={classes.projectExitButton} color={"primary"} aria-label={"close"} onClick={handleClose}>
                       <CloseIcon />
                     </IconButton>
+                  </Fade>
                   </div>
-                  <Project5 />
+                  <div className={classes.projectWrapper} ref={ref}>
+                    <Project5 />
+                  </div>
                </div>;
       default:
         return null;
@@ -323,23 +375,23 @@ function Projects(props) {
     // setProjMount(true);
   }, []);
 
+   // const githubLink = (
+        //   <a target={"_blank"} rel={"noopener noreferrer"} href={project.githubLink} className={classes.titleLink}>
+        //     {project.title}
+        //   </a>
+        // );
+
   return (
     <div className={classes.container}>
       <div className={classes.projectContainer}>
       {projects.map((project, index) => {
-        const githubLink = (
-          <a target={"_blank"} rel={"noopener noreferrer"} href={project.githubLink} className={classes.titleLink}>
-            {project.title}
-          </a>
-        );
-
         return (
           <div className={classes.project} key={project.projectNumber}>
             <div className={classes.shadow} onClick={onClick(index)}>
               <img className={classes.projectBG} src={project.background} alt={""} />
               <Grid container className={classes.container}>
                 <Grid item className={classes.container} xs={12} sm={12} md={12} lg={12} xl={12}>
-                  <h1 className={classes.title}>{githubLink}</h1>
+                  <h1 className={classes.title}>{project.title}</h1>
                 </Grid>
                 <Grid item className={classes.container} xs={12} sm={12} md={12} lg={12} xl={12} align={"center"}>
                   <h5 className={classes.body}>{project.body}</h5>

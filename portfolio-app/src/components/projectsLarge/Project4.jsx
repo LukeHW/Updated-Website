@@ -2,8 +2,9 @@
 /* eslint-disable react/jsx-boolean-value */
 /* eslint-disable react/jsx-filename-extension */
 // import modules
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Slide } from '@mui/material';
 
 // import json Projects object
 import ProjectsJSON from '../Projects.json';
@@ -81,6 +82,7 @@ function Project4() {
 
   return (
     <div>
+      <Slide in timeout={1000} direction={"up"} easing={{ enter: "cubic-bezier(0, 1, .4, 1)", exit: "linear", }}>
       <div className={classes.container}>
         <img className={classes.projectBG} src={currentProjectArray.background} alt={""}/>
         <h1 className={classes.projectHeader}>
@@ -93,6 +95,7 @@ function Project4() {
           <h2 className={classes.codeHeader}>The code</h2>
         </div>
       </div>
+      </Slide>
       <div className={classes.emptyContainer} />
     </div>
   );
