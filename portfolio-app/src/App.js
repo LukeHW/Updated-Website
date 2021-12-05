@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 // import modules
 import * as React from 'react';
 
@@ -15,9 +16,17 @@ const Footer = React.lazy(() => import('./components/Footer'))
 const ScrollToTop = React.lazy(() => import('./components/pageComponents/Scroll'))
 
 // import pages
-const Main = React.lazy(() => import('./components/Main'))
+const Main = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/Main')), 3000);
+  });
+});
 const Work = React.lazy(() => import('./components/Work'))
-const Gallery = React.lazy(() => import('./components/Gallery'))
+const Gallery = React.lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('./components/Gallery')), 3000);
+  });
+});
 
 // styles for App.js
 // const useStyles = makeStyles(() => ({
