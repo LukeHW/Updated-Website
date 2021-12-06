@@ -521,7 +521,7 @@ function Main() {
           <Grid container className={classes.container}>
             <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Slide in timeout={1500} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
-                  <img className={classes.placer} src={"/main.avif"} alt={"Luke W."} />
+                    <img className={classes.placer} src={"/main-400-test.png"} srcSet={"/main-400-test.png 400w, /main-800.png 800w"} alt={"Luke W."} />
                 </Slide>
                 <Slide in timeout={1750} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
                   <Typography className={classes.title} variant={"h1"} component={"h2"} gutterBottom align={"center"}>

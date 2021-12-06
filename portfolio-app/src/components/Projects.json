@@ -39,7 +39,7 @@
             "subtitle": "A simple information website, hosted with AWS",
             "body": "This AWS hosted static website displays images and information for the public in the area of service. Made with React, JS, and HTML.",
             "background": "/projectImages/project3/storehouseBG.avif",
-            "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
+            "images": ["/projectImages/project3/storehouseCode.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/Burlington-God-Store-House-Page",
             "tags": ["JavaScript", "HTML", "CSS", "React"],
             "yearCreated": 2021

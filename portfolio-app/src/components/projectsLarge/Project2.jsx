@@ -147,7 +147,7 @@ const useStyles = makeStyles(() => ({
   },
   ideasContainer: {
     width: '100%',
-    maxHeight: 1600,
+    maxHeight: 2000,
     backgroundColor: '#F5F5F7',
     borderRadius: '0px 0px 20px 20px'
   },
@@ -180,7 +180,7 @@ const useStyles = makeStyles(() => ({
     display: 'block'
   },
   spacer: {
-    height: 100,
+    height: 'clamp(30px, 5vmin, 100px)',
     width: '100%',
     content: ' '
   }
@@ -264,10 +264,11 @@ function Project2() {
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>Amazon Web Services</h3>
-                <h5 className={classes.detailSubItem}>After the API data is returned, Node uses the 'file system' module to create a file tree. The application then saves the file tree in the root directory for the user to traverse.</h5>
+                <h5 className={classes.detailSubItem}>Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Currently being used for this website, AWS hosts a S3 bucket on Cloudfront's CDN.</h5>
               </div>        
               <div className={classes.divContainer} />
             </Grid>
+            <div className={classes.spacer} />
           </Grid>
         </div>
 
@@ -282,7 +283,7 @@ function Project2() {
             <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>Figma</h3>
-                <h5 className={classes.detailSubItem}>User will enter a list of product IDs to be used by the API.</h5>
+                <h5 className={classes.detailSubItem}>Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.</h5>
               </div>
               <div className={classes.spacer} />          
             </Grid>

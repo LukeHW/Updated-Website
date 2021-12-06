@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
     width: '100%'
   },
   bg:{
-    backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9))'
+    backgroundImage: 'rgba(0,0,0,0.9)'
   },
   title: {
     fontWeight: 700,

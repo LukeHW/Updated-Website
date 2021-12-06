@@ -168,6 +168,11 @@ const useStyles = makeStyles(() => ({
     fontSize: 'clamp(18px, 3vmin, 24px)',
     color: '#605F5F',
     textAlign: 'center'
+  },
+  spacer: {
+    height: 100,
+    width: '100%',
+    content: ''
   }
 }))
 
@@ -247,7 +252,7 @@ function Project0() {
           <h2 className={classes.codeHeader}>Ideas/Updates</h2>
           <img className={classes.ideasImage} src={'/projectImages/project0/npmLogo.png'} alt={"npm logo"}/>
           <h5 className={classes.ideasBody}>An idea to improve this application would be to create a bundle for node package manager. This would make it easier for users to start using this application, rather than cloning the repo and hard-coding specifics.</h5>     
-          <div className={classes.divContainer} />   
+          <div className={classes.spacer} />   
         </div>
 
       </div>

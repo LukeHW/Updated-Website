@@ -55,7 +55,7 @@ function DemoCarousel() {
                     <h3 className={classes.galleryTitle}>Dewey</h3>
                     <h5 className={classes.gallerySubtitle}>Sitting Funny</h5>
                 </div>
-                <img className={classes.image} src={"/galleryImages/compressed/Dewey%204.avif"} alt={"Dewey"} />
+                <img className={classes.image} src={"/responsiveCarouselImages/Dewey-4-400.png"} srcSet={"/responsiveCarouselImages/Dewey-4-400-test.png 400w, /responsiveCarouselImages/Dewey-4-800.png 800w"} alt={"Dewey"} />
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
