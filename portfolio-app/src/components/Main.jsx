@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paperContainer: {
     background: `url(${bg}) no-repeat center center`,
+    backgroundColor: 'rgba(0, 0, 0, 0.9)',
     '&::before': {
       content: ' ',
       position: 'fixed',
@@ -37,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
       top: 0,
       left: 0,
       background: `url(${bg}) no-repeat center center`,
+      backgroundColor: 'rgba(0, 0, 0, 0.9)',
       backgroundSize: 'cover',
       willChange: 'transform',
       zIndex: -1
@@ -204,6 +206,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Inter',
     padding: theme.spacing(0),
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg})`,
+    backgroundColor: 'rgba(0, 0, 0, 0.9)',
     '&::before': {
       content: ' ',
       position: 'fixed',
@@ -218,7 +221,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contactContainer: {
     minHeight: "55vh",
-    backgroundColor: ('#252423'),
+    backgroundColor: '#252423',
     fontFamily: 'Inter',
     padding: theme.spacing(0)
   },

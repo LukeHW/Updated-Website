@@ -277,13 +277,13 @@ function Project1() {
           <Grid container >
             <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.ideasImage} src={'/projectImages/project2/figmaLogo.svg'} alt={"Search bar image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project1/adobexdLogo.png'} alt={"Search bar image"}/>
               </div>               
             </Grid>
             <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Figma</h3>
-                <h5 className={classes.detailSubItem}>Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.</h5>
+                <h3 className={classes.detailItem}>Adobe XD</h3>
+                <h5 className={classes.detailSubItem}>Adobe XD is a vector-based user experience design tool for web apps and mobile apps, developed and published by Adobe Inc.</h5>
               </div>
               <div className={classes.spacer} />          
             </Grid>

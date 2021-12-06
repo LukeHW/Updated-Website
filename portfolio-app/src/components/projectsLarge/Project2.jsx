@@ -292,6 +292,25 @@ function Project2() {
           <div className={classes.spacer} /> 
         </div>
 
+        <div>
+          <h2 className={classes.detailHeader}>Tested with Lighthouse</h2>
+          <Grid container >
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project2/lighthouseLogo.png'} alt={"Search bar image"}/>
+              </div>               
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>Google Lighthouse</h3>
+                <h5 className={classes.detailSubItem}>Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO and more.</h5>
+              </div>
+              <div className={classes.divContainer} />          
+            </Grid>
+            <div className={classes.spacer} />
+          </Grid>
+        </div>
+
       </div>
       </Slide>
       <div className={classes.emptyContainer} />

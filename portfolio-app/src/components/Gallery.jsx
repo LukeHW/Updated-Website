@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
     width: '100%'
   },
   bg:{
-    backgroundImage: 'rgba(0,0,0,0.9)'
+    backgroundColor: 'rgba(0, 0, 0, 0.9)'
   },
   title: {
     fontWeight: 700,
@@ -152,7 +152,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 600,
     fontSize: 'clamp(48px, 10vw, 92px)',
     textAlign: 'left',
-    color: '#222222',
+    color: '#BBBBBB',
     margin: 5,
     marginBottom: 50,
     lineHeight: 1.05,
@@ -162,7 +162,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 600,
     fontSize: 28,
     textAlign: 'left',
-    color: 'black',
+    color: 'white',
     margin: 5
   },
   mediumContainer: {

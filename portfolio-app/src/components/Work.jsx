@@ -18,7 +18,8 @@ const useStyles = makeStyles(() => ({
     backgroundImage: `url(${workBG})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+    backgroundAttachment: "fixed",
+    backgroundColor: 'rgba(0, 0, 0, 0.9)'
   },
   title: {
     fontWeight: 500,
