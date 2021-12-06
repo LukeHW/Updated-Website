@@ -273,23 +273,10 @@ function Project3() {
         </div>
 
         <div className={classes.ideasContainer}>
-          <h2 className={classes.detailHeader}>Designed with</h2>
-          <Grid container >
-            <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
-              <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.ideasImage} src={'/projectImages/project2/figmaLogo.svg'} alt={"Search bar image"}/>
-              </div>               
-            </Grid>
-            <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
-              <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Figma</h3>
-                <h5 className={classes.detailSubItem}>Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.</h5>
-              </div>
-              <div className={classes.spacer} />          
-            </Grid>
-          </Grid>
-          <img className={classes.ideasDesignImage} src={'/projectImages/project2/figmaExample.png'} alt={""}/>
-          <div className={classes.spacer} /> 
+          <h2 className={classes.codeHeader}>Ideas/Updates</h2>
+          <img className={classes.ideasImage} src={'/projectImages/project3/facebookLogo.png'} alt={"npm logo"}/>
+          <h5 className={classes.ideasBody}>An idea to improve this website is to implement Facebook's Graph API to show most recent posts from the website's own Facebook page. That way users can access recent information surrounding the business without visiting Facebook directly.</h5>     
+          <div className={classes.spacer} />   
         </div>
 
       </div>

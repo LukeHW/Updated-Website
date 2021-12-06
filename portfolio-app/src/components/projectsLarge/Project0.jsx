@@ -169,8 +169,18 @@ const useStyles = makeStyles(() => ({
     color: '#605F5F',
     textAlign: 'center'
   },
+  ideasHeader: {
+    padding: 'clamp(30px, 8vmin, 80px)',
+    paddingLeft: 0,
+    paddingRight: 0,
+    marginBottom: 0,
+    marginTop: 0,
+    fontWeight: 600,
+    fontSize: 'clamp(28px, 8vmin, 60px)',
+    color: '#1D1D1F'
+  },
   spacer: {
-    height: 100,
+    height: 'clamp(30px, 5vmin, 100px)',
     width: '100%',
     content: ''
   }
@@ -205,6 +215,38 @@ function Project0() {
         </div>
 
         <div>
+          <h2 className={classes.detailHeader}>Created with</h2>
+          <Grid container >
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project0/nodeLogo.png'} alt={"Search bar image"}/>
+              </div>               
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>Node.js</h3>
+                <h5 className={classes.detailSubItem}>Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.</h5>
+              </div>
+              <div className={classes.divContainer} />          
+            </Grid>
+
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project4/javascriptLogo.png'} alt={"File image"}/>
+              </div> 
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>JavaScript</h3>
+                <h5 className={classes.detailSubItem}>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. In this project, JS was used to display project cards using "MixItUp".</h5>
+              </div>        
+              <div className={classes.divContainer} />
+            </Grid>
+            <div className={classes.spacer} />
+          </Grid>
+        </div>
+
+        <div className={classes.ideasContainer}>
           <h2 className={classes.detailHeader}>How it works</h2>
           <Grid container >
             <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
@@ -246,10 +288,11 @@ function Project0() {
               <div className={classes.divContainer} />
             </Grid>
           </Grid>
+          <div className={classes.spacer} />
         </div>
 
-        <div className={classes.ideasContainer}>
-          <h2 className={classes.codeHeader}>Ideas/Updates</h2>
+        <div>
+          <h2 className={classes.ideasHeader}>Ideas/Updates</h2>
           <img className={classes.ideasImage} src={'/projectImages/project0/npmLogo.png'} alt={"npm logo"}/>
           <h5 className={classes.ideasBody}>An idea to improve this application would be to create a bundle for node package manager. This would make it easier for users to start using this application, rather than cloning the repo and hard-coding specifics.</h5>     
           <div className={classes.spacer} />   
