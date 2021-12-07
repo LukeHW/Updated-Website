@@ -55,56 +55,96 @@ function DemoCarousel() {
                     <h3 className={classes.galleryTitle}>Dewey</h3>
                     <h5 className={classes.gallerySubtitle}>Sitting Funny</h5>
                 </div>
-                <img className={classes.image} src={"/responsiveCarouselImages/Dewey-4-400.png"} srcSet={"/responsiveCarouselImages/Dewey-4-400-test.png 400w, /responsiveCarouselImages/Dewey-4-800.png 800w"} alt={"Dewey"} />
+                <picture>
+                    <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Dewey%204.avif"} />
+                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Dewey-4-800.png"} />
+                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Dewey-4-400.png"} />
+                    <img className={classes.image} src={"/galleryImages/compressed/Dewey%204.avif"} alt={"Luke W."} />
+                </picture>
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Jack</h3>
                     <h5 className={classes.gallerySubtitle}>Spooky Loaf</h5>
                 </div>
-                <img className={classes.image} src={"/galleryImages/compressed/Jack%202.avif"} alt={"Jack"} />
+                <picture>
+                    <source type={"image/avif"} media={"(min-width: 1200px))"} srcSet={"/galleryImages/compressed/Jack%202.avif"} />
+                    <source type={"image/png"} media={"(min-width: 400px))"} srcSet={"/responsiveCarouselImages/Jack-2-800.png"} />
+                    <source type={"image/png"} media={"(min-width: 0px))"} srcSet={"/responsiveCarouselImages/Jack-2-400.png"} />
+                    <img className={classes.image} src={"/galleryImages/compressed/Jack%202.avif"} alt={"Jack"} />
+                </picture>
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Colin</h3>
                     <h5 className={classes.gallerySubtitle}>Views</h5>
                 </div>
-                <img className={classes.image} src={"/galleryImages/compressed/Colin%202.avif"} alt={"Colin"} />
+                <picture>
+                    <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Colin%202.avif"} />
+                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Colin-2-800.png"} />
+                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Colin-2-400.png"} />
+                    <img className={classes.image} src={"/galleryImages/compressed/Colin%202.avif"} alt={"Colin"} />
+                </picture>
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Mr. Mister</h3>
                     <h5 className={classes.gallerySubtitle}>Wet Boi</h5>
                 </div>
-                <img className={classes.image} src={"/galleryImages/compressed/Mr.%20Mister%202.avif"} alt={"Mr. Mister"} />
+                <picture>
+                    <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Mr.%20Mister%202.avif"} />
+                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Mr.Mister-2-800.png"} />
+                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Mr.Mister-2-400.png"} />
+                    <img className={classes.image} src={"/galleryImages/compressed/Mr.%20Mister%202.avif"} alt={"Mr. Mister"} />
+                </picture>
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Vicious</h3>
                     <h5 className={classes.gallerySubtitle}>Showing Off</h5>
                 </div>
-                <img className={classes.image} src={"/galleryImages/compressed/Vicious%202.avif"} alt={"Vicious"} />
+                <picture>
+                    <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Vicious%202.avif"} />
+                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Vicious-2-800.png"} />
+                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Vicious-2-400.png"} />
+                    <img className={classes.image} src={"/galleryImages/compressed/Vicious%202.avif"} alt={"Vicious"} />
+                </picture>
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Jack</h3>
                     <h5 className={classes.gallerySubtitle}>Being Cute</h5>
                 </div>
-                <img className={classes.image} src={"/galleryImages/compressed/Jack.avif"} alt={"Jack"} />
+                <picture>
+                    <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Jack.avif"} />
+                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Jack-800.png"} />
+                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Jack-400.png"} />
+                    <img className={classes.image} src={"/galleryImages/compressed/Jack.avif"} alt={"Jack"} />
+                </picture>
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Vicious</h3>
                     <h5 className={classes.gallerySubtitle}>Fabulous</h5>
                 </div>
-                <img className={classes.image} src={"/galleryImages/compressed/Vicious%205.avif"} alt={"Vicious"} />
+                <picture>
+                    <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Vicious%205.avif"} />
+                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Vicious-5-800.png"} />
+                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Vicious-5-400.png"} />
+                    <img className={classes.image} src={"/galleryImages/compressed/Vicious%205.avif"} alt={"Vicious"} />
+                </picture>
             </div>
             <div>
                 <div className={classes.galleryTitleContainer}>
                     <h3 className={classes.galleryTitle}>Colin</h3>
                     <h5 className={classes.gallerySubtitle}>Breather</h5>
                 </div>
-                <img className={classes.image} src={"/galleryImages/compressed/Colin.avif"} alt={"Colin"} />
+                <picture>
+                    <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Colin.avif"} />
+                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Colin-800.png"} />
+                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Colin-400.png"} />
+                    <img className={classes.image} src={"/galleryImages/compressed/Colin.avif"} alt={"Colin"} />
+                </picture>
             </div>
         </Carousel>
     );

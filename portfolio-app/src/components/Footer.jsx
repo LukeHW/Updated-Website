@@ -96,10 +96,10 @@ function Footer() {
               <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align={"right"}>
                 <div className={classes.iconsContainer}>
                   <a target={'_blank'} href={'https://github.com/LukeHW'} rel={"noreferrer"} className={classes.footerLinks}>
-                    <img className={classes.icons} src={"/githubWhiteLogo.png"} alt={"github logo"} />
+                    <img className={classes.icons} src={"/githubwhiteLogo.png"} alt={"github logo"} />
                   </a>
                   <a target={'_blank'} href={'https://linkedin.com/in/lukehw/'} rel={"noreferrer"} className={classes.footerLinks}>
-                    <img className={classes.icons} src={"/linkedinWhiteLogo.png"} alt={"linkedin logo"} />
+                    <img className={classes.icons} src={"/linkedinwhiteLogo.png"} alt={"linkedin logo"} />
                   </a>
                 </div>
               </Grid> 
@@ -118,10 +118,10 @@ function Footer() {
         <Grid item xs={12} sm={12} md={12} lg={12} xl={4} align={"right"}>
           <div className={classes.iconsContainerSmall}>
             <a target={'_blank'} href={'https://github.com/LukeHW'} rel={"noreferrer"} className={classes.footerLinks}>
-              <img className={classes.icons} src={"/githubWhiteLogo.png"} alt={"github logo"} />
+              <img className={classes.icons} src={"/githubwhiteLogo.png"} alt={"github logo"} />
             </a>
             <a target={'_blank'} href={'https://linkedin.com/in/lukehw/'} rel={"noreferrer"} className={classes.footerLinks}>
-              <img className={classes.icons} src={"/linkedinWhiteLogo.png"} alt={"linkedin logo"} />
+              <img className={classes.icons} src={"/linkedinwhiteLogo.png"} alt={"linkedin logo"} />
             </a>
           </div>
         </Grid> 

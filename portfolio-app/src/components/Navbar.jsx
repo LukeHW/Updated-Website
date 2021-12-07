@@ -5,7 +5,8 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from "react-router-dom";
 import { Spin as Hamburger } from 'hamburger-react';
 
 
@@ -217,21 +218,21 @@ function Navbar() {
                 <Grid item xs={"auto"} sm={"auto"} /> 
                 <Grid item xs={6} sm={4} md={3} lg={3} xl={3}>
                   <div className={classes.logoLinkContainer}>
-                    <Link to={"/"} className={classes.logoLink}>
-                          <h1 className={classes.nameLink}>Luke Wahlmeier</h1>
-                    </Link>
+                    <a href={"/"} className={classes.logoLink}>
+                      <h1 className={classes.nameLink}>Luke Wahlmeier</h1>
+                    </a>
                   </div>
                 </Grid>
                 <Hidden smDown>
                     <div className={classes.navSpacer}/>
                     <div className={classes.link}>
-                          <Link to={"/Work"} className={classes.navLinks}>Work</Link>
+                        <Link to={"/Work"} className={classes.navLinks}>Work</Link>
                     </div>
                     <div className={classes.link}>
-                          <Link to={"/Gallery"} className={classes.navLinks}>Gallery</Link>
+                        <Link to={"/Gallery"} className={classes.navLinks}>Gallery</Link>
                     </div>
                     <div className={classes.link}>
-                          <Link smooth to={"/#Contact"} className={classes.navLinks}>Contact</Link>
+                        <HashLink smooth to={"/#Contact"} className={classes.navLinks}>Contact</HashLink>
                     </div>
                 </Hidden>
 
@@ -256,7 +257,7 @@ function Navbar() {
                         <Link to={"/Gallery"} className={classes.menuLink} onClick={closeMenuHandler}>Gallery</Link>
                     </div>
                     <div className={classes.menuLinkSpacer}>
-                        <Link smooth to={"/#Contact"} className={classes.menuLink} onClick={closeMenuHandler}>Contact</Link>
+                        <HashLink smooth to={"/#Contact"} className={classes.menuLink} onClick={closeMenuHandler}>Contact</HashLink>
                     </div>
                 </Grid>
             </Grid>

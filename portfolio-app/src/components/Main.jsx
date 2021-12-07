@@ -16,7 +16,7 @@ import Projects from './Projects';
 import './Main.css';
 
 // import components
-import bg from '../blurredBG.avif';
+import bg from '../blurredBG.jpg';
 
 import Input from './Input.jsx';
 
@@ -69,7 +69,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     marginBottom: 35,
     borderRadius: '50%',
-    border: 'solid white 5px'
+    border: 'solid white 5px',
+    display: 'block'
   },
   placerContainer: {
     flexDirection: "column",
@@ -523,7 +524,13 @@ function Main() {
           <Grid container className={classes.container}>
             <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Slide in timeout={1500} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
-                    <img className={classes.placer} src={"/main-400-test.png"} srcSet={"/main-400-test.png 400w, /main-800.png 800w"} alt={"Luke W."} />
+                    <picture>
+                      <source type={"image/avif"} media={"(min-width: 1200px"} srcSet={"/main.avif"} />
+                      <source type={"image/png"} media={"(min-width: 1200px"} srcSet={"/main.png"} />
+                      <source type={"image/png"} media={"(min-width: 400px"} srcSet={"/main-800.png"} />
+                      <source type={"image/png"} media={"(min-width: 0px"} srcSet={"/main-400.png"} />
+                      <img className={classes.placer} src={"/main-400.png"} alt={"Luke W."} />
+                    </picture>
                 </Slide>
                 <Slide in timeout={1750} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
                   <Typography className={classes.title} variant={"h1"} component={"h2"} gutterBottom align={"center"}>
