@@ -1,9 +1,12 @@
 /* eslint-disable no-plusplus */
 // import modules
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import ResponsiveGallery from 'react-responsive-gallery';
+import ReactGallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
+
+// import ResponsiveGallery from 'react-responsive-gallery';
 
 // import components
 
@@ -181,6 +184,20 @@ function Gallery() {
 
   const classes = useStyles();
 
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  // eslint-disable-next-line no-unused-vars
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
+
   const itemData = galleryJSON;
 
   const imagesArray = [];
@@ -229,9 +246,23 @@ function Gallery() {
                     </Grid>
                 </div>
                 <Grid container>
-                    <Grid item className={classes.gallery} xs={12} sm={12} md={12} lg={12} xl={12}>
-                      <ResponsiveGallery useLightBox images={imagesArray} numOfImagesPerRow={{xs: 1, s: 1, m: 2, l: 2, xl: 3, xxl: 4}} />
-                    </Grid>
+                  <Grid item className={classes.gallery} xs={12} sm={12} md={12} lg={12} xl={12}>
+                    <ReactGallery photos={imagesArray} onClick={openLightbox} />
+                    <ModalGateway>
+                      {viewerIsOpen ? (
+                        <Modal onClose={closeLightbox}>
+                          <Carousel
+                            currentIndex={currentImage}
+                            views={imagesArray.map(x => ({
+                              ...x,
+                              srcset: x.srcSet,
+                              caption: x.title
+                            }))}
+                          />
+                        </Modal>
+                      ) : null}
+                    </ModalGateway>
+                  </Grid>
                 </Grid>
           </div>
       </div>

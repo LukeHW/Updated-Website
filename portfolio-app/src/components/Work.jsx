@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 // import components
-import workBG from '../lost-sky-bg.avif';
 import Projects from './Projects';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
@@ -12,13 +11,10 @@ import ScrollToTop from './pageComponents/ScrollToTop';
 // styles for Main.js
 const useStyles = makeStyles(() => ({
   container: {
-    overflow: 'hidden'
+    overflow: 'hidden',
+    paddingBottom: 50
   },
   paperContainer: {
-    backgroundImage: `url(${workBG})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed",
     backgroundColor: 'rgba(0, 0, 0, 0.9)'
   },
   title: {
@@ -101,7 +97,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 600,
     fontSize: 'clamp(48px, 10vw, 92px)',
     textAlign: 'left',
-    color: '#222222',
+    color: '#BBBBBB',
     margin: 5,
     marginBottom: 60,
     lineHeight: 1.05,
@@ -111,7 +107,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 600,
     fontSize: 28,
     textAlign: 'left',
-    color: '#333333',
+    color: 'white',
     margin: 5
   }
 }));

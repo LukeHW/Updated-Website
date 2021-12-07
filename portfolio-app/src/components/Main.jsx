@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
-import { Slide } from '@mui/material';
+import { Slide, Button } from '@mui/material';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
 import DemoCarousel from './pageComponents/DemoCarousel.jsx';
@@ -226,9 +226,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0)
   },
   viewLinkContainer: {
-    width: 300,
-    height: 70,
-    marginTop: 40,
+    marginTop: 20,
+    paddingBottom: 50,
     marginRight: 'auto',
     marginLeft: 'auto',
     textAlign: 'center'
@@ -564,10 +563,10 @@ function Main() {
 
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <div className={classes.viewLinkContainer}>
-              <a href={"/Work"} className={classes.viewLink}>
-                View more
-              </a>
-            </div>
+              <Button color={'primary'} variant={'outlined'} href={'/Work'}>
+                View more projects
+              </Button>
+            </div>       
           </Grid> 
       </Grid>
 
@@ -593,10 +592,10 @@ function Main() {
 
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <div className={classes.viewLinkContainer}>
-                <a href={"/Gallery"} className={classes.viewLink}>
-                  View gallery
-                </a>
-              </div>
+                <Button color={'primary'} variant={'outlined'} href={'/Gallery'}>
+                  View more pictures
+                </Button>
+              </div> 
             </Grid> 
           </div>
 
