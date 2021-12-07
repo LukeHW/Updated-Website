@@ -2,6 +2,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import { fadeInUp } from 'react-animations';
+import Radium, { StyleRoot } from 'radium';
 
 // import components
 import Projects from './Projects';
@@ -116,6 +118,21 @@ function Work() {
 
   const classes = useStyles();
 
+  const styles = {
+    fadeInUp: {
+      animation: 'x 1s',
+      animationName: Radium.keyframes(fadeInUp, 'fadeInUp')
+    },
+    fadeInUp2: {
+      animation: 'x 1.5s',
+      animationName: Radium.keyframes(fadeInUp, 'fadeInUp2')
+    },
+    fadeInUp3: {
+      animation: 'x 2s',
+      animationName: Radium.keyframes(fadeInUp, 'fadeInUp3')
+    },
+  }
+
   return (
     <div className={"App"}>
     <ScrollToTop showBelow={250} />
@@ -124,19 +141,27 @@ function Work() {
       <Grid container className={classes.container}>
         <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
         <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={10} xl={10}>
-            <div className={classes.spacerContainer}>
-              <h1 className={classes.spacerTextHeader}>
-                Projects
-              </h1>
-              <h2 className={classes.spacerText}>
-                Code I have worked on.
-              </h2>
-            </div>
+            <StyleRoot>
+              <div style={styles.fadeInUp}>
+                <div className={classes.spacerContainer}>
+                  <h1 className={classes.spacerTextHeader}>
+                    Projects
+                  </h1>
+                  <h2 className={classes.spacerText}>
+                    Code I have worked on.
+                  </h2>
+                </div>
+              </div>
+            </StyleRoot>
         </Grid>
         <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
 
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align={"center"}>
-          <Projects renderAmount={6}/>
+          <StyleRoot>
+            <div style={styles.fadeInUp2}>
+              <Projects renderAmount={6}/>
+            </div>
+          </StyleRoot>
         </Grid>
       </Grid>
     </div>

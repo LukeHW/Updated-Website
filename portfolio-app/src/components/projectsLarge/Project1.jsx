@@ -288,9 +288,67 @@ function Project1() {
               <div className={classes.spacer} />          
             </Grid>
           </Grid>
-          <img className={classes.ideasDesignImage} src={'/projectImages/project2/figmaExample.png'} alt={""}/>
           <div className={classes.spacer} /> 
         </div>
+
+        <div>
+          <h2 className={classes.detailHeader}>The idea</h2>
+          <Grid container >
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project2/muiLogo.png'} alt={"Search bar image"}/>
+              </div>               
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>Material UI</h3>
+                <h5 className={classes.detailSubItem}>MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.</h5>
+              </div>
+              <div className={classes.divContainer} />          
+            </Grid>
+
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project2/reactLogo2.png'} alt={"Digi-key image"}/>
+              </div> 
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>React and JS</h3>
+                <h5 className={classes.detailSubItem}>React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time.</h5>
+              </div>
+              <div className={classes.divContainer} />       
+            </Grid>
+
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project2/htmlcssLogo.png'} alt={"File image"}/>
+              </div> 
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>HTML/CSS</h3>
+                <h5 className={classes.detailSubItem}>HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.</h5>
+              </div>        
+              <div className={classes.divContainer} />
+            </Grid>
+
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project2/awsLogo.png'} alt={"File image"}/>
+              </div> 
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>Amazon Web Services</h3>
+                <h5 className={classes.detailSubItem}>Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Currently being used for this website, AWS hosts a S3 bucket on Cloudfront's CDN.</h5>
+              </div>        
+              <div className={classes.divContainer} />
+            </Grid>
+            <div className={classes.spacer} />
+          </Grid>
+        </div>
+
 
       </div>
       </Slide>

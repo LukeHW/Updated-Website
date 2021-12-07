@@ -1,3 +1,12 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable no-redeclare */
+/* eslint-disable block-scoped-var */
+/* eslint-disable no-var */
+/* eslint-disable vars-on-top */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-sequences */
 /* eslint-disable react/jsx-boolean-value */
 // import modules
 import React from 'react';
@@ -5,8 +14,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import { fadeInUp } from 'react-animations';
+import Radium, {StyleRoot} from 'radium';
 
-import { Slide, Button } from '@mui/material';
+import { Button } from '@mui/material';
 
 import ScrollToTop from './pageComponents/ScrollToTop';
 import DemoCarousel from './pageComponents/DemoCarousel.jsx';
@@ -505,16 +516,34 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    marginTop: 30,
-    maxWidth: 1500,
+    maxWidth: 1300,
     marginRight: 'auto',
     marginLeft: 'auto'
+  },
+  fadeInUp: {
+    animationName: 'fadeInUp',
+    animationDuration: '1s'
   }
 }));
 
 function Main() {
 
   const classes = useStyles();
+
+  const styles = {
+    fadeInUp: {
+      animation: 'x 1s',
+      animationName: Radium.keyframes(fadeInUp, 'fadeInUp')
+    },
+    fadeInUp2: {
+      animation: 'x 1.5s',
+      animationName: Radium.keyframes(fadeInUp, 'fadeInUp2')
+    },
+    fadeInUp3: {
+      animation: 'x 2s',
+      animationName: Radium.keyframes(fadeInUp, 'fadeInUp3')
+    },
+  }
 
   return (
     <div className={"App"}>
@@ -523,25 +552,27 @@ function Main() {
         <div className={"AppBG"}>
           <Grid container className={classes.container}>
             <Grid item className={classes.item} xs={12} sm={12} md={12} lg={12} xl={12}>
-                <Slide in timeout={1500} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
-                    <picture>
-                      <source type={"image/avif"} media={"(min-width: 1200px"} srcSet={"/main.avif"} />
-                      <source type={"image/png"} media={"(min-width: 1200px"} srcSet={"/main.png"} />
-                      <source type={"image/png"} media={"(min-width: 400px"} srcSet={"/main-800.png"} />
-                      <source type={"image/png"} media={"(min-width: 0px"} srcSet={"/main-400.png"} />
-                      <img className={classes.placer} src={"/main-400.png"} alt={"Luke W."} />
-                    </picture>
-                </Slide>
-                <Slide in timeout={1750} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
+              <StyleRoot>
+                <div style={styles.fadeInUp}>
+                  <picture>
+                    <source type={"image/avif"} media={"(min-width: 1200px"} srcSet={"/main.avif"} />
+                    <source type={"image/png"} media={"(min-width: 1200px"} srcSet={"/main.png"} />
+                    <source type={"image/png"} media={"(min-width: 400px"} srcSet={"/main-800.png"} />
+                    <source type={"image/png"} media={"(min-width: 0px"} srcSet={"/main-400.png"} />
+                    <img className={classes.placer} src={"/main-400.png"} alt={"Luke W."} />
+                  </picture>
+                </div>
+                <div style={styles.fadeInUp2}>
                   <Typography className={classes.title} variant={"h1"} component={"h2"} gutterBottom align={"center"}>
                     Luke Wahlmeier
                   </Typography>
-                </Slide>
-                <Slide in timeout={2000} direction={"up"} easing={{ enter: "cubic-bezier(0, 1.5, .8, 1)", exit: "linear", }}>
-                  <Typography className={classes.greeting} variant={"h4"} component={"h2"} gutterBottom>
+                  </div>
+                <div style={styles.fadeInUp3}>
+                  <Typography className={classes.greeting} variant={"h1"} component={"h2"} gutterBottom align={"center"}>
                     Developer. Innovator. Musician.
                   </Typography>
-                </Slide>
+                </div>
+              </StyleRoot>
             </Grid>
           </Grid>
           <div className={classes.centeredItem}>
@@ -564,7 +595,7 @@ function Main() {
           </Grid>
           <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align={"center"}>
+          <Grid className={classes.projects} item xs={12} sm={12} md={12} lg={12} xl={12} align={"center"}>
             <Projects renderAmount={4}/>
           </Grid>
 

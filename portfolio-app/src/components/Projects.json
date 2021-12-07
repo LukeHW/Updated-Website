@@ -27,7 +27,7 @@
             "title": "LukeHW Web Portfolio",
             "subtitle": "Displays work and projects, hosted with AWS",
             "body": "This Website! Made with React, Material UI, JS, HTML, and CSS; this website displays some of my projects, pictures, and other works that I have contributed to. Feel free to look around.",
-            "background": "/projectImages/project2/portfolioBG.png",
+            "background": "/projectImages/project2/portfolioBGSmall.png",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
             "githubLink": "https://github.com/LukeHW/Updated-Website",
             "tags": ["JavaScript", "HTML", "CSS", "React", "Adobe", "4fun"],

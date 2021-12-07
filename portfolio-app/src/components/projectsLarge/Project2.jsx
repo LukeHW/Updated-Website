@@ -196,7 +196,7 @@ function Project2() {
     <div>
       <Slide in timeout={1000} direction={"up"} easing={{ enter: "cubic-bezier(0, 1, .4, 1)", exit: "linear", }}>
       <div className={classes.container}>
-        <img className={classes.projectBG} src={currentProjectArray.background} alt={""}/>
+        <img className={classes.projectBG} src={'/projectImages/project2/portfolioBG.png'} alt={""}/>
         <h1 className={classes.projectHeader}>
           {currentProjectArray.title}
         </h1>
