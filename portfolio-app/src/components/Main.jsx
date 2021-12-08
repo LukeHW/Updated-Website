@@ -9,13 +9,14 @@
 /* eslint-disable no-sequences */
 /* eslint-disable react/jsx-boolean-value */
 // import modules
-import React from 'react';
+import React, { useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import { fadeInUp } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
+import emailjs from 'emailjs-com';
 
 import { Button } from '@mui/material';
 
@@ -545,6 +546,20 @@ function Main() {
     },
   }
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ninvqfa', 'template_wjr5esa', form.current, 'user_y6yKgiEeaPNs4tMC7IEF7')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      form.current.reset();
+  };
+
   return (
     <div className={"App"}>
       <ScrollToTop showBelow={250} />
@@ -648,7 +663,7 @@ function Main() {
                     Get in touch.
                   </h2>
                 </div>
-                <form>
+                <form ref={form} onSubmit={sendEmail}>
                   <Input inputtype={"input"} required type={"text"} name={"name"} placeholder={"Your Name"} />
                   <Input inputtype={"input"} required type={"email"} name={"email"} placeholder={"Email Address"} />
                   <Input inputtype={"input"} required type={"tel"} name={"number"} placeholder={"Phone Number"} />
