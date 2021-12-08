@@ -159,7 +159,7 @@ function Work() {
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align={"center"}>
           <StyleRoot>
             <div style={styles.fadeInUp2}>
-              <Projects renderAmount={6}/>
+              <Projects renderAmount={7}/>
             </div>
           </StyleRoot>
         </Grid>

@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
   greeting: {
     fontWeight: 600,
-    fontSize: 'clamp(48px, 10vmin, 105px)',
+    fontSize: 'clamp(48px, 8vmin, 105px)',
     color: "white",
     fontFamily: 'Inter',
     textAlign: 'center',
@@ -68,14 +68,14 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontWeight: 600,
-    fontSize: 'min(6vw, 32px)',
+    fontSize: 'clamp(24px, 6vw, 32px)',
     color: "white",
     fontFamily: 'Inter',
     textAlign: "center"
   },
   placer: {
-    width: "30%",
-    maxWidth: 400,
+    width: "40%",
+    maxWidth: 500,
     minWidth: 200,
     marginRight: 'auto',
     marginLeft: 'auto',
@@ -541,7 +541,7 @@ function Main() {
       animationName: Radium.keyframes(fadeInUp, 'fadeInUp2')
     },
     fadeInUp3: {
-      animation: 'x 2s',
+      animation: 'x 1.5s',
       animationName: Radium.keyframes(fadeInUp, 'fadeInUp3')
     },
   }

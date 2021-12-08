@@ -65,6 +65,17 @@
             "githubLink": "https://github.com/LukeHW/CIS308_Final",
             "tags": ["C", "Undergraduate"],
             "yearCreated": 2019
+        },
+        {
+            "projectNumber": 6,
+            "title": "Multiple Website HTTP Status Fetcher",
+            "subtitle": "Small game made with C",
+            "body": "Fun text based adventure made for my CIS308 final project. Move around and find clues to advance. Made with C and some C-based gameboy pixel art programs.",
+            "background": "/projectImages/project5/detectiveBG.jpg",
+            "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],
+            "githubLink": "https://github.com/LukeHW/Website-Checker",
+            "tags": ["Python"],
+            "yearCreated": 2019
         }
     ]
 }

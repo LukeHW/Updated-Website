@@ -19,6 +19,7 @@ import Project2 from './projectsLarge/Project2.jsx';
 import Project3 from './projectsLarge/Project3.jsx';
 import Project4 from './projectsLarge/Project4.jsx';
 import Project5 from './projectsLarge/Project5.jsx';
+import Project6 from './projectsLarge/Project6.jsx';
 
 // styles for App.js
 const useStyles = makeStyles(() => ({
@@ -166,7 +167,9 @@ const useStyles = makeStyles(() => ({
     objectFit: 'cover',
     objectPosition: '50% 50%',
     borderRadius: '20px 20px 0px 0px',
-    backgroundColor: '#252423'
+    backgroundColor: 'transparent',
+    backgroundClip: 'padding-box',
+    boxSizing: 'border-box'
   },
   projectContainer: {
     maxWidth: 1600,
@@ -335,6 +338,19 @@ function Projects(props) {
                     <Project5 />
                   </div>
                </div>;
+        case 6:
+        return <div className={classes.projectLargeContainer}>
+                  <div className={classes.projectLargeContentContainer}>
+                  <Fade in timeout={3000}>
+                    <IconButton className={classes.projectExitButton} color={"primary"} aria-label={"close"} onClick={handleClose}>
+                      <CloseIcon />
+                    </IconButton>
+                  </Fade>
+                  </div>
+                  <div className={classes.projectWrapper} ref={ref}>
+                    <Project6 />
+                  </div>
+                </div>;
       default:
         return null;
     }
@@ -388,7 +404,7 @@ function Projects(props) {
         return (
           <div className={classes.project} key={project.projectNumber}>
             <div className={classes.shadow} onClick={onClick(index)}>
-              <img className={classes.projectBG} src={project.background} alt={""} />
+                <img className={classes.projectBG} src={project.background} alt={""} />
               <Grid container className={classes.container}>
                 <Grid item className={classes.container} xs={12} sm={12} md={12} lg={12} xl={12}>
                   <h1 className={classes.title}>{project.title}</h1>
