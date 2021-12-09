@@ -3,7 +3,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import ResponsiveGallery from 'react-responsive-gallery';
+import { Hidden, ImageList, ImageListItem } from '@mui/material';
+import { SRLWrapper } from "simple-react-lightbox";
+
+
+// import ResponsiveGallery from 'react-responsive-gallery';
 
 // import components
 
@@ -95,7 +99,6 @@ const useStyles = makeStyles(() => ({
       display: 'block',
       position: 'absolute',
       textAlign: 'center',
-      pointerEvents: 'none',
       width: "100%",
       height: "100%"
   },
@@ -166,7 +169,7 @@ const useStyles = makeStyles(() => ({
     margin: 5
   },
   mediumContainer: {
-    maxWidth: 1200,
+    maxWidth: 1000,
     marginRight: 'auto',
     marginLeft: 'auto'
   },
@@ -229,9 +232,61 @@ function Gallery() {
                     </Grid>
                 </div>
                 <Grid container>
-                    <Grid item className={classes.gallery} xs={12} sm={12} md={12} lg={12} xl={12}>
-                      <ResponsiveGallery useLightBox images={imagesArray} numOfImagesPerRow={{xs: 1, s: 1, m: 2, l: 2, xl: 3, xxl: 4}} />
+                    <Hidden xlDown>
+                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+                    <Grid item className={classes.gallery} xs={10} sm={10} md={10} lg={10} xl={10}>
+                      <SRLWrapper>
+                          <ImageList variant={"masonry"} cols={3} gap={20}>
+                          {itemData.map((item) => (
+                              <ImageListItem key={item.img}>
+                                <img src={`${item.img}`} srcSet={`${item.img}`} alt={item.title} loading={"lazy"} />
+                              </ImageListItem>
+                          ))}
+                          </ImageList>
+                      </SRLWrapper>
                     </Grid>
+                    <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
+                    </Hidden>
+
+                    <Hidden smDown xlUp>
+                    <Grid item className={classes.mediumContainer} xs={12} sm={12} md={12} lg={12} xl={12}>
+                      <SRLWrapper>
+                        <ImageList variant={"masonry"} cols={2} gap={20}>
+                        {itemData.map((item) => (
+                            <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.img}`}
+                                srcSet={`${item.img}`}
+                                alt={item.title}
+                                loading={"lazy"}
+                            />
+                            </ImageListItem>
+                        ))}
+                        </ImageList>
+                      </SRLWrapper>
+                    </Grid>
+                    </Hidden>
+
+                    <Hidden smUp>
+                    <Grid item xs={"auto"} sm={1} md={1} lg={1} xl={1} />
+                    <Grid item xs={12} sm={10} md={10} lg={10} xl={10}>
+                      <SRLWrapper>
+                        <ImageList variant={"masonry"} cols={1} gap={20}>
+                        {itemData.map((item) => (
+                            <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.img}`}
+                                srcSet={`${item.img}`}
+                                alt={item.title}
+                                loading={"lazy"}
+                            />
+                            </ImageListItem>
+                        ))}
+                        </ImageList>
+                      </SRLWrapper>
+                    </Grid>
+                    <Grid item xs={"auto"} sm={1} md={1} lg={1} xl={1} />
+                    </Hidden>
                 </Grid>
           </div>
       </div>
