@@ -9,7 +9,7 @@
 /* eslint-disable no-sequences */
 /* eslint-disable react/jsx-boolean-value */
 // import modules
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -557,7 +557,14 @@ function Main() {
           console.log(error.text);
       });
       form.current.reset();
+      handleSend();
   };
+
+  const [send, setSend] = useState("Send")
+
+  const handleSend = () => {
+    setSend("Email sent!")
+  }
 
   return (
     <div className={"App"}>
@@ -659,17 +666,37 @@ function Main() {
                     Get in touch.
                   </h2>
                 </div>
-                <form ref={form} onSubmit={sendEmail}>
+                <form ref={form} onSubmit={sendEmail} id={"myForm"}>
                   <Input inputtype={"input"} required type={"text"} name={"name"} placeholder={"Your Name"} />
                   <Input inputtype={"input"} required type={"email"} name={"email"} placeholder={"Email Address"} />
                   <Input inputtype={"input"} required type={"tel"} name={"number"} placeholder={"Phone Number"} />
                   <Input inputtype={"textarea"} required type={"text"} name={"message"} placeholder={"Reason for getting in touch"} />
-                  <Input inputtype={"submit"} type={"submit"} name={"submit"} placeholder={"Send"} />
                 </form>
+                  <div className={classes.viewLinkContainer}>
+                    <Button color={'primary'} variant={'contained'} type={"submit"} form={"myForm"}>
+                      {send}
+                    </Button>
+                  </div> 
+
                   <a href={"mailto:lukewahlmeier@gmail.com"} className={classes.emailText}>
                     lukewahlmeier@gmail.com
                   </a>
             </Grid>
+            <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+          </div>
+
+          <div className={classes.contactContainer} id={"Contact"}>
+            <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+              <Grid item className={classes.contactSpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
+                  <div className={classes.spacerContainer}>
+                    <h1 className={classes.galleryTextHeader}>
+                      Socials
+                    </h1>
+                    <h2 className={classes.spacerText}>
+                      Stay in touch.
+                    </h2>
+                  </div>
+              </Grid>
             <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
           </div>
 

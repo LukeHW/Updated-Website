@@ -50,15 +50,14 @@ const useStyles = makeStyles(() => ({
   },
   footerSmall: {
     color: "white",
-    width: 115,
-    height: '100%',
+    width: 105,
+    height: 40,
     marginLeft: 'auto',
     marginRight: 'auto',
     fontSize: 15,
-    fontFamily: 'Inter',
     flexDirection: "column",
     justifyContent: "center",
-    display: "flex"
+    display: "flex",
   },
   iconsContainerSmall: {
     padding: 2,
@@ -68,10 +67,13 @@ const useStyles = makeStyles(() => ({
   },
   footerActiveSmall: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
-    height: 120,
+    height: 110,
     width: "100%",
     zIndex: 10,
-    borderTop: '1px solid #333333'
+    borderTop: '1px solid #333333',
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
   },
   footerWrapper: {
     maxHeight: 120
@@ -84,38 +86,35 @@ function Footer() {
 
   return (
     <div className={classes.footerWrapper}>
-      <div className={classes.footerActive}>
-          <Grid className={classes.footerContainer} container>
-          <Hidden smDown>
-              <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1}/>
-              <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align={"left"}>
-                <Typography className={classes.footer} variant={"h5"} component={"h2"} gutterBottom>
-                    2021 - LukeHW
-                </Typography>
-              </Grid>
-              <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align={"right"}>
-                <div className={classes.iconsContainer}>
-                  <a target={'_blank'} href={'https://github.com/LukeHW'} rel={"noreferrer"} className={classes.footerLinks}>
-                    <img className={classes.icons} src={"/githubwhiteLogo.png"} alt={"github logo"} />
-                  </a>
-                  <a target={'_blank'} href={'https://linkedin.com/in/lukehw/'} rel={"noreferrer"} className={classes.footerLinks}>
-                    <img className={classes.icons} src={"/linkedinwhiteLogo.png"} alt={"linkedin logo"} />
-                  </a>
-                </div>
-              </Grid> 
-              <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1}/>
-          </Hidden>
-          </Grid>
-      </div>
+      <Hidden smDown>
+        <div className={classes.footerActive}>
+            <Grid className={classes.footerContainer} container>
+                <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1}/>
+                <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align={"left"}>
+                  <Typography className={classes.footer} variant={"h5"} component={"h2"} gutterBottom>
+                      2021 - LukeHW
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sm={6} md={5} lg={5} xl={5} align={"right"}>
+                  <div className={classes.iconsContainer}>
+                    <a target={'_blank'} href={'https://github.com/LukeHW'} rel={"noreferrer"} className={classes.footerLinks}>
+                      <img className={classes.icons} src={"/githubwhiteLogo.png"} alt={"github logo"} />
+                    </a>
+                    <a target={'_blank'} href={'https://linkedin.com/in/lukehw/'} rel={"noreferrer"} className={classes.footerLinks}>
+                      <img className={classes.icons} src={"/linkedinwhiteLogo.png"} alt={"linkedin logo"} />
+                    </a>
+                  </div>
+                </Grid> 
+                <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1}/>
+            </Grid>
+        </div>
+      </Hidden>
 
       <Hidden mdUp>
         <div className={classes.footerActiveSmall}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align={"left"}>
           <Typography className={classes.footerSmall} variant={"h5"} component={"h2"}>
               2021 - LukeHW
           </Typography>
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4} align={"right"}>
           <div className={classes.iconsContainerSmall}>
             <a target={'_blank'} href={'https://github.com/LukeHW'} rel={"noreferrer"} className={classes.footerLinks}>
               <img className={classes.icons} src={"/githubwhiteLogo.png"} alt={"github logo"} />
@@ -124,7 +123,6 @@ function Footer() {
               <img className={classes.icons} src={"/linkedinwhiteLogo.png"} alt={"linkedin logo"} />
             </a>
           </div>
-        </Grid> 
         </div>
       </Hidden>
     </div>
