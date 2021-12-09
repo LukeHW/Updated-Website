@@ -225,7 +225,7 @@ function Gallery() {
                               Gallery
                             </h1>
                             <h2 className={classes.spacerText}>
-                              Pictures taken from my daily life.
+                              Pictures captured during my daily life.
                             </h2>
                           </div>
                       </Grid>
@@ -238,8 +238,8 @@ function Gallery() {
                       <SRLWrapper>
                           <ImageList variant={"masonry"} cols={3} gap={20}>
                           {itemData.map((item) => (
-                              <ImageListItem key={item.img}>
-                                <img src={`${item.img}`} srcSet={`${item.img}`} alt={item.title} loading={"lazy"} />
+                              <ImageListItem key={item.avif_img}>
+                                <img src={`${item.avif_img}`} alt={item.title} loading={"lazy"} />
                               </ImageListItem>
                           ))}
                           </ImageList>
@@ -253,10 +253,9 @@ function Gallery() {
                       <SRLWrapper>
                         <ImageList variant={"masonry"} cols={2} gap={20}>
                         {itemData.map((item) => (
-                            <ImageListItem key={item.img}>
+                            <ImageListItem key={item.avif_img}>
                             <img
-                                src={`${item.img}`}
-                                srcSet={`${item.img}`}
+                                src={`${item.avif_img}`}
                                 alt={item.title}
                                 loading={"lazy"}
                             />
@@ -273,10 +272,9 @@ function Gallery() {
                       <SRLWrapper>
                         <ImageList variant={"masonry"} cols={1} gap={20}>
                         {itemData.map((item) => (
-                            <ImageListItem key={item.img}>
+                            <ImageListItem key={item.avif_img}>
                             <img
-                                src={`${item.img}`}
-                                srcSet={`${item.img}`}
+                                src={`${item.avif_img}`}
                                 alt={item.title}
                                 loading={"lazy"}
                             />

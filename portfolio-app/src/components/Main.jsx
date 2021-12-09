@@ -13,7 +13,6 @@ import React, { useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import { fadeInUp } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import emailjs from 'emailjs-com';
@@ -74,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center"
   },
   placer: {
-    width: "40%",
+    width: "35%",
     maxWidth: 500,
     minWidth: 200,
     marginRight: 'auto',
@@ -590,9 +589,6 @@ function Main() {
               </StyleRoot>
             </Grid>
           </Grid>
-          <div className={classes.centeredItem}>
-            <ArrowDownwardIcon className={"downArrow bounce-7"} />
-          </div>
         </div>
       </Grid>
 
@@ -616,7 +612,7 @@ function Main() {
 
           <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
             <div className={classes.viewLinkContainer}>
-              <Button color={'primary'} variant={'outlined'} href={'/Work'}>
+              <Button color={'primary'} variant={'contained'} href={'/Work'}>
                 View more projects
               </Button>
             </div>       
@@ -631,7 +627,7 @@ function Main() {
                     Gallery
                   </h1>
                   <h2 className={classes.spacerText}>
-                    Some of the pictures I have taken.
+                    Pictures captured during my daily life.
                   </h2>
                 </div>
             </Grid>
@@ -645,7 +641,7 @@ function Main() {
 
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <div className={classes.viewLinkContainer}>
-                <Button color={'primary'} variant={'outlined'} href={'/Gallery'}>
+                <Button color={'primary'} variant={'contained'} href={'/Gallery'}>
                   View more pictures
                 </Button>
               </div> 

@@ -3,236 +3,312 @@
         "id": 3,
         "title": "Taking A Nap",
         "names": "Dewey",
-        "img": "/galleryImages/compressed/Dewey%202.avif"
+        "avif_img": "/galleryImages/compressed/Dewey%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 20,
         "title": "Star Wars Vibes",
         "names": "Kansas",
-        "img": "/galleryImages/compressed/Outside.avif"
+        "avif_img": "/galleryImages/compressed/Outside.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 1,
         "title": "Catland by Sarah Archer",
         "names": "Dewey",
-        "img": "/galleryImages/compressed/Catland.avif"
+        "avif_img": "/galleryImages/compressed/Catland.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 2,
         "title": "Dinner Time",
         "names": "Toby and Dewey",
-        "img": "/galleryImages/compressed/Cats.avif"
+        "avif_img": "/galleryImages/compressed/Cats.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 4,
         "title": "Cuddle Time",
         "names": "Dewey",
-        "img": "/galleryImages/compressed/Dewey%203.avif"
+        "avif_img": "/galleryImages/compressed/Dewey%203.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 5,
         "title": "Sitting Funny",
         "names": "Dewey",
-        "img": "/galleryImages/compressed/Dewey%204.avif"
+        "avif_img": "/galleryImages/compressed/Dewey%204.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 6,
         "title": "Looking For Birds",
         "names": "Dewey",
-        "img": "/galleryImages/compressed/Dewey%205.avif"
+        "avif_img": "/galleryImages/compressed/Dewey%205.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 7,
         "title": "Hanging Out On A Towel",
         "names": "Dewey",
-        "img": "/galleryImages/compressed/Dewey.avif"
+        "avif_img": "/galleryImages/compressed/Dewey.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 8,
         "title": "Weird Resting Position",
         "names": "Gracie",
-        "img": "/galleryImages/compressed/Gracie%202.avif"
+        "avif_img": "/galleryImages/compressed/Gracie%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 9,
         "title": "Looking Back",
         "names": "Gracie",
-        "img": "/galleryImages/compressed/Gracie%203.avif"
+        "avif_img": "/galleryImages/compressed/Gracie%203.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 10,
         "title": "Waiting",
         "names": "Gracie",
-        "img": "/galleryImages/compressed/Gracie.avif"
+        "avif_img": "/galleryImages/compressed/Gracie.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 11,
         "title": "Life On The Edge",
         "names": "Little Bitty",
-        "img": "/galleryImages/compressed/Little%20Bitty%202.avif"
+        "avif_img": "/galleryImages/compressed/Little%20Bitty%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 12,
         "title": "Relaxing",
         "names": "Little Bitty",
-        "img": "/galleryImages/compressed/Little%20Bitty%203.avif"
+        "avif_img": "/galleryImages/compressed/Little%20Bitty%203.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 14,
         "title": "Colorful Cloud",
         "names": "Kansas",
-        "img": "/galleryImages/compressed/Outside%202.avif"
+        "avif_img": "/galleryImages/compressed/Outside%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 15,
         "title": "Wet Boi",
         "names": "Mr. Mister",
-        "img": "/galleryImages/compressed/Mr.%20Mister%202.avif"
+        "avif_img": "/galleryImages/compressed/Mr.%20Mister%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 13,
         "title": "Approaching Sunset",
         "names": "Kansas",
-        "img": "/galleryImages/compressed/Outside%204.avif"
+        "avif_img": "/galleryImages/compressed/Outside%204.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 16,
         "title": "On The Hunt",
         "names": "Mr. Mister",
-        "img": "/galleryImages/compressed/Mr.%20Mister.avif"
+        "avif_img": "/galleryImages/compressed/Mr.%20Mister.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 17,
         "title": "After A Rain",
         "names": "Mushrooms",
-        "img": "/galleryImages/compressed/Mushrooms.avif"
+        "avif_img": "/galleryImages/compressed/Mushrooms.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 18,
         "title": "Defensive",
         "names": "Little Bitty",
-        "img": "/galleryImages/compressed/Little%20Bitty.avif"
+        "avif_img": "/galleryImages/compressed/Little%20Bitty.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 19,
         "title": "Classic Evening Sky",
         "names": "Kansas",
-        "img": "/galleryImages/compressed/Outside%203.avif"
+        "avif_img": "/galleryImages/compressed/Outside%203.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 21,
         "title": "Waiting For Their Return",
         "names": "Peaches",
-        "img": "/galleryImages/compressed/Peaches.avif"
+        "avif_img": "/galleryImages/compressed/Peaches.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 22,
         "title": "Deceive-mode: ON",
         "names": "Pipsqueak",
-        "img": "/galleryImages/compressed/Pipsqueak.avif"
+        "avif_img": "/galleryImages/compressed/Pipsqueak.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 23,
         "title": "Moonrise",
         "names": "Kansas",
-        "img": "/galleryImages/compressed/Road.avif"
+        "avif_img": "/galleryImages/compressed/Road.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 24,
         "title": "For Everything",
         "names": "Setup",
-        "img": "/galleryImages/compressed/Setup.avif"
+        "avif_img": "/galleryImages/compressed/Setup.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 25,
         "title": "Not amused",
         "names": "Toby",
-        "img": "/galleryImages/compressed/Toby%202.avif"
+        "avif_img": "/galleryImages/compressed/Toby%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 26,
         "title": "Curious",
         "names": "Toby",
-        "img": "/galleryImages/compressed/Toby%203.avif"
+        "avif_img": "/galleryImages/compressed/Toby%203.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 27,
         "title": "Alone Time",
         "names": "Toby",
-        "img": "/galleryImages/compressed/Toby.avif"
+        "avif_img": "/galleryImages/compressed/Toby.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 28,
         "title": "Showing Off",
         "names": "Vicious",
-        "img": "/galleryImages/compressed/Vicious%202.avif"
+        "avif_img": "/galleryImages/compressed/Vicious%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 29,
         "title": "Thinking Of Drinking",
         "names": "Vicious",
-        "img": "/galleryImages/compressed/Vicious%203.avif"
+        "avif_img": "/galleryImages/compressed/Vicious%203.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 30,
         "title": "Taking A Drink",
         "names": "Vicious",
-        "img": "/galleryImages/compressed/Vicious%204.avif"
+        "avif_img": "/galleryImages/compressed/Vicious%204.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 31,
         "title": "Fabulous",
         "names": "Vicious",
-        "img": "/galleryImages/compressed/Vicious%205.avif"
+        "avif_img": "/galleryImages/compressed/Vicious%205.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 32,
         "title": "Vibing",
         "names": "Vicious",
-        "img": "/galleryImages/compressed/Vicious.avif"
+        "avif_img": "/galleryImages/compressed/Vicious.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 33,
         "title": "Layers",
         "names": "Castle Rock",
-        "img": "/galleryImages/compressed/Castle%20Rock.avif"
+        "avif_img": "/galleryImages/compressed/Castle%20Rock.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 34,
         "title": "Snoozing",
         "names": "Vicious",
-        "img": "/galleryImages/compressed/Vicious%206.avif"
+        "avif_img": "/galleryImages/compressed/Vicious%206.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 35,
         "title": "Being Cute",
         "names": "Jack",
-        "img": "/galleryImages/compressed/Jack.avif"
+        "avif_img": "/galleryImages/compressed/Jack.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 36,
         "title": "Breather",
         "names": "Colin",
-        "img": "/galleryImages/compressed/Colin.avif"
+        "avif_img": "/galleryImages/compressed/Colin.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 37,
         "title": "Spooky Loaf",
         "names": "Jack",
-        "img": "/galleryImages/compressed/Jack%202.avif"
+        "avif_img": "/galleryImages/compressed/Jack%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 38,
         "title": "Downtown",
         "names": "Castle Rock",
-        "img": "/galleryImages/compressed/Castle%20Rock%202.avif"
+        "avif_img": "/galleryImages/compressed/Castle%20Rock%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     },
     {
         "id": 39,
         "title": "Views",
         "names": "Colin",
-        "img": "/galleryImages/compressed/Colin%202.avif",
-        "orderM": 1,
-        "orderL": 1
+        "avif_img": "/galleryImages/compressed/Colin%202.avif",
+        "jpg_img": "",
+        "webp_img": ""
     }
 ]
