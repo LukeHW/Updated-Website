@@ -79,7 +79,6 @@ const useStyles = makeStyles(() => ({
   workWrapper: {
     minHeight: '100vh',
     color: 'black',
-    fontFamily: 'Inter',
     alignItems: 'center'
   },
   galleryImages: {
@@ -90,7 +89,6 @@ const useStyles = makeStyles(() => ({
     height: '100%'
   },
   gallerySpacer: {
-      maxHeight: 500,
       width: '100%'
   },
   galleryTitleContainer: {
@@ -128,8 +126,7 @@ const useStyles = makeStyles(() => ({
   pageTitle:{
     fontSize: 80,
     fontWeight: 500,
-    marginTop: 130,
-    fontFamily: 'Inter'
+    marginTop: 130
   },
   pageSubtitle: {
     fontSize: 40,
@@ -139,7 +136,9 @@ const useStyles = makeStyles(() => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    marginTop: 100,
+    marginTop: 'clamp(80px, 10vw, 140px)',
+    paddingTop: 62,
+    marginBottom: 'clamp(80px, 10vw, 140px)',
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -147,9 +146,7 @@ const useStyles = makeStyles(() => ({
     maxWidth: 1000,
     width: '95%',
     marginRight: 'auto',
-    marginLeft: 'auto',
-    padding: 10,
-    paddingLeft: '3vw'
+    marginLeft: 'auto'
   },
   spacerText: {
     fontWeight: 600,
@@ -157,7 +154,6 @@ const useStyles = makeStyles(() => ({
     textAlign: 'left',
     color: '#BBBBBB',
     margin: 5,
-    marginBottom: 50,
     lineHeight: 1.05,
     letterSpacing: '-.045em'
   },

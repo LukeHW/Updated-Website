@@ -74,16 +74,15 @@ const useStyles = makeStyles(() => ({
     color: "Black"
   },
   workWrapper: {
-    minHeight: '100vh',
     color: 'black',
-    fontFamily: 'Inter',
-    alignItems: 'center'
   },
   spacer: {
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    marginTop: 100,
+    marginTop: 'clamp(80px, 10vw, 140px)',
+    paddingTop: 62,
+    marginBottom: 'clamp(80px, 10vw, 140px)',
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -92,8 +91,6 @@ const useStyles = makeStyles(() => ({
     width: '95%',
     marginRight: 'auto',
     marginLeft: 'auto',
-    padding: 10,
-    paddingLeft: '3vw'
   },
   spacerText: {
     fontWeight: 600,
@@ -101,7 +98,6 @@ const useStyles = makeStyles(() => ({
     textAlign: 'left',
     color: '#BBBBBB',
     margin: 5,
-    marginBottom: 60,
     lineHeight: 1.05,
     letterSpacing: '-.045em'
   },

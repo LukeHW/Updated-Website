@@ -53,7 +53,7 @@ const useStyles = makeStyles(() => ({
     backdropFilter: "blur(15px)",
     position: "fixed",
     zIndex: 6,
-    right: '0px'
+    right: '0px',
   },
   menuLink: {
     textDecoration: "none",
@@ -188,12 +188,12 @@ const useStyles = makeStyles(() => ({
     fontWeight: 600,
     fontFamily: 'Inter',
     textAlign: 'left',
-    marginLeft: '3vw'
+    marginLeft: 'min(3vw, 45px)'
   },
   navSpacer: {
     height: '100%',
-    width: '35vw',
-    maxWidth: 450
+    maxWidth: 440,
+    width: '36vw'
   }
 }));
 

@@ -70,7 +70,7 @@ const useStyles = makeStyles(() => ({
     height: 110,
     width: "100%",
     zIndex: 10,
-    borderTop: '1px solid #333333',
+    borderTop: '1px solid #555555',
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",

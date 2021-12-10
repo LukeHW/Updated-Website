@@ -35,7 +35,6 @@ import Input from './Input.jsx';
 const useStyles = makeStyles((theme) => ({
   container: {
     justifyContent: "space-between",
-    fontFamily: 'Inter',
     minHeight: 600
   },
   paperContainer: {
@@ -59,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     fontSize: 'clamp(48px, 8vmin, 105px)',
     color: "white",
-    fontFamily: 'Inter',
     textAlign: 'center',
     lineHeight: 1.05,
     letterSpacing: '-.045em',
@@ -69,7 +67,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     fontSize: 'clamp(24px, 6vw, 32px)',
     color: "white",
-    fontFamily: 'Inter',
     textAlign: "center"
   },
   placer: {
@@ -112,14 +109,12 @@ const useStyles = makeStyles((theme) => ({
   },
   secondContainer: {
     backgroundColor: ('#252423'),
-    fontFamily: 'Inter',
     padding: theme.spacing(0)
   },
   hidden: {
     justifyContent: "center",
     display: "flex",
     marginTop: 30,
-    fontFamily: 'Inter',
     fontSize: 30,
     overflow: 'auto'
   },
@@ -161,7 +156,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    marginTop: 100,
+    marginTop: 'clamp(80px, 10vw, 140px)',
+    marginBottom: 'clamp(80px, 10vw, 140px)',
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -170,8 +166,6 @@ const useStyles = makeStyles((theme) => ({
     width: '95%',
     marginRight: 'auto',
     marginLeft: 'auto',
-    padding: 10,
-    paddingLeft: '3vw'
   },
   spacerText: {
     fontWeight: 600,
@@ -179,7 +173,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     color: '#DDDDDD',
     margin: 5,
-    marginBottom: 80,
     lineHeight: 1.05,
     letterSpacing: '-.045em'
   },
@@ -215,7 +208,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10
   },
   galleryContainer: {
-    fontFamily: 'Inter',
     padding: theme.spacing(0),
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg})`,
     backgroundColor: 'rgba(0, 0, 0, 0.9)',
@@ -232,9 +224,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   contactContainer: {
-    minHeight: "55vh",
     backgroundColor: '#252423',
-    fontFamily: 'Inter',
     padding: theme.spacing(0)
   },
   viewLinkContainer: {
@@ -284,7 +274,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    paddingTop: 100,
+    paddingTop: 'clamp(80px, 10vw, 140px)',
+    paddingBottom: 'clamp(80px, 10vw, 140px)',
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -312,7 +303,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 200,
     textDecoration: 'none',
     marginTop: 25,
-    marginBottom: 25,
+    marginBottom: 'clamp(80px, 10vw, 140px)',
     marginRight: 'auto',
     marginLeft: 'auto',
     width: 200
@@ -321,8 +312,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     display: "flex",
-    paddingTop: 100,
-    paddingBottom: 100,
+    paddingTop: 'clamp(80px, 10vw, 140px)',
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -347,7 +337,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '400',
     margin: 0,
     marginBottom: 10,
-    fontFamily: 'Inter',
     textAlign: 'left',
     lineHeight: '120%'
   },
@@ -356,7 +345,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '400',
     margin: 5,
     marginBottom: 20,
-    fontFamily: 'Inter',
     maxWidth: 450,
     display: 'inline-block'
   },
@@ -366,7 +354,6 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: 'italic',
     marginTop: 0,
     marginBottom: 10,
-    fontFamily: 'Inter',
     textAlign: 'center'
   },
   body: {
@@ -460,40 +447,6 @@ const useStyles = makeStyles((theme) => ({
       color: '#bbbbbb'
     }
   },
-  line: {
-    height: 2,
-    width: 200,
-    color: 'white',
-    backgroundColor: 'white',
-    position: 'relative',
-    top: 65
-  },
-  year: {
-    fontWeight: 200,
-    fontStyle: 'italic',
-    fontSize: 28,
-    color: 'white',
-    height: '100%',
-    textAlign: 'left',
-    marginLeft: 240
-  },
-  line2: {
-    height: 2,
-    width: 200,
-    color: 'white',
-    backgroundColor: 'white',
-    position: 'relative',
-    top: -65
-  },
-  year2: {
-    fontWeight: 200,
-    fontStyle: 'italic',
-    fontSize: 28,
-    color: 'white',
-    height: '100%',
-    textAlign: 'right',
-    marginRight: 240
-  },
   workWrapper: {
     width: 360,
     height: '100%',
@@ -523,6 +476,20 @@ const useStyles = makeStyles((theme) => ({
   fadeInUp: {
     animationName: 'fadeInUp',
     animationDuration: '1s'
+  },
+  formButton: {
+    marginTop: 20,
+    paddingBottom: 10,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    textAlign: 'center'
+  },
+  socialsContainer: {
+    backgroundColor: '#111111',
+    padding: theme.spacing(0)
+  },
+  form: {
+    paddingTop: 20
   }
 }));
 
@@ -666,13 +633,13 @@ function Main() {
                     Get in touch.
                   </h2>
                 </div>
-                <form ref={form} onSubmit={sendEmail} id={"myForm"}>
+                <form ref={form} onSubmit={sendEmail} id={"myForm"} className={classes.form}>
                   <Input inputtype={"input"} required type={"text"} name={"name"} placeholder={"Your Name"} />
                   <Input inputtype={"input"} required type={"email"} name={"email"} placeholder={"Email Address"} />
                   <Input inputtype={"input"} required type={"tel"} name={"number"} placeholder={"Phone Number"} />
                   <Input inputtype={"textarea"} required type={"text"} name={"message"} placeholder={"Reason for getting in touch"} />
                 </form>
-                  <div className={classes.viewLinkContainer}>
+                  <div className={classes.formButton}>
                     <Button color={'primary'} variant={'contained'} type={"submit"} form={"myForm"}>
                       {send}
                     </Button>
@@ -685,7 +652,7 @@ function Main() {
             <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
           </div>
 
-          <div className={classes.contactContainer} id={"Contact"}>
+          <div className={classes.socialsContainer} id={"Contact"}>
             <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
               <Grid item className={classes.contactSpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
                   <div className={classes.spacerContainer}>
