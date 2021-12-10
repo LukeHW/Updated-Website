@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { Hidden, ImageList, ImageListItem } from '@mui/material';
 import { SRLWrapper } from "simple-react-lightbox";
+import { fadeInUp } from 'react-animations';
+import Radium, { StyleRoot } from 'radium';
 
 
 // import ResponsiveGallery from 'react-responsive-gallery';
@@ -173,6 +175,11 @@ const useStyles = makeStyles(() => ({
     maxWidth: 1500,
     marginRight: 'auto',
     marginLeft: 'auto'
+  },
+  imageContainer: {
+    '&:hover': {
+      cursor: 'pointer'
+    }
   }
 }));
 
@@ -208,6 +215,21 @@ function Gallery() {
     imagesArray.push(src);
   }
 
+  const styles = {
+    fadeInUp: {
+      animation: 'x 1s',
+      animationName: Radium.keyframes(fadeInUp, 'fadeInUp')
+    },
+    fadeInUp2: {
+      animation: 'x 1.5s',
+      animationName: Radium.keyframes(fadeInUp, 'fadeInUp2')
+    },
+    fadeInUp3: {
+      animation: 'x 2s',
+      animationName: Radium.keyframes(fadeInUp, 'fadeInUp3')
+    },
+  }
+
   return (
     <div className={classes.bg}>
       <ScrollToTop showBelow={250} />
@@ -216,7 +238,8 @@ function Gallery() {
                 <div className={classes.gallerySpacer} >
                     <Grid container>
                       <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={12} xl={12}>
-                          <div className={classes.spacerContainer}>
+                      <StyleRoot>
+                          <div className={classes.spacerContainer} style={styles.fadeInUp}>
                             <h1 className={classes.spacerTextHeader}>
                               Gallery
                             </h1>
@@ -224,6 +247,7 @@ function Gallery() {
                               Pictures captured during my daily life.
                             </h2>
                           </div>
+                      </StyleRoot>
                       </Grid>
                     </Grid>
                 </div>
@@ -234,7 +258,7 @@ function Gallery() {
                       <SRLWrapper>
                           <ImageList variant={"masonry"} cols={3} gap={20}>
                           {itemData.map((item) => (
-                              <ImageListItem key={item.avif_img}>
+                              <ImageListItem key={item.avif_img} className={classes.imageContainer}>
                                 <img src={`${item.avif_img}`} alt={item.title} loading={"lazy"} />
                               </ImageListItem>
                           ))}
@@ -249,7 +273,7 @@ function Gallery() {
                       <SRLWrapper>
                         <ImageList variant={"masonry"} cols={2} gap={20}>
                         {itemData.map((item) => (
-                            <ImageListItem key={item.avif_img}>
+                            <ImageListItem key={item.avif_img} className={classes.imageContainer}>
                             <img
                                 src={`${item.avif_img}`}
                                 alt={item.title}
@@ -268,7 +292,7 @@ function Gallery() {
                       <SRLWrapper>
                         <ImageList variant={"masonry"} cols={1} gap={20}>
                         {itemData.map((item) => (
-                            <ImageListItem key={item.avif_img}>
+                            <ImageListItem key={item.avif_img} className={classes.imageContainer}>
                             <img
                                 src={`${item.avif_img}`}
                                 alt={item.title}

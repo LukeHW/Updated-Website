@@ -365,6 +365,7 @@ function Projects(props) {
           subtitle,
           body,
           background,
+          backgroundAVIF,
           images,
           githubLink,
           hostedLink,
@@ -378,6 +379,7 @@ function Projects(props) {
           subtitle,
           body,
           background,
+          backgroundAVIF,
           images,
           githubLink,
           hostedLink,
@@ -404,7 +406,10 @@ function Projects(props) {
         return (
           <div className={classes.project} key={project.projectNumber}>
             <div className={classes.shadow} onClick={onClick(index)}>
-                <img className={classes.projectBG} src={project.background} alt={""} />
+              <picture>
+                <source type={"image/avif"} media={"(min-width: 0px"} srcSet={project.backgroundAVIF} />
+                <img className={classes.projectBG} src={project.background} alt={project.title} />
+              </picture>
               <Grid container className={classes.container}>
                 <Grid item className={classes.container} xs={12} sm={12} md={12} lg={12} xl={12}>
                   <h1 className={classes.title}>{project.title}</h1>

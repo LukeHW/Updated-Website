@@ -490,6 +490,57 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     paddingTop: 20
+  },
+  socialCard: {
+    height: 200,
+    width: 200,
+    backgroundColor: '#191919',
+    border: '3px solid #888888',
+    borderRadius: 20,
+    margin: 30,
+    display: 'inline-block',
+    '&:focus': {
+      border: '3px solid white',
+      webkitTransition: 'all 0.15s ease-in-out',
+      transition: 'all 0.15s ease-in-out',
+    },
+    '&:hover': {
+      border: '3px solid white',
+      webkitTransition: 'all 0.15s ease-in-out',
+      transition: 'all 0.15s ease-in-out',
+    }
+  },
+  socialCardImage: {
+    height: 100,
+    width: 100,
+    display: 'block',
+    padding: 30,
+    marginRight: 'auto',
+    marginLeft: 'auto'
+  },
+  socialCardHeader: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 500,
+    width: '100%',
+    textAlign: 'center',
+    margin: 0
+  },
+  socialContainer: {
+    maxWidth: 540,
+    paddingBottom: 40,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    textAlign: 'center'
+  },
+  socialSpacer: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    paddingTop: 'clamp(80px, 10vw, 140px)',
+    paddingBottom: 20,
+    marginLeft: 'auto',
+    marginRight: 'auto'
   }
 }));
 
@@ -543,8 +594,8 @@ function Main() {
               <StyleRoot>
                 <div style={styles.fadeInUp}>
                   <picture>
-                    <source type={"image/avif"} media={"(min-width: 1200px"} srcSet={"/main.avif"} />
-                    <source type={"image/png"} media={"(min-width: 1200px"} srcSet={"/main.png"} />
+                    <source type={"image/avif"} media={"(min-width: 800px"} srcSet={"/main.avif"} />
+                    <source type={"image/png"} media={"(min-width: 800px"} srcSet={"/main.png"} />
                     <source type={"image/png"} media={"(min-width: 400px"} srcSet={"/main-800.png"} />
                     <source type={"image/png"} media={"(min-width: 0px"} srcSet={"/main-400.png"} />
                     <img className={classes.placer} src={"/main-400.png"} alt={"Luke W."} />
@@ -653,8 +704,8 @@ function Main() {
           </div>
 
           <div className={classes.socialsContainer} id={"Contact"}>
-            <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
-              <Grid item className={classes.contactSpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
+              <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+              <Grid item className={classes.socialSpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
                   <div className={classes.spacerContainer}>
                     <h1 className={classes.galleryTextHeader}>
                       Socials
@@ -664,7 +715,22 @@ function Main() {
                     </h2>
                   </div>
               </Grid>
-            <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+              <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+
+              <div className={classes.socialContainer}>
+                <a target={'_blank'} href={'https://github.com/LukeHW'} rel={"noreferrer"}>
+                  <div className={classes.socialCard}>
+                    <img className={classes.socialCardImage} src={"./githubLogo.png"} alt={"GitHub"} />
+                    <h5 className={classes.socialCardHeader}>GitHub</h5>
+                  </div>
+                </a>
+                <a target={'_blank'} href={'https://linkedin.com/in/lukehw/'} rel={"noreferrer"}>
+                  <div className={classes.socialCard}>
+                    <img className={classes.socialCardImage} src={"./linkedinLogo.png"} alt={"LinkedIn"} />
+                    <h5 className={classes.socialCardHeader}>LinkedIn</h5>
+                  </div>
+                </a>
+              </div>
           </div>
 
     </div>
