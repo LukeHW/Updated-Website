@@ -5,7 +5,7 @@
         "names": "Dewey",
         "avif_img": "/galleryImages/compressed/Dewey%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Dewey%202.webp"
     },
     {
         "id": 20,
@@ -13,7 +13,7 @@
         "names": "Kansas",
         "avif_img": "/galleryImages/compressed/Outside.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Outside.webp"
     },
     {
         "id": 1,
@@ -21,7 +21,7 @@
         "names": "Dewey",
         "avif_img": "/galleryImages/compressed/Catland.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Catland.webp"
     },
     {
         "id": 2,
@@ -29,7 +29,7 @@
         "names": "Toby and Dewey",
         "avif_img": "/galleryImages/compressed/Cats.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Cats.webp"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@
         "names": "Dewey",
         "avif_img": "/galleryImages/compressed/Dewey%203.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Dewey%203.webp"
     },
     {
         "id": 5,
@@ -45,7 +45,7 @@
         "names": "Dewey",
         "avif_img": "/galleryImages/compressed/Dewey%204.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Dewey%204.webp"
     },
     {
         "id": 6,
@@ -53,7 +53,7 @@
         "names": "Dewey",
         "avif_img": "/galleryImages/compressed/Dewey%205.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Dewey%205.webp"
     },
     {
         "id": 7,
@@ -61,7 +61,7 @@
         "names": "Dewey",
         "avif_img": "/galleryImages/compressed/Dewey.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Dewey.webp"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "names": "Gracie",
         "avif_img": "/galleryImages/compressed/Gracie%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Gracie%202.webp"
     },
     {
         "id": 9,
@@ -77,7 +77,7 @@
         "names": "Gracie",
         "avif_img": "/galleryImages/compressed/Gracie%203.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Gracie%203.webp"
     },
     {
         "id": 10,
@@ -85,7 +85,7 @@
         "names": "Gracie",
         "avif_img": "/galleryImages/compressed/Gracie.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Gracie.webp"
     },
     {
         "id": 11,
@@ -93,7 +93,7 @@
         "names": "Little Bitty",
         "avif_img": "/galleryImages/compressed/Little%20Bitty%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Little%20Bitty%202.webp"
     },
     {
         "id": 12,
@@ -101,7 +101,7 @@
         "names": "Little Bitty",
         "avif_img": "/galleryImages/compressed/Little%20Bitty%203.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Little%20Bitty%203.webp"
     },
     {
         "id": 14,
@@ -109,7 +109,7 @@
         "names": "Kansas",
         "avif_img": "/galleryImages/compressed/Outside%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Outside%202.webp"
     },
     {
         "id": 15,
@@ -117,7 +117,7 @@
         "names": "Mr. Mister",
         "avif_img": "/galleryImages/compressed/Mr.%20Mister%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Mr.%20Mister%202.webp"
     },
     {
         "id": 13,
@@ -125,7 +125,7 @@
         "names": "Kansas",
         "avif_img": "/galleryImages/compressed/Outside%204.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Outside%204.webp"
     },
     {
         "id": 16,
@@ -133,7 +133,7 @@
         "names": "Mr. Mister",
         "avif_img": "/galleryImages/compressed/Mr.%20Mister.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Mr.%20Mister.webp"
     },
     {
         "id": 17,
@@ -141,7 +141,7 @@
         "names": "Mushrooms",
         "avif_img": "/galleryImages/compressed/Mushrooms.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Mushrooms.webp"
     },
     {
         "id": 18,
@@ -149,7 +149,7 @@
         "names": "Little Bitty",
         "avif_img": "/galleryImages/compressed/Little%20Bitty.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Little%20Bitty.webp"
     },
     {
         "id": 19,
@@ -157,7 +157,7 @@
         "names": "Kansas",
         "avif_img": "/galleryImages/compressed/Outside%203.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Outside%203.webp"
     },
     {
         "id": 21,
@@ -165,7 +165,7 @@
         "names": "Peaches",
         "avif_img": "/galleryImages/compressed/Peaches.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Peaches.webp"
     },
     {
         "id": 22,
@@ -173,7 +173,7 @@
         "names": "Pipsqueak",
         "avif_img": "/galleryImages/compressed/Pipsqueak.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Pipsqueak.webp"
     },
     {
         "id": 23,
@@ -181,7 +181,7 @@
         "names": "Kansas",
         "avif_img": "/galleryImages/compressed/Road.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Road.webp"
     },
     {
         "id": 24,
@@ -189,7 +189,7 @@
         "names": "Setup",
         "avif_img": "/galleryImages/compressed/Setup.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Setup.webp"
     },
     {
         "id": 25,
@@ -197,7 +197,7 @@
         "names": "Toby",
         "avif_img": "/galleryImages/compressed/Toby%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Toby%202.webp"
     },
     {
         "id": 26,
@@ -205,7 +205,7 @@
         "names": "Toby",
         "avif_img": "/galleryImages/compressed/Toby%203.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Toby%203.webp"
     },
     {
         "id": 27,
@@ -213,7 +213,7 @@
         "names": "Toby",
         "avif_img": "/galleryImages/compressed/Toby.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Toby.webp"
     },
     {
         "id": 28,
@@ -221,7 +221,7 @@
         "names": "Vicious",
         "avif_img": "/galleryImages/compressed/Vicious%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Vicious%202.webp"
     },
     {
         "id": 29,
@@ -229,7 +229,7 @@
         "names": "Vicious",
         "avif_img": "/galleryImages/compressed/Vicious%203.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Vicious%203.webp"
     },
     {
         "id": 30,
@@ -237,7 +237,7 @@
         "names": "Vicious",
         "avif_img": "/galleryImages/compressed/Vicious%204.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Vicious%204.webp"
     },
     {
         "id": 31,
@@ -245,7 +245,7 @@
         "names": "Vicious",
         "avif_img": "/galleryImages/compressed/Vicious%205.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Vicious%205.webp"
     },
     {
         "id": 32,
@@ -253,7 +253,7 @@
         "names": "Vicious",
         "avif_img": "/galleryImages/compressed/Vicious.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Vicious.webp"
     },
     {
         "id": 33,
@@ -261,7 +261,7 @@
         "names": "Castle Rock",
         "avif_img": "/galleryImages/compressed/Castle%20Rock.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Castle%20Rock.webp"
     },
     {
         "id": 34,
@@ -269,7 +269,7 @@
         "names": "Vicious",
         "avif_img": "/galleryImages/compressed/Vicious%206.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Vicious%206.webp"
     },
     {
         "id": 35,
@@ -277,7 +277,7 @@
         "names": "Jack",
         "avif_img": "/galleryImages/compressed/Jack.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Jack.webp"
     },
     {
         "id": 36,
@@ -285,7 +285,7 @@
         "names": "Colin",
         "avif_img": "/galleryImages/compressed/Colin.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Colin.webp"
     },
     {
         "id": 37,
@@ -293,7 +293,7 @@
         "names": "Jack",
         "avif_img": "/galleryImages/compressed/Jack%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Jack%202.webp"
     },
     {
         "id": 38,
@@ -301,7 +301,7 @@
         "names": "Castle Rock",
         "avif_img": "/galleryImages/compressed/Castle%20Rock%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Castle%20Rock%202.webp"
     },
     {
         "id": 39,
@@ -309,6 +309,6 @@
         "names": "Colin",
         "avif_img": "/galleryImages/compressed/Colin%202.avif",
         "jpg_img": "",
-        "webp_img": ""
+        "webp_img": "/galleryImages/webp/Colin%202.webp"
     }
 ]

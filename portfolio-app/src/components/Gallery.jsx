@@ -152,7 +152,7 @@ const useStyles = makeStyles(() => ({
   },
   spacerText: {
     fontWeight: 600,
-    fontSize: 'clamp(48px, 10vw, 92px)',
+    fontSize: 'clamp(38px, 10vw, 92px)',
     textAlign: 'left',
     color: '#BBBBBB',
     margin: 5,
@@ -230,6 +230,20 @@ function Gallery() {
     },
   }
 
+  const options = {
+    buttons: {
+      backgroundColor: "#397BA6",
+      iconColor: "white",
+      showDownloadButton: false
+    },
+    caption: {
+      captionColor: "white",
+      captionFontFamily: "Inter, sans-serif",
+      captionFontWeight: "500",
+      captionTextTransform: "uppercase",
+    }
+  };
+
   return (
     <div className={classes.bg}>
       <ScrollToTop showBelow={250} />
@@ -255,11 +269,11 @@ function Gallery() {
                     <Hidden xlDown>
                     <Grid item xs={1} sm={1} md={1} lg={1} xl={1} />
                     <Grid item className={classes.gallery} xs={10} sm={10} md={10} lg={10} xl={10}>
-                      <SRLWrapper>
+                      <SRLWrapper options={options}>
                           <ImageList variant={"masonry"} cols={3} gap={20}>
                           {itemData.map((item) => (
                               <ImageListItem key={item.avif_img} className={classes.imageContainer}>
-                                <img src={`${item.avif_img}`} alt={item.title} loading={"lazy"} />
+                                <img src={`${item.avif_img}`} srcSet={`${item.webp_img}`} alt={item.title} loading={"lazy"} />
                               </ImageListItem>
                           ))}
                           </ImageList>
@@ -270,15 +284,11 @@ function Gallery() {
 
                     <Hidden smDown xlUp>
                     <Grid item className={classes.mediumContainer} xs={12} sm={12} md={12} lg={12} xl={12}>
-                      <SRLWrapper>
+                      <SRLWrapper options={options}>
                         <ImageList variant={"masonry"} cols={2} gap={20}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.avif_img} className={classes.imageContainer}>
-                            <img
-                                src={`${item.avif_img}`}
-                                alt={item.title}
-                                loading={"lazy"}
-                            />
+                              <img src={`${item.avif_img}`} srcSet={`${item.webp_img}`} alt={item.title} loading={"lazy"} />
                             </ImageListItem>
                         ))}
                         </ImageList>
@@ -289,15 +299,11 @@ function Gallery() {
                     <Hidden smUp>
                     <Grid item xs={"auto"} sm={1} md={1} lg={1} xl={1} />
                     <Grid item xs={12} sm={10} md={10} lg={10} xl={10}>
-                      <SRLWrapper>
+                      <SRLWrapper options={options}>
                         <ImageList variant={"masonry"} cols={1} gap={20}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.avif_img} className={classes.imageContainer}>
-                            <img
-                                src={`${item.avif_img}`}
-                                alt={item.title}
-                                loading={"lazy"}
-                            />
+                              <img src={`${item.avif_img}`} srcSet={`${item.webp_img}`} alt={item.title} loading={"lazy"} />
                             </ImageListItem>
                         ))}
                         </ImageList>

@@ -58,8 +58,6 @@ function DemoCarousel() {
                 <picture>
                     <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Dewey%204.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Dewey%204.avif"} />
-                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Dewey-4-800.png"} />
-                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Dewey-4-400.png"} />
                     <img className={classes.image} src={"/galleryImages/webp/Dewey%204.webp"} alt={"Luke W."} />
                 </picture>
             </div>
@@ -71,8 +69,6 @@ function DemoCarousel() {
                 <picture>
                     <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Jack%202.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px))"} srcSet={"/galleryImages/compressed/Jack%202.avif"} />
-                    <source type={"image/png"} media={"(min-width: 400px))"} srcSet={"/responsiveCarouselImages/Jack-2-800.png"} />
-                    <source type={"image/png"} media={"(min-width: 0px))"} srcSet={"/responsiveCarouselImages/Jack-2-400.png"} />
                     <img className={classes.image} src={"/galleryImages/webp/Jack%202.webp"} alt={"Jack"} />
                 </picture>
             </div>
@@ -84,8 +80,6 @@ function DemoCarousel() {
                 <picture>
                     <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Colin%202.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Colin%202.avif"} />
-                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Colin-2-800.png"} />
-                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Colin-2-400.png"} />
                     <img className={classes.image} src={"/galleryImages/webp/Colin%202.webp"} alt={"Colin"} />
                 </picture>
             </div>
@@ -97,8 +91,6 @@ function DemoCarousel() {
                 <picture>
                     <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Mr.%20Mister%202.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Mr.%20Mister%202.avif"} />
-                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Mr.Mister-2-800.png"} />
-                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Mr.Mister-2-400.png"} />
                     <img className={classes.image} src={"/galleryImages/webp/Mr.%20Mister%202.webp"} alt={"Mr. Mister"} />
                 </picture>
             </div>
@@ -110,8 +102,6 @@ function DemoCarousel() {
                 <picture>
                     <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Vicious%202.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Vicious%202.avif"} />
-                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Vicious-2-800.png"} />
-                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Vicious-2-400.png"} />
                     <img className={classes.image} src={"/galleryImages/webp/Vicious%202.webp"} alt={"Vicious"} />
                 </picture>
             </div>
@@ -123,8 +113,6 @@ function DemoCarousel() {
                 <picture>
                     <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Jack.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Jack.avif"} />
-                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Jack-800.png"} />
-                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Jack-400.png"} />
                     <img className={classes.image} src={"/galleryImages/compressed/Jack.webp"} alt={"Jack"} />
                 </picture>
             </div>
@@ -136,8 +124,6 @@ function DemoCarousel() {
                 <picture>
                     <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Vicious%205.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Vicious%205.avif"} />
-                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Vicious-5-800.png"} />
-                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Vicious-5-400.png"} />
                     <img className={classes.image} src={"/galleryImages/webp/Vicious%205.webp"} alt={"Vicious"} />
                 </picture>
             </div>
@@ -149,8 +135,6 @@ function DemoCarousel() {
                 <picture>
                     <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Colin.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Colin.avif"} />
-                    <source type={"image/png"} media={"(min-width: 400px)"} srcSet={"/responsiveCarouselImages/Colin-800.png"} />
-                    <source type={"image/png"} media={"(min-width: 0px)"} srcSet={"/responsiveCarouselImages/Colin-400.png"} />
                     <img className={classes.image} src={"/galleryImages/webp/Colin.webp"} alt={"Colin"} />
                 </picture>
             </div>

@@ -594,10 +594,9 @@ function Main() {
               <StyleRoot>
                 <div style={styles.fadeInUp}>
                   <picture>
-                    <source type={"image/avif"} media={"(min-width: 800px"} srcSet={"/main.avif"} />
-                    <source type={"image/png"} media={"(min-width: 800px"} srcSet={"/main.png"} />
-                    <source type={"image/png"} media={"(min-width: 400px"} srcSet={"/main-800.png"} />
-                    <source type={"image/png"} media={"(min-width: 0px"} srcSet={"/main-400.png"} />
+                    <source type={"image/avif"} media={"(min-width: 0px"} srcSet={"/main.avif"} />
+                    <source type={"image/webp"} media={"(min-width: 0px"} srcSet={"/main.webp"} />
+                    <source type={"image/png"} media={"(min-width: 0px"} srcSet={"/main.png"} />
                     <img className={classes.placer} src={"/main-400.png"} alt={"Luke W."} />
                   </picture>
                 </div>
