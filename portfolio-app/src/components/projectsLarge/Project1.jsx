@@ -148,8 +148,7 @@ const useStyles = makeStyles(() => ({
   ideasContainer: {
     width: '100%',
     maxHeight: 2000,
-    backgroundColor: '#F5F5F7',
-    borderRadius: '0px 0px 20px 20px'
+    backgroundColor: '#F5F5F7'
   },
   ideasImage: {
     width: '20%',
@@ -301,7 +300,7 @@ function Project1() {
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Material UI</h3>
+                <h3 className={classes.detailItem}>User Sign-in</h3>
                 <h5 className={classes.detailSubItem}>MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.</h5>
               </div>
               <div className={classes.divContainer} />          
@@ -314,7 +313,7 @@ function Project1() {
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>React and JS</h3>
+                <h3 className={classes.detailItem}>File Traversal</h3>
                 <h5 className={classes.detailSubItem}>React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time.</h5>
               </div>
               <div className={classes.divContainer} />       
@@ -327,7 +326,7 @@ function Project1() {
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>HTML/CSS</h3>
+                <h3 className={classes.detailItem}>File Selection</h3>
                 <h5 className={classes.detailSubItem}>HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.</h5>
               </div>        
               <div className={classes.divContainer} />
@@ -340,7 +339,7 @@ function Project1() {
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Amazon Web Services</h3>
+                <h3 className={classes.detailItem}>Transfer</h3>
                 <h5 className={classes.detailSubItem}>Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Currently being used for this website, AWS hosts a S3 bucket on Cloudfront's CDN.</h5>
               </div>        
               <div className={classes.divContainer} />

@@ -206,7 +206,7 @@ function Project4() {
 
         <div className={classes.codeContainer}>
           <h2 className={classes.codeHeader}>The markup</h2>
-          <img className={classes.codeImage} src={'/projectImages/project2/portfolioCode.png'} alt={""}/>
+          <img className={classes.codeImage} src={'/projectImages/project4/oldportfolioMarkup.png'} alt={""}/>
           <div className={classes.codeButton}>
             <Button color={'primary'} variant={'outlined'} href={currentProjectArray.githubLink} target={'_blank'}>
               View on GitHub
@@ -257,26 +257,6 @@ function Project4() {
             </Grid>
             <div className={classes.spacer} />
           </Grid>
-        </div>
-
-        <div className={classes.ideasContainer}>
-          <h2 className={classes.detailHeader}>Designed with</h2>
-          <Grid container >
-            <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
-              <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.ideasImage} src={'/projectImages/project2/figmaLogo.svg'} alt={"Search bar image"}/>
-              </div>               
-            </Grid>
-            <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
-              <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Figma</h3>
-                <h5 className={classes.detailSubItem}>Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.</h5>
-              </div>
-              <div className={classes.spacer} />          
-            </Grid>
-          </Grid>
-          <img className={classes.ideasDesignImage} src={'/projectImages/project2/figmaExample.png'} alt={""}/>
-          <div className={classes.spacer} /> 
         </div>
 
       </div>

@@ -71,6 +71,9 @@ const useStyles = makeStyles((theme) => ({
   },
   placer: {
     width: "35%",
+    height: "35%",
+    maxHeight: 500,
+    minHeight: 200,
     maxWidth: 500,
     minWidth: 200,
     marginRight: 'auto',

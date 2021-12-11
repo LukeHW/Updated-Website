@@ -64,7 +64,7 @@
             "projectNumber": 5,
             "title": "Text Based Detective Game",
             "subtitle": "Small game made with C",
-            "body": "Fun text based adventure made for my CIS308 final project. Move around and find clues to advance. Made with C and some C-based gameboy pixel art programs.",
+            "body": "Silly text based detective game made for my CIS308 final project. Move around and find clues to advance. This was made in a week or two; and most of the time was spent on sprites.. On second thought, maybe don't play it. Written in C, with help of some gameboy pixel art programs.",
             "background": "/projectImages/project5/detectiveBG.jpg",
             "backgroundAVIF": "/projectImages/project5/detectiveBG.avif",
             "images": ["/githubWhiteLogo.png", "/githubWhiteLogo.png", "/githubWhiteLogo.png"],

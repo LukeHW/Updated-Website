@@ -148,8 +148,7 @@ const useStyles = makeStyles(() => ({
   ideasContainer: {
     width: '100%',
     maxHeight: 2000,
-    backgroundColor: '#F5F5F7',
-    borderRadius: '0px 0px 20px 20px'
+    backgroundColor: '#F5F5F7'
   },
   ideasImage: {
     width: '20%',
@@ -177,12 +176,39 @@ const useStyles = makeStyles(() => ({
     marginRight: 'auto',
     marginLeft: 'auto',
     borderRadius: 20,
-    display: 'block'
+    display: 'block',
   },
   spacer: {
     height: 'clamp(30px, 5vmin, 100px)',
     width: '100%',
     content: ' '
+  },
+  lighthouseButton: {
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    padding: 'clamp(40px, 8vmin, 80px)'
+  },
+  lighthouseContainer: {
+    width: '100%',
+    maxHeight: 1200
+  },
+  lighthouseHeader: {
+    padding: 'clamp(30px, 8vmin, 80px)',
+    paddingLeft: 0,
+    paddingRight: 0,
+    margin: 0,
+    fontWeight: 600,
+    fontSize: 'clamp(28px, 8vmin, 60px)',
+    color: '#1D1D1F'
+  },
+  lighthouseImage: {
+    width: '90%',
+    maxWidth: 800,
+    maxHeight: 600,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    borderRadius: 20,
+    display: 'block'
   }
 }))
 
@@ -191,6 +217,23 @@ function Project2() {
   const classes = useStyles();
 
   const currentProjectArray = ProjectsJSON.projects[2];
+
+  const [lighthouse, setLighthouse] = useState("View mobile data")
+
+  const lighthouseImage = () => {
+    if(lighthouse === "View mobile data"){
+      return <img className={classes.lighthouseImage} src={'/projectImages/project2/capture3.png'} alt={"Desktop Lighthouse Data"} />
+    }
+    return <img className={classes.lighthouseImage} src={'/projectImages/project2/captureMobile3.png'} alt={"Mobile Lighthouse Data"} />
+  }
+
+  const handleLighthouse = () => {
+    if(lighthouse === "View mobile data"){
+      setLighthouse("View desktop data")
+    } else {
+      setLighthouse("View mobile data")
+    }
+  }
 
   return (
     <div>
@@ -307,7 +350,16 @@ function Project2() {
               </div>
               <div className={classes.divContainer} />          
             </Grid>
-            <div className={classes.spacer} />
+
+            <div className={classes.lighthouseContainer}>
+              <h2 className={classes.lighthouseHeader}>Lighthouse data</h2>
+              <div>{lighthouseImage()}</div>
+              <div className={classes.lighthouseButton}>
+                <Button color={'primary'} variant={'outlined'} onClick={handleLighthouse}>
+                  {lighthouse}
+                </Button>
+              </div>       
+            </div>
           </Grid>
         </div>
 

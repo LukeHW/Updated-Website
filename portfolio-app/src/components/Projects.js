@@ -108,7 +108,7 @@ const useStyles = makeStyles(() => ({
   },
   shadow: {
     backgroundColor: 'rgba(255, 255, 255, 1)',
-    borderRadius: '20px',
+    borderRadius: '22px',
     minHeight: 495,
   },
   inlineSkeleton: {

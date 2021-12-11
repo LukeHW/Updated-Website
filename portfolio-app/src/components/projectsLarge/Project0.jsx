@@ -148,8 +148,7 @@ const useStyles = makeStyles(() => ({
   ideasContainer: {
     width: '100%',
     maxHeight: 1200,
-    backgroundColor: '#F5F5F7',
-    borderRadius: '0px 0px 20px 20px'
+    backgroundColor: '#F5F5F7'
   },
   ideasImage: {
     width: '20%',

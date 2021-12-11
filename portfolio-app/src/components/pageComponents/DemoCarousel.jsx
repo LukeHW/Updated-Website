@@ -40,7 +40,12 @@ const useStyles = makeStyles(() => ({
       left: 5,
     },
     image: {
-        
+        maxWidth: 800,
+        minWidth: 300,
+        width: 'min(100%, 60vh)',
+        height: 'min(100%, 60vh)',
+        minHeight: 400,
+        maxHeight: 1200
     }
   }));
 
@@ -56,7 +61,7 @@ function DemoCarousel() {
                     <h5 className={classes.gallerySubtitle}>Sitting Funny</h5>
                 </div>
                 <picture>
-                    <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Dewey%204.webp"} />
+                    <source type={"image/webp"} media={"(min-width: 0px)"} srcSet={"/galleryImages/webp/Dewey%204.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Dewey%204.avif"} />
                     <img className={classes.image} src={"/galleryImages/webp/Dewey%204.webp"} alt={"Luke W."} />
                 </picture>
@@ -67,7 +72,7 @@ function DemoCarousel() {
                     <h5 className={classes.gallerySubtitle}>Spooky Loaf</h5>
                 </div>
                 <picture>
-                    <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Jack%202.webp"} />
+                    <source type={"image/webp"} media={"(min-width: 0px)"} srcSet={"/galleryImages/webp/Jack%202.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px))"} srcSet={"/galleryImages/compressed/Jack%202.avif"} />
                     <img className={classes.image} src={"/galleryImages/webp/Jack%202.webp"} alt={"Jack"} />
                 </picture>
@@ -78,7 +83,7 @@ function DemoCarousel() {
                     <h5 className={classes.gallerySubtitle}>Views</h5>
                 </div>
                 <picture>
-                    <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Colin%202.webp"} />
+                    <source type={"image/webp"} media={"(min-width: 0px)"} srcSet={"/galleryImages/webp/Colin%202.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Colin%202.avif"} />
                     <img className={classes.image} src={"/galleryImages/webp/Colin%202.webp"} alt={"Colin"} />
                 </picture>
@@ -89,7 +94,7 @@ function DemoCarousel() {
                     <h5 className={classes.gallerySubtitle}>Wet Boi</h5>
                 </div>
                 <picture>
-                    <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Mr.%20Mister%202.webp"} />
+                    <source type={"image/webp"} media={"(min-width: 0px)"} srcSet={"/galleryImages/webp/Mr.%20Mister%202.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Mr.%20Mister%202.avif"} />
                     <img className={classes.image} src={"/galleryImages/webp/Mr.%20Mister%202.webp"} alt={"Mr. Mister"} />
                 </picture>
@@ -100,7 +105,7 @@ function DemoCarousel() {
                     <h5 className={classes.gallerySubtitle}>Showing Off</h5>
                 </div>
                 <picture>
-                    <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Vicious%202.webp"} />
+                    <source type={"image/webp"} media={"(min-width: 0px)"} srcSet={"/galleryImages/webp/Vicious%202.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Vicious%202.avif"} />
                     <img className={classes.image} src={"/galleryImages/webp/Vicious%202.webp"} alt={"Vicious"} />
                 </picture>
@@ -111,7 +116,7 @@ function DemoCarousel() {
                     <h5 className={classes.gallerySubtitle}>Being Cute</h5>
                 </div>
                 <picture>
-                    <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Jack.webp"} />
+                    <source type={"image/webp"} media={"(min-width: 0px)"} srcSet={"/galleryImages/webp/Jack.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Jack.avif"} />
                     <img className={classes.image} src={"/galleryImages/compressed/Jack.webp"} alt={"Jack"} />
                 </picture>
@@ -122,7 +127,7 @@ function DemoCarousel() {
                     <h5 className={classes.gallerySubtitle}>Fabulous</h5>
                 </div>
                 <picture>
-                    <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Vicious%205.webp"} />
+                    <source type={"image/webp"} media={"(min-width: 0px)"} srcSet={"/galleryImages/webp/Vicious%205.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Vicious%205.avif"} />
                     <img className={classes.image} src={"/galleryImages/webp/Vicious%205.webp"} alt={"Vicious"} />
                 </picture>
@@ -133,7 +138,7 @@ function DemoCarousel() {
                     <h5 className={classes.gallerySubtitle}>Breather</h5>
                 </div>
                 <picture>
-                    <source type={"image/webp"} media={"(min-width: 400px)"} srcSet={"/galleryImages/webp/Colin.webp"} />
+                    <source type={"image/webp"} media={"(min-width: 0px)"} srcSet={"/galleryImages/webp/Colin.webp"} />
                     <source type={"image/avif"} media={"(min-width: 1200px)"} srcSet={"/galleryImages/compressed/Colin.avif"} />
                     <img className={classes.image} src={"/galleryImages/webp/Colin.webp"} alt={"Colin"} />
                 </picture>

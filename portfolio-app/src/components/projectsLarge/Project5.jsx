@@ -206,7 +206,7 @@ function Project5() {
 
         <div className={classes.codeContainer}>
           <h2 className={classes.codeHeader}>The code</h2>
-          <img className={classes.codeImage} src={'/projectImages/project2/portfolioCode.png'} alt={""}/>
+          <img className={classes.codeImage} src={'/projectImages/project5/detectiveCode.png'} alt={""}/>
           <div className={classes.codeButton}>
             <Button color={'primary'} variant={'outlined'} href={currentProjectArray.githubLink} target={'_blank'}>
               View on GitHub
@@ -219,12 +219,12 @@ function Project5() {
           <Grid container >
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/muiLogo.png'} alt={"Search bar image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project5/cLogo.png'} alt={"Search bar image"}/>
               </div>               
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Material UI</h3>
+                <h3 className={classes.detailItem}>C Programming Language</h3>
                 <h5 className={classes.detailSubItem}>MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.</h5>
               </div>
               <div className={classes.divContainer} />          
@@ -232,12 +232,12 @@ function Project5() {
 
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/reactLogo2.png'} alt={"Digi-key image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project5/gbtdLogo.webp'} alt={"Digi-key image"}/>
               </div> 
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>React and JS</h3>
+                <h3 className={classes.detailItem}>Gameboy Tile Designer</h3>
                 <h5 className={classes.detailSubItem}>React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time.</h5>
               </div>
               <div className={classes.divContainer} />       
@@ -245,26 +245,13 @@ function Project5() {
 
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/htmlcssLogo.png'} alt={"File image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project5/visualboyadvanceLogo.jpg'} alt={"VisualBoyAdvance Logo"}/>
               </div> 
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>HTML/CSS</h3>
+                <h3 className={classes.detailItem}>VisualBoyAdvance</h3>
                 <h5 className={classes.detailSubItem}>HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.</h5>
-              </div>        
-              <div className={classes.divContainer} />
-            </Grid>
-
-            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
-              <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/awsLogo.png'} alt={"File image"}/>
-              </div> 
-            </Grid>
-            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
-              <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Amazon Web Services</h3>
-                <h5 className={classes.detailSubItem}>Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Currently being used for this website, AWS hosts a S3 bucket on Cloudfront's CDN.</h5>
               </div>        
               <div className={classes.divContainer} />
             </Grid>
@@ -273,22 +260,21 @@ function Project5() {
         </div>
 
         <div className={classes.ideasContainer}>
-          <h2 className={classes.detailHeader}>Designed with</h2>
+          <h2 className={classes.detailHeader}>How to play</h2>
           <Grid container >
-            <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.ideasImage} src={'/projectImages/project2/figmaLogo.svg'} alt={"Search bar image"}/>
+                <img className={classes.ideasImage} src={'/githubblackLogo.png'} alt={"Github Logo"}/>
               </div>               
             </Grid>
-            <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Figma</h3>
+                <h3 className={classes.detailItem}>Clone/Download Repo</h3>
                 <h5 className={classes.detailSubItem}>Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.</h5>
               </div>
               <div className={classes.spacer} />          
             </Grid>
           </Grid>
-          <img className={classes.ideasDesignImage} src={'/projectImages/project2/figmaExample.png'} alt={""}/>
           <div className={classes.spacer} /> 
         </div>
 
