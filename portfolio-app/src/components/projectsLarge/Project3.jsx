@@ -71,7 +71,8 @@ const useStyles = makeStyles(() => ({
     borderRadius: '20px 20px 0px 0px',
     backgroundColor: '#252423',
     overflow: 'hidden',
-    marginTop: -45
+    marginTop: -45,
+    boxShadow: '0px 0px 8px -3px #000000'
   },
   codeImage: {
     width: '80%',

@@ -71,7 +71,8 @@ const useStyles = makeStyles(() => ({
     borderRadius: '20px 20px 0px 0px',
     backgroundColor: '#252423',
     overflow: 'hidden',
-    marginTop: -45
+    marginTop: -45,
+    boxShadow: '0px 0px 8px -3px #000000'
   },
   codeImage: {
     width: '80%',
@@ -225,7 +226,7 @@ function Project5() {
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>C Programming Language</h3>
-                <h5 className={classes.detailSubItem}>MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.</h5>
+                <h5 className={classes.detailSubItem}>C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.</h5>
               </div>
               <div className={classes.divContainer} />          
             </Grid>
@@ -238,7 +239,7 @@ function Project5() {
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>Gameboy Tile Designer</h3>
-                <h5 className={classes.detailSubItem}>React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time.</h5>
+                <h5 className={classes.detailSubItem}>With GBTD, you can design tiles in different sizes, including 8x8, 8x16, 16x16 and 32x32, both in standard Gameboy, as well as colors for the Super Gameboy and Gameboy Color.</h5>
               </div>
               <div className={classes.divContainer} />       
             </Grid>
@@ -251,7 +252,7 @@ function Project5() {
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>VisualBoyAdvance</h3>
-                <h5 className={classes.detailSubItem}>HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.</h5>
+                <h5 className={classes.detailSubItem}>VisualBoyAdvance is a free emulator of the Game Boy, Game Boy Color, and Game Boy Advance handheld game consoles as well as of Super Game Boy and Super Game Boy 2.</h5>
               </div>        
               <div className={classes.divContainer} />
             </Grid>
@@ -264,12 +265,25 @@ function Project5() {
           <Grid container >
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.ideasImage} src={'/githubblackLogo.png'} alt={"Github Logo"}/>
+                <img className={classes.detailImage} src={'/githubblackLogo.png'} alt={"Github Logo"}/>
               </div>               
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>Clone/Download Repo</h3>
+                <h5 className={classes.detailSubItem}>Visit the project's repo page on GitHub. Click on the "Code" dropdown menu and choose to either clone or download the repo. </h5>
+              </div>
+              <div className={classes.spacer} />          
+            </Grid>
+
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project5/visualboyadvanceLogo.jpg'} alt={"Github Logo"}/>
+              </div>               
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>Download VisualBoyAdvance</h3>
                 <h5 className={classes.detailSubItem}>Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.</h5>
               </div>
               <div className={classes.spacer} />          

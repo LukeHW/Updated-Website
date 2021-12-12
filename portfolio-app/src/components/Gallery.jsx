@@ -273,7 +273,7 @@ function Gallery() {
                           <ImageList variant={"masonry"} cols={3} gap={20}>
                           {itemData.map((item) => (
                               <ImageListItem key={item.avif_img} className={classes.imageContainer}>
-                                <img src={`${item.webp_img}`} srcSet={`${item.webp_img}`} alt={item.title} loading={"lazy"} />
+                                <img src={`${item.webp_img}`} srcSet={`${item.webp_img}, ${item.avif_img}`} alt={item.title} loading={"lazy"} />
                               </ImageListItem>
                           ))}
                           </ImageList>
@@ -288,7 +288,7 @@ function Gallery() {
                         <ImageList variant={"masonry"} cols={2} gap={20}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.avif_img} className={classes.imageContainer}>
-                              <img src={`${item.webp_img}`} srcSet={`${item.avif_img}`} alt={item.title} loading={"lazy"} />
+                              <img src={`${item.webp_img}`} srcSet={`${item.webp_img}, ${item.avif_img}`} alt={item.title} loading={"lazy"} />
                             </ImageListItem>
                         ))}
                         </ImageList>
@@ -303,7 +303,7 @@ function Gallery() {
                         <ImageList variant={"masonry"} cols={1} gap={20}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.avif_img} className={classes.imageContainer}>
-                              <img src={`${item.webp_img}`} srcSet={`${item.avif_img}`} alt={item.title} loading={"lazy"} />
+                              <img src={`${item.webp_img}`} srcSet={`${item.webp_img}, ${item.avif_img}`} alt={item.title} loading={"lazy"} />
                             </ImageListItem>
                         ))}
                         </ImageList>

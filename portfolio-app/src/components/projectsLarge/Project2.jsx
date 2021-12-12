@@ -71,7 +71,8 @@ const useStyles = makeStyles(() => ({
     borderRadius: '20px 20px 0px 0px',
     backgroundColor: '#252423',
     overflow: 'hidden',
-    marginTop: -45
+    marginTop: -45,
+    boxShadow: '0px 0px 8px -3px #000000'
   },
   codeImage: {
     width: '80%',
@@ -239,7 +240,7 @@ function Project2() {
     <div>
       <Slide in timeout={1000} direction={"up"} easing={{ enter: "cubic-bezier(0, 1, .4, 1)", exit: "linear", }}>
       <div className={classes.container}>
-        <img className={classes.projectBG} src={'/projectImages/project2/portfolioBG.png'} alt={""}/>
+        <img className={classes.projectBG} src={'/projectImages/project2/portfolioBG.png'} alt={"Portfolio BG"}/>
         <h1 className={classes.projectHeader}>
           {currentProjectArray.title}
         </h1>
@@ -249,7 +250,7 @@ function Project2() {
 
         <div className={classes.codeContainer}>
           <h2 className={classes.codeHeader}>The code</h2>
-          <img className={classes.codeImage} src={'/projectImages/project2/portfolioCode.png'} alt={""}/>
+          <img className={classes.codeImage} src={'/projectImages/project2/portfolioCode.png'} alt={"Portfolio Code"}/>
           <div className={classes.codeButton}>
             <Button color={'primary'} variant={'outlined'} href={currentProjectArray.githubLink} target={'_blank'}>
               View on GitHub
@@ -262,7 +263,7 @@ function Project2() {
           <Grid container >
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/muiLogo.png'} alt={"Search bar image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project2/muiLogo.png'} alt={"MUI Logo"}/>
               </div>               
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
@@ -275,7 +276,7 @@ function Project2() {
 
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/reactLogo2.png'} alt={"Digi-key image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project2/reactLogo2.png'} alt={"React Logo"}/>
               </div> 
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
@@ -288,7 +289,7 @@ function Project2() {
 
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/htmlcssLogo.png'} alt={"File image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project2/htmlcssLogo.png'} alt={"HTML/CSS Logo"}/>
               </div> 
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
@@ -301,7 +302,7 @@ function Project2() {
 
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/awsLogo.png'} alt={"File image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project2/awsLogo.png'} alt={"AWS Logo"}/>
               </div> 
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
@@ -320,7 +321,7 @@ function Project2() {
           <Grid container >
             <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.ideasImage} src={'/projectImages/project2/figmaLogo.svg'} alt={"Search bar image"}/>
+                <img className={classes.ideasImage} src={'/projectImages/project2/figmaLogo.svg'} alt={"Figma Logo"}/>
               </div>               
             </Grid>
             <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
@@ -331,7 +332,7 @@ function Project2() {
               <div className={classes.spacer} />          
             </Grid>
           </Grid>
-          <img className={classes.ideasDesignImage} src={'/projectImages/project2/figmaExample.png'} alt={""}/>
+          <img className={classes.ideasDesignImage} src={'/projectImages/project2/figmaExample.png'} alt={"Figma design"}/>
           <div className={classes.spacer} /> 
         </div>
 
@@ -340,7 +341,7 @@ function Project2() {
           <Grid container >
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/lighthouseLogo.png'} alt={"Search bar image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project2/lighthouseLogo.png'} alt={"Google Lighthouse Logo"}/>
               </div>               
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
@@ -360,6 +361,50 @@ function Project2() {
                 </Button>
               </div>       
             </div>
+          </Grid>
+        </div>
+
+        <div className={classes.ideasContainer}>
+          <h2 className={classes.detailHeader}>Responsive design in mind</h2>
+          <Grid container >
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project2/bracketLogo.png'} alt={"HTML bracket"}/>
+              </div>               
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>{"The <picture> element"}</h3>
+                <h5 className={classes.detailSubItem}>With responsive design in mind, this website makes use of the picture html element. This allows support for image fallbacks for a number of different browsers and devices.</h5>
+              </div>
+              <div className={classes.spacer} />          
+            </Grid>
+
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project2/bracketLogo.png'} alt={"HTML bracket"}/>
+              </div>               
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>Grid structure</h3>
+                <h5 className={classes.detailSubItem}>With responsive design in mind, this website makes use of the picture html element. This allows support for image fallbacks for a number of different browsers and devices.</h5>
+              </div>
+              <div className={classes.spacer} />          
+            </Grid>
+
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project2/bracketLogo.png'} alt={"HTML bracket"}/>
+              </div>               
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>Media queries</h3>
+                <h5 className={classes.detailSubItem}>With responsive design in mind, this website makes use of the picture html element. This allows support for image fallbacks for a number of different browsers and devices.</h5>
+              </div>
+              <div className={classes.spacer} />          
+            </Grid>
           </Grid>
         </div>
 

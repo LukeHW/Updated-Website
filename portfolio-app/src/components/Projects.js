@@ -169,7 +169,8 @@ const useStyles = makeStyles(() => ({
     borderRadius: '20px 20px 0px 0px',
     backgroundColor: 'transparent',
     backgroundClip: 'padding-box',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    boxShadow: '0px 0px 8px -3px #000000'
   },
   projectContainer: {
     maxWidth: 1600,

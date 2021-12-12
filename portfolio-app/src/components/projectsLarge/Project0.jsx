@@ -71,7 +71,8 @@ const useStyles = makeStyles(() => ({
     borderRadius: '20px 20px 0px 0px',
     backgroundColor: '#252423',
     overflow: 'hidden',
-    marginTop: -45
+    marginTop: -45,
+    boxShadow: '0px 0px 8px -3px #000000'
   },
   codeImage: {
     width: '80%',
@@ -147,7 +148,6 @@ const useStyles = makeStyles(() => ({
   },
   ideasContainer: {
     width: '100%',
-    maxHeight: 1200,
     backgroundColor: '#F5F5F7'
   },
   ideasImage: {
@@ -248,12 +248,12 @@ function Project0() {
         <div className={classes.ideasContainer}>
           <h2 className={classes.detailHeader}>How it works</h2>
           <Grid container >
-            <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
                 <img className={classes.detailImage} src={'/projectImages/project0/image1.png'} alt={"Search bar image"}/>
               </div>               
             </Grid>
-            <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>Product IDs</h3>
                 <h5 className={classes.detailSubItem}>User will enter a list of product IDs to be used by the API.</h5>
@@ -261,12 +261,12 @@ function Project0() {
               <div className={classes.divContainer} />          
             </Grid>
 
-            <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
                 <img className={classes.detailImage} src={'/projectImages/project0/image2.png'} alt={"Digi-key image"}/>
               </div> 
             </Grid>
-            <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>Digi-Key API Logic</h3>
                 <h5 className={classes.detailSubItem}>Digi-Key’s API takes the product IDs as an input. It will then search through it’s own database for the part’s URL, datasheet, manufacture part identifiers, and more.</h5>
@@ -274,12 +274,12 @@ function Project0() {
               <div className={classes.divContainer} />       
             </Grid>
 
-            <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
                 <img className={classes.detailImage} src={'/projectImages/project0/image3.png'} alt={"File image"}/>
               </div> 
             </Grid>
-            <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>File Tree Creation</h3>
                 <h5 className={classes.detailSubItem}>After the API data is returned, Node uses the 'file system' module to create a file tree. The application then saves the file tree in the root directory for the user to traverse.</h5>

@@ -71,7 +71,8 @@ const useStyles = makeStyles(() => ({
     borderRadius: '20px 20px 0px 0px',
     backgroundColor: '#252423',
     overflow: 'hidden',
-    marginTop: -45
+    marginTop: -45,
+    boxShadow: '0px 0px 8px -3px #000000'
   },
   codeImage: {
     width: '80%',
@@ -179,6 +180,16 @@ const useStyles = makeStyles(() => ({
     borderRadius: 20,
     display: 'block'
   },
+  ideasHeader: {
+    padding: 'clamp(30px, 8vmin, 80px)',
+    paddingLeft: 0,
+    paddingRight: 0,
+    marginBottom: 0,
+    marginTop: 0,
+    fontWeight: 600,
+    fontSize: 'clamp(28px, 8vmin, 60px)',
+    color: '#1D1D1F'
+  },
   spacer: {
     height: 'clamp(30px, 5vmin, 100px)',
     width: '100%',
@@ -206,7 +217,7 @@ function Project6() {
 
         <div className={classes.codeContainer}>
           <h2 className={classes.codeHeader}>The code</h2>
-          <img className={classes.codeImage} src={'/projectImages/project2/portfolioCode.png'} alt={""}/>
+          <img className={classes.codeImage} src={'/projectImages/project6/pythonCode.png'} alt={""}/>
           <div className={classes.codeButton}>
             <Button color={'primary'} variant={'outlined'} href={currentProjectArray.githubLink} target={'_blank'}>
               View on GitHub
@@ -219,77 +230,25 @@ function Project6() {
           <Grid container >
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/muiLogo.png'} alt={"Search bar image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project6/pythonLogo.png'} alt={"Search bar image"}/>
               </div>               
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Material UI</h3>
-                <h5 className={classes.detailSubItem}>MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.</h5>
+                <h3 className={classes.detailItem}>Python</h3>
+                <h5 className={classes.detailSubItem}>Python is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation.</h5>
               </div>
               <div className={classes.divContainer} />          
-            </Grid>
-
-            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
-              <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/reactLogo2.png'} alt={"Digi-key image"}/>
-              </div> 
-            </Grid>
-            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
-              <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>React and JS</h3>
-                <h5 className={classes.detailSubItem}>React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time.</h5>
-              </div>
-              <div className={classes.divContainer} />       
-            </Grid>
-
-            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
-              <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/htmlcssLogo.png'} alt={"File image"}/>
-              </div> 
-            </Grid>
-            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
-              <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>HTML/CSS</h3>
-                <h5 className={classes.detailSubItem}>HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.</h5>
-              </div>        
-              <div className={classes.divContainer} />
-            </Grid>
-
-            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
-              <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/awsLogo.png'} alt={"File image"}/>
-              </div> 
-            </Grid>
-            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
-              <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Amazon Web Services</h3>
-                <h5 className={classes.detailSubItem}>Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Currently being used for this website, AWS hosts a S3 bucket on Cloudfront's CDN.</h5>
-              </div>        
-              <div className={classes.divContainer} />
             </Grid>
             <div className={classes.spacer} />
           </Grid>
         </div>
 
         <div className={classes.ideasContainer}>
-          <h2 className={classes.detailHeader}>Designed with</h2>
-          <Grid container >
-            <Grid item xs={3} sm={5} md={5} lg={5} xl={5}>
-              <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.ideasImage} src={'/projectImages/project2/figmaLogo.svg'} alt={"Search bar image"}/>
-              </div>               
-            </Grid>
-            <Grid item xs={9} sm={7} md={7} lg={7} xl={7}>
-              <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Figma</h3>
-                <h5 className={classes.detailSubItem}>Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.</h5>
-              </div>
-              <div className={classes.spacer} />          
-            </Grid>
-          </Grid>
-          <img className={classes.ideasDesignImage} src={'/projectImages/project2/figmaExample.png'} alt={""}/>
-          <div className={classes.spacer} /> 
+          <h2 className={classes.ideasHeader}>Ideas/Updates</h2>
+          <img className={classes.ideasImage} src={'/projectImages/project6/clipboard.png'} alt={"npm logo"}/>
+          <h5 className={classes.ideasBody}>An idea to improve this python script would be to introduce testing. This would allow for more coverage of use cases in the event of a status error and to prevent anything unexpected from returning.</h5>     
+          <div className={classes.spacer} />   
         </div>
 
       </div>

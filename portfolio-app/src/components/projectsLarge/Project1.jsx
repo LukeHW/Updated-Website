@@ -71,7 +71,8 @@ const useStyles = makeStyles(() => ({
     borderRadius: '20px 20px 0px 0px',
     backgroundColor: '#252423',
     overflow: 'hidden',
-    marginTop: -45
+    marginTop: -45,
+    boxShadow: '0px 0px 8px -3px #000000'
   },
   codeImage: {
     width: '80%',
@@ -114,6 +115,7 @@ const useStyles = makeStyles(() => ({
     height: '100%',
     marginBottom: 50,
     marginLeft: 15,
+    minHeight: 200
   },
   detailItemWrapperLeft: {
     flexDirection: "column",
@@ -191,6 +193,14 @@ function Project1() {
 
   const currentProjectArray = ProjectsJSON.projects[1];
 
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    if (!clicked) {
+      setClicked(true)
+    }
+  };
+
   return (
     <div>
       <Slide in timeout={1000} direction={"up"} easing={{ enter: "cubic-bezier(0, 1, .4, 1)", exit: "linear", }}>
@@ -205,17 +215,31 @@ function Project1() {
 
         <div className={classes.codeContainer}>
           <h2 className={classes.codeHeader}>The code</h2>
-          <img className={classes.codeImage} src={'/projectImages/project2/portfolioCode.png'} alt={""}/>
+          <img className={classes.codeImage} src={'/projectImages/project1/matrixCode.jpg'} alt={""}/>
           <div className={classes.codeButton}>
-            <Button color={'primary'} variant={'outlined'} href={currentProjectArray.githubLink} target={'_blank'}>
-              View on GitHub
+            <Button color={'error'} variant={'outlined'} onClick={handleClick}>
+              Private Repo
             </Button>
+            <h5>{clicked ? "Sorry, but this repo is private.": null}</h5>
           </div>       
         </div>
 
         <div>
           <h2 className={classes.detailHeader}>Created with</h2>
-          <Grid container >
+          <Grid container>
+            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/projectImages/project0/nodeLogo.png'} alt={"Search bar image"}/>
+              </div>               
+            </Grid>
+            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+              <div className={classes.detailItemWrapper}>
+                <h3 className={classes.detailItem}>Node.js</h3>
+                <h5 className={classes.detailSubItem}>Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.</h5>
+              </div>
+              <div className={classes.divContainer} />          
+            </Grid>
+
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
                 <img className={classes.detailImage} src={'/projectImages/project2/muiLogo.png'} alt={"Search bar image"}/>
@@ -295,52 +319,52 @@ function Project1() {
           <Grid container >
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/muiLogo.png'} alt={"Search bar image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project1/userLogo.png'} alt={"Search bar image"}/>
               </div>               
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>User Sign-in</h3>
-                <h5 className={classes.detailSubItem}>MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.</h5>
+                <h5 className={classes.detailSubItem}>A registered user can sign in to begin viewing files. Since the original idea was to keep the files private, the user would have to be given access.</h5>
               </div>
               <div className={classes.divContainer} />          
             </Grid>
 
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/reactLogo2.png'} alt={"Digi-key image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project1/filesearchLogo.png'} alt={"Digi-key image"}/>
               </div> 
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>File Traversal</h3>
-                <h5 className={classes.detailSubItem}>React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time.</h5>
+                <h5 className={classes.detailSubItem}>Files are displayed to the user, similar to a file directory. The files are searchable to make it easier to find what is needed.</h5>
               </div>
               <div className={classes.divContainer} />       
             </Grid>
 
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/htmlcssLogo.png'} alt={"File image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project0/image3.png'} alt={"File image"}/>
               </div> 
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>File Selection</h3>
-                <h5 className={classes.detailSubItem}>HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.</h5>
+                <h5 className={classes.detailSubItem}>Once the user has found the files they are looking for, they can add them to the download queue.</h5>
               </div>        
               <div className={classes.divContainer} />
             </Grid>
 
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/awsLogo.png'} alt={"File image"}/>
+                <img className={classes.detailImage} src={'/projectImages/project1/transferLogo.png'} alt={"File image"}/>
               </div> 
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>Transfer</h3>
-                <h5 className={classes.detailSubItem}>Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Currently being used for this website, AWS hosts a S3 bucket on Cloudfront's CDN.</h5>
+                <h5 className={classes.detailSubItem}>Finally, whenever they decide to, the user can begin transferring to their own devices and download all selected files.</h5>
               </div>        
               <div className={classes.divContainer} />
             </Grid>

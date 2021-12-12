@@ -71,7 +71,8 @@ const useStyles = makeStyles(() => ({
     borderRadius: '20px 20px 0px 0px',
     backgroundColor: '#252423',
     overflow: 'hidden',
-    marginTop: -45
+    marginTop: -45,
+    boxShadow: '0px 0px 8px -3px #000000'
   },
   codeImage: {
     width: '80%',
@@ -179,10 +180,30 @@ const useStyles = makeStyles(() => ({
     borderRadius: 20,
     display: 'block'
   },
+  ideasHeader: {
+    padding: 'clamp(30px, 8vmin, 80px)',
+    paddingLeft: 0,
+    paddingRight: 0,
+    marginBottom: 0,
+    marginTop: 0,
+    fontWeight: 600,
+    fontSize: 'clamp(28px, 8vmin, 60px)',
+    color: '#1D1D1F'
+  },
   spacer: {
     height: 'clamp(30px, 5vmin, 100px)',
     width: '100%',
     content: ' '
+  },
+  updateImage: {
+    width: '20%',
+    maxWidth: 400,
+    minWidth: 100,
+    borderRadius: '50%',
+    border: '5px solid white',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    display: 'block'
   }
 }))
 
@@ -257,6 +278,13 @@ function Project4() {
             </Grid>
             <div className={classes.spacer} />
           </Grid>
+        </div>
+
+        <div className={classes.ideasContainer}>
+          <h2 className={classes.ideasHeader}>Ideas/Updates</h2>
+          <img className={classes.updateImage} src={'main.webp'} alt={"npm logo"}/>
+          <h5 className={classes.ideasBody}>Hint: You're currently looking at the updated version of this project.</h5>     
+          <div className={classes.spacer} />   
         </div>
 
       </div>
