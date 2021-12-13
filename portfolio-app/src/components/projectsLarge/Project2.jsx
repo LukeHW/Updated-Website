@@ -210,6 +210,16 @@ const useStyles = makeStyles(() => ({
     marginLeft: 'auto',
     borderRadius: 20,
     display: 'block'
+  },
+  nextImage: {
+    width: '100%',
+    maxHeight: 200,
+    maxWidth: 200,
+    objectFit: 'cover',
+    objectPosition: '50% 50%',
+    padding: 5,
+    marginRight: 'auto',
+    marginLeft: 'auto',
   }
 }))
 
@@ -382,26 +392,31 @@ function Project2() {
 
             <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/bracketLogo.png'} alt={"HTML bracket"}/>
+                <img className={classes.detailImage} src={'/projectImages/project2/gridLogo.png'} alt={"Grid Layout"}/>
               </div>               
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Grid structure</h3>
-                <h5 className={classes.detailSubItem}>With responsive design in mind, this website makes use of the picture html element. This allows support for image fallbacks for a number of different browsers and devices.</h5>
+                <h3 className={classes.detailItem}>Grid structure and media queries</h3>
+                <h5 className={classes.detailSubItem}>Grid designs and media queries allow easier structure flow across multiple sizes of windows. Resizing the window will change the layout to best suit the viewport.</h5>
               </div>
               <div className={classes.spacer} />          
             </Grid>
+          </Grid>
+        </div>
 
-            <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+        <div>
+          <h2 className={classes.detailHeader}>Ideas/Updates</h2>
+          <Grid container >
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <div className={classes.detailItemWrapperLeft}>
-                <img className={classes.detailImage} src={'/projectImages/project2/bracketLogo.png'} alt={"HTML bracket"}/>
+                <img className={classes.nextImage} src={'/projectImages/project2/nextjsLogo.png'} alt={"HTML bracket"}/>
               </div>               
             </Grid>
-            <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Media queries</h3>
-                <h5 className={classes.detailSubItem}>With responsive design in mind, this website makes use of the picture html element. This allows support for image fallbacks for a number of different browsers and devices.</h5>
+                <h3 className={classes.detailItem}>Next.js</h3>
+                <h5 className={classes.detailSubItem}>If I would re-make this website for a third time, I would probably start my project with Next.js. Next has a lot of helpful tools out of the box like: responsively rendered image components, api routing for client side, file structure routing, and more. This would save a ton of time optimizing and staging.</h5>
               </div>
               <div className={classes.spacer} />          
             </Grid>

@@ -271,7 +271,7 @@ function Project5() {
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
                 <h3 className={classes.detailItem}>Clone/Download Repo</h3>
-                <h5 className={classes.detailSubItem}>Visit the project's repo page on GitHub. Click on the "Code" dropdown menu and choose to either clone or download the repo. </h5>
+                <h5 className={classes.detailSubItem}>Visit the project's <a target={"_blank"} href={currentProjectArray.githubLink}>repo page</a> on GitHub. Click on the "Code" dropdown menu and choose to either clone or download the repo. </h5>
               </div>
               <div className={classes.spacer} />          
             </Grid>
@@ -283,8 +283,8 @@ function Project5() {
             </Grid>
             <Grid item xs={12} sm={7} md={7} lg={7} xl={7}>
               <div className={classes.detailItemWrapper}>
-                <h3 className={classes.detailItem}>Download VisualBoyAdvance</h3>
-                <h5 className={classes.detailSubItem}>Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.</h5>
+                <h3 className={classes.detailItem}>Download VBA</h3>
+                <h5 className={classes.detailSubItem}>Visit a gameboy emulator website like <a target={"_blank"} href={"https://www.emulator-zone.com/doc.php/gba/vboyadvance.html"}>this one</a> and download VisualBoyAdvance. Then open the "main.gb" file under the menu to play.</h5>
               </div>
               <div className={classes.spacer} />          
             </Grid>
