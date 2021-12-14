@@ -70,8 +70,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center"
   },
   placer: {
-    width: "35%",
-    height: "35%",
+    width: "50%",
+    height: "50%",
     maxHeight: 500,
     minHeight: 200,
     maxWidth: 500,
@@ -227,7 +227,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   contactContainer: {
-    backgroundColor: '#252423',
+    backgroundColor: '#111111',
     padding: theme.spacing(0)
   },
   viewLinkContainer: {
@@ -323,6 +323,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: 60,
+    marginTop: 'clamp(80px, 10vw, 140px)',
     minHeight: 400
   },
   project: {
@@ -488,7 +489,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center'
   },
   socialsContainer: {
-    backgroundColor: '#111111',
+    backgroundColor: '#252423',
     padding: theme.spacing(0)
   },
   form: {
@@ -544,6 +545,75 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 20,
     marginLeft: 'auto',
     marginRight: 'auto'
+  },
+  aboutWrapper: {
+    backgroundColor: ('#111111'),
+    padding: theme.spacing(0),
+  },
+  aboutContainer: {
+    maxWidth: 1300,
+    marginRight: 'auto',
+    marginLeft: 'auto'
+  },
+  aboutText: {
+    fontWeight: 400,
+    fontSize: 'clamp(18px, 5vw, 24px)',
+    textAlign: 'left',
+    color: '#DDDDDD',
+    margin: 5,
+    lineHeight: 1.05,
+    letterSpacing: '-.045em'
+  },
+  aboutTextHeader: {
+    fontWeight: 600,
+    fontSize: 'clamp(24px, 7vw, 32px)',
+    textAlign: 'left',
+    color: 'white',
+    margin: 5,
+    marginTop: 0,
+  },
+  sectionWrapper: {
+    maxWidth: 1000,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    padding: 20
+  },
+  detailImage: {
+    width: '50%',
+    maxHeight: 300,
+    maxWidth: 300,
+    minHeight: 200,
+    minWidth: 200,
+    objectFit: 'cover',
+    objectPosition: '50% 50%',
+    margin: 5,
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    borderRadius: '50%',
+    border: '5px solid white'
+  },
+  detailItemWrapperLeft: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    height: '100%'
+  },
+  detailItemWrapper: {
+    flexDirection: "column",
+    justifyContent: "center",
+    display: "flex",
+    height: '100%',
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingTop: 15,
+    maxWidth: 500
+  },
+  aboutSpacer: {
+    height: 'clamp(80px, 10vw, 140px)',
+    width: '100%'
+  },
+  paragraphWrapper: {
+    maxWidth: 940
   }
 }));
 
@@ -619,6 +689,66 @@ function Main() {
         </div>
       </Grid>
 
+      <div className={classes.aboutWrapper}>
+      <Grid container className={classes.aboutContainer}>
+        <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+          <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={10} xl={10}>
+              <div className={classes.spacerContainer}>
+                <h1 className={classes.spacerTextHeader}>
+                  Bio
+                </h1>
+                <h2 className={classes.spacerText}>
+                  About me.
+                </h2>
+              </div>
+          </Grid>
+          <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
+
+          <Grid item xs={12} sm={5} md={5} lg={5} xl={5}>
+              <div className={classes.detailItemWrapperLeft}>
+                <img className={classes.detailImage} src={'/main.webp'} alt={"LukeHW"}/>
+              </div>               
+            </Grid>
+          <Grid item xs={12} sm={7} md={7} lg={7} xl={7} align={"center"}>
+            <div className={classes.detailItemWrapper}>
+              <h3 className={classes.aboutTextHeader}>Who Am I?</h3>
+              <h5 className={classes.aboutText}>Hi! I'm Luke, an aspiring full-stack developer. I play a couple of instruments including: trumpet, french horn, and drums. Though, it has been a while since I last played, I would love to pick it back up in an instant. I enjoy taking pictures of animals, nature, and candid moments.</h5>
+            </div>    
+          </Grid>
+
+          <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} />
+            <Grid item className={classes.carouselSpacer} xs={12} sm={12} md={10} lg={10} xl={10}>
+                <DemoCarousel />
+            </Grid>
+          <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} />
+
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <div className={classes.viewLinkContainer}>
+              <Button color={'primary'} variant={'contained'} href={'/Gallery'}>
+                View more pictures
+              </Button>
+            </div> 
+          </Grid> 
+
+          <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} />
+          <Grid className={classes.paragraphWrapper} item xs={12} sm={12} md={5} lg={5} xl={5} align={"center"}>
+            <div className={classes.sectionWrapper}>
+              <h3 className={classes.aboutTextHeader}>Technical Experience</h3>
+              <h5 className={classes.aboutText}>I have a demonstrated history working with front-end tech including: React, Material UI, and JavaScript; and I have taken interest in: Next.js and Docker recently. I have also started to branch out into the back-end, looking at tech like: Node, Express, and MongoDB.</h5>
+            </div>      
+          </Grid> 
+          <Grid className={classes.paragraphWrapper} item xs={12} sm={12} md={5} lg={5} xl={5} align={"center"}>
+            <div className={classes.sectionWrapper}>
+              <h3 className={classes.aboutTextHeader}>Hobbies</h3>
+              <h5 className={classes.aboutText}>I enjoy taking walks around the neighborhood and nearby trails. I like to play video games with my friends, and I have particularly been enjoying trying to speedrun Super Mario 64 - 16 star category. </h5>
+            </div>      
+          </Grid> 
+          <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} />
+
+          <div className={classes.aboutSpacer} />
+      </Grid>
+      </div>
+
       <Grid container className={classes.secondContainer}>
         <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
           <Grid item className={classes.spacer} xs={12} sm={12} md={12} lg={10} xl={10}>
@@ -645,36 +775,6 @@ function Main() {
             </div>       
           </Grid> 
       </Grid>
-
-          <div className={classes.galleryContainer}>
-            <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
-            <Grid item className={classes.gallerySpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
-                <div className={classes.spacerContainer}>
-                  <h1 className={classes.galleryTextHeader}>
-                    Gallery
-                  </h1>
-                  <h2 className={classes.spacerText}>
-                    Pictures captured during my daily life.
-                  </h2>
-                </div>
-            </Grid>
-            <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
-
-            <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} />
-            <Grid item className={classes.carouselSpacer} xs={12} sm={12} md={10} lg={10} xl={10}>
-                <DemoCarousel />
-            </Grid>
-            <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} />
-
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-              <div className={classes.viewLinkContainer}>
-                <Button color={'primary'} variant={'contained'} href={'/Gallery'}>
-                  View more pictures
-                </Button>
-              </div> 
-            </Grid> 
-          </div>
-
           <div className={classes.contactContainer} id={"Contact"}>
           <Grid item xs={"auto"} sm={"auto"} md={"auto"} lg={1} xl={1} />
             <Grid item className={classes.contactSpacer} xs={12} sm={12} md={12} lg={10} xl={10}>
