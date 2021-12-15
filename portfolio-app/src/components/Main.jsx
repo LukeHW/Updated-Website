@@ -724,7 +724,7 @@ function Main() {
           <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align={"center"}>
             <div className={classes.about}>
               <h3 className={classes.aboutTextHeader}>Who Am I?</h3>
-              <h5 className={classes.aboutText}>Hi! I'm Luke, an aspiring full-stack developer. I play a couple of instruments including: trumpet, french horn, and drums. Though, it has been a while since I last played, I would love to pick it back up in an instant. I enjoy taking pictures of animals, nature, and candid moments.</h5>
+              <h5 className={classes.aboutText}>Hi! I'm Luke, an aspiring full-stack developer. I play a couple of instruments including: trumpet, french horn, and drums. Though it has been a while since I last played, I would love to pick it back up in an instant. I enjoy taking pictures of animals, nature, and candid moments.</h5>
             </div>    
           </Grid>
           <Grid item xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} />
