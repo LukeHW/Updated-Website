@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Welcome to my portfolio!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Made with React, Material UI, JS, HTML, and CSS; this website displays some of my projects, pictures, and other works that I have contributed to. Feel free to look around.
 
-## Available Scripts
 
-In the project directory, you can run:
+# Created with
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Material UI
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+MUI provides a robust, customizable, and accessible library of foundational and advanced components, enabling you to build your own design system and develop React applications faster.
 
-### `yarn test`
+## React and JS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time.
 
-### `yarn build`
+## HTML and CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Amazon Web Services
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. Currently being used for this website, AWS hosts a S3 bucket on Cloudfront's CDN.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Designed with
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Figma
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Tested with Lighthouse
+## Google Lighthouse
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Google Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO and more.
 
-### Code Splitting
+# Responsive design in mind
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Built from the mobile format up, this website makes use of Material UI's grid components with a mixture of React to make a seamless responsive design.
 
-### Analyzing the Bundle Size
+## The picture element
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+With responsive design in mind, this website makes use of the picture html element. This allows support for image fallbacks for a number of different browsers and devices.
 
-### Making a Progressive Web App
+## Grid structure and media queries
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Grid designs and media queries allow easier structure flow across multiple sizes of windows. Resizing the window will change the layout to best suit the viewport.
 
-### Advanced Configuration
+# Ideas/Updates
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Next.js
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If I would re-make this website for a third time, I would probably start my project with Next.js. Next has a lot of helpful tools out of the box like: responsively rendered image components, api routing for client side, file structure routing, and more. This would save a ton of time optimizing and staging.
